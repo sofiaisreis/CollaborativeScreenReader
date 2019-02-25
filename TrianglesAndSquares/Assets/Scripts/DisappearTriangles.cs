@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using static ClassDemo.CountObjects;
+using static ClassDemo.Audios;
 
 namespace ClassDemo { 
     public class DisappearTriangles : MonoBehaviour
@@ -9,12 +10,13 @@ namespace ClassDemo {
         public AudioClip triangulo;
         public AudioClip selected;
         public AudioSource myAudioSource;
-       
+
 
         void Start()
         {
             myAudioSource = GetComponent<AudioSource>();
             //GameObject[] max_triangles = GameObject.FindGameObjectsWithTag("triangle");
+
         }
 
         private void Update()
@@ -39,9 +41,17 @@ namespace ClassDemo {
         {
             //Read how many
             myAudioSource.PlayOneShot(selected);
+            myAudioSource.PlayOneShot(triangulo);
 
             //Increment
-            print("Selected " + CountObjects.IncrementTriangles() + " square a total of " + CountObjects.gettriInit());
+            if (CountObjects.GetTriAtual() > 0)
+            {
+                print("Selected " + CountObjects.IncrementTriangles() + " triangles a total of " + CountObjects.GetTriInit());
+            }
+            else if (CountObjects.GetTriAtual() == 0)
+            {
+                print("Selected " + CountObjects.IncrementTriangles() + " triangle a total of " + CountObjects.GetTriInit());
+            }
 
             //hide
             //if(!myAudioSource.isPlaying)

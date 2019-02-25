@@ -40,8 +40,14 @@ namespace ClassDemo {
             myAudioSource.PlayOneShot(selected);
 
             //Increment
-            print("Selected " + CountObjects.IncrementSquares() + " square a total of " + CountObjects.getsquaInit());
-
+            if (CountObjects.GetSquaAtual() > 0)
+            {
+                print("Selected " + CountObjects.IncrementSquares() + " squares of total of " + CountObjects.GetSquaInit());
+            }
+            else if (CountObjects.GetSquaAtual() == 0)
+            {
+                print("Selected " + CountObjects.IncrementSquares() + " square of total of " + CountObjects.GetSquaInit());
+            }
             //hide
             gameObject.SetActive(false);
             //Destroy(this.gameObject);
