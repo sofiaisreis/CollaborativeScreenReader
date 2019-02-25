@@ -60,10 +60,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Audios.cs" />
     <Compile Include="Assets\Scripts\CountObjects.cs" />
     <Compile Include="Assets\Scripts\DisappearCircles.cs" />
     <Compile Include="Assets\Scripts\DisappearSquares.cs" />
+    <Compile Include="Assets\Scripts\FollowMouse.cs" />
+    <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/TESE/GitHub/CollaborativeScreenReader/SquaresAndCircles/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

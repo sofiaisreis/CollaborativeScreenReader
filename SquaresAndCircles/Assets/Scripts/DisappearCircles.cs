@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using static ClassDemo.CountObjects;
-using static ClassDemo.Audios;
+using static ClassDemo.SoundManager;
 
 namespace ClassDemo { 
     public class DisappearCircles : MonoBehaviour

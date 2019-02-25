@@ -8,6 +8,7 @@ TagManager:
   - square
   - triangle
   - circle
+  - mousedown
   layers:
   - Default
   - TransparentFX

@@ -4,7 +4,9 @@ using UnityEngine;
 
 namespace ClassDemo
 {
-    public static class Audios {
+    public static class SoundManager {
+
+        
 
         static AudioClip one, two, three, four, five;
         static AudioClip de;
