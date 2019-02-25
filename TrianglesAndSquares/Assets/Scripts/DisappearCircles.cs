@@ -5,9 +5,9 @@ using static ClassDemo.CountObjects;
 using static ClassDemo.Audios;
 
 namespace ClassDemo { 
-    public class DisappearTriangles : MonoBehaviour
+    public class DisappearCircles : MonoBehaviour
     {
-        public AudioClip triangulo;
+        public AudioClip circle; //tenho que por TO DO
         public AudioClip selected;
         public AudioSource myAudioSource;
 
@@ -15,7 +15,7 @@ namespace ClassDemo {
         void Start()
         {
             myAudioSource = GetComponent<AudioSource>();
-            //GameObject[] max_triangles = GameObject.FindGameObjectsWithTag("triangle");
+            //GameObject[] max_circles = GameObject.FindGameObjectsWithTag("circle");
 
         }
 
@@ -25,10 +25,10 @@ namespace ClassDemo {
 
         public void OnMouseEnter()
         {
-            //print("Mouse is over one Triangle."); //On table exists " + max_triangles.Length);
+            //print("Mouse is over one Circle."); //On table exists " + max_circles.Length);
             gameObject.GetComponent<Renderer>().material.color = new Color(255, 0, 0);
             // Read name of object
-            myAudioSource.PlayOneShot(triangulo);  
+            myAudioSource.PlayOneShot(circle);  
         }
 
         public void OnMouseExit()
@@ -41,16 +41,16 @@ namespace ClassDemo {
         {
             //Read how many
             myAudioSource.PlayOneShot(selected);
-            myAudioSource.PlayOneShot(triangulo);
+            myAudioSource.PlayOneShot(circle);
 
             //Increment
-            if (CountObjects.GetTriAtual() > 0)
+            if (CountObjects.GetCircAtual() > 0)
             {
-                print("Selected " + CountObjects.IncrementTriangles() + " triangles a total of " + CountObjects.GetTriInit());
+                print("Selected " + CountObjects.IncrementCircles() + " circles a total of " + CountObjects.GetCircInit());
             }
-            else if (CountObjects.GetTriAtual() == 0)
+            else if (CountObjects.GetCircAtual() == 0)
             {
-                print("Selected " + CountObjects.IncrementTriangles() + " triangle a total of " + CountObjects.GetTriInit());
+                print("Selected " + CountObjects.IncrementCircles() + " circle a total of " + CountObjects.GetCircInit());
             }
 
             //hide
