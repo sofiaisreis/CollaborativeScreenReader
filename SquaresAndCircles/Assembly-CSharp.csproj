@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3FEE06DF-1334-A1F9-DDAB-499653CD2DEA}</ProjectGuid>
+    <ProjectGuid>{5CBF96C3-E2F1-C890-FF36-CCC16BA34B62}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -62,22 +62,22 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Audios.cs" />
     <Compile Include="Assets\Scripts\CountObjects.cs" />
+    <Compile Include="Assets\Scripts\DisappearCircles.cs" />
     <Compile Include="Assets\Scripts\DisappearSquares.cs" />
-    <Compile Include="Assets\Scripts\DisappearTriangles.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/TESE/GitHub/CollaborativeScreenReader/TrianglesAndSquares/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/TESE/GitHub/CollaborativeScreenReader/SquaresAndCircles/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/TESE/GitHub/CollaborativeScreenReader/TrianglesAndSquares/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>D:/TESE/GitHub/CollaborativeScreenReader/SquaresAndCircles/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/TESE/GitHub/CollaborativeScreenReader/TrianglesAndSquares/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/TESE/GitHub/CollaborativeScreenReader/SquaresAndCircles/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/TESE/GitHub/CollaborativeScreenReader/TrianglesAndSquares/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/TESE/GitHub/CollaborativeScreenReader/SquaresAndCircles/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>D:/TESE/GitHub/CollaborativeScreenReader/TrianglesAndSquares/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>D:/TESE/GitHub/CollaborativeScreenReader/SquaresAndCircles/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -281,13 +281,13 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.3f1/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>D:/TESE/GitHub/CollaborativeScreenReader/TrianglesAndSquares/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>D:/TESE/GitHub/CollaborativeScreenReader/SquaresAndCircles/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>D:/TESE/GitHub/CollaborativeScreenReader/TrianglesAndSquares/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>D:/TESE/GitHub/CollaborativeScreenReader/SquaresAndCircles/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>D:/TESE/GitHub/CollaborativeScreenReader/TrianglesAndSquares/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>D:/TESE/GitHub/CollaborativeScreenReader/SquaresAndCircles/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.3f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
