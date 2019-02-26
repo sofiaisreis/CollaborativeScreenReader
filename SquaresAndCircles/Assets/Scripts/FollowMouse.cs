@@ -4,32 +4,40 @@ using UnityEngine;
 
 public class FollowMouse : MonoBehaviour
 {
-
-    public float distance = 3.0f;
-    public bool useInitialCameraDistance = false;
+    public float distance = 1.0f;
+    public bool useInitalCameraDistance = false;
     private float actualDistance;
-   
+
+    // Use this for initialization
     void Start()
     {
-        if (useInitialCameraDistance)
+        if (useInitalCameraDistance)
         {
-            //projecao de vetor
             Vector3 toObjectVector = transform.position - Camera.main.transform.position;
             Vector3 linearDistanceVector = Vector3.Project(toObjectVector, Camera.main.transform.forward);
-            actualDistance = (transform.position - Camera.main.transform.position).magnitude;
+            actualDistance = linearDistanceVector.magnitude;
         }
         else
         {
             actualDistance = distance;
         }
     }
-    
+
+    // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0)){
+        if (Input.GetMouseButton(0))
+        {
             Vector3 mousePosition = Input.mousePosition;
-            mousePosition.z = distance;
+            mousePosition.z = actualDistance;
             transform.position = Camera.main.ScreenToWorldPoint(mousePosition);
         }
     }
+
+
+    //Vector3 getMousePosition()
+      //  {
+         //   return mousePosition;
+        //}
+
 }
