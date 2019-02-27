@@ -39,6 +39,11 @@ namespace ClassDemo {
 
         public static void HandleObjectEnter(string tag)
         {
+            
+        }
+
+        public static void HandleObjectSelect(string tag)
+        {
             if (tag == "square")
             {
 
@@ -50,7 +55,8 @@ namespace ClassDemo {
                 {
                     Debug.Log("Selected " + IncrementSquares() + " square of total of " + GetSquaInit());
                 }
-            } else if (tag == "circle")
+            }
+            else if (tag == "circle")
             {
                 if (GetCircAtual() > 0)
                 {
@@ -61,11 +67,6 @@ namespace ClassDemo {
                     Debug.Log("Selected " + IncrementCircles() + " circle a total of " + GetCircInit());
                 }
             }
-        }
-
-        public static void HandleObjectSelect(MonoBehaviour obj)
-        {
-
         }
 
         public static void HandleObjectExit(MonoBehaviour obj)

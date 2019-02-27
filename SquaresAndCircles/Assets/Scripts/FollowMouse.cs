@@ -31,13 +31,11 @@ public class FollowMouse : MonoBehaviour
             Vector3 mousePosition = Input.mousePosition;
             mousePosition.z = actualDistance;
             transform.position = Camera.main.ScreenToWorldPoint(mousePosition);
+            transform.position = new Vector3(transform.position.x, 0f, transform.position.z);
+
+            //imprime posicao do mini cube
+            //Debug.Log(transform.position);
         }
     }
-
-
-    //Vector3 getMousePosition()
-      //  {
-         //   return mousePosition;
-        //}
 
 }
