@@ -522,7 +522,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -666,11 +666,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 654241594343028451, guid: 4061ea8916f56bf49af9f912da0d0195,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 654241594343028455, guid: 4061ea8916f56bf49af9f912da0d0195,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -724,7 +719,6 @@ GameObject:
   - component: {fileID: 901625838}
   - component: {fileID: 901625837}
   - component: {fileID: 901625836}
-  - component: {fileID: 901625835}
   m_Layer: 0
   m_Name: PlaneTable
   m_TagString: Untagged
@@ -732,19 +726,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &901625835
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 901625834}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &901625836
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1091,8 +1072,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1053415171}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.91, y: 0, z: -0.72509766}
-  m_LocalScale: {x: 0.1, y: 0.1001, z: 0.1}
+  m_LocalPosition: {x: 6.026, y: 0, z: -0.72509766}
+  m_LocalScale: {x: 0.2, y: 0.4, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
@@ -1122,7 +1103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 1
-  useInitalCameraDistance: 0
+  useInitalCameraDistance: 1
 --- !u!54 &1053415178
 Rigidbody:
   m_ObjectHideFlags: 0
