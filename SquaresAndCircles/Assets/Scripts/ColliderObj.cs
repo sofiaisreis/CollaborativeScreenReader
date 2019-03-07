@@ -7,37 +7,38 @@ namespace ClassDemo
         private bool enterSquare = false;
         private bool enterCircle = false;
         private bool exitObject = false;
-
-        public void OnSquare()
-        {
-            enterSquare = true;
-        }
-
-        public void OnCircle()
-        {
-            enterCircle = true;
-        }
-
-        public void OnExit()
-        {
-            exitObject = true;
-            enterSquare = false;
-            enterCircle = false;
-        }
+        public static AudioClip quad;
+        public AudioSource myAudioSource;
 
         void OnCollisionEnter(Collision collisionInfo) {
-            var objTag = collisionInfo.gameObject.tag;
-            //var objTag = collisionInfo.collider.tag;
 
-          
+            myAudioSource = GetComponent<AudioSource>();
+            var objTag = collisionInfo.gameObject.tag;
+            var nameObject = collisionInfo.collider.name;
             Debug.Log("We hit a " + objTag + " named " + collisionInfo.collider.name);
-            //Debug.Log(collisionInfo.collider.name); //Name of the Object On which we Collided
-            //or .tag
+            //Debug.Log(collisionInfo.collider.name); //Name of the Object On which we Collided or .tag
+          
             GameManager.HandleObjectEnter(objTag);
         }
 
         void OnCollisionStay(Collision collisionInfo) {
+            var objTag = collisionInfo.gameObject.tag;
 
+
+            if (objTag == "square")
+            {
+                SoundManager.PlaySquare();
+                Debug.Log("onCollisionStay SQUARE");
+                enterSquare = true;
+            }
+            if (objTag == "circle")
+            {
+                SoundManager.PlayCircle2();
+                Debug.Log("onCollisionStay CIRCLE");
+                enterCircle = true;
+            }
+
+            GameManager.HandleObjectStay(objTag, enterSquare, enterCircle);
             /* print("I never collide STAY!");
             Debug.Log("I never collide STAY");
            
@@ -57,10 +58,19 @@ namespace ClassDemo
 
         void OnCollisionExit(Collision collisionInfo) {
 
-            //print("I never collide EXIT!");
-            //Debug.Log("I never collide EXIT");
-        }
+            var objTag = collisionInfo.gameObject.tag;
 
+            exitObject = true;
+            enterSquare = false;
+            enterCircle = false;
+            Debug.Log("We EXIT " + collisionInfo.collider.name);
+
+            SoundManager.StopSounds();
+            GameManager.HandleObjectExit(objTag, exitObject);
+        }
+    //print("I never collide EXIT!");
+    //Debug.Log("I never collide EXIT");
     }
 
 }
+

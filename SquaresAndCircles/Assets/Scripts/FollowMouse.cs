@@ -26,7 +26,7 @@ public class FollowMouse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) || Input.touchCount > 0)
         {
             Vector3 mousePosition = Input.mousePosition;
             mousePosition.z = actualDistance;

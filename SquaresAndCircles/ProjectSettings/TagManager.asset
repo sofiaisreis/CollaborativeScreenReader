@@ -9,6 +9,7 @@ TagManager:
   - triangle
   - circle
   - mousedown
+  - soundmanager
   layers:
   - Default
   - TransparentFX
