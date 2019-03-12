@@ -86,7 +86,7 @@ namespace ClassDemo
             enterCircle = false;
 
             */
-            myAudioSource.Pause();
+            myAudioSource.Stop();
             Debug.Log("Parou, parou, PaROU!");
             Debug.Log("We EXIT " + collisionInfo.collider.name);
 
