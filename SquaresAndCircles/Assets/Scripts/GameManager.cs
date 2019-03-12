@@ -20,9 +20,9 @@ namespace ClassDemo {
         /***** COUNT OBJECTS *****/
         /*************************/
 
-        private static int IncrementSquares() { squares++; return squares; }
+        private static int IncrementSquares() { return ++squares; }
 
-        private static int IncrementCircles() { circles++; return circles; }
+        private static int IncrementCircles() { return ++circles; }
 
         private static int GetCircInit() { return circInit; }
 
@@ -44,12 +44,12 @@ namespace ClassDemo {
 
         }
 
-        public static void HandleObjectStay(string tag, bool squareEnter, bool circleEnter) //double click to select
+        public static void HandleObjectStay(string tag) //double click to select
         {
 
             if (tag == "square")
             {
-                if (squareEnter)
+              /*  if (squareEnter)
                 {
 
                 }
@@ -65,7 +65,7 @@ namespace ClassDemo {
             }
             else if (tag == "circle")
             {
-                if (circleEnter)
+                /*if (circleEnter)
                 {
 
                 }
@@ -81,7 +81,7 @@ namespace ClassDemo {
             }
         }
 
-        public static void HandleObjectExit(string tag, bool objExit)
+        public static void HandleObjectExit(string tag)
         {
            
         }
