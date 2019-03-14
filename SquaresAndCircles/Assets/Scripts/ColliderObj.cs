@@ -15,6 +15,8 @@ public class ColliderObj : MonoBehaviour
     //public float highPitchRange = 1.05f;            //The highest a sound effect will be randomly pitched.
     public static Renderer rend;
     public bool tapToProcess = false;
+    public bool isBeingDragged = false;
+    public GameObject collidingObject = null;
 
     void Start()
     {
@@ -57,9 +59,9 @@ public class ColliderObj : MonoBehaviour
     void OnCollisionStay(Collision collisionInfo) {
         var objTag = collisionInfo.gameObject.tag;
 
-        //GameObject soundManager = GameObject.FindGameObjectsWithTag("soundmanager")[0];
+        collidingObject = collisionInfo.gameObject;
 
-        // PERGUNTA AO MOUSEINPUT SE HOUVE UM TAP NUM LAST FRAME
+        //GameObject soundManager = GameObject.FindGameObjectsWithTag("soundmanager")[0];
 
         //print("Estou no: " + collisionInfo.collider.tag);
         GameManager.HandleObjectStay(objTag);
@@ -117,11 +119,24 @@ public class ColliderObj : MonoBehaviour
         Debug.Log("Parou, parou, PaROU SoM!");
         Debug.Log("We EXIT " + collisionInfo.collider.name);
 
+        if (isBeingDragged) {
+            myAudioSource.PlayOneShot(exitObjM);
+        }
+        
+
         //SoundManager.StopSounds();
         GameManager.HandleObjectExit(objTag);
+
+        collidingObject = null;
     }
 
-
+    public void SelectObject()
+    {
+        myAudioSource.PlayOneShot(selectedM);
+        //collidingObject.SetActive(false);
+        Destroy(collidingObject);
+        collidingObject = null;
+    }
 //print("I never collide EXIT!");
 //Debug.Log("I never collide EXIT");
 }

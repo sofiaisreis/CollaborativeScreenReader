@@ -55,6 +55,8 @@ public class FollowMouse : MonoBehaviour
                 if (difTime.TotalMilliseconds >= 250 || difDist >= 10)
                 {
                     print("Eh um DRAG");
+                    GetComponent<ColliderObj>().isBeingDragged = true;
+                    print(GetComponent<ColliderObj>().isBeingDragged);
                     touchType = 2;
                 }
             }
@@ -73,7 +75,7 @@ public class FollowMouse : MonoBehaviour
             TimeSpan difTime = DateTime.Now - timestart;
             float difDist = (Input.mousePosition - positionstart).magnitude;
             //print("DifTime: " + difTime.TotalMilliseconds + " DifPos: " + difDist);
-
+            GetComponent<ColliderObj>().isBeingDragged = false;
             if(difTime.TotalMilliseconds < 250 && difDist < 10)
             {
                 //print("Eh um TAP");
@@ -115,7 +117,7 @@ public class FollowMouse : MonoBehaviour
                 print("Eh um TAP");
                 touchType = 1;
                 GetComponent<ColliderObj>().tapToProcess = true;
-
+                
                 Tap();
             }
 
@@ -133,7 +135,10 @@ public class FollowMouse : MonoBehaviour
 
     private void DoubleTap()
     {
-
+        if(GetComponent<ColliderObj>().collidingObject != null)
+        {
+            GetComponent<ColliderObj>().SelectObject();
+        }
     }
 
     private void Tap()
