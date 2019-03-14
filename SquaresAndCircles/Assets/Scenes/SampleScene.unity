@@ -359,7 +359,8 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 126
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1355515005315579687, guid: 83f33cff804ec89489f0d13220fd21c7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 83f33cff804ec89489f0d13220fd21c7, type: 3}
 --- !u!1 &466167615
 GameObject:
@@ -735,7 +736,8 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 126
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1355515005315579687, guid: 83f33cff804ec89489f0d13220fd21c7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 83f33cff804ec89489f0d13220fd21c7, type: 3}
 --- !u!1 &586184300 stripped
 GameObject:
@@ -826,7 +828,8 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 126
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1355515005315579687, guid: 83f33cff804ec89489f0d13220fd21c7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 83f33cff804ec89489f0d13220fd21c7, type: 3}
 --- !u!1001 &744363821
 PrefabInstance:
@@ -890,7 +893,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 92537242b83b9a24dba00e1d7a47e77d, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 654241594343028452, guid: 4061ea8916f56bf49af9f912da0d0195, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4061ea8916f56bf49af9f912da0d0195, type: 3}
 --- !u!1001 &803604679
 PrefabInstance:
@@ -944,7 +948,8 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 654241594343028452, guid: 4061ea8916f56bf49af9f912da0d0195, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4061ea8916f56bf49af9f912da0d0195, type: 3}
 --- !u!1 &901625834
 GameObject:
@@ -1080,7 +1085,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1053415173
 MeshRenderer:
@@ -1172,6 +1177,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 1
   useInitalCameraDistance: 1
+  positionstart: {x: 0, y: 0, z: 0}
+  lastTapPosition: {x: 0, y: 0, z: 0}
+  wasTapped: 0
+  touchType: -1
 --- !u!54 &1053415178
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1563,7 +1572,8 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 654241594343028452, guid: 4061ea8916f56bf49af9f912da0d0195, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4061ea8916f56bf49af9f912da0d0195, type: 3}
 --- !u!1001 &1522412819
 PrefabInstance:
@@ -1622,7 +1632,8 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 126
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1355515005315579687, guid: 83f33cff804ec89489f0d13220fd21c7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 83f33cff804ec89489f0d13220fd21c7, type: 3}
 --- !u!1001 &1630311283
 PrefabInstance:
@@ -1696,7 +1707,8 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 126
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1355515005315579687, guid: 83f33cff804ec89489f0d13220fd21c7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 83f33cff804ec89489f0d13220fd21c7, type: 3}
 --- !u!1001 &654241594360420450
 PrefabInstance:
@@ -1770,7 +1782,8 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 654241594343028452, guid: 4061ea8916f56bf49af9f912da0d0195, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4061ea8916f56bf49af9f912da0d0195, type: 3}
 --- !u!1001 &7824817103455332431
 PrefabInstance:
@@ -1829,5 +1842,6 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 126
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1355515005315579687, guid: 83f33cff804ec89489f0d13220fd21c7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 83f33cff804ec89489f0d13220fd21c7, type: 3}
