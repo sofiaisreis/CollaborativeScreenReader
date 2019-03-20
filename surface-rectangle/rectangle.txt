@@ -1,0 +1,7 @@
+% 2019-03-07 17:01:50
+surface.name=Unknown Surface
+surface.kinect=DESKTOP-J7VERF9
+surface.bottom.left=-0.5680814:-0.03701606:2.182
+surface.bottom.right=0.2119059:-0.3414801:1.322
+surface.top.left=-1.081084:-0.1670916:1.762777
+surface.top.right=-0.3010968:-0.4715557:0.9027765
