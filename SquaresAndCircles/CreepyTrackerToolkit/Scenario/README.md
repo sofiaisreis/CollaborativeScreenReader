@@ -1,1 +1,0 @@
-# creepytracker-application-template
