@@ -63,6 +63,16 @@
     <Compile Include="Assets\Scripts\ColliderObj.cs" />
     <Compile Include="Assets\Scripts\FollowMouse.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Hands.cs" />
+    <Compile Include="Assets\Scripts\StalkerMaster.cs" />
+    <Compile Include="Assets\Scripts\SurfaceCalib.cs" />
+    <Compile Include="Assets\Scripts\SurfaceRequest.cs" />
+    <Compile Include="Assets\Scripts\SurfaceRequestListener.cs" />
+    <Compile Include="Assets\Scripts\TableStalker.cs" />
+    <Compile Include="Assets\Scripts\TableUser.cs" />
+    <Compile Include="Assets\Scripts\TrackerClient.cs" />
+    <Compile Include="Assets\Scripts\UdpListener.cs" />
+    <None Include="Assets\Resources\isMaterials.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/TESE/GitHub/CollaborativeScreenReader/SquaresAndCircles/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
@@ -633,6 +643,12 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.3f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{B215D301-C886-8B5B-0C06-1DD7E5C31295}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

@@ -29,7 +29,7 @@ public class ColliderObj : MonoBehaviour
 
         var objTag = collisionInfo.gameObject.tag;
         var nameObject = collisionInfo.collider.name;
-        Debug.Log("We hit a " + objTag + " named " + collisionInfo.collider.name);
+        //Debug.Log("We hit a " + objTag + " named " + collisionInfo.collider.name);
         //Debug.Log(collisionInfo.collider.name); //Name of the Object On which we Collided or .tag
 
         if (!tapToProcess) { 
@@ -37,18 +37,18 @@ public class ColliderObj : MonoBehaviour
             {
                 //myAudioSource.clip = quadrado;
                 myAudioSource.PlayOneShot(quadrado);
-                Debug.Log("REPRODUZI SOM QUADRADO");
+                //Debug.Log("REPRODUZI SOM QUADRADO");
                 rend.material.color = new Color(0, 0, 255);
-                Debug.Log("onCollisionEnter SQUARE");
+                //Debug.Log("onCollisionEnter SQUARE");
                 //enterSquare = true;
             }
             else if (objTag == "circle")
             {
                 //myAudioSource.clip = circulo;
                 myAudioSource.PlayOneShot(circulo);
-                Debug.Log("TocaSOM");
+                //Debug.Log("TocaSOM");
                 rend.material.color = new Color(0, 255, 0);
-                Debug.Log("onCollisionEnter CIRCLE");
+                //Debug.Log("onCollisionEnter CIRCLE");
                 //enterCircle = true;
             }
         }
@@ -72,18 +72,18 @@ public class ColliderObj : MonoBehaviour
             {
                 //myAudioSource.clip = quadrado;
                 myAudioSource.PlayOneShot(quadrado);
-                Debug.Log("REPRODUZI SOM QUADRADO");
+                //Debug.Log("REPRODUZI SOM QUADRADO");
                 rend.material.color = new Color(0, 0, 255);
-                Debug.Log("onCollisionEnter SQUARE");
+                //Debug.Log("onCollisionEnter SQUARE");
                 //enterSquare = true;
             }
             else if (objTag == "circle")
             {
                 //myAudioSource.clip = circulo;
                 myAudioSource.PlayOneShot(circulo);
-                Debug.Log("TocaSOM");
+                //Debug.Log("TocaSOM");
                 rend.material.color = new Color(0, 255, 0);
-                Debug.Log("onCollisionEnter CIRCLE");
+                //Debug.Log("onCollisionEnter CIRCLE");
                 //enterCircle = true;
             }
 
@@ -116,8 +116,8 @@ public class ColliderObj : MonoBehaviour
 
         */
         myAudioSource.Stop();
-        Debug.Log("Parou, parou, PaROU SoM!");
-        Debug.Log("We EXIT " + collisionInfo.collider.name);
+       // Debug.Log("Parou, parou, PaROU SoM!");
+        //Debug.Log("We EXIT " + collisionInfo.collider.name);
 
         if (isBeingDragged) {
             myAudioSource.PlayOneShot(exitObjM);

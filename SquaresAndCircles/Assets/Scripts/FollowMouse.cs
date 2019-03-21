@@ -3,8 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+// DOUBLE TAP E DRAG FUNCIONAN
+// TAP NEM SEMPRE
+// TAPS SEPARADAS EM OBJETOS CONCORRENTES NAO ENTRA EM COLISION
+
 public class FollowMouse : MonoBehaviour
 {
+    //public GameObject TouchInput;
     public float distance = 1.0f;
     public bool useInitalCameraDistance = false;
     private float actualDistance;
@@ -14,9 +19,9 @@ public class FollowMouse : MonoBehaviour
     private Vector3 lastTapPosition;
     private bool possibleDoubleTap = false;
     private int touchType = -1;
-    /* 0 - Tap; 
-     * 1 - Double Tap; 
-     * 2 - Drag*/
+    /* 1 - Tap; 
+     * 2 - Double Tap; 
+     * 3 - Drag*/
 
     // Use this for initialization
     void Start()
@@ -31,106 +36,132 @@ public class FollowMouse : MonoBehaviour
         {
             actualDistance = distance;
         }
-        print("lastTapTime:" + lastTapTime + " and pos: " + lastTapPosition);
+        //print("lastTapTime:" + lastTapTime + " and pos: " + lastTapPosition);
+
+       /* for (int i = 0; i < 3; i++)
+        {
+            Instantiate(gameObject, new Vector3(i*1,0,4), Quaternion.identity);
+        }*/
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            timestart = DateTime.Now;
-            positionstart = Input.mousePosition;
-            touchType = -1;
-        }
 
-        if (Input.GetMouseButton(0) || Input.touchCount > 0)
-        {
-            // Debug.Log(transform.position);
-            TimeSpan difTime = DateTime.Now - timestart;
-            float difDist = (Input.mousePosition - positionstart).magnitude;
-
-            if (touchType == -1)
-            {
-                if (difTime.TotalMilliseconds >= 250 || difDist >= 10)
-                {
-                    print("Eh um DRAG");
-                    GetComponent<ColliderObj>().isBeingDragged = true;
-                    print(GetComponent<ColliderObj>().isBeingDragged);
-                    touchType = 2;
-                }
-            }
-
-            if (touchType == 2)
-            {
-                Drag();
-            }
-        }
         
-        //printing timestamp
-        //Debug.Log(DateTime.Now.ToString("yyyyMMddHHmmssffff"));
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.touchCount > 0)
         {
-            TimeSpan difTime = DateTime.Now - timestart;
-            float difDist = (Input.mousePosition - positionstart).magnitude;
-            //print("DifTime: " + difTime.TotalMilliseconds + " DifPos: " + difDist);
-            GetComponent<ColliderObj>().isBeingDragged = false;
-            if(difTime.TotalMilliseconds < 250 && difDist < 10)
+            //print("In: " + (Input.GetTouch(0).position).magnitude);
+            // O fingerId mostra o numero de dedos a moverem/na mesa
+            //Debug.Log("Touch Struct: " + touch.position.magnitude);
+            //Vector3 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
+
+            Touch touchStruct = Input.touches[0];
+            Touch touch = Input.GetTouch(0);
+            Vector3 touchPosition = touch.position;
+
+            //Buttondown
+
+            if (touch.phase == TouchPhase.Began)
             {
-                //print("Eh um TAP");
-                //touchType = 1;
+                timestart = DateTime.Now;
+                positionstart = touchPosition;
+                //Instantiate(TouchInput, positionstart, Quaternion.identity);
+                //Debug.Log("Identity is: " + Quaternion.identity);
+                touchType = -1;
+            }
 
-                if (possibleDoubleTap)
-                {
-                    TimeSpan difLastNowTime = timestart - lastTapTime;
-                    float difLastNowPosition = (positionstart - lastTapPosition).magnitude;
+        //Input.GetMouseButton(0) || //Estah ou sempre a mover ou selecionado parado 
+            if (touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved || Input.touchCount > 0)
+            {
+                touch = Input.GetTouch(0);
 
-                    if (difLastNowTime.TotalMilliseconds < 249 && difLastNowPosition < 15)
+                // Debug.Log(transform.position);
+                TimeSpan difTime = DateTime.Now - timestart;
+                float difDist = (touchPosition - positionstart).magnitude;
+
+             
+                    if (difTime.TotalMilliseconds >= 250 || difDist >= 10)
                     {
-                        print("Eh DOUBLE TAP");
-                        touchType = 2;
-                        possibleDoubleTap = false;
+                        GetComponent<ColliderObj>().isBeingDragged = true;
+                        //print(GetComponent<ColliderObj>().isBeingDragged);
+                        touchType = 3;
+                        print("DRAG: " + touchType);
+                }
+                   
+                    if (touchType == 3)
+                    {
+                        Vector3 begginDrag = touch.position;
+                        Drag();
+                    }
+            }
 
-                        DoubleTap();
+            //printing timestamp
+            //Debug.Log(DateTime.Now.ToString("yyyyMMddHHmmssffff"));
+
+            //Button up
+            if (touch.phase == TouchPhase.Ended)
+            {
+                TimeSpan difTime = DateTime.Now - timestart;
+                float difDist = (touchPosition - positionstart).magnitude;
+                //print("DifTime: " + difTime.TotalMilliseconds + " DifPos: " + difDist);
+                GetComponent<ColliderObj>().isBeingDragged = false;
+                if (difTime.TotalMilliseconds < 250 && difDist < 10)
+                {
+                    if (possibleDoubleTap)
+                    {
+                        TimeSpan difLastNowTime = timestart - lastTapTime;
+                        float difLastNowPosition = (positionstart - lastTapPosition).magnitude;
+
+                        if (difLastNowTime.TotalMilliseconds < 249 && difLastNowPosition < 15)
+                        {
+                            touchType = 2;
+                            print("DOUBLE TAP: " + touchType);
+                            possibleDoubleTap = false;
+
+                            DoubleTap();
+                        }
+                        else
+                        {
+                            possibleDoubleTap = true;
+                        }
                     }
                     else
                     {
                         possibleDoubleTap = true;
                     }
 
+                    lastTapTime = DateTime.Now;
+                    lastTapPosition = touchPosition;
                 }
-                else
+            }
+
+            // if(touch.phase != TouchPhase.Stationary)
+            //{
+            if (touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Stationary || Input.touchCount > 0)
+            {
+                if (possibleDoubleTap && touchType == -1 && (DateTime.Now - lastTapTime).TotalMilliseconds >= 249)
                 {
-                    possibleDoubleTap = true;
+                    touchType = 1;
+                    print("TAP: " + touchType);
+                    GetComponent<ColliderObj>().tapToProcess = true;
+
+                    Tap();
                 }
-
-                lastTapTime = DateTime.Now;
-                lastTapPosition = Input.mousePosition;
+                else if (touchType == 1)
+                {
+                    Tap();
+                }
             }
-        }
-
-        if(!Input.GetMouseButton(0))
-        {
-            if (possibleDoubleTap && touchType == -1 && (DateTime.Now - lastTapTime).TotalMilliseconds >= 249)
-            {
-                print("Eh um TAP");
-                touchType = 1;
-                GetComponent<ColliderObj>().tapToProcess = true;
-                
-                Tap();
-            }
-
-            else if (touchType == 1)
-            {
-                Tap();
-            }
+        //Debug.Log("touch type: " + touchType);
         }
     }
 
     private void Drag()
     {
-        moveTheMiniCube(Input.mousePosition);
+        moveTheMiniCube(Input.GetTouch(0).position);
     }
 
     private void DoubleTap()
@@ -148,8 +179,8 @@ public class FollowMouse : MonoBehaviour
 
     private void moveTheMiniCube(Vector3 position)
     {
-        Vector3 mousePosition = position;
-        mousePosition.z = actualDistance;
-        transform.position = Camera.main.ScreenToWorldPoint(mousePosition);
+        Vector3 touchPosition = position;
+        touchPosition.z = actualDistance;
+        transform.position = Camera.main.ScreenToWorldPoint(touchPosition);
     }
 }

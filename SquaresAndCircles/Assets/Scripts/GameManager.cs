@@ -8,10 +8,7 @@ public static class GameManager
     static int circles = 0;
     static int circInit = GameObject.FindGameObjectsWithTag("circle").Length;
     static int squaInit = GameObject.FindGameObjectsWithTag("square").Length;
-    static AudioClip quadradoM;
-    static AudioClip circuloM;
-    static AudioClip selectedM;
-    static AudioClip exitObjM;
+
     //Set the initial color (0f,0f,0f,0f)
 
     /*************************/
