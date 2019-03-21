@@ -60,10 +60,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\NewTouch.cs" />
     <Compile Include="Assets\Scripts\ColliderObj.cs" />
-    <Compile Include="Assets\Scripts\FollowMouse.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Hands.cs" />
+    <Compile Include="Assets\Scripts\MyHand.cs" />
+    <Compile Include="Assets\Scripts\MyTouch.cs" />
     <Compile Include="Assets\Scripts\StalkerMaster.cs" />
     <Compile Include="Assets\Scripts\SurfaceCalib.cs" />
     <Compile Include="Assets\Scripts\SurfaceRequest.cs" />

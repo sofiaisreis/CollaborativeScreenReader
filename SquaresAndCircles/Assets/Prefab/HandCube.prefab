@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 3462790539842953431}
   - component: {fileID: 3462790539842953430}
   - component: {fileID: 3462790539842953429}
-  - component: {fileID: 3462790539842953433}
+  - component: {fileID: 1760540636150990704}
+  - component: {fileID: 4964717616841401188}
   - component: {fileID: 3462790539842953432}
   - component: {fileID: 3462790539842953428}
   - component: {fileID: 3462790539842953434}
@@ -19,7 +20,7 @@ GameObject:
   - component: {fileID: 3462790539842953435}
   - component: {fileID: 3462790539842953437}
   m_Layer: 0
-  m_Name: TouchInput
+  m_Name: HandCube
   m_TagString: mousedown
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -84,7 +85,28 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &3462790539842953433
+--- !u!114 &1760540636150990704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3462790539842953427}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dbba71a2795fff46a5dcd4a4beb7a52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TouchInput: {fileID: 3462790539842953427}
+  distance: 1
+  useInitalCameraDistance: 0
+  actualDistance: 0
+  positionstart: {x: 0, y: 0, z: 0}
+  lastTapPosition: {x: 0, y: 0, z: 0}
+  possibleDoubleTap: 0
+  touchType: -1
+  isToDestroy: 0
+--- !u!114 &4964717616841401188
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,12 +115,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3462790539842953427}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afcd18efcf7e84843992e3e3ee7bb13a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b20ac13678667f48b827220df8d9352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TouchInput: {fileID: 3462790539842953427}
-  distance: 1
-  useInitalCameraDistance: 1
 --- !u!114 &3462790539842953432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,7 +165,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 36
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!82 &3462790539842953436
 AudioSource:
