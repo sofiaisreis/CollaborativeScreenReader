@@ -74,7 +74,6 @@ public class MyHand : MonoBehaviour
         }
         else
         {
-            SingleTap(position);
             possibleDoubleTap = true;
         }
         
