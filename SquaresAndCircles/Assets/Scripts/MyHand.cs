@@ -74,6 +74,7 @@ public class MyHand : MonoBehaviour
         }
         else
         {
+            SingleTap(position);
             possibleDoubleTap = true;
         }
         
@@ -89,6 +90,7 @@ public class MyHand : MonoBehaviour
 
     public void BeginDrag(Vector3 position)
     {
+        possibleDoubleTap = false;
         GetComponent<ColliderObj>().isBeingDragged = true;
         Drag(position);
         print("DRAG");
