@@ -6,8 +6,12 @@ public class NewTouch : MonoBehaviour
 {
 
     public GameObject TouchInput;
-    public GameObject Hand; //vou ter mais instancias
-    // Start is called before the first frame update
+    public GameObject Hand;
+    public GameObject Hand2;
+    public GameObject Hand3;
+    public GameObject Hand4;
+    public int numHands = 0;
+
     void Start()
     {
 
@@ -30,6 +34,28 @@ public class NewTouch : MonoBehaviour
                         touchGO.GetComponent<MyTouch>().touchID = touch.fingerId;
 
                         Hand.GetComponent<MyHand>().NewTouchStarts(touchGO);
+                        numHands=1;
+                    }
+                    else
+                    {
+                        GameObject touchGO = Instantiate(TouchInput, Vector3.zero, Quaternion.identity);
+                        touchGO.GetComponent<MyTouch>().touchID = touch.fingerId;
+
+                        if (numHands == 1) {
+
+                            Hand2.GetComponent<MyHand>().NewTouchStarts(touchGO);
+                        }
+                        else if (numHands == 2)
+                        {
+                            Hand3.GetComponent<MyHand>().NewTouchStarts(touchGO);
+                        }
+                        else if (numHands == 3)
+                        {
+                            Hand4.GetComponent<MyHand>().NewTouchStarts(touchGO);
+                        }
+
+                        numHands++;
+                        print("Mais que uma mao: " + numHands);
                     }
                     // É preciso escolher a mão livre mais próxima
                 }
