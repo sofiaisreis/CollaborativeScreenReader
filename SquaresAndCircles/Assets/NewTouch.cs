@@ -32,6 +32,8 @@ public class NewTouch : MonoBehaviour
                     {
                         GameObject touchGO = Instantiate(TouchInput, Vector3.zero, Quaternion.identity);
                         touchGO.GetComponent<MyTouch>().touchID = touch.fingerId;
+                        print("Touch Position: " + touch.position.magnitude);
+                        print("Cube Position: " + );
 
                         Hand.GetComponent<MyHand>().NewTouchStarts(touchGO);
                         numHands=1;
