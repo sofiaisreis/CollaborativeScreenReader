@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class SurfaceCalib : MonoBehaviour {
 
-    /*public Transform TL;
-    public Transform TR;
-    public Transform BL;
-    public Transform BR;*/
 
     private float width;
     private float height;
@@ -27,20 +23,18 @@ public class SurfaceCalib : MonoBehaviour {
             return height;
         }
     }
-
-    // Use this for initialization
+    
     void Start ()
     {
         
     }
 	
-	// Update is called once per frame
 	void Update ()
     {
 		
 	}
 
-    public void calibrate(SurfaceRectangle r)
+    public void Calibrate(SurfaceRectangle r)
     {
         // Position and Orientation
         Vector3 up = r.SurfaceTopLeft - r.SurfaceBottomLeft;

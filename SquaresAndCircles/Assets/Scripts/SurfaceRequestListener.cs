@@ -54,7 +54,7 @@ public class SurfaceRequestListener : MonoBehaviour
         if (_surface != null)
         {
             //gameObject.GetComponent<TrackerClient>().setSurface(_surface);
-            surfaceCalib.calibrate(_surface);
+            surfaceCalib.Calibrate(_surface);
             _surface = null;
         }
     }
