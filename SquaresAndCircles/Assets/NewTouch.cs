@@ -6,11 +6,12 @@ public class NewTouch : MonoBehaviour
 {
 
     public GameObject TouchInput;
-    public GameObject Hand;
+    public GameObject Hand1;
     public GameObject Hand2;
     public GameObject Hand3;
     public GameObject Hand4;
     public int numHands = 0;
+    public Transform touchPosition;
 
     void Start()
     {
@@ -24,44 +25,51 @@ public class NewTouch : MonoBehaviour
         {
             foreach (Touch touch in Input.touches)
             {
+                numHands++;
                 if (touch.phase == TouchPhase.Began)
                 {
 
                     //Suportar multiplos toques
-                    if (Hand.GetComponent<MyHand>().touch == null)
-                    {
-                        GameObject touchGO = Instantiate(TouchInput, Vector3.zero, Quaternion.identity);
-                        touchGO.GetComponent<MyTouch>().touchID = touch.fingerId;
-                        print("Touch Position: " + touch.position.magnitude);
-                        print("Cube Position: " + );
-
-                        Hand.GetComponent<MyHand>().NewTouchStarts(touchGO);
-                        numHands=1;
-                    }
-                    else
-                    {
-                        GameObject touchGO = Instantiate(TouchInput, Vector3.zero, Quaternion.identity);
-                        touchGO.GetComponent<MyTouch>().touchID = touch.fingerId;
-
-                        if (numHands == 1) {
-
-                            Hand2.GetComponent<MyHand>().NewTouchStarts(touchGO);
-                        }
-                        else if (numHands == 2)
+                        if (GetClosestMiniCube().GetComponent<MyHand>().touch == null)
                         {
-                            Hand3.GetComponent<MyHand>().NewTouchStarts(touchGO);
-                        }
-                        else if (numHands == 3)
-                        {
-                            Hand4.GetComponent<MyHand>().NewTouchStarts(touchGO);
-                        }
+                            GameObject touchGO = Instantiate(TouchInput, Vector3.zero, Quaternion.identity);
+                            touchGO.GetComponent<MyTouch>().touchID = touch.fingerId;
+                            print("Touch Position: " + touch.position.magnitude);
+                            print("Cube Position: " + GameObject.Find("Hand1").transform.position);
 
-                        numHands++;
-                        print("Mais que uma mao: " + numHands);
-                    }
-                    // É preciso escolher a mão livre mais próxima
+                            GetClosestMiniCube().GetComponent<MyHand>().NewTouchStarts(touchGO);
+
+                            Debug.Log("Objeto eh: " + GetClosestMiniCube());
+                        }
+                            numHands++;
                 }
             }
         }
+
+        if (numHands > 0)
+        {
+            print("User has " + numHands + " hand(s) touching the screen");
+        }
+    }
+
+    GameObject GetClosestMiniCube()
+    {
+        GameObject[] gameObjs;
+        gameObjs = GameObject.FindGameObjectsWithTag("handdown");
+        GameObject closest = null;
+        float minDist = Mathf.Infinity;
+        Vector3 currentPos = transform.position;
+        foreach (GameObject gameObj in gameObjs)
+        {
+            Vector3 diff = gameObj.transform.position - currentPos;
+            float currentDis = diff.sqrMagnitude;
+            if (currentDis < minDist)
+            {
+                closest = gameObj;
+                minDist = currentDis;
+            }
+        }
+        return closest;
+
     }
 }

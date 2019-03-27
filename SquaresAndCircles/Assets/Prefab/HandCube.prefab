@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 3462790539842953437}
   m_Layer: 0
   m_Name: HandCube
-  m_TagString: mousedown
+  m_TagString: handdown
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,15 +97,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dbba71a2795fff46a5dcd4a4beb7a52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hand: {fileID: 0}
   TouchInput: {fileID: 3462790539842953427}
-  distance: 1
-  useInitalCameraDistance: 0
-  actualDistance: 0
   positionstart: {x: 0, y: 0, z: 0}
-  lastTapPosition: {x: 0, y: 0, z: 0}
-  possibleDoubleTap: 0
-  touchType: -1
-  isToDestroy: 0
+  isDrag: 0
+  touchID: 0
 --- !u!114 &4964717616841401188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,6 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b20ac13678667f48b827220df8d9352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  touch: {fileID: 0}
 --- !u!114 &3462790539842953432
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -692,7 +692,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TouchInput: {fileID: 2606130624987835971, guid: 6384938b16122384ea8b1fae692bda87,
     type: 3}
-  Hand: {fileID: 1905842644}
+  Hand1: {fileID: 1905842644}
   Hand2: {fileID: 9567905}
   Hand3: {fileID: 319263066}
   Hand4: {fileID: 812192206}
@@ -1287,7 +1287,7 @@ PrefabInstance:
     - target: {fileID: 3462790539842953427, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}
       propertyPath: m_Name
-      value: HandCube
+      value: HandCube1
       objectReference: {fileID: 0}
     - target: {fileID: 3462790539842953431, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}
