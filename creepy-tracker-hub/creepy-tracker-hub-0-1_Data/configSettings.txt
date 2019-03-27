@@ -1,5 +1,5 @@
-%Config File created in 2017-06-20 17:05:04
-udp.listenport=5001
+%Config File created in 2019-03-27 17:04:29
+udp.listenport=9001
 udp.broadcastport=5002
 udp.sensor.listener=5007
 udp.sendinterval=50
