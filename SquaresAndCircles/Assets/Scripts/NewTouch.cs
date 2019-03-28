@@ -35,7 +35,7 @@ public class NewTouch : MonoBehaviour
                             GameObject touchGO = Instantiate(TouchInput, Vector3.zero, Quaternion.identity);
                             touchGO.GetComponent<MyTouch>().touchID = touch.fingerId;
                             print("Touch Position: " + touch.position.magnitude);
-                            print("Cube Position: " + GameObject.Find("Hand1").transform.position);
+                            //print("Hand Position: " + GameObject.FindObjectsOfType(GetClosestMiniCube()).transform.position);
 
                             GetClosestMiniCube().GetComponent<MyHand>().NewTouchStarts(touchGO);
 
@@ -70,6 +70,5 @@ public class NewTouch : MonoBehaviour
             }
         }
         return closest;
-
     }
 }

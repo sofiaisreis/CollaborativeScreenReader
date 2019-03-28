@@ -11,8 +11,14 @@ public class MyTouch : MonoBehaviour
     public DateTime timestart;
     public Vector3 positionstart;
     public bool isDrag = false;
-    public int touchID; 
+    public int touchID;
 
+    public GameObject stalkingGO1;
+    public GameObject stalkingGO2;
+    public Transform user1;
+    public Transform userProjection1;
+    public Transform user2;
+    public Transform userProjection2;
 
     void Start()
     {
@@ -94,6 +100,14 @@ public class MyTouch : MonoBehaviour
         float enter;
         if (table.Raycast(ray, out enter))
         {
+            Vector3 lh1, rh1, lh2, rh2;
+            Hands hands;
+            hands = user1.GetComponent<Hands>();
+            lh1 = hands.leftHand;
+            rh1 = hands.rightHand;
+            hands = user2.GetComponent<Hands>();
+            lh2 = hands.leftHand;
+            rh2 = hands.rightHand;
 
             return ray.GetPoint(enter);
         }

@@ -44,35 +44,10 @@ public static class GameManager
 
         if (tag == "square")
         {
-            /*  if (squareEnter)
-            {
-
-            }
-            /*
-            if (GetSquaAtual() > 0)
-            {
-                Debug.Log("Selected " + IncrementSquares() + " squares of total of " + GetSquaInit());
-            }
-            else if (GetSquaAtual() == 0)
-            {
-                Debug.Log("Selected " + IncrementSquares() + " square of total of " + GetSquaInit());
-            }*/
+           
         }
         else if (tag == "circle")
         {
-            /*if (circleEnter)
-            {
-
-            }
-                
-            /*if (GetCircAtual() > 0)
-            {
-                Debug.Log("Selected " + IncrementCircles() + " circles a total of " + GetCircInit());
-            }
-            else if (GetCircAtual() == 0)
-            {
-                Debug.Log("Selected " + IncrementCircles() + " circle a total of " + GetCircInit());
-            }*/
         }
     }
 
