@@ -62,17 +62,12 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ColliderObj.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Hands.cs" />
-    <Compile Include="Assets\Scripts\MyHand.cs" />
     <Compile Include="Assets\Scripts\MyTouch.cs" />
     <Compile Include="Assets\Scripts\NewTouch.cs" />
     <Compile Include="Assets\Scripts\SurfaceCalib.cs" />
     <Compile Include="Assets\Scripts\SurfaceRequest.cs" />
     <Compile Include="Assets\Scripts\SurfaceRequestListener.cs" />
-    <Compile Include="Assets\Scripts\TableStalker.cs" />
-    <Compile Include="Assets\Scripts\TableUser.cs" />
-    <Compile Include="Assets\Scripts\TrackerClient.cs" />
-    <Compile Include="Assets\Scripts\UdpListener.cs" />
+    <Compile Include="Assets\Scripts\UserTouch.cs" />
     <None Include="Assets\Resources\isMaterials.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/TESE/GitHub/CollaborativeScreenReader/SquaresAndCircles/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

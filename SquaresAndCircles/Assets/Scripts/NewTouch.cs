@@ -8,10 +8,10 @@ public class NewTouch : MonoBehaviour
     public GameObject TouchInput;
     public GameObject Hand1;
     public GameObject Hand2;
-    public GameObject Hand3;
-    public GameObject Hand4;
+    //public GameObject Hand3;
+    //public GameObject Hand4;
     public int numHands = 0;
-    public Transform touchPosition;
+    //public Transform touchPosition;
 
     void Start()
     {
@@ -30,26 +30,29 @@ public class NewTouch : MonoBehaviour
                 {
 
                     //Suportar multiplos toques
-                        if (GetClosestMiniCube().GetComponent<MyHand>().touch == null)
+                    MyTouch ourT = Hand1.GetComponent<UserTouch>().touch;
+                        if (ourT == null)
                         {
                             GameObject touchGO = Instantiate(TouchInput, Vector3.zero, Quaternion.identity);
                             touchGO.GetComponent<MyTouch>().touchID = touch.fingerId;
-                            print("Touch Position: " + touch.position.magnitude);
+                            //print("Touch Position: " + touch.position.magnitude);
                             //print("Hand Position: " + GameObject.FindObjectsOfType(GetClosestMiniCube()).transform.position);
 
-                            GetClosestMiniCube().GetComponent<MyHand>().NewTouchStarts(touchGO);
+                            Hand1.GetComponent<UserTouch>().NewTouchStarts(touchGO);
 
-                            Debug.Log("Objeto eh: " + GetClosestMiniCube());
-                        }
+                            //Debug.Log("Objeto eh: " + GetClosestMiniCube());
                             numHands++;
+                        }
+                     //o toque ja existe
+                    else
+                    {
+                        GameObject touchGO = Instantiate(TouchInput, Vector3.zero, Quaternion.identity);
+                        touchGO.GetComponent<MyTouch>().touchID = touch.fingerId;
+                        
+                    }   
                 }
             }
-        }
-
-        if (numHands > 0)
-        {
-            print("User has " + numHands + " hand(s) touching the screen");
-        }
+        }  
     }
 
     GameObject GetClosestMiniCube()

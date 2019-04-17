@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 3462790539842953431}
   - component: {fileID: 3462790539842953430}
   - component: {fileID: 3462790539842953429}
-  - component: {fileID: 1760540636150990704}
-  - component: {fileID: 4964717616841401188}
   - component: {fileID: 3462790539842953432}
+  - component: {fileID: 4279992100563308375}
   - component: {fileID: 3462790539842953428}
   - component: {fileID: 3462790539842953434}
   - component: {fileID: 3462790539842953436}
@@ -85,36 +84,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1760540636150990704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3462790539842953427}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dbba71a2795fff46a5dcd4a4beb7a52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hand: {fileID: 0}
-  TouchInput: {fileID: 3462790539842953427}
-  positionstart: {x: 0, y: 0, z: 0}
-  isDrag: 0
-  touchID: 0
---- !u!114 &4964717616841401188
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3462790539842953427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b20ac13678667f48b827220df8d9352, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  touch: {fileID: 0}
 --- !u!114 &3462790539842953432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +104,19 @@ MonoBehaviour:
   tapToProcess: 0
   isBeingDragged: 0
   collidingObject: {fileID: 0}
+--- !u!114 &4279992100563308375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3462790539842953427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b20ac13678667f48b827220df8d9352, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touch: {fileID: 0}
 --- !u!65 &3462790539842953428
 BoxCollider:
   m_ObjectHideFlags: 0

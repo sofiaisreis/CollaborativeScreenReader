@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class MyHand : MonoBehaviour
+//it's like hands. Old MyHand
+public class UserTouch : MonoBehaviour
 {
     public MyTouch touch;
     
@@ -34,7 +35,7 @@ public class MyHand : MonoBehaviour
     public void NewTouchStarts(GameObject touchStart)
     {
         touch = touchStart.GetComponent<MyTouch>(); //Ponteiro para a classe MyTouch
-        touch.hand = this;
+        touch.mihand = this; //O MyTouch vai saber que esta mao agora eh dele
 
     }
 
@@ -49,6 +50,7 @@ public class MyHand : MonoBehaviour
         if (GetComponent<ColliderObj>().collidingObject != null)
         {
             GetComponent<ColliderObj>().SelectObject();
+            //print("Entrei no double tap");
         }
     }
 
