@@ -7,6 +7,7 @@ Direct3D:
     VRAM:     2111 MB
     Driver:   25.20.100.6373
 Begin MonoManager ReloadAssembly
+<<<<<<< HEAD
 Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.dll (this message is harmless)
 Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.dll into Unity Child Domain
 Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
@@ -21,6 +22,22 @@ Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creep
 Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
+=======
+Platform assembly: D:\TESE\GitHub\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\TESE\GitHub\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\TESE\GitHub\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading D:\TESE\GitHub\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: D:\TESE\GitHub\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\TESE\GitHub\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\TESE\GitHub\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\TESE\GitHub\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\TESE\GitHub\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\TESE\GitHub\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.031 seconds
+Platform assembly: D:\TESE\GitHub\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\TESE\GitHub\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+>>>>>>> 286f66b261a0b2f06b799a37ad1bd99acffe2812
 <RI> Initializing input.
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
@@ -192,7 +209,11 @@ desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
+<<<<<<< HEAD
 UnloadTime: 1.732200 ms
+=======
+UnloadTime: 1.592844 ms
+>>>>>>> 286f66b261a0b2f06b799a37ad1bd99acffe2812
 [UDP Broadcast] Sending at port: 53804
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
@@ -279,5 +300,10 @@ New stream from TAVARES
 (Filename:  Line: 54)
 
 Setting up 2 worker threads for Enlighten.
+<<<<<<< HEAD
   Thread -> id: 1988 -> priority: 1 
   Thread -> id: 17cc -> priority: 1 
+=======
+  Thread -> id: 3e1c -> priority: 1 
+  Thread -> id: 1968 -> priority: 1 
+>>>>>>> 286f66b261a0b2f06b799a37ad1bd99acffe2812

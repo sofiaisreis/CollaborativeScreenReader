@@ -67,6 +67,8 @@
     <Compile Include="Assets\Scripts\SurfaceCalib.cs" />
     <Compile Include="Assets\Scripts\SurfaceRequest.cs" />
     <Compile Include="Assets\Scripts\SurfaceRequestListener.cs" />
+    <Compile Include="Assets\Scripts\User.cs" />
+    <Compile Include="Assets\Scripts\UserHand.cs" />
     <Compile Include="Assets\Scripts\UserTouch.cs" />
     <None Include="Assets\Resources\isMaterials.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">

@@ -33,12 +33,12 @@ public class ColliderObj : MonoBehaviour
             if (objTag == "square")
             {
                 myAudioSource.PlayOneShot(quadrado);
-                rend.material.color = new Color(0, 0, 255);
+                //rend.material.color = new Color(0, 0, 255);
             }
             else if (objTag == "circle")
             {
                 myAudioSource.PlayOneShot(circulo);
-                rend.material.color = new Color(0, 255, 0);
+                //rend.material.color = new Color(0, 255, 0);
             }
         }
         GameManager.HandleObjectEnter(objTag);
@@ -59,12 +59,12 @@ public class ColliderObj : MonoBehaviour
             if (objTag == "square")
             {
                 myAudioSource.PlayOneShot(quadrado);
-                rend.material.color = new Color(0, 0, 255);
+                //rend.material.color = new Color(0, 0, 255);
             }
             else if (objTag == "circle")
             {
                 myAudioSource.PlayOneShot(circulo);
-                rend.material.color = new Color(0, 255, 0);
+                //rend.material.color = new Color(0, 255, 0);
             }
             tapToProcess = false;
         }

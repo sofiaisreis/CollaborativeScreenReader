@@ -35,7 +35,7 @@ public class UserTouch : MonoBehaviour
     public void NewTouchStarts(GameObject touchStart)
     {
         touch = touchStart.GetComponent<MyTouch>(); //Ponteiro para a classe MyTouch
-        touch.mihand = this; //O MyTouch vai saber que esta mao agora eh dele
+        touch.hand = this; //O MyTouch vai saber que esta mao agora eh dele
 
     }
 
