@@ -1,30 +1,57 @@
 Initialize engine version: 5.6.1f1 (2860b30f0b54)
 GfxDevice: creating device client; threaded=1
 Direct3D:
-    Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce 840M (ID=0x1341)
-    Vendor:   NVIDIA
-    VRAM:     2020 MB
-    Driver:   23.21.13.8857
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) HD Graphics 630 (ID=0x5912)
+    Vendor:   Intel
+    VRAM:     2111 MB
+    Driver:   25.20.100.6373
 Begin MonoManager ReloadAssembly
-Platform assembly: D:\TESE\GitHub\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading D:\TESE\GitHub\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: D:\TESE\GitHub\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading D:\TESE\GitHub\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: D:\TESE\GitHub\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading D:\TESE\GitHub\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: D:\TESE\GitHub\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading D:\TESE\GitHub\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: D:\TESE\GitHub\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading D:\TESE\GitHub\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.362 seconds
-Platform assembly: D:\TESE\GitHub\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: D:\TESE\GitHub\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\System.dll (this message is harmless)
-desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.176 seconds
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 <RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+Initialize engine version: 5.6.1f1 (2860b30f0b54)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) HD Graphics 630 (ID=0x5912)
+    Vendor:   Intel
+    VRAM:     2111 MB
+    Driver:   25.20.100.6373
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.017 seconds
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 3.803486 ms
+UnloadTime: 0.921000 ms
 [UDP Broadcast] Sending at port: 53804
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
@@ -42,5 +69,215 @@ Accepting clients at port 9001
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1b70 -> priority: 1 
-  Thread -> id: 1c64 -> priority: 1 
+  Thread -> id: db4 -> priority: 1 
+  Thread -> id: e04 -> priority: 1 
+Initialize engine version: 5.6.1f1 (2860b30f0b54)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) HD Graphics 630 (ID=0x5912)
+    Vendor:   Intel
+    VRAM:     2111 MB
+    Driver:   25.20.100.6373
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.016 seconds
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.755100 ms
+[UDP Broadcast] Sending at port: 53804
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[UDPListener] Receiving in port: 9001
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[UDP Broadcast] Sending at port: 5002
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Accepting clients at port 9001
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 1e40 -> priority: 1 
+  Thread -> id: a18 -> priority: 1 
+Initialize engine version: 5.6.1f1 (2860b30f0b54)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) HD Graphics 630 (ID=0x5912)
+    Vendor:   Intel
+    VRAM:     2111 MB
+    Driver:   25.20.100.6373
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.017 seconds
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.244200 ms
+[UDP Broadcast] Sending at port: 53804
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[UDPListener] Receiving in port: 9001
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[UDP Broadcast] Sending at port: 5002
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Accepting clients at port 9001
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 1df8 -> priority: 1 
+  Thread -> id: 21c8 -> priority: 1 
+Initialize engine version: 5.6.1f1 (2860b30f0b54)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) HD Graphics 630 (ID=0x5912)
+    Vendor:   Intel
+    VRAM:     2111 MB
+    Driver:   25.20.100.6373
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.017 seconds
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\vimmi\Desktop\CreepyTrackerToolkit-0-1\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 1.732200 ms
+[UDP Broadcast] Sending at port: 53804
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[UDPListener] Receiving in port: 9001
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[UDP Broadcast] Sending at port: 5002
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Accepting clients at port 9001
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+(0.0, 0.5, -0.1)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+(0.0, 0.5, -0.2)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+(0.0, 0.5, -0.1)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+(0.0, 0.5, -0.2)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+  at System.Double.Parse (System.String s, NumberStyles style, IFormatProvider provider) [0x00000] in <filename unknown>:0 
+  at System.Single.Parse (System.String s) [0x00000] in <filename unknown>:0 
+  at CommonUtils.convertRpcStringToVector3 (System.String v) [0x00000] in <filename unknown>:0 
+  at Skeleton..ctor (System.String body) [0x00000] in <filename unknown>:0 
+  at BodiesMessage..ctor (System.String bodies) [0x00000] in <filename unknown>:0 
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Cannot instantiate BodiesMessage: Unknown char: ?
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+New stream from XUXUBELEZA
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+New stream from TAVARES
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Argument is out of range.
+Parameter name: offset+size exceeds the size of buffer
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+New stream from TAVARES
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+<RI.Hid> Failed to create device file:
+ 20 The process cannot access the file because it is being used by another process.
+
+ 
+(Filename:  Line: 54)
+
+<RI.Hid> Failed to create device file:
+ 20 The process cannot access the file because it is being used by another process.
+
+ 
+(Filename:  Line: 54)
+
+<RI.Hid> Failed to create device file:
+ 20 The process cannot access the file because it is being used by another process.
+
+ 
+(Filename:  Line: 54)
+
+<RI.Hid> Failed to create device file:
+ 20 The process cannot access the file because it is being used by another process.
+
+ 
+(Filename:  Line: 54)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 1988 -> priority: 1 
+  Thread -> id: 17cc -> priority: 1 
