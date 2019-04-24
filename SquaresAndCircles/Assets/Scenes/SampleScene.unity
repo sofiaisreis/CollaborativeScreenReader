@@ -219,7 +219,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 077f681729f08264cbfad84337141ba0, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8268607306722751597, guid: b576413ea9e9c85408a01b42ff4a57e5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b576413ea9e9c85408a01b42ff4a57e5, type: 3}
 --- !u!4 &9567906 stripped
 Transform:
@@ -531,6 +532,7 @@ GameObject:
   - component: {fileID: 522154812}
   - component: {fileID: 522154811}
   - component: {fileID: 522154810}
+  - component: {fileID: 522154814}
   m_Layer: 0
   m_Name: User2
   m_TagString: Untagged
@@ -611,6 +613,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &522154814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 522154809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e1abe572c310b4898506f326262e56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userID: 0
+  userHands: {fileID: 0}
 --- !u!1001 &562730219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -837,6 +853,7 @@ GameObject:
   - component: {fileID: 662442361}
   - component: {fileID: 662442360}
   - component: {fileID: 662442359}
+  - component: {fileID: 662442363}
   m_Layer: 0
   m_Name: User1
   m_TagString: Untagged
@@ -917,6 +934,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &662442363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662442358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21e1abe572c310b4898506f326262e56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userID: 0
+  userHands: {fileID: 0}
 --- !u!1001 &684318279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1129,13 +1160,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2722fbe52e16d4b9fbd0f9ef86d403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  userID: 0
   TouchInput: {fileID: 2606130624987835971, guid: 6384938b16122384ea8b1fae692bda87,
     type: 3}
   Hand1: {fileID: 598936823}
   Hand2: {fileID: 1569652333}
-  userID: 0
-  numTouches: 0
-  trackTouch: 0
 --- !u!4 &756066670
 Transform:
   m_ObjectHideFlags: 0
@@ -1230,7 +1259,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d40f0eb654e5b474d814104cc77dd665, type: 2}
+  - {fileID: 2100000, guid: c29c5f7fcf4fec449b039ba0d645eede, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1571,7 +1600,8 @@ PrefabInstance:
       propertyPath: userProjection2
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8268607306722751597, guid: b576413ea9e9c85408a01b42ff4a57e5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b576413ea9e9c85408a01b42ff4a57e5, type: 3}
 --- !u!4 &1293948991 stripped
 Transform:
@@ -2153,6 +2183,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4964717616841401188, guid: b576413ea9e9c85408a01b42ff4a57e5, type: 3}
+    - {fileID: 8268607306722751597, guid: b576413ea9e9c85408a01b42ff4a57e5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b576413ea9e9c85408a01b42ff4a57e5, type: 3}
 --- !u!4 &1881834338 stripped
 Transform:
@@ -2274,7 +2305,8 @@ PrefabInstance:
       propertyPath: user2
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8268607306722751597, guid: b576413ea9e9c85408a01b42ff4a57e5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b576413ea9e9c85408a01b42ff4a57e5, type: 3}
 --- !u!4 &2116466719 stripped
 Transform:

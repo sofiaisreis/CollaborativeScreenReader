@@ -13,10 +13,7 @@ public class MyTouch : MonoBehaviour
     public Vector3 positionstart;
     public bool isDrag = false;
     public int touchID;
-
     static int maxTouches = 2;
-    static int[] fingerIDActive;
-    private TouchPhase[] touchPhase;
     static Vector2[] touchPos;
 
 
@@ -24,14 +21,9 @@ public class MyTouch : MonoBehaviour
     {
         timestart = DateTime.Now;
         touchPos = new Vector2[maxTouches];
-
         positionstart = GetTouchWorldPosition(touch);
         transform.position = positionstart;
         touchID = touch.fingerId;
-
-
-        touchPhase = new TouchPhase[maxTouches];
-        fingerIDActive = new int[maxTouches];
         isDrag = false;
     }
 
@@ -59,24 +51,6 @@ public class MyTouch : MonoBehaviour
         else
         {
             Vector3 touchPosition = GetTouchWorldPosition(touch);
-            /*var count = Input.touchCount;
-            for (int i = 0; i < count; i++)
-            {
-                Touch touch1 = Input.GetTouch(i);
-                var figID = touch.fingerId;
-
-                //cache touch data
-                touchPos[figID] = touch.position;
-                touchPhase[figID] = touch.phase;
-
-                //End finger marker
-                if (touchPhase[figID] == TouchPhase.Ended)
-                {
-                    fingerIDActive[figID] = 0;
-                }
-
-            }*/
-
 
             if (touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved)
             {
@@ -120,14 +94,12 @@ public class MyTouch : MonoBehaviour
     {
         Ray ray = Camera.main.ScreenPointToRay(touch.position);
         Transform tableTransform = GameObject.Find("Plane").transform;
-       // print("TableTransform: " + tableTransform);
         Plane table = new Plane(tableTransform.up, tableTransform.position);
         float enter;
         if (table.Raycast(ray, out enter))
         {
             return ray.GetPoint(enter);
         }
-        //print("Ray: " + Vector3.zero);
         return Vector3.zero;
        
     }

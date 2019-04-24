@@ -5,7 +5,6 @@ using UnityEngine;
 public class UserHand : MonoBehaviour
 {
     public UserTouch userTouch;
-
     public User userId;
 
 

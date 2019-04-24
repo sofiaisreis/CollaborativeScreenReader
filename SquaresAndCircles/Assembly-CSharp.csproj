@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\MyTouch.cs" />
     <Compile Include="Assets\Scripts\NewTouch.cs" />
+    <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\SurfaceCalib.cs" />
     <Compile Include="Assets\Scripts\SurfaceRequest.cs" />
     <Compile Include="Assets\Scripts\SurfaceRequestListener.cs" />

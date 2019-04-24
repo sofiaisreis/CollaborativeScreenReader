@@ -38,8 +38,7 @@ public class UserTouch : MonoBehaviour
         touch.hand = this; //O MyTouch vai saber que esta mao agora eh dele
 
     }
-
-
+    
     public void Drag(Vector3 position)
     {
         transform.position = position;
@@ -50,7 +49,6 @@ public class UserTouch : MonoBehaviour
         if (GetComponent<ColliderObj>().collidingObject != null)
         {
             GetComponent<ColliderObj>().SelectObject();
-            //print("Entrei no double tap");
         }
     }
 
@@ -77,7 +75,7 @@ public class UserTouch : MonoBehaviour
         {
             possibleDoubleTap = true;
         }
-        
+
         lastTapTime = DateTime.Now;
         lastTapPosition = position;
     }
@@ -100,5 +98,5 @@ public class UserTouch : MonoBehaviour
     {
         GetComponent<ColliderObj>().isBeingDragged = false;
     }
-
 }
+
