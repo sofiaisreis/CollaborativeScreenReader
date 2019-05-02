@@ -19,6 +19,7 @@ public class SurfaceRectangle
 
     public Vector3 Center { get { return (_bl + _tr) * 0.5f; } }
 
+
     public Quaternion Perpendicular
     {
         get
@@ -61,11 +62,10 @@ public class SurfaceRectangle
 
 public class SurfaceMessage
 {
-    // TO DO - fix Network.player.ipAddress
-    /*public static string createRequestMessage(int port)
+    public static string createRequestMessage(int port)
     {
-        return "SurfaceMessage" + MessageSeparators.L0 + Network.player.ipAddress + MessageSeparators.L1 + port;
-    }*/
+        return "SurfaceMessage" + MessageSeparators.L0 + IPManager.GetLocalIPAddress() + MessageSeparators.L1 + port;
+    }
 
     public static bool isMessage(string value)
     {
@@ -110,14 +110,12 @@ public class SurfaceRequest : MonoBehaviour
     }
 
     private void _request(string trackerPort, string receivePort)
-    {   // TO DO: fix createRequestMessage
-        /*
+    {
         UdpClient udp = new UdpClient();
         IPEndPoint remoteEndPoint = new IPEndPoint(IPAddress.Broadcast, int.Parse(trackerPort));
         string message = SurfaceMessage.createRequestMessage(int.Parse(receivePort));
         byte[] data = Encoding.UTF8.GetBytes(message);
         udp.Send(data, data.Length, remoteEndPoint);
-    */
     }
 
     void Update()

@@ -6,6 +6,7 @@ public class UserHand : MonoBehaviour
 {
     public UserTouch userTouch;
     public User userId;
+    public Vector3 userHand;
 
 
     // Start is called before the first frame update
