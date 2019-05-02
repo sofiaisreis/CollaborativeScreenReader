@@ -1,9 +1,8 @@
-%Config File created in 2019-04-23 19:46:06
+%Config File created in 2019-05-02 16:33:29
 udp.listenport=9001
-udp.broadcastport=5002
+udp.broadcastport=9005
 udp.sensor.listener=5007
 udp.sendinterval=50
 tracker.mergedistance=0.3
 tracker.confidencethreshold=10
-kinect.ZENNIE=ZENNIE;0.9797764;1.355589;2.584113;0.03153167;-0.9459721;0.07724797;0.3133294
 kinect.DESKTOP-PPJILDO=DESKTOP-PPJILDO;-0.4250895;1.545422;2.241291;-0.04883137;-0.9515098;0.1374718;-0.2708248

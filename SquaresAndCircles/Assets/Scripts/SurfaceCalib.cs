@@ -49,5 +49,10 @@ public class SurfaceCalib : MonoBehaviour {
 
         // Camera
         Camera.main.orthographicSize = (r.SurfaceTopLeft - r.SurfaceBottomLeft).magnitude * 0.5f;
+        // not only camera... EVERYTHING!
+        float scale = (r.SurfaceTopLeft - r.SurfaceBottomLeft).magnitude * 0.5f;
+        transform.localScale = new Vector3(scale, scale, scale);
+
+        print("calibrei");
     }
 }
