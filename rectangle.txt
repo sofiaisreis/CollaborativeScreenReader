@@ -1,0 +1,7 @@
+% 2019/04/23 19:57:14
+surface.name=Unknown Surface
+surface.kinect=DESKTOP-PPJILDO
+surface.bottom.left=-1.055152:-0.1872508:1.848
+surface.bottom.right=-0.3372728:-0.4670222:0.9450001
+surface.top.left=-0.5238244:-0.09348327:2.241351
+surface.top.right=0.194055:-0.3732546:1.338351

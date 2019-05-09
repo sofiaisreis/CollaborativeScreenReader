@@ -1,23 +1,21 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
 using UnityEngine;
-
-
-[RequireComponent(typeof(AudioSource))]
 
 public class ColliderObj : MonoBehaviour
 {
-   
-    public AudioSource myAudioSource;   //Drag a reference to the audio source which will play the music.
-    public AudioClip quadrado, circulo, selectedM, exitObjM;
-    //public float lowPitchRange = .95f;              //The lowest a sound effect will be randomly pitched.
-    //public float highPitchRange = 1.05f;            //The highest a sound effect will be randomly pitched.
+
     public bool tapToProcess = false;
     public bool isBeingDragged = false;
     public GameObject collidingObject = null;
+    public AudioRequest audioRequest;
 
     void Start()
     {
-        myAudioSource = GetComponent<AudioSource>();
-        myAudioSource.playOnAwake = false;
     }
 
     void OnCollisionEnter(Collision collisionInfo) {
@@ -28,11 +26,13 @@ public class ColliderObj : MonoBehaviour
         if (!tapToProcess) { 
             if (objTag == "square")
             {
-                myAudioSource.PlayOneShot(quadrado);
+                //myAudioSource.PlayOneShot(quadrado);
+                audioRequest.PlayRemoteAudio(-1,-1, transform.position);
             }
             else if (objTag == "circle")
             {
-                myAudioSource.PlayOneShot(circulo);
+                //myAudioSource.PlayOneShot(circulo);
+                audioRequest.PlayRemoteAudio(-1, -1, transform.position);
             }
         }
     }
@@ -46,11 +46,13 @@ public class ColliderObj : MonoBehaviour
         {
             if (objTag == "square")
             {
-                myAudioSource.PlayOneShot(quadrado);
+                //myAudioSource.PlayOneShot(quadrado);
+                audioRequest.PlayRemoteAudio(-1, -1, transform.position);
             }
             else if (objTag == "circle")
             {
-                myAudioSource.PlayOneShot(circulo);
+                //myAudioSource.PlayOneShot(circulo);
+                audioRequest.PlayRemoteAudio(-1, -1, transform.position);
             }
             tapToProcess = false;
         }
@@ -59,10 +61,13 @@ public class ColliderObj : MonoBehaviour
     void OnCollisionExit(Collision collisionInfo) {
 
         var objTag = collisionInfo.gameObject.tag;
-        myAudioSource.Stop();
+        //myAudioSource.Stop();
+        audioRequest.StopRemoteAudio(-1);
 
         if (isBeingDragged) {
-            myAudioSource.PlayOneShot(exitObjM);
+            //  myAudioSource.PlayOneShot(exitObjM);
+            audioRequest.PlayRemoteAudio(-1, -1, transform.position);
+
         }
 
         collidingObject = null;
@@ -70,10 +75,9 @@ public class ColliderObj : MonoBehaviour
 
     public void SelectObject()
     {
-        myAudioSource.PlayOneShot(selectedM);
+        //myAudioSource.PlayOneShot(selectedM);
+        audioRequest.PlayRemoteAudio(-1, -1, transform.position);
         Destroy(collidingObject);
         collidingObject = null;
     }
 }
-
-
