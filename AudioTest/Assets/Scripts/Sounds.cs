@@ -50,6 +50,28 @@ public class Sounds : MonoBehaviour
     {
         myAudioSource.PlayOneShot(F1_quadrado);
     }
-    
+
+    internal void ParseAndPlay(string stringToParse)
+    {
+        print("string_ " + stringToParse);
+        string[] ourStrings = stringToParse.Split(':');
+        if (ourStrings[0] == "Play")
+        {
+            // string message = "Play:" + 
+            // userID + ":" + numSom + ":" + relativePos1 + ":" + relativePos2;
+
+            int userID = int.Parse(ourStrings[1]);
+            int numSom = int.Parse(ourStrings[2]);
+            Vector3 relativePos1 = new Vector3(float.Parse(ourStrings[3]), float.Parse(ourStrings[4]), float.Parse(ourStrings[5]));
+            Vector3 relativePos2 = new Vector3(float.Parse(ourStrings[6]), float.Parse(ourStrings[7]), float.Parse(ourStrings[8]));
+
+            transform.position = relativePos1;
+            PlayFemale();
+        }
+        else if (ourStrings[0] == "Stop")
+        {
+            int userID = int.Parse(ourStrings[1]);
+        }
+    }
 }
 

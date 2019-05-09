@@ -52,12 +52,7 @@ public class UDPListener : MonoBehaviour
             
             if (stringToParse.Length != 1)
             {
-                print("string_ " + stringToParse);
-                //List<string> bstrings = new List<string>(stringToParse.Split(MessageSeparators.L1));
-                // bstrings.RemoveAt(0); // first statement is not a body
-                //foreach (string b in bstrings)
-                {
-                }
+                GetComponent<Sounds>().ParseAndPlay(stringToParse);
             }
         }
     }

@@ -32,7 +32,9 @@ public class AudioRequest : MonoBehaviour
         Vector3 relativePos1 = User1.worldToLocalMatrix.MultiplyPoint(posSom);
         Vector3 relativePos2 = User2.worldToLocalMatrix.MultiplyPoint(posSom);
 
-        string message = "Play:" + userID + ":" + numSom + ":" + relativePos1 + ":" + relativePos2;
+        string message = "Play:" + userID + ":" + numSom + ":"
+            + relativePos1.x + ":" + relativePos1.y + ":" + relativePos1.z + ":"
+            + relativePos2.x + ":" + relativePos2.y + ":" + relativePos2.z;
 
         // Envia!
         UDPBroadcast(message);
