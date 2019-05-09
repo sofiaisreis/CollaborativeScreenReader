@@ -17,7 +17,7 @@ Platform assembly: C:\Users\vimmi\Desktop\Sofia\CollaborativeScreenReader\creepy
 Loading C:\Users\vimmi\Desktop\Sofia\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\vimmi\Desktop\Sofia\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\vimmi\Desktop\Sofia\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.018 seconds
+- Completed reload, in  0.017 seconds
 Platform assembly: C:\Users\vimmi\Desktop\Sofia\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\vimmi\Desktop\Sofia\CollaborativeScreenReader\creepy-tracker-hub\creepy-tracker-hub-0-1_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
@@ -25,7 +25,7 @@ desktop: 1920x1080 59Hz; virtual: 1920x1080 at 0,0
 XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.468100 ms
+UnloadTime: 1.012700 ms
 [UDP Broadcast] Sending at port: 53804
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
@@ -42,75 +42,7 @@ Accepting clients at port 9001
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
+Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:-0.04883137:-0.9515098:0.1374718:-0.2708248/
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -120,94 +52,11 @@ Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0
  
 (Filename:  Line: 54)
 
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
+Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:-0.04883137:-0.9515098:0.1374718:-0.2708248/
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
+Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:-0.04883137:-0.9515098:0.1374718:-0.2708248/
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Sent reply with surface's data SurfaceMessage$Unknown Surface#0.233:0.833:0.13#0.351:0.806:1.335#-0.445:0.849:0.197#-0.326:0.821:1.402#$DESKTOP-PPJILDO:-0.4250895:1.545422:2.241291:0.04883135:0.9515099:-0.1374718:0.2708247/
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
-
-Setting up 2 worker threads for Enlighten.
-  Thread -> id: 2a8 -> priority: 1 
-  Thread -> id: 27c8 -> priority: 1 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.43667546, g: 0.48427135, b: 0.5645225, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667555, g: 0.48427123, b: 0.5645229, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -229,6 +229,11 @@ PrefabInstance:
       propertyPath: Port
       value: 7001
       objectReference: {fileID: 0}
+    - target: {fileID: 3462790539842953432, guid: b576413ea9e9c85408a01b42ff4a57e5,
+        type: 3}
+      propertyPath: audioRequest
+      value: 
+      objectReference: {fileID: 93999225}
     m_RemovedComponents:
     - {fileID: 8268607306722751597, guid: b576413ea9e9c85408a01b42ff4a57e5, type: 3}
     - {fileID: 6819712176098251808, guid: b576413ea9e9c85408a01b42ff4a57e5, type: 3}
@@ -2436,6 +2441,11 @@ PrefabInstance:
       propertyPath: MaxDistance
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3462790539842953432, guid: b576413ea9e9c85408a01b42ff4a57e5,
+        type: 3}
+      propertyPath: audioRequest
+      value: 
+      objectReference: {fileID: 93999225}
     m_RemovedComponents:
     - {fileID: 4964717616841401188, guid: b576413ea9e9c85408a01b42ff4a57e5, type: 3}
     - {fileID: 8268607306722751597, guid: b576413ea9e9c85408a01b42ff4a57e5, type: 3}
