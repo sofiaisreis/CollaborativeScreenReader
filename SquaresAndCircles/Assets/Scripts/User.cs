@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class User : MonoBehaviour
 {
-    public int userID;
-    public UserHand userHands;
+    public string humanID; // é ID do tracker
+    public UserHand hand1;
+    public UserHand hand2;
 
     // Start is called before the first frame update
     void Start()

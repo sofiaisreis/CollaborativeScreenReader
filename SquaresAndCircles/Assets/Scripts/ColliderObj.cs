@@ -13,9 +13,12 @@ public class ColliderObj : MonoBehaviour
     public bool isBeingDragged = false;
     public GameObject collidingObject = null;
     public AudioRequest audioRequest;
+    public AudioSource _audio;
+    public AudioClip F_quadrado;
 
     void Start()
     {
+        _audio = GetComponent<AudioSource>();
     }
 
     void OnCollisionEnter(Collision collisionInfo) {
@@ -27,12 +30,14 @@ public class ColliderObj : MonoBehaviour
             if (objTag == "square")
             {
                 //myAudioSource.PlayOneShot(quadrado);
+                _audio.PlayOneShot(F_quadrado);
                 audioRequest.PlayRemoteAudio(-1,-1, transform.position);
             }
             else if (objTag == "circle")
             {
                 //myAudioSource.PlayOneShot(circulo);
                 audioRequest.PlayRemoteAudio(-1, -1, transform.position);
+                _audio.PlayOneShot(F_quadrado);
             }
         }
     }

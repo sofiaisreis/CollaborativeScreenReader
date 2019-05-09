@@ -27,39 +27,60 @@ public class TrackerClient : MonoBehaviour
         Human human;
         //UserHand hands;
 
+        User u1 = user1.GetComponent<User>();
+        User u2 = user2.GetComponent<User>();
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            setUser(u1);
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            setUser(u2);
+        }
+        
         if (_humans.Count > 0)
         {
-            human = _humans.ElementAt(0).Value;
-            //user1.transform.position = human.body.Joints[BodyJointType.spineBase];
-            //hands = user1.GetComponent<UserHand>();
-            //hands.userHand
-            hand1.transform.position = human.body.Joints[BodyJointType.rightHandTip]; //suppose right TO DO
-            user1.transform.position = human.body.Joints[BodyJointType.head]; //suppose right TO DO
-            user1.transform.localPosition = new Vector3(user1.transform.localPosition.x, user1.transform.localPosition.y, 0);
-            user1.transform.LookAt(surfaceCenter);
-        }
-        else
-        {
-            //hands = user1.GetComponent<UserHand>();
-            //hand1.transform.position = new Vector3(float.PositiveInfinity, float.PositiveInfinity, float.PositiveInfinity);
-        }
-
-        if (_humans.Count > 1)
-        {
-            human = _humans.ElementAt(1).Value;
-            //user2.transform.position = human.body.Joints[BodyJointType.spineBase];
-            //hands = user2.GetComponent<UserHand>();
-            hand2.transform.position = human.body.Joints[BodyJointType.rightHandTip];
-            user2.transform.position = human.body.Joints[BodyJointType.head];
-        }
-        else
-        {
-            //hands = user2.GetComponent<UserHand>();
-            //hand2.transform.position = new Vector3(float.PositiveInfinity, float.PositiveInfinity, float.PositiveInfinity);
-        }
+            foreach (Human h in _humans.Values)
+            {
+                if(h.id == u1.humanID)
+                {
+                    updateUser(u1, h);
+                }
+                else if(h.id == u2.humanID)
+                {
+                    updateUser(u2, h);
+                }
+            }}
 
         // finally
         _cleanDeadHumans();
+    }
+
+    private void setUser(User u)
+    {
+        foreach (Human h in _humans.Values)
+        {
+            Vector3 head = h.body.Joints[BodyJointType.head];
+            Vector3 hand1 = h.body.Joints[BodyJointType.rightHand];
+            Vector3 hand2 = h.body.Joints[BodyJointType.leftHand];
+
+            if (hand1.y > head.y || hand2.y > head.y)
+            {
+                u.humanID = h.id;
+                break;
+            }
+        }
+    }
+
+    private void updateUser(User u, Human h)
+    {
+        u.hand1.transform.position = h.body.Joints[BodyJointType.rightHandTip]; //suppose right TO DO
+        //u.hand2.transform.position = h.body.Joints[BodyJointType.leftHandTip]; //suppose right TO DO
+        u.transform.position = h.body.Joints[BodyJointType.head]; //suppose right TO DO
+        u.transform.localPosition = new Vector3(u.transform.localPosition.x, u.transform.localPosition.y, 0);
+        u.transform.LookAt(surfaceCenter);
     }
 
     public void setNewFrame(Body[] bodies)
