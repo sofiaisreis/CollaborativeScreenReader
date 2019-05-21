@@ -16,9 +16,38 @@ public class ColliderObj : MonoBehaviour
     public AudioSource _audio;
     public AudioClip F_quadrado;
 
+    public TrackerClient whichUser;
+    public int userID;
+
+    /* CODE OF SOUNDS
+    * 1 - Female Square
+    * 2 - Male Square
+    * 
+    * 3 - Female Circle
+    * 4 - Male Circle
+    * 
+    * 5 - Female Triangle
+    * 6 - Male Triangle
+    *
+    * 7 - Select
+    * 8 - OnExit
+    */
+
+    /* CODE OF OBJECTS
+     * 1 - square
+     * 2 - circle
+     * 3 - triangle
+     * 4 - select
+     * 5 - exit
+     */
+
     void Start()
     {
-        _audio = GetComponent<AudioSource>();
+        //_audio = GetComponent<AudioSource>();
+    }
+
+    private void Update()
+    {
     }
 
     void OnCollisionEnter(Collision collisionInfo) {
@@ -29,15 +58,11 @@ public class ColliderObj : MonoBehaviour
         if (!tapToProcess) { 
             if (objTag == "square")
             {
-                //myAudioSource.PlayOneShot(quadrado);
-                _audio.PlayOneShot(F_quadrado);
-                audioRequest.PlayRemoteAudio(-1,-1, transform.position);
+                audioRequest.PlayRemoteAudio(-1, 1, 1, transform.position);
             }
             else if (objTag == "circle")
             {
-                //myAudioSource.PlayOneShot(circulo);
-                audioRequest.PlayRemoteAudio(-1, -1, transform.position);
-                _audio.PlayOneShot(F_quadrado);
+                audioRequest.PlayRemoteAudio(-1, 3, 2, transform.position);
             }
         }
     }
@@ -51,13 +76,11 @@ public class ColliderObj : MonoBehaviour
         {
             if (objTag == "square")
             {
-                //myAudioSource.PlayOneShot(quadrado);
-                audioRequest.PlayRemoteAudio(-1, -1, transform.position);
+                audioRequest.PlayRemoteAudio(-1, 1, 1, transform.position);
             }
             else if (objTag == "circle")
             {
-                //myAudioSource.PlayOneShot(circulo);
-                audioRequest.PlayRemoteAudio(-1, -1, transform.position);
+                audioRequest.PlayRemoteAudio(-1, 3, 2, transform.position);
             }
             tapToProcess = false;
         }
@@ -66,12 +89,10 @@ public class ColliderObj : MonoBehaviour
     void OnCollisionExit(Collision collisionInfo) {
 
         var objTag = collisionInfo.gameObject.tag;
-        //myAudioSource.Stop();
         audioRequest.StopRemoteAudio(-1);
 
         if (isBeingDragged) {
-            //  myAudioSource.PlayOneShot(exitObjM);
-            audioRequest.PlayRemoteAudio(-1, -1, transform.position);
+            audioRequest.PlayRemoteAudio(-1, 8, 5, transform.position);
 
         }
 
@@ -80,8 +101,7 @@ public class ColliderObj : MonoBehaviour
 
     public void SelectObject()
     {
-        //myAudioSource.PlayOneShot(selectedM);
-        audioRequest.PlayRemoteAudio(-1, -1, transform.position);
+        audioRequest.PlayRemoteAudio(-1, 7, 4, transform.position);
         Destroy(collidingObject);
         collidingObject = null;
     }
