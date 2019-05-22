@@ -12,6 +12,8 @@ public class TrackerClient : MonoBehaviour
 
     public GameObject hand1;
     public GameObject hand2;
+    public GameObject hand3;
+    public GameObject hand4;
     public GameObject user1;
     public GameObject user2;
     public Transform surfaceCenter;
@@ -64,9 +66,11 @@ public class TrackerClient : MonoBehaviour
         {
             Vector3 head = h.body.Joints[BodyJointType.head];
             Vector3 hand1 = h.body.Joints[BodyJointType.rightHand];
-            Vector3 hand2 = h.body.Joints[BodyJointType.leftHand];
+            Vector3 hand2 = h.body.Joints[BodyJointType.rightHand]; 
+            Vector3 hand3 = h.body.Joints[BodyJointType.leftHand];
+            Vector3 hand4 = h.body.Joints[BodyJointType.leftHand];
 
-            if (hand1.y > head.y || hand2.y > head.y)
+            if (hand1.y > head.y || hand2.y > head.y || hand3.y > head.y || hand4.y > head.y)
             {
                 u.humanID = h.id;
                 break;
@@ -77,6 +81,9 @@ public class TrackerClient : MonoBehaviour
     private void updateUser(User u, Human h)
     {
         u.hand1.transform.position = h.body.Joints[BodyJointType.rightHandTip]; //suppose right TO DO
+        u.hand2.transform.position = h.body.Joints[BodyJointType.rightHandTip]; //suppose right TO DO
+        u.hand3.transform.position = h.body.Joints[BodyJointType.leftHandTip]; //suppose right TO DO
+        u.hand4.transform.position = h.body.Joints[BodyJointType.leftHandTip]; //suppose right TO DO
         //u.hand2.transform.position = h.body.Joints[BodyJointType.leftHandTip]; //suppose right TO DO
         u.transform.position = h.body.Joints[BodyJointType.head]; //suppose right TO DO
         u.transform.localPosition = new Vector3(u.transform.localPosition.x, u.transform.localPosition.y, 0);
