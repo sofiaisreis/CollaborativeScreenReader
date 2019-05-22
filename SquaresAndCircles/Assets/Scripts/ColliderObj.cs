@@ -13,7 +13,6 @@ public class ColliderObj : MonoBehaviour
     public bool isBeingDragged = false;
     public GameObject collidingObject = null;
     public AudioRequest audioRequest;
-
     public TrackerClient whichUser;
     public int userID;
 
