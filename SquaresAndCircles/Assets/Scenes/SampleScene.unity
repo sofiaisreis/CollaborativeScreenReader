@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.43667546, g: 0.48427135, b: 0.5645225, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667555, g: 0.48427123, b: 0.5645229, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -690,9 +690,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   humanID: 
   hand1: {fileID: 1569652338}
-  hand2: {fileID: 0}
-  hand3: {fileID: 0}
-  hand4: {fileID: 0}
+  hand2: {fileID: 676111263}
 --- !u!1001 &562730219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1022,9 +1020,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   humanID: 
   hand1: {fileID: 598936828}
-  hand2: {fileID: 0}
-  hand3: {fileID: 0}
-  hand4: {fileID: 0}
+  hand2: {fileID: 1266410112}
 --- !u!81 &662442364
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2096,10 +2092,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a465d1f00538d4083e119948d6d49f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hand1: {fileID: 598936823}
-  hand2: {fileID: 1569652333}
-  hand3: {fileID: 1266410111}
-  hand4: {fileID: 676111262}
+  handRightU1: {fileID: 598936823}
+  handLeftU1: {fileID: 1266410111}
+  handRightU2: {fileID: 1569652333}
+  handLeftU2: {fileID: 676111262}
   user1: {fileID: 662442358}
   user2: {fileID: 522154809}
   surfaceCenter: {fileID: 1230793024}
