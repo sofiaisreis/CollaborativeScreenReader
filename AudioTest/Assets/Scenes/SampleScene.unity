@@ -488,8 +488,18 @@ MonoBehaviour:
   ding: {fileID: 8300000, guid: 827c34b61b011914cba5d74ed21366a8, type: 3}
   selected: {fileID: 8300000, guid: 33b99a48d7dfcd7409dff33eb9a894b7, type: 3}
   exitObj: {fileID: 8300000, guid: 03b698e67cb5f2949be1de14b855694d, type: 3}
+  F1_test: {fileID: 0}
   udpConnection: {fileID: 0}
   port: 7001
+  tocaQuadradoF: 0
+  tocaQuadradoM: 0
+  tocaCirculoF: 0
+  tocaCirculoM: 0
+  tocaTrianguloF: 0
+  tocaTrianguloM: 0
+  tocaSelected: 0
+  tocaExit: 0
+  antonio: 0
 --- !u!82 &1812368703
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1560,3 +1570,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Port: 7001
   _stringsToParse: []
+  F1_quadrado: {fileID: 8300000, guid: ea1f27a29e198ff41acaf157c0c0ba7c, type: 3}
