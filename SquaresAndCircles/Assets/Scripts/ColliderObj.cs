@@ -13,8 +13,7 @@ public class ColliderObj : MonoBehaviour
     public bool isBeingDragged = false;
     public GameObject collidingObject = null;
     public AudioRequest audioRequest;
-    public TrackerClient whichUser;
-    public int userID;
+    public User u;
 
     /* CODE OF SOUNDS
     * 1 - Female Square
@@ -55,11 +54,13 @@ public class ColliderObj : MonoBehaviour
         if (!tapToProcess) { 
             if (objTag == "square")
             {
-                audioRequest.PlayRemoteAudio(-1, 1, 1, transform.position);
+                //userIDstring = u.GetComponent<User>().humanID;
+                audioRequest.PlayRemoteAudio(u.humanID, 1, 1, transform.position);
+                print("ID OF USER: " + u.humanID);
             }
             else if (objTag == "circle")
             {
-                audioRequest.PlayRemoteAudio(-1, 3, 2, transform.position);
+                audioRequest.PlayRemoteAudio(u.humanID, 3, 2, transform.position);
             }
         }
     }
@@ -73,11 +74,11 @@ public class ColliderObj : MonoBehaviour
         {
             if (objTag == "square")
             {
-                audioRequest.PlayRemoteAudio(-1, 1, 1, transform.position);
+                audioRequest.PlayRemoteAudio(u.humanID, 1, 1, transform.position);
             }
             else if (objTag == "circle")
             {
-                audioRequest.PlayRemoteAudio(-1, 3, 2, transform.position);
+                audioRequest.PlayRemoteAudio(u.humanID, 3, 2, transform.position);
             }
             tapToProcess = false;
         }
@@ -89,7 +90,7 @@ public class ColliderObj : MonoBehaviour
         audioRequest.StopRemoteAudio(-1);
 
         if (isBeingDragged) {
-            audioRequest.PlayRemoteAudio(-1, 8, 5, transform.position);
+            audioRequest.PlayRemoteAudio(u.humanID, 8, 5, transform.position);
 
         }
 
@@ -98,7 +99,7 @@ public class ColliderObj : MonoBehaviour
 
     public void SelectObject()
     {
-        audioRequest.PlayRemoteAudio(-1, 7, 4, transform.position);
+        audioRequest.PlayRemoteAudio(u.humanID, 7, 4, transform.position);
         Destroy(collidingObject);
         collidingObject = null;
     }

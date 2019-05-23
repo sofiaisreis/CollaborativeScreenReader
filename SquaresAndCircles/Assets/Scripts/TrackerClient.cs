@@ -25,8 +25,7 @@ public class TrackerClient : MonoBehaviour
 
     void Update()
     {
-
-        Human human;
+        //Human human;
         //UserHand hands;
 
         User u1 = user1.GetComponent<User>();
@@ -81,9 +80,9 @@ public class TrackerClient : MonoBehaviour
 
     private void updateUser(User u, Human h)
     {
-        u.hand1.transform.position = h.body.Joints[BodyJointType.rightHandTip]; //suppose right TO DO
-        u.hand2.transform.position = h.body.Joints[BodyJointType.leftHandTip]; //suppose right TO DO
-        u.transform.position = h.body.Joints[BodyJointType.head]; //suppose right TO DO
+        u.hand1.transform.position = h.body.Joints[BodyJointType.rightHandTip];
+        u.hand2.transform.position = h.body.Joints[BodyJointType.leftHandTip];
+        u.transform.position = h.body.Joints[BodyJointType.head];
         u.transform.localPosition = new Vector3(u.transform.localPosition.x, u.transform.localPosition.y, 0);
         u.transform.LookAt(surfaceCenter);
     }

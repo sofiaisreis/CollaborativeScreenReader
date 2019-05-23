@@ -12,6 +12,8 @@ public class UserTouch : MonoBehaviour
     private Vector3 lastTapPosition;
     private bool possibleDoubleTap = false;
 
+    public UserHand hand;
+    //public UserHand uHand2;
 
     void Start()
     {

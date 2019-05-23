@@ -27,7 +27,7 @@ public class AudioRequest : MonoBehaviour
         UDPBroadcast(message);
     }
 
-    public void PlayRemoteAudio(int userID, int numSom, int objType, Vector3 posSom)
+    public void PlayRemoteAudio(string userID, int numSom, int objType, Vector3 posSom)
     {
         // Compoe Mensagem
         Vector3 relativePos1 = User1.worldToLocalMatrix.MultiplyPoint(posSom);

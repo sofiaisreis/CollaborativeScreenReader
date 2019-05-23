@@ -9,8 +9,8 @@ public class NewTouch : MonoBehaviour
     public GameObject Hand1;
     public GameObject Hand2;
     // for 2 more hands
-    public GameObject Hand3;
-    public GameObject Hand4;
+   /* public GameObject Hand3;
+    public GameObject Hand4;*/
 
     void Start()
     {
@@ -48,7 +48,7 @@ public class NewTouch : MonoBehaviour
                         //Vector3 hand4Pos = Hand4.transform.position;
                         Vector3 touchPos = touchGO.transform.position;
                         //print("Touch Position:" + touchPos);
-
+                        
                         // escolhe mao 1
                         if (Vector3.Distance(hand1Pos, touchPos) <= Vector3.Distance(hand2Pos, touchPos))
                         {

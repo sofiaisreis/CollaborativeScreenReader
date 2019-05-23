@@ -5,9 +5,9 @@ using UnityEngine;
 public class UserHand : MonoBehaviour
 {
     public UserTouch userTouch;
-    public User userId;
     public Vector3 userHand;
-
+    
+    public User theUser;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,6 @@ public class UserHand : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
     }
 
 }

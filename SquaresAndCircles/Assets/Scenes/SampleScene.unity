@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.43667546, g: 0.48427135, b: 0.5645225, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667555, g: 0.48427123, b: 0.5645229, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -234,9 +234,30 @@ PrefabInstance:
       propertyPath: audioRequest
       value: 
       objectReference: {fileID: 93999225}
+    - target: {fileID: 3462790539842953432, guid: b576413ea9e9c85408a01b42ff4a57e5,
+        type: 3}
+      propertyPath: u
+      value: 
+      objectReference: {fileID: 522154814}
+    - target: {fileID: 3462790539842953432, guid: b576413ea9e9c85408a01b42ff4a57e5,
+        type: 3}
+      propertyPath: isBeingDragged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462790539842953432, guid: b576413ea9e9c85408a01b42ff4a57e5,
+        type: 3}
+      propertyPath: tapToProcess
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4279992100563308375, guid: b576413ea9e9c85408a01b42ff4a57e5,
+        type: 3}
+      propertyPath: touch
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8268607306722751597, guid: b576413ea9e9c85408a01b42ff4a57e5, type: 3}
     - {fileID: 6819712176098251808, guid: b576413ea9e9c85408a01b42ff4a57e5, type: 3}
+    - {fileID: 3244307144999417042, guid: b576413ea9e9c85408a01b42ff4a57e5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b576413ea9e9c85408a01b42ff4a57e5, type: 3}
 --- !u!4 &9567906 stripped
 Transform:
@@ -615,8 +636,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userTouch: {fileID: 0}
-  userId: {fileID: 0}
   userHand: {x: 0, y: 0, z: 0}
+  theUser: {fileID: 0}
 --- !u!23 &522154811
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -691,6 +712,7 @@ MonoBehaviour:
   humanID: 
   hand1: {fileID: 1569652338}
   hand2: {fileID: 676111263}
+  theUser: {fileID: 0}
 --- !u!1001 &562730219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -909,8 +931,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userTouch: {fileID: 1905842651}
-  userId: {fileID: 0}
   userHand: {x: 0, y: 0, z: 0}
+  theUser: {fileID: 0}
 --- !u!1 &662442358
 GameObject:
   m_ObjectHideFlags: 0
@@ -945,8 +967,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userTouch: {fileID: 0}
-  userId: {fileID: 0}
   userHand: {x: 0, y: 0, z: 0}
+  theUser: {fileID: 0}
 --- !u!23 &662442360
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1021,6 +1043,7 @@ MonoBehaviour:
   humanID: 
   hand1: {fileID: 598936828}
   hand2: {fileID: 1266410112}
+  theUser: {fileID: 0}
 --- !u!81 &662442364
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1062,8 +1085,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userTouch: {fileID: 1835605305}
-  userId: {fileID: 0}
   userHand: {x: 0, y: 0, z: 0}
+  theUser: {fileID: 0}
 --- !u!135 &676111264
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1353,8 +1376,6 @@ MonoBehaviour:
     type: 3}
   Hand1: {fileID: 598936823}
   Hand2: {fileID: 1569652333}
-  Hand3: {fileID: 1266410111}
-  Hand4: {fileID: 676111262}
 --- !u!4 &756066670
 Transform:
   m_ObjectHideFlags: 0
@@ -1727,8 +1748,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userTouch: {fileID: 2003405634}
-  userId: {fileID: 0}
   userHand: {x: 0, y: 0, z: 0}
+  theUser: {fileID: 0}
 --- !u!135 &1266410113
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1816,7 +1837,7 @@ PrefabInstance:
     - target: {fileID: 3462790539842953427, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3462790539842953427, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}
@@ -2387,8 +2408,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userTouch: {fileID: 981745821}
-  userId: {fileID: 0}
   userHand: {x: 0, y: 0, z: 0}
+  theUser: {fileID: 0}
 --- !u!1001 &1630311283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2612,7 +2633,7 @@ PrefabInstance:
     - target: {fileID: 3244307144999417042, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1803881808282455161, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}
@@ -2644,6 +2665,16 @@ PrefabInstance:
       propertyPath: F_quadrado
       value: 
       objectReference: {fileID: 8300000, guid: b0173ea17f6541a448cfa4067e959993, type: 3}
+    - target: {fileID: 3462790539842953432, guid: b576413ea9e9c85408a01b42ff4a57e5,
+        type: 3}
+      propertyPath: u
+      value: 
+      objectReference: {fileID: 662442363}
+    - target: {fileID: 4279992100563308375, guid: b576413ea9e9c85408a01b42ff4a57e5,
+        type: 3}
+      propertyPath: touch
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3462790539842953434, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}
       propertyPath: m_IsKinematic
@@ -2698,6 +2729,7 @@ PrefabInstance:
     - {fileID: 4964717616841401188, guid: b576413ea9e9c85408a01b42ff4a57e5, type: 3}
     - {fileID: 8268607306722751597, guid: b576413ea9e9c85408a01b42ff4a57e5, type: 3}
     - {fileID: 6819712176098251808, guid: b576413ea9e9c85408a01b42ff4a57e5, type: 3}
+    - {fileID: 3244307144999417042, guid: b576413ea9e9c85408a01b42ff4a57e5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b576413ea9e9c85408a01b42ff4a57e5, type: 3}
 --- !u!4 &1881834338 stripped
 Transform:
@@ -2744,7 +2776,7 @@ PrefabInstance:
     - target: {fileID: 3462790539842953427, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3462790539842953427, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}
