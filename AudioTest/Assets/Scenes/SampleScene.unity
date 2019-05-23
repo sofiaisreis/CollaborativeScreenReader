@@ -476,7 +476,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7de35623422ff54d82dea55e3cd335f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myAudioSource: {fileID: 0}
   F1_quadrado: {fileID: 8300000, guid: ea1f27a29e198ff41acaf157c0c0ba7c, type: 3}
   F1_circulo: {fileID: 8300000, guid: b20be83946b5cf3418aa3a6ed1652889, type: 3}
   F1_triangulo: {fileID: 8300000, guid: cc8a788bf111dbd4c8a6a47bc3f1a4a0, type: 3}
