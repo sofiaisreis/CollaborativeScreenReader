@@ -15,7 +15,6 @@ public class ColliderObj : MonoBehaviour
     public AudioRequest audioRequest;
     public User u;
     public TrackerClient trackedUser;
-    public int idUser;
     public UserHand uHand;
 
     /* CODE OF SOUNDS
@@ -47,17 +46,6 @@ public class ColliderObj : MonoBehaviour
 
     private void Update()
     {
-        if ( idUser == 1)
-        {
-            idUser = u.user1;
-        }
-        else if ( idUser == 2)
-        {
-            idUser = u.user2;
-        }
-        else
-        {
-        }
 
         //print("IDDD USSEEEER: " + idUser);
         /*if(u.humanID == trackedUser.GetComponent<User>().)
@@ -76,6 +64,8 @@ public class ColliderObj : MonoBehaviour
     }
 
     void OnCollisionEnter(Collision collisionInfo) {
+
+        int idUser = GetComponent<UserTouch>().hand.theUser.userID;
 
         var objTag = collisionInfo.gameObject.tag;
         var nameObject = collisionInfo.collider.name;
@@ -98,6 +88,9 @@ public class ColliderObj : MonoBehaviour
 
     void OnCollisionStay(Collision collisionInfo)
     {
+
+        int idUser = GetComponent<UserTouch>().hand.theUser.userID;
+
         var objTag = collisionInfo.gameObject.tag;
         collidingObject = collisionInfo.gameObject;
 
@@ -115,7 +108,10 @@ public class ColliderObj : MonoBehaviour
         }
     }
 
-    void OnCollisionExit(Collision collisionInfo) {
+    void OnCollisionExit(Collision collisionInfo)
+    {
+
+        int idUser = GetComponent<UserTouch>().hand.theUser.userID;
 
         var objTag = collisionInfo.gameObject.tag;
         audioRequest.StopRemoteAudio(-1);
@@ -130,6 +126,9 @@ public class ColliderObj : MonoBehaviour
 
     public void SelectObject()
     {
+
+        int idUser = GetComponent<UserTouch>().hand.theUser.userID;
+
         audioRequest.PlayRemoteAudio(idUser, 7, 4, transform.position);
         Destroy(collidingObject);
         collidingObject = null;
