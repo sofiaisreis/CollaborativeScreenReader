@@ -1,16 +1,12 @@
 ﻿using UnityEngine;
 using System;
-using System.Collections.Generic;
-using System.Net;
-using System.Net.Sockets;
-using System.Linq;
-using System.Text;
+using System.Collections;
 
 [RequireComponent(typeof(AudioSource))]
 public class Sounds : MonoBehaviour
 {
-    public AudioSource myAudioSource;
-    public AudioClip 
+    private AudioSource myAudioSource;
+    public AudioClip
         F1_quadrado, F1_circulo, F1_triangulo,
         M1_quadrado, M1_circulo, M1_triangulo,
         M2_quadrado, M2_circulo, M2_triangulo,
@@ -18,6 +14,14 @@ public class Sounds : MonoBehaviour
 
     public UDPListener udpConnection;
     public int port;
+    public bool tocaQuadradoF = false;
+    public bool tocaQuadradoM= false;
+    public bool tocaCirculoF = false;
+    public bool tocaCirculoM = false;
+    public bool tocaTrianguloF = false;
+    public bool tocaTrianguloM = false;
+    public bool tocaSelected = false;
+    public bool tocaExit = false;
 
 
     // Start is called before the first frame update
@@ -27,84 +31,60 @@ public class Sounds : MonoBehaviour
         udpConnection = new UDPListener();
         //udpConnection.GetComponent<UDPListener>().Port = port;
         //udpConnection.GetComponent<UDPListener>().udpRestart();
-        
+
     }
 
     void Update()
     {
-
+        ChooseSound();
     }
 
-    public void ChooseSound(int user, int soundNum, int objType)
+    void ChooseSound()
     {
-        print("Vou escolher o Som: ");
-        switch (objType)
+        print("Estou no Choose Sound");
+        if (tocaQuadradoF)
         {
-            case 1: //quadrado
-                //if user eh o 1 userID = 1 Feminino
-                if (user == -1)
-                {
-                    myAudioSource.PlayOneShot(F1_quadrado);
-                }
-                else
-                {
-                    myAudioSource.PlayOneShot(M2_quadrado);
-                }
-                break;
-
-            case 2: //circulo
-                //if user eh o 1 userID = 1 Feminino
-                if (user == -1)
-                {
-                    myAudioSource.PlayOneShot(F1_circulo);
-                }
-                else
-                {
-                    myAudioSource.PlayOneShot(M2_circulo);
-                }
-                break;
-
-            case 3: //triangulo
-                //if user eh o 1 userID = 1 Feminino
-                if (user == -1)
-                {
-                    myAudioSource.PlayOneShot(F1_triangulo);
-                }
-                else
-                {
-                    myAudioSource.PlayOneShot(M2_triangulo);
-                }
-                break;
-
-            case 4: //select
-                myAudioSource.PlayOneShot(selected);
-                break;
-
-            case 5: //onExit
-                myAudioSource.PlayOneShot(exitObj);
-                break;
-
-            default:
-                print("You have no object type defined!");
-                break;
+            myAudioSource.PlayOneShot(F1_quadrado);
+            print("Tocou quadrado F. ");
+            tocaQuadradoF = false;
         }
-
+        if (tocaCirculoF)
+        {
+            myAudioSource.PlayOneShot(F1_circulo);
+            tocaCirculoF = false;
+        }
+        if (tocaTrianguloF)
+        {
+            myAudioSource.PlayOneShot(F1_triangulo);
+            tocaTrianguloF = false;
+        }
+        if (tocaQuadradoM)
+        {
+            myAudioSource.PlayOneShot(M2_quadrado);
+            print("Tocou quadrado M. ");
+            tocaQuadradoM = false;
+        }
+        if (tocaCirculoM)
+        {
+            myAudioSource.PlayOneShot(M2_circulo);
+            tocaCirculoM = false;
+        }
+        if (tocaTrianguloM)
+        {
+            myAudioSource.PlayOneShot(M2_triangulo);
+            tocaTrianguloM = false;
+        }
+        if (tocaSelected)
+        {
+            myAudioSource.PlayOneShot(selected);
+            tocaSelected = false;
+        }
+        if (tocaExit)
+        {
+            myAudioSource.PlayOneShot(exitObj);
+            tocaExit = false;
+        }        
     }
-
-
-    // Sounds
-
-    void PlayFemale()
-    {
-        
-        print("playing female");
-    }
-
-    void PlayMale()
-    {
-        myAudioSource.PlayOneShot(M2_quadrado);
-    }
-
     internal void ParseAndPlay(string stringToParse)
     {
         print("string_ " + stringToParse);
@@ -121,7 +101,52 @@ public class Sounds : MonoBehaviour
             Vector3 relativePos2 = new Vector3(float.Parse(ourStrings[7]), float.Parse(ourStrings[8]), float.Parse(ourStrings[9]));
 
             transform.position = relativePos1;
-            ChooseSound(userID, numSom, objType);
+
+            print("Vou escolher o Som e sou o user: " + userID);
+
+            switch (objType) {
+                case 1:
+                    if(userID == 1)
+                    {
+                        tocaQuadradoF = true;
+                    }
+                    else if(userID == 2)
+                    {
+                        tocaQuadradoM = true;
+                    }
+                    break;
+                case 2:
+                    if (userID == 1)
+                    {
+                        tocaCirculoF = true;
+                    }
+                    else if (userID == 2)
+                    {
+                        tocaCirculoM = true;
+                    }
+                    break;
+                case 3:
+                    if (userID == 1)
+                    {
+                        tocaTrianguloF = true;
+                    }
+                    else if (userID == 2)
+                    {
+                        tocaTrianguloM = true;
+                    }
+                    break;
+                case 4:
+                    tocaSelected = true;
+                    break;
+                case 5:
+                    tocaExit = true;
+                    break;
+                default:
+                    print("You have no object type defined!");
+                    break;
+            }
+            //print("UserID: " + userID + " NumSom: " + numSom + " ObjType: " + objType);        
+            print(tocaQuadradoF + " " +  tocaCirculoF + " " +  tocaTrianguloF + " " + tocaSelected + " " + tocaExit + " "  + "BOYS: " + tocaQuadradoM + " " + tocaCirculoM + " " + tocaTrianguloM);
         }
         else if (ourStrings[0] == "Stop")
         {
