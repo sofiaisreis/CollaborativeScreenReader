@@ -14,10 +14,14 @@ public class UDPListener : MonoBehaviour
     public IPEndPoint _anyIP;
     public UdpClient _udpClient = null;
     public List<string> _stringsToParse;
+    private AudioSource myAudioSource;
+    public AudioClip
+        F1_quadrado;
 
     void Start()
     {
         udpRestart();
+        myAudioSource = GetComponent<AudioSource>();
     }
 
     public void udpRestart()
@@ -46,6 +50,7 @@ public class UDPListener : MonoBehaviour
 
     void Update()
     {
+        //myAudioSource.PlayOneShot(F1_quadrado);
         while (_stringsToParse.Count > 0)
         {
             string stringToParse = _stringsToParse.First();
@@ -54,6 +59,7 @@ public class UDPListener : MonoBehaviour
             if (stringToParse.Length != 1)
             {
                 GetComponent<Sounds>().ParseAndPlay(stringToParse);
+                
             }
         }
     }
