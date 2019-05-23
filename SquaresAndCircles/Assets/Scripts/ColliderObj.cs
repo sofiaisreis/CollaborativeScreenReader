@@ -14,6 +14,9 @@ public class ColliderObj : MonoBehaviour
     public GameObject collidingObject = null;
     public AudioRequest audioRequest;
     public User u;
+    public TrackerClient trackedUser;
+    public int idUser;
+    public UserHand uHand;
 
     /* CODE OF SOUNDS
     * 1 - Female Square
@@ -44,23 +47,51 @@ public class ColliderObj : MonoBehaviour
 
     private void Update()
     {
+        if ( idUser == 1)
+        {
+            idUser = u.user1;
+        }
+        else if ( idUser == 2)
+        {
+            idUser = u.user2;
+        }
+        else
+        {
+        }
+
+        //print("IDDD USSEEEER: " + idUser);
+        /*if(u.humanID == trackedUser.GetComponent<User>().)
+        i
+        {
+            idUser = 1;
+        }
+        else if(u.humanID == Human.id)
+        {
+            idUser = 2;
+        }
+        else
+        {
+            print("ja foste...");
+        }*/
     }
 
     void OnCollisionEnter(Collision collisionInfo) {
 
         var objTag = collisionInfo.gameObject.tag;
         var nameObject = collisionInfo.collider.name;
+        print("ID DO USERINO: " + idUser);
 
+        //print("Collision of user: " + u);
         if (!tapToProcess) { 
             if (objTag == "square")
             {
                 //userIDstring = u.GetComponent<User>().humanID;
-                audioRequest.PlayRemoteAudio(u.humanID, 1, 1, transform.position);
-                print("ID OF USER: " + u.humanID);
+                audioRequest.PlayRemoteAudio(idUser, 1, 1, transform.position);
+                //print("ID OF USER: " + u.humanID);
             }
             else if (objTag == "circle")
             {
-                audioRequest.PlayRemoteAudio(u.humanID, 3, 2, transform.position);
+                audioRequest.PlayRemoteAudio(idUser, 3, 2, transform.position);
             }
         }
     }
@@ -74,11 +105,11 @@ public class ColliderObj : MonoBehaviour
         {
             if (objTag == "square")
             {
-                audioRequest.PlayRemoteAudio(u.humanID, 1, 1, transform.position);
+                audioRequest.PlayRemoteAudio(idUser, 1, 1, transform.position);
             }
             else if (objTag == "circle")
             {
-                audioRequest.PlayRemoteAudio(u.humanID, 3, 2, transform.position);
+                audioRequest.PlayRemoteAudio(idUser, 3, 2, transform.position);
             }
             tapToProcess = false;
         }
@@ -90,7 +121,7 @@ public class ColliderObj : MonoBehaviour
         audioRequest.StopRemoteAudio(-1);
 
         if (isBeingDragged) {
-            audioRequest.PlayRemoteAudio(u.humanID, 8, 5, transform.position);
+            audioRequest.PlayRemoteAudio(idUser, 8, 5, transform.position);
 
         }
 
@@ -99,7 +130,7 @@ public class ColliderObj : MonoBehaviour
 
     public void SelectObject()
     {
-        audioRequest.PlayRemoteAudio(u.humanID, 7, 4, transform.position);
+        audioRequest.PlayRemoteAudio(idUser, 7, 4, transform.position);
         Destroy(collidingObject);
         collidingObject = null;
     }

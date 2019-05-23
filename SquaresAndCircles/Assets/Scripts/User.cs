@@ -8,6 +8,8 @@ public class User : MonoBehaviour
     public UserHand hand1;
     public UserHand hand2;
     public TrackerClient theUser;
+    public int user1 = 1;
+    public int user2 = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +20,6 @@ public class User : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
     }
 }
 
