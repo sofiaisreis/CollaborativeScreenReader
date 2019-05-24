@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System;
-using System.Collections;
+
+
+/* APLICACAO PC ZENNIE */
 
 [RequireComponent(typeof(AudioSource))]
 public class Sounds : MonoBehaviour
@@ -14,15 +16,7 @@ public class Sounds : MonoBehaviour
 
     public UDPListener udpConnection;
     public int port;
-    public bool tocaQuadradoF = false;
-    public bool tocaQuadradoM= false;
-    public bool tocaCirculoF = false;
-    public bool tocaCirculoM = false;
-    public bool tocaTrianguloF = false;
-    public bool tocaTrianguloM = false;
-    public bool tocaSelected = false;
-    public bool tocaExit = false;
-    public bool antonio = false;
+    public string obj;
 
 
     // Start is called before the first frame update
@@ -30,79 +24,12 @@ public class Sounds : MonoBehaviour
     {
         myAudioSource = GetComponent<AudioSource>();
         udpConnection = new UDPListener();
-        //udpConnection.GetComponent<UDPListener>().Port = port;
-        //udpConnection.GetComponent<UDPListener>().udpRestart();
-
     }
 
     void Update()
     {
-        ChooseSound();
     }
     
-
-    void ChooseSound()
-    {
-        print("Estou no Choose Sound");
-        if (tocaQuadradoF)
-        {
-            myAudioSource.PlayOneShot(F1_quadrado);
-            tocaQuadradoF = false;
-            print("F");
-        }
-        if (tocaCirculoF)
-        {
-            myAudioSource.PlayOneShot(F1_circulo);
-            tocaCirculoF = false;
-
-        }
-        if (tocaTrianguloF)
-        {
-            myAudioSource.PlayOneShot(F1_triangulo);
-            tocaTrianguloF = false;
-
-        }
-        if (tocaQuadradoM)
-        {
-            myAudioSource.PlayOneShot(M2_quadrado);
-            tocaQuadradoM = false;
-            print("Tocou quadrado M. ");
-        }
-        if (tocaCirculoM)
-        {
-            myAudioSource.PlayOneShot(M2_circulo);
-            tocaCirculoM = false;
-        }
-        if (tocaTrianguloM)
-        {
-            myAudioSource.PlayOneShot(M2_triangulo);
-            tocaTrianguloM = false;
-        }
-        if (tocaSelected)
-        {
-            myAudioSource.PlayOneShot(selected);
-            tocaExit = false;
-            tocaQuadradoF = false;
-            tocaCirculoF = false;
-            tocaTrianguloF = false;
-            tocaQuadradoM = false;
-            tocaCirculoM = false;
-            tocaTrianguloM = false;
-        }
-        if (tocaExit)
-        {
-            myAudioSource.PlayOneShot(exitObj);
-            tocaExit = false;
-            tocaQuadradoF = false;
-            tocaCirculoF = false;
-            tocaTrianguloF = false;
-            tocaQuadradoM = false;
-            tocaCirculoM = false;
-            tocaTrianguloM = false;
-        }
-
-        tocaSelected = false;
-    }
     internal void ParseAndPlay(string stringToParse)
     {
 
@@ -121,53 +48,79 @@ public class Sounds : MonoBehaviour
             Vector3 relativePos2 = new Vector3(float.Parse(ourStrings[7]) / 1000.0f, float.Parse(ourStrings[8]) / 1000.0f, float.Parse(ourStrings[9]) / 1000.0f);
 
             transform.position = relativePos1;
-            //myAudioSource.PlayOneShot(ding);
-            print("Vou escolher o Som e sou o user: " + userID);
 
-            //myAudioSource.PlayOneShot(F1_quadrado);
-            switch (objType) {
+            print("Vou escolher o Som e sou o user: " + userID);
+            
+            switch (userID)
+            {
                 case 1:
-                    if(userID == 1)
+                    if (objType == 1)
                     {
-                        tocaQuadradoF = true;
+                        obj = "quadrado";
+                        myAudioSource.PlayOneShot(F1_quadrado);
+
                     }
-                    else if(userID == 2)
+                    else if (objType == 2)
                     {
-                        tocaQuadradoM = true;
+                        obj = "circulo";
+                        myAudioSource.PlayOneShot(F1_circulo);
+
                     }
-                    break;
-                case 2:
-                    if (userID == 1)
+                    else if (objType == 3)
                     {
-                        tocaCirculoF = true;
+                        obj = "triangulo";
+                        myAudioSource.PlayOneShot(F1_triangulo);
+
                     }
-                    else if (userID == 2)
+                    else if (objType == 4)
                     {
-                        tocaCirculoM = true;
+                        myAudioSource.PlayOneShot(selected);
                     }
-                    break;
-                case 3:
-                    if (userID == 1)
+                    else if (objType == 5)
                     {
-                        tocaTrianguloF = true;
-                    }
-                    else if (userID == 2)
-                    {
-                        tocaTrianguloM = true;
+                        myAudioSource.PlayOneShot(exitObj);
                     }
                     break;
-                case 4:
-                    tocaSelected = true;
-                    break;
-                case 5:
-                    tocaExit = true;
+
+                case 2:                    
+                    if (objType == 1)
+                    {
+                        obj = "quadrado";
+                        myAudioSource.PlayOneShot(M2_quadrado);
+
+                    }
+                    else if (objType == 2)
+                    {
+                        obj = "circulo";
+                        myAudioSource.PlayOneShot(M2_circulo);
+
+                    }
+                    else if (objType == 3)
+                    {
+                        obj = "triangulo";
+                        myAudioSource.PlayOneShot(M2_triangulo);
+
+                    }
+                    else if (objType == 4)
+                    {
+                        myAudioSource.PlayOneShot(selected);
+                    }
+                    else if (objType == 5)
+                    {
+                        myAudioSource.PlayOneShot(exitObj);
+                    }
                     break;
                 default:
-                    print("You have no object type defined!");
+                    print("You have no user defined!");
                     break;
             }
-            //print("UserID: " + userID + " NumSom: " + numSom + " ObjType: " + objType);        
-            print(tocaQuadradoF + " " +  tocaCirculoF + " " +  tocaTrianguloF + " " + tocaSelected + " " + tocaExit + " "  + "BOYS: " + tocaQuadradoM + " " + tocaCirculoM + " " + tocaTrianguloM);
+            if (objType == 1 || objType == 2 || objType == 3) {
+                print("User: " + userID + " tocou num: " + obj + ".");
+            }
+            else if (objType == 4)
+            {
+                print("User: " + userID + " selecionou objeto!");
+            }
         }
         else if (ourStrings[0] == "Stop")
         {
@@ -175,5 +128,5 @@ public class Sounds : MonoBehaviour
             int userID = int.Parse(ourStrings[1]);
         }
     }
-}
 
+}
