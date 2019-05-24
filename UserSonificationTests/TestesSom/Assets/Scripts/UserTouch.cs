@@ -12,7 +12,7 @@ public class UserTouch : MonoBehaviour
     private Vector3 lastTapPosition;
     private bool possibleDoubleTap = false;
 
-    public UserHand hand;
+    public UserHand hand1;
 
     void Start()
     {
@@ -36,7 +36,7 @@ public class UserTouch : MonoBehaviour
     public void NewTouchStarts(GameObject touchStart)
     {
         touch = touchStart.GetComponent<MyTouch>(); //Ponteiro para a classe MyTouch
-        touch.hand = this; //O MyTouch vai saber que esta mao agora eh dele
+        touch.hand1 = this; //O MyTouch vai saber que esta mao agora eh dele
 
     }
     

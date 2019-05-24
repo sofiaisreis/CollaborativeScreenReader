@@ -6,7 +6,7 @@ using System;
 public class MyTouch : MonoBehaviour
 {
     //um toque so tem uma mao
-    public UserTouch hand;
+    public UserTouch hand1;
     public GameObject TouchInput;
 
     public DateTime timestart;
@@ -45,7 +45,7 @@ public class MyTouch : MonoBehaviour
         if (!foundTouch)
         {
             print("cocó");
-            hand.touch = null;
+            hand1.touch = null;
             Destroy(gameObject);
         }
         else
@@ -62,12 +62,12 @@ public class MyTouch : MonoBehaviour
                     if (difTime.TotalMilliseconds >= 250 || difDist >= 10)
                     {
                         isDrag = true;
-                        hand.BeginDrag(touchPosition);
+                        hand1.BeginDrag(touchPosition);
                     }
                 }
                 else
                 {
-                    hand.Drag(touchPosition);
+                    hand1.Drag(touchPosition);
                 }
             }
 
@@ -78,13 +78,13 @@ public class MyTouch : MonoBehaviour
 
                 if (isDrag)
                 {
-                    hand.EndDrag(touchPosition);
+                    hand1.EndDrag(touchPosition);
                 }
                 else
                 {
-                    hand.Tap(touchPosition);
+                    hand1.Tap(touchPosition);
                 }
-                hand.touch = null;
+                hand1.touch = null;
                 Destroy(gameObject);
             }
         }
