@@ -72,7 +72,7 @@ public class ColliderObjTest : MonoBehaviour
         var objTag = collisionInfo.gameObject.tag;
 
         if (isBeingDragged) {
-            myAudioSource.PlayOneShot(exitObj);
+            //myAudioSource.PlayOneShot(exitObj);
 
         }
 
