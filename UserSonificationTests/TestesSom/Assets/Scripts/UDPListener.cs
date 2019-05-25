@@ -68,6 +68,7 @@ public class UDPListener : MonoBehaviour
                     if (b != NoneMessage) bodies.Add(new Body(b));
                 }
             }
+            gameObject.GetComponent<TrackerClient>().setNewFrame(bodies.ToArray());
         }
     }
 

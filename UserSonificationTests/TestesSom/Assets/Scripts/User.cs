@@ -5,6 +5,7 @@ using UnityEngine;
 public class User : MonoBehaviour
 {
     public UserHand hand1;
+    public TrackerClient theUser;
 
     // Start is called before the first frame update
     void Start()

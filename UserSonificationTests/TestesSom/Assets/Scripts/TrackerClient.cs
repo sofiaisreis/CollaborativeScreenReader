@@ -10,7 +10,7 @@ public class TrackerClient : MonoBehaviour
 
     private Dictionary<string, Human> _humans;
 
-    public GameObject hand;
+    public GameObject hand1;
     public GameObject user1;
     public Transform surfaceCenter;
 
@@ -22,7 +22,13 @@ public class TrackerClient : MonoBehaviour
     void Update()
     {
         User u1 = user1.GetComponent<User>();
-        
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            setUser(u1);
+            print("User set");
+        }
+
         if (_humans.Count > 0)
         {
             foreach (Human h in _humans.Values)
@@ -41,11 +47,11 @@ public class TrackerClient : MonoBehaviour
         foreach (Human h in _humans.Values)
         {
             Vector3 head = h.body.Joints[BodyJointType.head];
-            Vector3 hand = h.body.Joints[BodyJointType.rightHand];
+            Vector3 hand1 = h.body.Joints[BodyJointType.rightHand];
 
             // qualquer uma das maos da para calibrar
             // mas depois óh associa ah mao direita
-            if (hand.y > head.y )
+            if (hand1.y > head.y )
             {
                 print("human id is " + h.id);
                 break;
