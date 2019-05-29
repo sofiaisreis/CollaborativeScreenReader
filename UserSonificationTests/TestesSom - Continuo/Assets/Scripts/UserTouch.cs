@@ -47,10 +47,7 @@ public class UserTouch : MonoBehaviour
 
     public void DoubleTap()
     {
-        if (GetComponent<ColliderObjTest>().collidingObject != null)
-        {
-            GetComponent<ColliderObjTest>().SelectObject();
-        }
+       
     }
 
     public void Tap(Vector3 position)
