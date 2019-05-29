@@ -88,6 +88,7 @@ public class UserTouch : MonoBehaviour
     {
         possibleDoubleTap = false;
         GetComponent<ColliderObjTest>().isBeingDragged = true;
+        GetComponent<ColliderObjTest>().PlaySound();
         Drag(position);
         print("DRAG");
     }

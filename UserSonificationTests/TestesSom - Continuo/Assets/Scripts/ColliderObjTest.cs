@@ -25,12 +25,14 @@ public class ColliderObjTest : MonoBehaviour
 
     private void Update()
     {
-        
+        if (!isBeingDragged)
+        {
+            myAudioSource.Stop();
+        }
     }
 
     public void PlaySound()
     {
         myAudioSource.PlayOneShot(shortBeep);
     }
-
 }
