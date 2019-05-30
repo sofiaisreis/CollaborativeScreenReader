@@ -43,8 +43,6 @@ public class Sounds : MonoBehaviour
             Vector3 relativePos1 = new Vector3(float.Parse(ourStrings[4]) / 1000.0f, float.Parse(ourStrings[5]) / 1000.0f, float.Parse(ourStrings[6]) / 1000.0f);
             Vector3 relativePos2 = new Vector3(float.Parse(ourStrings[7]) / 1000.0f, float.Parse(ourStrings[8]) / 1000.0f, float.Parse(ourStrings[9]) / 1000.0f);
 
-            transform.position = user == 1? relativePos1 : user == 2? relativePos2 : Vector3.zero;
-
             print("Vou escolher o Som e sou o user: " + userID);
             
             switch (userID)
@@ -54,27 +52,32 @@ public class Sounds : MonoBehaviour
                     {
                         obj = "quadrado";
                         female.GetComponent<Female>().PlaySquare();
+                        female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
 
                     }
                     else if (objType == 2)
                     {
                         obj = "circulo";
                         female.GetComponent<Female>().PlayCircle();
+                        female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
 
                     }
                     else if (objType == 3)
                     {
                         obj = "triangulo";
                         female.GetComponent<Female>().PlayTriangle();
+                        female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
 
                     }
                     else if (objType == 4)
                     {
                         female.GetComponent<Female>().PlaySelectedF();
+                        female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                     }
                     else if (objType == 5)
                     {
                         female.GetComponent<Female>().PlayExitF();
+                        female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                     }
                     break;
 
@@ -83,27 +86,32 @@ public class Sounds : MonoBehaviour
                     {
                         obj = "quadrado";
                         male.GetComponent<Male>().PlaySquare();
+                        male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
 
                     }
                     else if (objType == 2)
                     {
                         obj = "circulo";
                         male.GetComponent<Male>().PlayCircle();
+                        male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
 
                     }
                     else if (objType == 3)
                     {
                         obj = "triangulo";
                         male.GetComponent<Male>().PlayTriangle();
+                        male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
 
                     }
                     else if (objType == 4)
                     {
                         male.GetComponent<Male>().PlaySelectedM();
+                        male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                     }
                     else if (objType == 5)
                     {
                         male.GetComponent<Male>().PlayExitM();
+                        male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                     }
                     break;
                 default:
