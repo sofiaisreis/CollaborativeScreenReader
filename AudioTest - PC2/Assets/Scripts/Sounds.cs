@@ -10,7 +10,7 @@ public class Sounds : MonoBehaviour
     public UDPListener udpConnection;
     public int port;
     public string obj;
-
+    public int user;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +20,10 @@ public class Sounds : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+            user = 1;
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+            user = 2;
     }
     
     internal void ParseAndPlay(string stringToParse)
@@ -39,7 +43,7 @@ public class Sounds : MonoBehaviour
             Vector3 relativePos1 = new Vector3(float.Parse(ourStrings[4]) / 1000.0f, float.Parse(ourStrings[5]) / 1000.0f, float.Parse(ourStrings[6]) / 1000.0f);
             Vector3 relativePos2 = new Vector3(float.Parse(ourStrings[7]) / 1000.0f, float.Parse(ourStrings[8]) / 1000.0f, float.Parse(ourStrings[9]) / 1000.0f);
 
-            transform.position = relativePos2;
+            transform.position = user == 1? relativePos1 : user == 2? relativePos2 : Vector3.zero;
 
             print("Vou escolher o Som e sou o user: " + userID);
             
@@ -121,4 +125,8 @@ public class Sounds : MonoBehaviour
         }
     }
 
+    private void OnGUI()
+    {
+        GUI.Label(new Rect(0, 0, 100, 100), "User " + user);
+    }
 }
