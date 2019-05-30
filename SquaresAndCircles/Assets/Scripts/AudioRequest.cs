@@ -10,6 +10,8 @@ public class AudioRequest : MonoBehaviour
     public Transform User1;
     public Transform User2;
 
+    public GameObject GO;
+
     private void Update()
     {
         /*if (Input.GetKeyDown(KeyCode.S))
@@ -32,6 +34,10 @@ public class AudioRequest : MonoBehaviour
         // Compoe Mensagem
         Vector3 relativePos1 = User1.worldToLocalMatrix.MultiplyPoint(posSom);
         Vector3 relativePos2 = User2.worldToLocalMatrix.MultiplyPoint(posSom);
+
+        GO.transform.parent = User1;
+        GO.transform.localPosition = relativePos1;
+        //GO.transform.parent = null;
 
         string message = "Play:" + userID + ":" + numSom + ":" + objType + ":"
             + (int)(relativePos1.x * 1000) + ":" + (int)(relativePos1.y * 1000) + ":" + (int)(relativePos1.z * 1000) + ":"

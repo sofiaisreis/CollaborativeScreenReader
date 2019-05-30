@@ -8,6 +8,11 @@ public class SurfaceCalib : MonoBehaviour {
     private float width;
     private float height;
 
+    public Transform border1;
+    public Transform border2;
+    public Transform border3;
+    public Transform border4;
+
     public float Width
     {
         get
@@ -54,5 +59,21 @@ public class SurfaceCalib : MonoBehaviour {
         transform.localScale = new Vector3(scale, scale, scale);
 
         print("calibrei");
+
+        // borders
+        border1.localPosition = new Vector3(-width / scale / 2.0f, 0, 0);
+        border2.localPosition = new Vector3(width / scale / 2.0f, 0, 0);
+        border3.localPosition = new Vector3(0, -height / scale / 2.0f, 0);
+        border4.localPosition = new Vector3(0, height / scale / 2.0f, 0);
+
+        border1.localScale = new Vector3(height / scale - 0.1f, 0.1f, 0.1f);
+        border2.localScale = new Vector3(height / scale - 0.1f, 0.1f, 0.1f);
+        border3.localScale = new Vector3(width / scale - 0.1f, 0.1f, 0.1f);
+        border4.localScale = new Vector3(width / scale - 0.1f, 0.1f, 0.1f);
+
+        border1.LookAt(center, Vector3.Cross(up, right));
+        border2.LookAt(center, Vector3.Cross(up, right));
+        border3.LookAt(center, Vector3.Cross(up, right));
+        border4.LookAt(center, Vector3.Cross(up, right));
     }
 }

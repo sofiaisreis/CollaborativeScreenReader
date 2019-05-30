@@ -17,6 +17,7 @@ public class TrackerClient : MonoBehaviour
     public GameObject user1;
     public GameObject user2;
     public Transform surfaceCenter;
+    public Transform borders;
 
     void Start()
     {
@@ -83,8 +84,28 @@ public class TrackerClient : MonoBehaviour
         u.hand1.transform.position = h.body.Joints[BodyJointType.rightHandTip];
         u.hand2.transform.position = h.body.Joints[BodyJointType.leftHandTip];
         u.transform.position = h.body.Joints[BodyJointType.head];
+        Vector3 spine = h.body.Joints[BodyJointType.spineBase];
+
+        // por cabeça ao nivel da mesa
+        u.transform.parent = surfaceCenter;
         u.transform.localPosition = new Vector3(u.transform.localPosition.x, u.transform.localPosition.y, 0);
-        u.transform.LookAt(surfaceCenter);
+        u.transform.parent = null;
+
+        // olhar em frente
+        float shortestD = float.PositiveInfinity;
+        Transform closestB = null;
+        for(int i = 0; i < borders.childCount; i++)
+        {
+            Transform b = borders.GetChild(i);
+            float d = Vector3.Distance(b.GetComponent<BoxCollider>().ClosestPoint(spine), spine);
+            if(d < shortestD)
+            {
+                shortestD = d;
+                closestB = b;
+            }
+        }
+        u.transform.LookAt(u.transform.position + closestB.forward, -surfaceCenter.forward);
+
     }
 
     public void setNewFrame(Body[] bodies)
