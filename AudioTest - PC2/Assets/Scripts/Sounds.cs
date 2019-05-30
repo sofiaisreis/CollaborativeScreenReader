@@ -28,8 +28,6 @@ public class Sounds : MonoBehaviour
     
     internal void ParseAndPlay(string stringToParse)
     {
-        print("Entrei no parse");
-
         print("string_ " + stringToParse);
         string[] ourStrings = stringToParse.Split(':');
         if (ourStrings[0] == "Play")
@@ -40,8 +38,8 @@ public class Sounds : MonoBehaviour
             int userID = int.Parse(ourStrings[1]);
             int numSom = int.Parse(ourStrings[2]);
             int objType = int.Parse(ourStrings[3]);
-            Vector3 relativePos1 = new Vector3(float.Parse(ourStrings[4]) / 1000.0f, float.Parse(ourStrings[5]) / 1000.0f, float.Parse(ourStrings[6]) / 1000.0f);
-            Vector3 relativePos2 = new Vector3(float.Parse(ourStrings[7]) / 1000.0f, float.Parse(ourStrings[8]) / 1000.0f, float.Parse(ourStrings[9]) / 1000.0f);
+            Vector3 relativePos1 = new Vector3(float.Parse(ourStrings[4]) / 1000.0f * 2.0f, float.Parse(ourStrings[5]) / 1000.0f * 2.0f, float.Parse(ourStrings[6]) / 1000.0f * 2.0f);
+            Vector3 relativePos2 = new Vector3(float.Parse(ourStrings[7]) / 1000.0f * 2.0f, float.Parse(ourStrings[8]) / 1000.0f * 2.0f, float.Parse(ourStrings[9]) / 1000.0f * 2.0f);
 
             print("Vou escolher o Som e sou o user: " + userID);
             

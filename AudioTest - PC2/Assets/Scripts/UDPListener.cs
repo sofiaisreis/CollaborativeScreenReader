@@ -52,7 +52,7 @@ public class UDPListener : MonoBehaviour
             string stringToParse = _stringsToParse.First();
             _stringsToParse.RemoveAt(0);
             
-            if (stringToParse.Length != 1)
+            //if (stringToParse.Length != 1)
             {
                 GetComponent<Sounds>().ParseAndPlay(stringToParse); 
             }
