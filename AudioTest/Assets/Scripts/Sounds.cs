@@ -3,17 +3,10 @@ using System;
 
 
 /* APLICACAO PC ZENNIE */
-
-[RequireComponent(typeof(AudioSource))]
 public class Sounds : MonoBehaviour
 {
-    private AudioSource myAudioSource;
-    public AudioClip
-        F1_quadrado, F1_circulo, F1_triangulo,
-        M1_quadrado, M1_circulo, M1_triangulo,
-        M2_quadrado, M2_circulo, M2_triangulo,
-        ding, selected, exitObj, F1_test;
-
+    public GameObject female;
+    public GameObject male;
     public UDPListener udpConnection;
     public int port;
     public string obj;
@@ -22,7 +15,6 @@ public class Sounds : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        myAudioSource = GetComponent<AudioSource>();
         udpConnection = new UDPListener();
     }
 
@@ -32,7 +24,7 @@ public class Sounds : MonoBehaviour
     
     internal void ParseAndPlay(string stringToParse)
     {
-
+        print("Entrei no parse");
 
         print("string_ " + stringToParse);
         string[] ourStrings = stringToParse.Split(':');
@@ -57,57 +49,57 @@ public class Sounds : MonoBehaviour
                     if (objType == 1)
                     {
                         obj = "quadrado";
-                        myAudioSource.PlayOneShot(F1_quadrado);
+                        female.GetComponent<Female>().PlaySquare();
 
                     }
                     else if (objType == 2)
                     {
                         obj = "circulo";
-                        myAudioSource.PlayOneShot(F1_circulo);
+                        female.GetComponent<Female>().PlayCircle();
 
                     }
                     else if (objType == 3)
                     {
                         obj = "triangulo";
-                        myAudioSource.PlayOneShot(F1_triangulo);
+                        female.GetComponent<Female>().PlayTriangle();
 
                     }
                     else if (objType == 4)
                     {
-                        myAudioSource.PlayOneShot(selected);
+                        female.GetComponent<Female>().PlaySelectedF();
                     }
                     else if (objType == 5)
                     {
-                        myAudioSource.PlayOneShot(exitObj);
+                        female.GetComponent<Female>().PlayExitF();
                     }
                     break;
 
-                case 2:                    
+                case 2:
                     if (objType == 1)
                     {
                         obj = "quadrado";
-                        myAudioSource.PlayOneShot(M2_quadrado);
+                        male.GetComponent<Male>().PlaySquare();
 
                     }
                     else if (objType == 2)
                     {
                         obj = "circulo";
-                        myAudioSource.PlayOneShot(M2_circulo);
+                        male.GetComponent<Male>().PlayCircle();
 
                     }
                     else if (objType == 3)
                     {
                         obj = "triangulo";
-                        myAudioSource.PlayOneShot(M2_triangulo);
+                        male.GetComponent<Male>().PlayTriangle();
 
                     }
                     else if (objType == 4)
                     {
-                        myAudioSource.PlayOneShot(selected);
+                        male.GetComponent<Male>().PlaySelectedM();
                     }
                     else if (objType == 5)
                     {
-                        myAudioSource.PlayOneShot(exitObj);
+                        male.GetComponent<Male>().PlayExitM();
                     }
                     break;
                 default:
