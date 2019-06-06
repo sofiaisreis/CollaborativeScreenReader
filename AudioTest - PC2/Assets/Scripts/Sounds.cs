@@ -8,6 +8,8 @@ public class Sounds : MonoBehaviour
     public GameObject female;
     public GameObject male;
     public UDPListener udpConnection;
+    public int feedbackValue = 0;
+    public string feedbackString = null;
     public int port;
     public string obj;
     public int user;
@@ -24,8 +26,26 @@ public class Sounds : MonoBehaviour
             user = 1;
         if (Input.GetKeyDown(KeyCode.Alpha2))
             user = 2;
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            //Feedback privado
+            feedbackValue = 1;
+            feedbackString = "Private";
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            //Feedback task-dependent
+            feedbackValue = 2;
+            feedbackString = "Task-Dependent";
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            //Feedback publico
+            feedbackValue = 3;
+            feedbackString = "Public";
+        }
     }
-    
+
     internal void ParseAndPlay(string stringToParse)
     {
         print("string_ " + stringToParse);
@@ -144,5 +164,6 @@ public class Sounds : MonoBehaviour
     private void OnGUI()
     {
         GUI.Label(new Rect(0, 0, 100, 100), "User " + user);
+        GUI.Label(new Rect(0, 15, 200, 100), "Feedback " + feedbackString);
     }
 }

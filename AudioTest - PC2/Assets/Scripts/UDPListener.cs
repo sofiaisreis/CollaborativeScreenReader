@@ -39,7 +39,6 @@ public class UDPListener : MonoBehaviour
     
     public void ReceiveCallback(IAsyncResult ar)
     {
-        print("estou no receive callback");
         Byte[] receiveBytes = _udpClient.EndReceive(ar, ref _anyIP);
         _stringsToParse.Add(Encoding.UTF8.GetString(receiveBytes));
         _udpClient.BeginReceive(new AsyncCallback(this.ReceiveCallback), null);
