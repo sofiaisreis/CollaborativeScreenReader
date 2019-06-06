@@ -48,9 +48,17 @@ public class UserTouch : MonoBehaviour
 
     public void DoubleTap()
     {
-        if (GetComponent<ColliderObj>().collidingObject != null)
+        if (GetComponent<ColliderObj>().lastCollidingObject != null)
         {
-            GetComponent<ColliderObj>().SelectObject();
+            if ((GetComponent<ColliderObj>().lastCollidingObject.tag == "square" && hand.theUser.shapeType == ShapeType.Square) ||
+                (GetComponent<ColliderObj>().lastCollidingObject.tag == "circle" && hand.theUser.shapeType == ShapeType.Circle))
+            {
+                GetComponent<ColliderObj>().SelectObject();
+            }
+            else
+            {
+                // som erro!
+            }
         }
     }
 

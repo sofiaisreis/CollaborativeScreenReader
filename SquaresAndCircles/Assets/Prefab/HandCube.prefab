@@ -11,11 +11,8 @@ GameObject:
   - component: {fileID: 3462790539842953431}
   - component: {fileID: 3462790539842953430}
   - component: {fileID: 3462790539842953429}
-  - component: {fileID: 6819712176098251808}
-  - component: {fileID: 7433571014784123137}
   - component: {fileID: 3462790539842953432}
   - component: {fileID: 4279992100563308375}
-  - component: {fileID: 3244307144999417042}
   - component: {fileID: 3462790539842953428}
   - component: {fileID: 3462790539842953434}
   m_Layer: 0
@@ -84,35 +81,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &6819712176098251808
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3462790539842953427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: da6be623f34609440bb30c9fb66852af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  requestInterval: 100
-  soundListenPort: 7001
-  localListenPort: 7007
---- !u!114 &7433571014784123137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3462790539842953427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5be9ca620a0740b498b8cc91f631c7e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  listenPort: 7007
-  surfaceCalib: {fileID: 0}
 --- !u!114 &3462790539842953432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,10 +93,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aaf2e263691f71445b4bf262761a45d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tapToProcess: 0
   isBeingDragged: 0
   collidingObject: {fileID: 0}
   audioRequest: {fileID: 0}
+  u: {fileID: 0}
+  trackedUser: {fileID: 0}
+  uHand: {fileID: 0}
+  lastCollidingObject: {fileID: 0}
 --- !u!114 &4279992100563308375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,20 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   touch: {fileID: 0}
---- !u!114 &3244307144999417042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3462790539842953427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21e1abe572c310b4898506f326262e56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  userID: 0
-  userHands: {fileID: 0}
+  hand: {fileID: 0}
 --- !u!65 &3462790539842953428
 BoxCollider:
   m_ObjectHideFlags: 0

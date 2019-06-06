@@ -9,13 +9,14 @@ using UnityEngine;
 public class ColliderObj : MonoBehaviour
 {
 
-    public bool tapToProcess = false;
     public bool isBeingDragged = false;
     public GameObject collidingObject = null;
     public AudioRequest audioRequest;
     public User u;
     public TrackerClient trackedUser;
     public UserHand uHand;
+
+    public GameObject lastCollidingObject = null;
 
     /* CODE OF SOUNDS
     * 1 - Female Square
@@ -68,11 +69,9 @@ public class ColliderObj : MonoBehaviour
         int idUser = GetComponent<UserTouch>().hand.theUser.userID;
 
         var objTag = collisionInfo.gameObject.tag;
-        var nameObject = collisionInfo.collider.name;
-        print("ID DO USERINO: " + idUser);
 
-        //print("Collision of user: " + u);
-        if (!tapToProcess) { 
+        if (collidingObject == null)
+        { 
             if (objTag == "square")
             {
                 //userIDstring = u.GetComponent<User>().humanID;
@@ -84,6 +83,8 @@ public class ColliderObj : MonoBehaviour
                 audioRequest.PlayRemoteAudio(idUser, 3, 2, transform.position);
             }
         }
+
+        lastCollidingObject = collidingObject = collisionInfo.gameObject;
     }
 
     void OnCollisionStay(Collision collisionInfo)
@@ -92,9 +93,8 @@ public class ColliderObj : MonoBehaviour
         int idUser = GetComponent<UserTouch>().hand.theUser.userID;
 
         var objTag = collisionInfo.gameObject.tag;
-        collidingObject = collisionInfo.gameObject;
 
-        if (tapToProcess)
+        if (collidingObject == null)
         {
             if (objTag == "square")
             {
@@ -104,8 +104,9 @@ public class ColliderObj : MonoBehaviour
             {
                 audioRequest.PlayRemoteAudio(idUser, 3, 2, transform.position);
             }
-            tapToProcess = false;
         }
+
+        lastCollidingObject = collidingObject = collisionInfo.gameObject;
     }
 
     void OnCollisionExit(Collision collisionInfo)
@@ -114,10 +115,10 @@ public class ColliderObj : MonoBehaviour
         int idUser = GetComponent<UserTouch>().hand.theUser.userID;
 
         var objTag = collisionInfo.gameObject.tag;
-        audioRequest.StopRemoteAudio(-1);
+        audioRequest.StopRemoteAudio(idUser);
 
         if (isBeingDragged) {
-            audioRequest.PlayRemoteAudio(idUser, 8, 5, transform.position);
+            //audioRequest.PlayRemoteAudio(idUser, 8, 5, transform.position);
 
         }
 
@@ -130,7 +131,7 @@ public class ColliderObj : MonoBehaviour
         int idUser = GetComponent<UserTouch>().hand.theUser.userID;
 
         audioRequest.PlayRemoteAudio(idUser, 7, 4, transform.position);
-        Destroy(collidingObject);
-        collidingObject = null;
+        Destroy(lastCollidingObject);
+        lastCollidingObject = collidingObject = null;
     }
 }

@@ -90,7 +90,7 @@ public class MyTouch : MonoBehaviour
         }
     }
 
-    public Vector3 GetTouchWorldPosition(Touch touch)
+    public static Vector3 GetTouchWorldPosition(Touch touch)
     {
         Ray ray = Camera.main.ScreenPointToRay(touch.position);
         Transform tableTransform = GameObject.Find("Plane").transform;
