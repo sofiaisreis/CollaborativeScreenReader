@@ -42,7 +42,7 @@ public class Sounds : MonoBehaviour
             Vector3 relativePos2 = new Vector3(float.Parse(ourStrings[7]) / 1000.0f * 2.0f, float.Parse(ourStrings[8]) / 1000.0f * 2.0f, float.Parse(ourStrings[9]) / 1000.0f * 2.0f);
 
             print("Vou escolher o Som e sou o user: " + userID);
-            
+
             switch (userID)
             {
                 case 1:
@@ -116,7 +116,8 @@ public class Sounds : MonoBehaviour
                     print("You have no user defined!");
                     break;
             }
-            if (objType == 1 || objType == 2 || objType == 3) {
+            if (objType == 1 || objType == 2 || objType == 3)
+            {
                 print("User: " + userID + " tocou num: " + obj + ".");
             }
             else if (objType == 4)
@@ -128,6 +129,15 @@ public class Sounds : MonoBehaviour
         {
             print("TOU STOPPES");
             int userID = int.Parse(ourStrings[1]);
+            switch (userID)
+            {
+                case 1:
+                    female.GetComponent<Female>().StopF();
+                    break;
+                case 2:
+                    male.GetComponent<Male>().StopM();
+                    break;
+            }
         }
     }
 

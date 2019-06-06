@@ -56,4 +56,9 @@ public class Female : MonoBehaviour
         gameObject.GetComponent<Renderer>().material.color = Color.magenta;
         myAudioSource.PlayOneShot(exitObj);
     }
+
+    public void StopF()
+    {
+        myAudioSource.Stop();
+    }
 }

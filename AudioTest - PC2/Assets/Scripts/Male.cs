@@ -57,4 +57,9 @@ public class Male : MonoBehaviour
         gameObject.GetComponent<Renderer>().material.color = Color.blue;
         myAudioSource.PlayOneShot(exitObj);
     }
+
+    public void StopM()
+    {
+        myAudioSource.Stop();
+    }
 }
