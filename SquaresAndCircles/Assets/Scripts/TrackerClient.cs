@@ -81,31 +81,34 @@ public class TrackerClient : MonoBehaviour
 
     private void updateUser(User u, Human h)
     {
-        u.hand1.transform.position = h.body.Joints[BodyJointType.rightHandTip];
-        u.hand2.transform.position = h.body.Joints[BodyJointType.leftHandTip];
-        u.transform.position = h.body.Joints[BodyJointType.head];
+        u.handRight.transform.position = h.body.Joints[BodyJointType.rightHandTip];
+        u.handLeft.transform.position = h.body.Joints[BodyJointType.leftHandTip];
+        //u.transform.position = h.body.Joints[BodyJointType.head];
         Vector3 spine = h.body.Joints[BodyJointType.spineBase];
-
-        // por cabeça ao nivel da mesa
-        u.transform.parent = surfaceCenter;
-        u.transform.localPosition = new Vector3(u.transform.localPosition.x, u.transform.localPosition.y, 0);
-        u.transform.parent = null;
 
         // olhar em frente
         float shortestD = float.PositiveInfinity;
+        Vector3 closestP = Vector3.zero;
         Transform closestB = null;
-        for(int i = 0; i < borders.childCount; i++)
+        for (int i = 0; i < borders.childCount; i++)
         {
             Transform b = borders.GetChild(i);
-            float d = Vector3.Distance(b.GetComponent<BoxCollider>().ClosestPoint(spine), spine);
-            if(d < shortestD)
+            Vector3 p = b.GetComponent<BoxCollider>().ClosestPoint(spine);
+            float d = Vector3.Distance(p, spine);
+            if (d < shortestD)
             {
                 shortestD = d;
                 closestB = b;
+                closestP = p;
             }
         }
         u.transform.LookAt(u.transform.position + closestB.forward, -surfaceCenter.forward);
 
+        // por cabeça ao nivel da mesa
+        //u.transform.parent = surfaceCenter;
+        //u.transform.localPosition = new Vector3(u.transform.localPosition.x, u.transform.localPosition.y, 0);
+        //u.transform.parent = null;
+        u.transform.position = closestP;
     }
 
     public void setNewFrame(Body[] bodies)

@@ -66,10 +66,10 @@ public class SurfaceCalib : MonoBehaviour {
         border3.localPosition = new Vector3(0, -height / scale / 2.0f, 0);
         border4.localPosition = new Vector3(0, height / scale / 2.0f, 0);
 
-        border1.localScale = new Vector3(height / scale - 0.1f, 0.1f, 0.1f);
-        border2.localScale = new Vector3(height / scale - 0.1f, 0.1f, 0.1f);
-        border3.localScale = new Vector3(width / scale - 0.1f, 0.1f, 0.1f);
-        border4.localScale = new Vector3(width / scale - 0.1f, 0.1f, 0.1f);
+        border1.localScale = new Vector3(height / scale - 0.01f, 0.01f, 0.01f);
+        border2.localScale = new Vector3(height / scale - 0.01f, 0.01f, 0.01f);
+        border3.localScale = new Vector3(width / scale - 0.01f, 0.01f, 0.01f);
+        border4.localScale = new Vector3(width / scale - 0.01f, 0.01f, 0.01f);
 
         border1.LookAt(center, Vector3.Cross(up, right));
         border2.LookAt(center, Vector3.Cross(up, right));
