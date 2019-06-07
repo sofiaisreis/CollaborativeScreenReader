@@ -31,8 +31,6 @@ public class UDPListener : MonoBehaviour
         _anyIP = new IPEndPoint(IPAddress.Any, Port);
         _udpClient = new UdpClient(_anyIP);
         _udpClient.BeginReceive(new AsyncCallback(this.ReceiveCallback), null);
-        //gameObject.GetComponent<Sounds>().ChooseSound();
-        //print("Estou no udp restart: ");
         Debug.Log("[UDPListener] Receiving in port: " + Port);
     }
 

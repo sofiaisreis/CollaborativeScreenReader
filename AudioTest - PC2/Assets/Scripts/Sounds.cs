@@ -8,10 +8,8 @@ public class Sounds : MonoBehaviour
     public GameObject female;
     public GameObject male;
     public UDPListener udpConnection;
-    public int feedbackValue = 0;
-    public string feedbackString = null;
+    public string feedbackType = null;
     public int port;
-    public string obj;
     public int user;
 
     // Start is called before the first frame update
@@ -29,20 +27,17 @@ public class Sounds : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z))
         {
             //Feedback privado
-            feedbackValue = 1;
-            feedbackString = "Private";
+            feedbackType = "Private";
         }
         if (Input.GetKeyDown(KeyCode.X))
         {
             //Feedback task-dependent
-            feedbackValue = 2;
-            feedbackString = "Task-Dependent";
+            feedbackType = "Task-Dependent";
         }
         if (Input.GetKeyDown(KeyCode.C))
         {
             //Feedback publico
-            feedbackValue = 3;
-            feedbackString = "Public";
+            feedbackType = "Public";
         }
     }
 
@@ -61,88 +56,82 @@ public class Sounds : MonoBehaviour
             Vector3 relativePos1 = new Vector3(float.Parse(ourStrings[4]) / 1000.0f * 2.0f, float.Parse(ourStrings[5]) / 1000.0f * 2.0f, float.Parse(ourStrings[6]) / 1000.0f * 2.0f);
             Vector3 relativePos2 = new Vector3(float.Parse(ourStrings[7]) / 1000.0f * 2.0f, float.Parse(ourStrings[8]) / 1000.0f * 2.0f, float.Parse(ourStrings[9]) / 1000.0f * 2.0f);
 
-            print("Vou escolher o Som e sou o user: " + userID);
 
-            switch (userID)
+
+            /*********** Feedback Private **********/
+            if (feedbackType == "Private")
             {
-                case 1:
-                    if (objType == 1)
-                    {
-                        obj = "quadrado";
-                        female.GetComponent<Female>().PlaySquare();
-                        female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
 
-                    }
-                    else if (objType == 2)
-                    {
-                        obj = "circulo";
-                        female.GetComponent<Female>().PlayCircle();
-                        female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-
-                    }
-                    else if (objType == 3)
-                    {
-                        obj = "triangulo";
-                        female.GetComponent<Female>().PlayTriangle();
-                        female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-
-                    }
-                    else if (objType == 4)
-                    {
-                        female.GetComponent<Female>().PlaySelectedF();
-                        female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-                    }
-                    else if (objType == 5)
-                    {
-                        female.GetComponent<Female>().PlayExitF();
-                        female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-                    }
-                    break;
-
-                case 2:
-                    if (objType == 1)
-                    {
-                        obj = "quadrado";
-                        male.GetComponent<Male>().PlaySquare();
-                        male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-
-                    }
-                    else if (objType == 2)
-                    {
-                        obj = "circulo";
-                        male.GetComponent<Male>().PlayCircle();
-                        male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-
-                    }
-                    else if (objType == 3)
-                    {
-                        obj = "triangulo";
-                        male.GetComponent<Male>().PlayTriangle();
-                        male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-
-                    }
-                    else if (objType == 4)
-                    {
-                        male.GetComponent<Male>().PlaySelectedM();
-                        male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-                    }
-                    else if (objType == 5)
-                    {
-                        male.GetComponent<Male>().PlayExitM();
-                        male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-                    }
-                    break;
-                default:
-                    print("You have no user defined!");
-                    break;
             }
-            if (objType == 1 || objType == 2 || objType == 3)
+
+            /*********** Feedback Task-Dependent **********/
+            if (feedbackType == "Task-Dependent")
             {
-                print("User: " + userID + " tocou num: " + obj + ".");
+
             }
-            else if (objType == 4)
+
+            /*********** Feedback Public **********/
+            if (feedbackType == "Public")
             {
-                print("User: " + userID + " selecionou objeto!");
+                switch (userID)
+                {
+                    case 1:
+                        if (objType == 1)
+                        {
+                            female.GetComponent<Female>().PlaySquare();
+                            female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+
+                        }
+                        else if (objType == 2)
+                        {
+                            female.GetComponent<Female>().PlayCircle();
+                            female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+
+                        }
+                        else if (objType == 3)
+                        {
+                            female.GetComponent<Female>().PlayTriangle();
+                            female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+
+                        }
+                        else if (objType == 4)
+                        {
+                            female.GetComponent<Female>().PlaySelected();
+                            female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+                        }
+                        //else if () {female.GetComponent<Female>().PlayError(); }
+                        break;
+
+                    case 2:
+                        if (objType == 1)
+                        {
+                            male.GetComponent<Male>().PlaySquare();
+                            male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+
+                        }
+                        else if (objType == 2)
+                        {
+                            male.GetComponent<Male>().PlayCircle();
+                            male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+
+                        }
+                        else if (objType == 3)
+                        {
+                            male.GetComponent<Male>().PlayTriangle();
+                            male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+
+                        }
+                        else if (objType == 4)
+                        {
+                            male.GetComponent<Male>().PlaySelected();
+                            male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+                            //else if () {male.GetComponent<Male>().PlayError(); }
+                        }
+                        break;
+                    default:
+                        print("You have no user defined!");
+                        break;
+                }
             }
         }
         else if (ourStrings[0] == "Stop")
@@ -152,10 +141,10 @@ public class Sounds : MonoBehaviour
             switch (userID)
             {
                 case 1:
-                    female.GetComponent<Female>().StopF();
+                    female.GetComponent<Female>().Stop();
                     break;
                 case 2:
-                    male.GetComponent<Male>().StopM();
+                    male.GetComponent<Male>().Stop();
                     break;
             }
         }
@@ -164,6 +153,6 @@ public class Sounds : MonoBehaviour
     private void OnGUI()
     {
         GUI.Label(new Rect(0, 0, 100, 100), "User " + user);
-        GUI.Label(new Rect(0, 15, 200, 100), "Feedback " + feedbackString);
+        GUI.Label(new Rect(0, 15, 200, 100), "Feedback " + feedbackType);
     }
 }

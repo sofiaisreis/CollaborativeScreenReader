@@ -8,7 +8,7 @@ public class Female : MonoBehaviour
     private AudioSource myAudioSource;
     public AudioClip
         F1_quadrado, F1_circulo, F1_triangulo,
-        ding, selected, exitObj, F1_test;
+        ding, selected, error, F1_test;
 
     // Start is called before the first frame update
     void Start()
@@ -45,19 +45,19 @@ public class Female : MonoBehaviour
         myAudioSource.PlayOneShot(F1_triangulo);
     }
 
-    public void PlaySelectedF()
+    public void PlaySelected()
     {
         gameObject.GetComponent<Renderer>().material.color = Color.magenta;
         myAudioSource.PlayOneShot(selected);
     }
 
-    public void PlayExitF()
+    public void PlayError()
     {
         gameObject.GetComponent<Renderer>().material.color = Color.magenta;
-        myAudioSource.PlayOneShot(exitObj);
+        myAudioSource.PlayOneShot(error);
     }
 
-    public void StopF()
+    public void Stop()
     {
         myAudioSource.Stop();
     }
