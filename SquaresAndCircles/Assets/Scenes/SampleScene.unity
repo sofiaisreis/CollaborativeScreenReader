@@ -780,6 +780,7 @@ MonoBehaviour:
   handLeft: {fileID: 1266410112}
   theUser: {fileID: 0}
   userID: 1
+  shapeType: 0
 --- !u!1001 &562730219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1187,6 +1188,7 @@ MonoBehaviour:
   handLeft: {fileID: 676111263}
   theUser: {fileID: 0}
   userID: 2
+  shapeType: 1
 --- !u!81 &662442364
 AudioListener:
   m_ObjectHideFlags: 0
