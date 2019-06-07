@@ -54,12 +54,12 @@ public class UserTouch : MonoBehaviour
                 (GetComponent<ColliderObj>().lastCollidingObject.tag == "circle" && hand.theUser.shapeType == ShapeType.Circle))
             {
                 GetComponent<ColliderObj>().SelectObject();
-                GetComponent<ColliderObj>().errorTap = false;
             }
             else
             {
                 // som erro!
                 GetComponent<ColliderObj>().errorTap = true;
+                GetComponent<ColliderObj>().SelectObject();
             }
         }
     }

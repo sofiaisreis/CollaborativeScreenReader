@@ -40,31 +40,8 @@ public class ColliderObj : MonoBehaviour
      * 3 - triangle
      * 4 - select
      * 5 - exit
+     * 6 - error
      */
-
-    void Start()
-    {
-        //_audio = GetComponent<AudioSource>();
-    }
-
-    private void Update()
-    {
-
-        //print("IDDD USSEEEER: " + idUser);
-        /*if(u.humanID == trackedUser.GetComponent<User>().)
-        i
-        {
-            idUser = 1;
-        }
-        else if(u.humanID == Human.id)
-        {
-            idUser = 2;
-        }
-        else
-        {
-            print("ja foste...");
-        }*/
-    }
 
     void OnCollisionEnter(Collision collisionInfo) {
 
@@ -133,13 +110,14 @@ public class ColliderObj : MonoBehaviour
         int idUser = GetComponent<UserTouch>().hand.theUser.userID;
         if (errorTap)
         {
-            audioRequest.PlayRemoteAudio(idUser, 9, 4, transform.position);
+            audioRequest.PlayRemoteAudio(idUser, 9, 6, transform.position);
         }
         else
         {
             audioRequest.PlayRemoteAudio(idUser, 7, 4, transform.position);
-        }
-        Destroy(lastCollidingObject);
-        lastCollidingObject = collidingObject = null;
+            Destroy(lastCollidingObject);
+            lastCollidingObject = collidingObject = null;
+        }        
+        errorTap = false;
     }
 }
