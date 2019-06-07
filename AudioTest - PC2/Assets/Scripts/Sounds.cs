@@ -185,7 +185,7 @@ public class Sounds : MonoBehaviour
 
                             }
                             // Deve ouvir os Selected e erros do outro?
-                            else if (objType == 4)
+                            /*else if (objType == 4)
                             {
                                 female.GetComponent<Female>().PlaySelected();
                                 female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
@@ -195,7 +195,7 @@ public class Sounds : MonoBehaviour
                                 print("Não podes selecionar isso!");
                                 female.GetComponent<Female>().PlayError();
                                 female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-                            }
+                            }*/
                             
                         }
                         break;
@@ -210,7 +210,7 @@ public class Sounds : MonoBehaviour
                             }
 
                             // Deve ouvir os Selected do outro?
-                            else if (objType == 4)
+                            /*else if (objType == 4)
                             {
                                 male.GetComponent<Male>().PlaySelected();
                                 male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
@@ -220,7 +220,7 @@ public class Sounds : MonoBehaviour
                                 print("Não podes selecionar isso!");
                                 male.GetComponent<Male>().PlayError();
                                 male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-                            }
+                            }*/
                         }
                         else if (user == 2)
                         {
