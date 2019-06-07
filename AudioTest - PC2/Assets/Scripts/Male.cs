@@ -10,7 +10,7 @@ public class Male : MonoBehaviour
     private AudioSource myAudioSource;
     public AudioClip
         M2_quadrado, M2_circulo, M2_triangulo,
-        ding, selected, error;
+        ding, selected, error, gz;
 
     // Start is called before the first frame update
     void Start()
@@ -61,5 +61,10 @@ public class Male : MonoBehaviour
     public void Stop()
     {
         myAudioSource.Stop();
+    }
+
+    public void PlayGz()
+    {
+        myAudioSource.PlayOneShot(gz);
     }
 }

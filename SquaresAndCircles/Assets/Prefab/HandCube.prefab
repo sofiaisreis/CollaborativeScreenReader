@@ -94,11 +94,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isBeingDragged: 0
+  errorTap: 0
   collidingObject: {fileID: 0}
   audioRequest: {fileID: 0}
   u: {fileID: 0}
   trackedUser: {fileID: 0}
   uHand: {fileID: 0}
+  squares_inc: 0
+  circles_inc: 0
+  squares_findTotal: 5
+  circles_findTotal: 6
   lastCollidingObject: {fileID: 0}
 --- !u!114 &4279992100563308375
 MonoBehaviour:

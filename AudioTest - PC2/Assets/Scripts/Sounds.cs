@@ -57,7 +57,8 @@ public class Sounds : MonoBehaviour
             int objType = int.Parse(ourStrings[3]);
             Vector3 relativePos1 = new Vector3(float.Parse(ourStrings[4]) / 1000.0f * 2.0f, float.Parse(ourStrings[5]) / 1000.0f * 2.0f, float.Parse(ourStrings[6]) / 1000.0f * 2.0f);
             Vector3 relativePos2 = new Vector3(float.Parse(ourStrings[7]) / 1000.0f * 2.0f, float.Parse(ourStrings[8]) / 1000.0f * 2.0f, float.Parse(ourStrings[9]) / 1000.0f * 2.0f);
-
+            int selecao = int.Parse(ourStrings[10]);
+            int totais = int.Parse(ourStrings[11]);
 
 
             /*********** Feedback Private **********/
@@ -334,6 +335,13 @@ public class Sounds : MonoBehaviour
                         print("You have no user defined!");
                         break;
                 }
+            }
+            
+            // Se já selecionaram tudo, manda mensagem de parabens - marteladinha
+            if (selecao == 30 && totais == 30)
+            {
+                //male.GetComponent<Male>.PlayGz();
+                //female.GetComponent<Female>.PlayGz();
             }
         }
 

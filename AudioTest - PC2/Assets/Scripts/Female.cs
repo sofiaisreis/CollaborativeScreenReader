@@ -8,7 +8,7 @@ public class Female : MonoBehaviour
     private AudioSource myAudioSource;
     public AudioClip
         F1_quadrado, F1_circulo, F1_triangulo,
-        ding, selected, error;
+        ding, selected, error, gz;
 
     // Start is called before the first frame update
     void Start()
@@ -60,5 +60,10 @@ public class Female : MonoBehaviour
     public void Stop()
     {
         myAudioSource.Stop();
+    }
+
+    public void PlayGz()
+    {
+       myAudioSource.PlayOneShot(gz);
     }
 }
