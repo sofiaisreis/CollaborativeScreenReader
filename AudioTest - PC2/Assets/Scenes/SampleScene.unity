@@ -315,7 +315,7 @@ MonoBehaviour:
   M2_triangulo: {fileID: 8300000, guid: b4eb919ad6b635c4691c7012e2c831b5, type: 3}
   ding: {fileID: 8300000, guid: 827c34b61b011914cba5d74ed21366a8, type: 3}
   selected: {fileID: 8300000, guid: 33b99a48d7dfcd7409dff33eb9a894b7, type: 3}
-  exitObj: {fileID: 8300000, guid: 03b698e67cb5f2949be1de14b855694d, type: 3}
+  error: {fileID: 0}
   F1_test: {fileID: 0}
 --- !u!135 &461588508
 SphereCollider:
@@ -581,7 +581,7 @@ MonoBehaviour:
   F1_triangulo: {fileID: 8300000, guid: cc8a788bf111dbd4c8a6a47bc3f1a4a0, type: 3}
   ding: {fileID: 8300000, guid: 827c34b61b011914cba5d74ed21366a8, type: 3}
   selected: {fileID: 8300000, guid: 33b99a48d7dfcd7409dff33eb9a894b7, type: 3}
-  exitObj: {fileID: 8300000, guid: 03b698e67cb5f2949be1de14b855694d, type: 3}
+  error: {fileID: 8300000, guid: 4f94bc5ca3217b644a05a721cec492f9, type: 3}
   F1_test: {fileID: 0}
 --- !u!82 &1812368703
 AudioSource:
@@ -712,8 +712,8 @@ MonoBehaviour:
   female: {fileID: 1812368696}
   male: {fileID: 461588493}
   udpConnection: {fileID: 0}
+  feedbackType: 
   port: 7001
-  obj: 
   user: 1
 --- !u!4 &2047352990
 Transform:
