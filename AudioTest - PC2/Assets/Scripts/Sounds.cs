@@ -91,7 +91,9 @@ public class Sounds : MonoBehaviour
                                 female.GetComponent<Female>().PlaySelected();
                                 female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                             }
-                            //else if () {female.GetComponent<Female>().PlayError(); }
+                            else if (objType == 9) {
+                                female.GetComponent<Female>().PlayError();
+                            }
                         }
                         break;
                         
@@ -120,7 +122,10 @@ public class Sounds : MonoBehaviour
                             {
                                 male.GetComponent<Male>().PlaySelected();
                                 male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-                                //else if () {male.GetComponent<Male>().PlayError(); }
+                            }
+                            else if (objType == 9)
+                            {
+                                male.GetComponent<Male>().PlayError();
                             }
                         }
                         break;
@@ -161,7 +166,9 @@ public class Sounds : MonoBehaviour
                                 female.GetComponent<Female>().PlaySelected();
                                 female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                             }
-                            //else if () {female.GetComponent<Female>().PlayError(); }
+                            else if (objType == 9) {
+                                female.GetComponent<Female>().PlayError();
+                            }
                         }
                         else if (user == 2)
                         {
@@ -171,14 +178,17 @@ public class Sounds : MonoBehaviour
                                 female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
 
                             }
-
-                            // Deve ouvir os Selected do outro?
+                            // Deve ouvir os Selected e erros do outro?
                             else if (objType == 4)
                             {
                                 female.GetComponent<Female>().PlaySelected();
                                 female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-                                //else if () {male.GetComponent<Male>().PlayError(); }
                             }
+                            else if (objType == 9)
+                            {
+                                female.GetComponent<Female>().PlayError();
+                            }
+                            
                         }
                         break;
 
@@ -196,7 +206,10 @@ public class Sounds : MonoBehaviour
                             {
                                 male.GetComponent<Male>().PlaySelected();
                                 male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-                                //else if () {male.GetComponent<Male>().PlayError(); }
+                            }
+                            else if (objType == 9)
+                            {
+                                male.GetComponent<Male>().PlayError();
                             }
                         }
                         else if (user == 2)
@@ -223,7 +236,10 @@ public class Sounds : MonoBehaviour
                             {
                                 male.GetComponent<Male>().PlaySelected();
                                 male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-                                //else if () {male.GetComponent<Male>().PlayError(); }
+                            }
+                            else if (objType == 9)
+                            {
+                                male.GetComponent<Male>().PlayError();
                             }
                         }
                         break;
@@ -263,7 +279,10 @@ public class Sounds : MonoBehaviour
                             female.GetComponent<Female>().PlaySelected();
                             female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                         }
-                        //else if () {female.GetComponent<Female>().PlayError(); }
+                        else if (objType == 9)
+                        {
+                            female.GetComponent<Female>().PlayError();
+                        }
                         break;
 
                     case 2:
@@ -289,7 +308,10 @@ public class Sounds : MonoBehaviour
                         {
                             male.GetComponent<Male>().PlaySelected();
                             male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-                            //else if () {male.GetComponent<Male>().PlayError(); }
+                        }
+                        else if (objType == 9)
+                        {
+                            male.GetComponent<Male>().PlayError();
                         }
                         break;
                     default:

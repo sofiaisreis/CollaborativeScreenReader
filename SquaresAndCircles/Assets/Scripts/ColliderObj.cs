@@ -10,6 +10,7 @@ public class ColliderObj : MonoBehaviour
 {
 
     public bool isBeingDragged = false;
+    public bool errorTap = false;
     public GameObject collidingObject = null;
     public AudioRequest audioRequest;
     public User u;
@@ -30,6 +31,7 @@ public class ColliderObj : MonoBehaviour
     *
     * 7 - Select
     * 8 - OnExit
+    * 9 - ErrorTap
     */
 
     /* CODE OF OBJECTS
@@ -129,8 +131,14 @@ public class ColliderObj : MonoBehaviour
     {
 
         int idUser = GetComponent<UserTouch>().hand.theUser.userID;
-
-        audioRequest.PlayRemoteAudio(idUser, 7, 4, transform.position);
+        if (errorTap)
+        {
+            audioRequest.PlayRemoteAudio(idUser, 9, 4, transform.position);
+        }
+        else
+        {
+            audioRequest.PlayRemoteAudio(idUser, 7, 4, transform.position);
+        }
         Destroy(lastCollidingObject);
         lastCollidingObject = collidingObject = null;
     }
