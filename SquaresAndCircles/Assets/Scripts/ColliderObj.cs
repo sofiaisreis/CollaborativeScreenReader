@@ -141,14 +141,14 @@ public class ColliderObj : MonoBehaviour
             {
                 IncrementSquares();
                 audioRequest.PlayRemoteAudio(idUser, 7, 4, transform.position, GetSquaresAtual(), squares_findTotal);
-                print("Selecionou " + GetSquaresAtual() + "de " + squares_findTotal + ".");
+                print("Selecionou " + GetSquaresAtual() + " de " + squares_findTotal + " quadrados.");
             }
 
             else if(lastCollidingObject.tag == "circle")
             {
                 IncrementCircles();
                 audioRequest.PlayRemoteAudio(idUser, 7, 4, transform.position, GetCirclesAtual(), circles_findTotal);
-                print("Selecionou " + GetCirclesAtual() + "de " + circles_findTotal + ".");
+                print("Selecionou " + GetCirclesAtual() + " de " + circles_findTotal + "circulos.");
             }
 
             Destroy(lastCollidingObject);
