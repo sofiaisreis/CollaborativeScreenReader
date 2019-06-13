@@ -29,34 +29,7 @@ public class ColliderObj : MonoBehaviour
         circles_inc = 0;
     }
 
-    public void IncrementSquares() { squares_inc++; }
-
-    public void IncrementCircles() { circles_inc++; }
-
-    public int GetSquaresInit() { return GameObject.FindGameObjectsWithTag("square").Length; ; }
-
-    public int GetCirclesInit() { return GameObject.FindGameObjectsWithTag("circle").Length; ; }
-
-    public int GetSquaresAtual() { return squares_inc; }
-
-    public int GetCirclesAtual() { return circles_inc; }
-
-    /* CODE OF SOUNDS
-    * 1 - Female Square
-    * 2 - Male Square
-    * 
-    * 3 - Female Circle
-    * 4 - Male Circle
-    * 
-    * 5 - Female Triangle
-    * 6 - Male Triangle
-    *
-    * 7 - Select
-    * 8 - OnExit
-    * 9 - ErrorTap
-    */
-
-    /* CODE OF OBJECTS
+    /* CODE OF OBJECT TYPE SOUND
      * 1 - square
      * 2 - circle
      * 3 - triangle
@@ -64,6 +37,8 @@ public class ColliderObj : MonoBehaviour
      * 5 - exit
      * 6 - error
      */
+
+    // (userID, lastObj, objTypeSound, relativePos1, relativePos2, selecionados, totais);
 
     void OnCollisionEnter(Collision collisionInfo) {
 
@@ -81,7 +56,7 @@ public class ColliderObj : MonoBehaviour
                 }
                 else if (objTag == "circle")
                 {
-                    audioRequest.PlayRemoteAudio(idUser, 3, 2, transform.position, - 1, -1);
+                    audioRequest.PlayRemoteAudio(idUser, 2, 2, transform.position, - 1, -1);
                 }
             }
 
@@ -103,7 +78,7 @@ public class ColliderObj : MonoBehaviour
             }
             else if (objTag == "circle")
             {
-                audioRequest.PlayRemoteAudio(idUser, 3, 2, transform.position, -1, -1);
+                audioRequest.PlayRemoteAudio(idUser, 2, 2, transform.position, -1, -1);
             }
         }
 
@@ -133,33 +108,27 @@ public class ColliderObj : MonoBehaviour
 
         if (errorTap)
         {
-            audioRequest.PlayRemoteAudio(idUser, 9, 6, transform.position, -1, -1);
+            audioRequest.PlayRemoteAudio(idUser, -1, 6, transform.position, -1, -1);
         }
         else
         {
             if (lastCollidingObject.tag == "square")
             {
-                IncrementSquares();
-                audioRequest.PlayRemoteAudio(idUser, 7, 4, transform.position, GetSquaresAtual(), squares_findTotal);
-                print("Selecionou " + GetSquaresAtual() + " de " + squares_findTotal + " quadrados.");
+                squares_inc++;
+                audioRequest.PlayRemoteAudio(idUser, 1, 4, transform.position, squares_inc, squares_findTotal);
+                print("Selecionou " + squares_inc + " de " + squares_findTotal + " quadrados.");
             }
 
             else if(lastCollidingObject.tag == "circle")
             {
-                IncrementCircles();
-                audioRequest.PlayRemoteAudio(idUser, 7, 4, transform.position, GetCirclesAtual(), circles_findTotal);
-                print("Selecionou " + GetCirclesAtual() + " de " + circles_findTotal + "circulos.");
+                circles_inc++;
+                audioRequest.PlayRemoteAudio(idUser, 2, 4, transform.position, circles_inc, circles_findTotal);
+                print("Selecionou " + circles_inc + " de " + circles_findTotal + "circulos.");
             }
 
             Destroy(lastCollidingObject);
             lastCollidingObject = collidingObject = null;
         }    
         errorTap = false;
-
-        // Se já selecionaram tudo, manda mensagem de parabens
-        if (GetSquaresAtual() == squares_findTotal && GetCirclesAtual() == circles_findTotal)
-        {
-            audioRequest.PlayRemoteAudio(idUser, 7, 4, transform.position, 30, 30);
-        }
     }
 }
