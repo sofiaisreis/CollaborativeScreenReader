@@ -288,6 +288,8 @@ MonoBehaviour:
   User1: {fileID: 522154813}
   User2: {fileID: 662442362}
   GO: {fileID: 1837109297}
+  log: {fileID: 0}
+  ft: 
 --- !u!4 &93999226
 Transform:
   m_ObjectHideFlags: 0
@@ -2137,6 +2139,7 @@ GameObject:
   - component: {fileID: 1367184150}
   - component: {fileID: 1367184149}
   - component: {fileID: 1367184148}
+  - component: {fileID: 1367184153}
   m_Layer: 0
   m_Name: TrackerClientGO
   m_TagString: Untagged
@@ -2206,6 +2209,7 @@ MonoBehaviour:
   user2: {fileID: 662442358}
   surfaceCenter: {fileID: 1230793024}
   borders: {fileID: 1378911206}
+  logFeed: {fileID: 0}
 --- !u!4 &1367184152
 Transform:
   m_ObjectHideFlags: 0
@@ -2220,6 +2224,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1367184153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367184147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 900acc591e5f2ed48ae24ff781e9c892, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lines:
+  - First line
+  - Second line
+  - Third line
+  docPath: C:\Users\Utilizador\Documents
+  feedbackType: 
+  audioRequest: {fileID: 93999225}
 --- !u!1 &1378911205
 GameObject:
   m_ObjectHideFlags: 0

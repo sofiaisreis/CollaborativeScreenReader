@@ -11,6 +11,9 @@ public class AudioRequest : MonoBehaviour
     public Transform User2;
 
     public GameObject GO;
+    public Logs log;
+    public string ft; //feedback type
+
 
     private void Update()
     {
@@ -20,6 +23,13 @@ public class AudioRequest : MonoBehaviour
     }
 
     // args: userID, numSom, posSom
+
+    public void FeedbackType(int feedback)
+    {
+        string message = "FeedbackType:" + feedback;
+        // Envia!
+        UDPBroadcast(message);
+    }
 
     public void StopRemoteAudio(int userID)
     {

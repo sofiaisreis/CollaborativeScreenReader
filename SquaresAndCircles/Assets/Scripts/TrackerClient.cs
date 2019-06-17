@@ -18,6 +18,7 @@ public class TrackerClient : MonoBehaviour
     public GameObject user2;
     public Transform surfaceCenter;
     public Transform borders;
+    public Logs logFeed;
 
     void Start()
     {
