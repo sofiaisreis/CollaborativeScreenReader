@@ -1,20 +1,26 @@
 ﻿using UnityEngine;
 using System;
+using System.Timers;
 using System.IO;
 
 public class Logs : MonoBehaviour
 {
     // Create a string array with the lines of text
     public string[] lines = { "First line", "Second line", "Third line" };
-
     // Set a variable to the Documents path.
     public string docPath =
       Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-
     public string feedbackType = null;
     public int whichFeedback = -1;
+    public int timer = 0;
+    public Timer Timer1;
+    public TimeSpan current = new TimeSpan(0);
+    public int tarefaOn = -1;
 
-    public AudioRequest audioRequest;
+    public void Start()
+    {
+        
+    }
 
     public void Update()
     {
@@ -37,7 +43,28 @@ public class Logs : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             print("Comecou a tarefa!");
+            tarefaOn = 1;
+            // In your update loop:
+
+            
             //StartLoggings();
+        }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            tarefaOn = 0;
+        }
+
+        if ( tarefaOn == 1 )
+        {
+            current += TimeSpan.FromSeconds(1);
+            //print("current: " + current);
+        }
+
+        if ( tarefaOn == 0 )
+        {
+            print("Tarefa Terminada! Tempo: " + current);
+
         }
         // Write the string array to a new file named "WriteLines.txt".
         /*using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "WriteLines.txt")))
