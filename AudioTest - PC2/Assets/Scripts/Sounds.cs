@@ -69,7 +69,6 @@ public class Sounds : MonoBehaviour
             if (feedback == 1)
             {
                 feedbackType = "Private";
-                GUI.Label(new Rect(0, 15, 200, 100), "Feedback " + feedbackType);
                 print("Private");
                 switch (userID)
                 {
@@ -152,7 +151,6 @@ public class Sounds : MonoBehaviour
             if (feedback == 2)
             {
                 feedbackType = "Task-Dependent";
-                GUI.Label(new Rect(0, 15, 200, 100), "Feedback " + feedbackType);
                 print("Task-Dependent");
                 switch (userID)
                 {
@@ -279,7 +277,6 @@ public class Sounds : MonoBehaviour
             if (feedback == 3)
             {
                 feedbackType = "Public";
-                GUI.Label(new Rect(0, 15, 200, 100), "Feedback " + feedbackType);
                 print("Private");
                 switch (userID)
                 {
@@ -373,6 +370,6 @@ public class Sounds : MonoBehaviour
     private void OnGUI()
     {
         GUI.Label(new Rect(0, 0, 100, 100), "User " + user);
-        GUI.Label(new Rect(0, 30, 200, 35), "Feedback Type: " + feedbackType);
+        GUI.Label(new Rect(0, 15, 200, 35), "Feedback Type: " + feedbackType);
     }
 }
