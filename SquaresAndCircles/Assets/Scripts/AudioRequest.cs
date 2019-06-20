@@ -11,7 +11,6 @@ public class AudioRequest : MonoBehaviour
     public Transform User2;
 
     public GameObject GO;
-    public Logs log;
     public string ft; //feedback type
 
 
@@ -22,14 +21,6 @@ public class AudioRequest : MonoBehaviour
 
     }
 
-    // args: userID, numSom, posSom
-
-    public void FeedbackType(int feedback)
-    {
-        string message = "FeedbackType:" + feedback;
-        // Envia!
-        UDPBroadcast(message);
-    }
 
     public void StopRemoteAudio(int userID)
     {
@@ -39,7 +30,7 @@ public class AudioRequest : MonoBehaviour
         UDPBroadcast(message);
     }
 
-    public void PlayRemoteAudio(int userID, int numSom, int objType, Vector3 posSom, int selecao, int totais)
+    public void PlayRemoteAudio(int userID, int numSom, int objType, Vector3 posSom, int selecao, int totais, int feedB)
     {
         // Compoe Mensagem
         Vector3 relativePos1 = User1.worldToLocalMatrix.MultiplyPoint(posSom);
@@ -51,7 +42,7 @@ public class AudioRequest : MonoBehaviour
 
         string message = "Play:" + userID + ":" + numSom + ":" + objType + ":"
             + (int)(relativePos1.x * 1000) + ":" + (int)(relativePos1.y * 1000) + ":" + (int)(relativePos1.z * 1000) + ":"
-            + (int)(relativePos2.x * 1000) + ":" + (int)(relativePos2.y * 1000) + ":" + (int)(relativePos2.z * 1000) + ":" + selecao + ":" + totais;
+            + (int)(relativePos2.x * 1000) + ":" + (int)(relativePos2.y * 1000) + ":" + (int)(relativePos2.z * 1000) + ":" + selecao + ":" + totais + ":" + feedB;
 
         // Envia!
         UDPBroadcast(message);

@@ -51,7 +51,7 @@ public class UDPListener : MonoBehaviour
             
             //if (stringToParse.Length != 1)
             {
-                GetComponent<Sounds>().ParseAndPlay(stringToParse); 
+                GetComponent<Sounds>().ParseAndPlay(stringToParse);
             }
         }
     }

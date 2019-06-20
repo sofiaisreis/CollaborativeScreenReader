@@ -12,6 +12,7 @@ public class Logs : MonoBehaviour
       Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
     public string feedbackType = null;
+    public int whichFeedback;
 
     public AudioRequest audioRequest;
 
@@ -20,22 +21,23 @@ public class Logs : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Z))
         {
             feedbackType = "Private";
-            audioRequest.FeedbackType(1);
+            whichFeedback = 1;
         }
         if (Input.GetKeyDown(KeyCode.X))
         {
             feedbackType = "Task-Dependent";
-            audioRequest.FeedbackType(2);
+            whichFeedback = 2;
         }
         if (Input.GetKeyDown(KeyCode.C))
         {
             feedbackType = "Public";
-            audioRequest.FeedbackType(3);
+            whichFeedback = 3;
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             print("Comecou a tarefa!");
+            //StartLoggings();
         }
         // Write the string array to a new file named "WriteLines.txt".
         using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "WriteLines.txt")))

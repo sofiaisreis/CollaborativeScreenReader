@@ -48,15 +48,10 @@ public class Sounds : MonoBehaviour
     {
         print("string_ " + stringToParse);
         string[] ourStrings = stringToParse.Split(':');
-
-        if (ourStrings[0] == "FeedbackType")
+        
+        // PLAY SOUNDS
+        if (ourStrings[0] == "Play")
         {
-            //OUR FEEDBACK MODE
-            int feedback = int.Parse(ourStrings[1]);
-
-            // PLAY SOUNDS
-            if (ourStrings[0] == "Play")
-            {
             // string message = "Play:" + 
             // userID + ":" + lastObj + ":" + objTypeSound + ":" + relativePos1 + ":" + relativePos2;
 
@@ -67,227 +62,20 @@ public class Sounds : MonoBehaviour
             Vector3 relativePos2 = new Vector3(float.Parse(ourStrings[7]) / 1000.0f * 2.0f, float.Parse(ourStrings[8]) / 1000.0f * 2.0f, float.Parse(ourStrings[9]) / 1000.0f * 2.0f);
             int selecionados = int.Parse(ourStrings[10]);
             int totais = int.Parse(ourStrings[11]);
+            int feedback = int.Parse(ourStrings[12]);
 
-            
-                /*********** Feedback Private **********/
-                if (feedback == 1)
+
+            /*********** Feedback Private **********/
+            if (feedback == 1)
+            {
+                feedbackType = "Private";
+                GUI.Label(new Rect(0, 15, 200, 100), "Feedback " + feedbackType);
+                print("Private");
+                switch (userID)
                 {
-                    feedbackType = "Private";
-                    GUI.Label(new Rect(0, 15, 200, 100), "Feedback " + feedbackType);
-                    print("Private");
-                    switch (userID)
-                    {
-                        case 1:
-                            if (user == 1)
-                            {
-                                if (objTypeSound == 1)
-                                {
-                                    female.GetComponent<Female>().PlaySquare();
-                                    female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-
-                                }
-                                else if (objTypeSound == 2)
-                                {
-                                    female.GetComponent<Female>().PlayCircle();
-                                    female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-
-                                }
-                                else if (objTypeSound == 3)
-                                {
-                                    female.GetComponent<Female>().PlayTriangle();
-                                    female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-
-                                }
-                                else if (objTypeSound == 4)
-                                {
-                                    female.GetComponent<Female>().PlaySelected(lastObj, selecionados, totais);
-                                    female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-                                }
-                                else if (objTypeSound == 6)
-                                {
-                                    print("Não podes selecionar isso!");
-                                    female.GetComponent<Female>().PlayError();
-                                    female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-                                }
-                            }
-                            break;
-
-                        case 2:
-                            if (user == 2)
-                            {
-                                if (objTypeSound == 1)
-                                {
-                                    male.GetComponent<Male>().PlaySquare();
-                                    male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-
-                                }
-                                else if (objTypeSound == 2)
-                                {
-                                    male.GetComponent<Male>().PlayCircle();
-                                    male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-
-                                }
-                                else if (objTypeSound == 3)
-                                {
-                                    male.GetComponent<Male>().PlayTriangle();
-                                    male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-
-                                }
-                                else if (objTypeSound == 4)
-                                {
-                                    male.GetComponent<Male>().PlaySelected(lastObj, selecionados, totais);
-                                    male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-                                }
-                                else if (objTypeSound == 6)
-                                {
-                                    print("Não podes selecionar isso!");
-                                    male.GetComponent<Male>().PlayError();
-                                    male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-                                }
-                            }
-                            break;
-                        default:
-                            print("You have no user defined!");
-                            break;
-                    }
-                }
-
-                /*********** Feedback Task-Dependent **********/
-                if (feedback == 2)
-                {
-                    feedbackType = "Task-Dependent";
-                    GUI.Label(new Rect(0, 15, 200, 100), "Feedback " + feedbackType);
-                    print("Task-Dependent");
-                    switch (userID)
-                    {
-                        case 1:
-                            if (user == 1)
-                            {
-                                if (objTypeSound == 1)
-                                {
-                                    female.GetComponent<Female>().PlaySquare();
-                                    female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-
-                                }
-                                else if (objTypeSound == 2)
-                                {
-                                    female.GetComponent<Female>().PlayCircle();
-                                    female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-
-                                }
-                                else if (objTypeSound == 3)
-                                {
-                                    female.GetComponent<Female>().PlayTriangle();
-                                    female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-
-                                }
-                                else if (objTypeSound == 4)
-                                {
-                                    female.GetComponent<Female>().PlaySelected(lastObj, selecionados, totais);
-                                    female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-                                }
-                                else if (objTypeSound == 6)
-                                {
-                                    print("Não podes selecionar isso!");
-                                    female.GetComponent<Female>().PlayError();
-                                    female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-                                }
-                            }
-                            else if (user == 2)
-                            {
-                                if (objTypeSound == 2)
-                                {
-                                    female.GetComponent<Female>().PlayCircle();
-                                    female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-
-                                }
-                                // Deve ouvir os Selected e erros do outro?
-                                /*else if (objTypeSound == 4)
-                                {
-                                    female.GetComponent<Female>().PlaySelected(lastObj, selecionados, totais);
-                                    female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-                                }
-                                else if (objTypeSound == 6)
-                                {
-                                    print("Não podes selecionar isso!");
-                                    female.GetComponent<Female>().PlayError();
-                                    female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-                                }*/
-
-                            }
-                            break;
-
-                        case 2:
-                            if (user == 1)
-                            {
-                                if (objTypeSound == 1)
-                                {
-                                    male.GetComponent<Male>().PlaySquare();
-                                    male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-                                }
-
-                                // Deve ouvir os Selected do outro?
-                                /*else if (objTypeSound == 4)
-                                {
-                                    male.GetComponent<Male>().PlaySelected(lastObj, selecionados, totais);
-                                    male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-                                }
-                                else if (objTypeSound == 6)
-                                {
-                                    print("Não podes selecionar isso!");
-                                    male.GetComponent<Male>().PlayError();
-                                    male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-                                }*/
-                            }
-                            else if (user == 2)
-                            {
-                                if (objTypeSound == 1)
-                                {
-                                    male.GetComponent<Male>().PlaySquare();
-                                    male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-
-                                }
-                                else if (objTypeSound == 2)
-                                {
-                                    male.GetComponent<Male>().PlayCircle();
-                                    male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-
-                                }
-                                else if (objTypeSound == 3)
-                                {
-                                    male.GetComponent<Male>().PlayTriangle();
-                                    male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-
-                                }
-                                else if (objTypeSound == 4)
-                                {
-                                    male.GetComponent<Male>().PlaySelected(lastObj, selecionados, totais);
-                                    male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-                                }
-                                else if (objTypeSound == 6)
-                                {
-                                    print("Não podes selecionar isso!");
-                                    male.GetComponent<Male>().PlayError();
-                                    male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-                                }
-                            }
-                            break;
-                        default:
-                            print("You have no user defined!");
-                            break;
-                    }
-                }
-
-
-                /*********** Feedback Public **********/
-                if (feedback == 3)
-                {
-                    feedbackType = "Public";
-                    GUI.Label(new Rect(0, 15, 200, 100), "Feedback " + feedbackType);
-                    print("Private");
-                    switch (userID)
-                    {
-                        case 1:
+                    case 1:
+                        if (user == 1)
+                        {
                             if (objTypeSound == 1)
                             {
                                 female.GetComponent<Female>().PlaySquare();
@@ -317,9 +105,12 @@ public class Sounds : MonoBehaviour
                                 female.GetComponent<Female>().PlayError();
                                 female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                             }
-                            break;
+                        }
+                        break;
 
-                        case 2:
+                    case 2:
+                        if (user == 2)
+                        {
                             if (objTypeSound == 1)
                             {
                                 male.GetComponent<Male>().PlaySquare();
@@ -349,28 +140,232 @@ public class Sounds : MonoBehaviour
                                 male.GetComponent<Male>().PlayError();
                                 male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                             }
-                            break;
-                        default:
-                            print("You have no user defined!");
-                            break;
-                    }
+                        }
+                        break;
+                    default:
+                        print("You have no user defined!");
+                        break;
                 }
             }
 
-            // STOP SOUNDS
-            else if (ourStrings[0] == "Stop")
+            /*********** Feedback Task-Dependent **********/
+            if (feedback == 2)
             {
-                print("TOU STOPPES");
-                int userID = int.Parse(ourStrings[1]);
+                feedbackType = "Task-Dependent";
+                GUI.Label(new Rect(0, 15, 200, 100), "Feedback " + feedbackType);
+                print("Task-Dependent");
                 switch (userID)
                 {
                     case 1:
-                        female.GetComponent<Female>().Stop();
+                        if (user == 1)
+                        {
+                            if (objTypeSound == 1)
+                            {
+                                female.GetComponent<Female>().PlaySquare();
+                                female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+
+                            }
+                            else if (objTypeSound == 2)
+                            {
+                                female.GetComponent<Female>().PlayCircle();
+                                female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+
+                            }
+                            else if (objTypeSound == 3)
+                            {
+                                female.GetComponent<Female>().PlayTriangle();
+                                female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+
+                            }
+                            else if (objTypeSound == 4)
+                            {
+                                female.GetComponent<Female>().PlaySelected(lastObj, selecionados, totais);
+                                female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+                            }
+                            else if (objTypeSound == 6)
+                            {
+                                print("Não podes selecionar isso!");
+                                female.GetComponent<Female>().PlayError();
+                                female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+                            }
+                        }
+                        else if (user == 2)
+                        {
+                            if (objTypeSound == 2)
+                            {
+                                female.GetComponent<Female>().PlayCircle();
+                                female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+
+                            }
+                            // Deve ouvir os Selected e erros do outro?
+                            /*else if (objTypeSound == 4)
+                            {
+                                female.GetComponent<Female>().PlaySelected(lastObj, selecionados, totais);
+                                female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+                            }
+                            else if (objTypeSound == 6)
+                            {
+                                print("Não podes selecionar isso!");
+                                female.GetComponent<Female>().PlayError();
+                                female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+                            }*/
+
+                        }
                         break;
+
                     case 2:
-                        male.GetComponent<Male>().Stop();
+                        if (user == 1)
+                        {
+                            if (objTypeSound == 1)
+                            {
+                                male.GetComponent<Male>().PlaySquare();
+                                male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+                            }
+
+                            // Deve ouvir os Selected do outro?
+                            /*else if (objTypeSound == 4)
+                            {
+                                male.GetComponent<Male>().PlaySelected(lastObj, selecionados, totais);
+                                male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+                            }
+                            else if (objTypeSound == 6)
+                            {
+                                print("Não podes selecionar isso!");
+                                male.GetComponent<Male>().PlayError();
+                                male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+                            }*/
+                        }
+                        else if (user == 2)
+                        {
+                            if (objTypeSound == 1)
+                            {
+                                male.GetComponent<Male>().PlaySquare();
+                                male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+
+                            }
+                            else if (objTypeSound == 2)
+                            {
+                                male.GetComponent<Male>().PlayCircle();
+                                male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+
+                            }
+                            else if (objTypeSound == 3)
+                            {
+                                male.GetComponent<Male>().PlayTriangle();
+                                male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+
+                            }
+                            else if (objTypeSound == 4)
+                            {
+                                male.GetComponent<Male>().PlaySelected(lastObj, selecionados, totais);
+                                male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+                            }
+                            else if (objTypeSound == 6)
+                            {
+                                print("Não podes selecionar isso!");
+                                male.GetComponent<Male>().PlayError();
+                                male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+                            }
+                        }
+                        break;
+                    default:
+                        print("You have no user defined!");
                         break;
                 }
+            }
+
+
+            /*********** Feedback Public **********/
+            if (feedback == 3)
+            {
+                feedbackType = "Public";
+                GUI.Label(new Rect(0, 15, 200, 100), "Feedback " + feedbackType);
+                print("Private");
+                switch (userID)
+                {
+                    case 1:
+                        if (objTypeSound == 1)
+                        {
+                            female.GetComponent<Female>().PlaySquare();
+                            female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+
+                        }
+                        else if (objTypeSound == 2)
+                        {
+                            female.GetComponent<Female>().PlayCircle();
+                            female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+
+                        }
+                        else if (objTypeSound == 3)
+                        {
+                            female.GetComponent<Female>().PlayTriangle();
+                            female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+
+                        }
+                        else if (objTypeSound == 4)
+                        {
+                            female.GetComponent<Female>().PlaySelected(lastObj, selecionados, totais);
+                            female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+                        }
+                        else if (objTypeSound == 6)
+                        {
+                            print("Não podes selecionar isso!");
+                            female.GetComponent<Female>().PlayError();
+                            female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+                        }
+                        break;
+
+                    case 2:
+                        if (objTypeSound == 1)
+                        {
+                            male.GetComponent<Male>().PlaySquare();
+                            male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+
+                        }
+                        else if (objTypeSound == 2)
+                        {
+                            male.GetComponent<Male>().PlayCircle();
+                            male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+
+                        }
+                        else if (objTypeSound == 3)
+                        {
+                            male.GetComponent<Male>().PlayTriangle();
+                            male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+
+                        }
+                        else if (objTypeSound == 4)
+                        {
+                            male.GetComponent<Male>().PlaySelected(lastObj, selecionados, totais);
+                            male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+                        }
+                        else if (objTypeSound == 6)
+                        {
+                            print("Não podes selecionar isso!");
+                            male.GetComponent<Male>().PlayError();
+                            male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+                        }
+                        break;
+                    default:
+                        print("You have no user defined!");
+                        break;
+                }
+            }
+        }
+
+        // STOP SOUNDS
+        else if (ourStrings[0] == "Stop")
+        {
+            print("TOU STOPPES");
+            int userID = int.Parse(ourStrings[1]);
+            switch (userID)
+            {
+                case 1:
+                    female.GetComponent<Female>().Stop();
+                    break;
+                case 2:
+                    male.GetComponent<Male>().Stop();
+                    break;
             }
         }
     }
@@ -378,5 +373,6 @@ public class Sounds : MonoBehaviour
     private void OnGUI()
     {
         GUI.Label(new Rect(0, 0, 100, 100), "User " + user);
+        GUI.Label(new Rect(0, 30, 200, 35), "Feedback Type: " + feedbackType);
     }
 }

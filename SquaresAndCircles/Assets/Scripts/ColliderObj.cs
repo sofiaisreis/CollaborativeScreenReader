@@ -20,7 +20,7 @@ public class ColliderObj : MonoBehaviour
     public int circles_inc;
     public int squares_findTotal; // definido no inspector
     public int circles_findTotal;
-
+    public Logs log;
     public GameObject lastCollidingObject = null;
 
     private void Start()
@@ -40,9 +40,14 @@ public class ColliderObj : MonoBehaviour
 
     // (userID, lastObj, objTypeSound, relativePos1, relativePos2, selecionados, totais);
 
-    void OnCollisionEnter(Collision collisionInfo) {
+    private void Update()
+    {
+    }
 
-            int idUser = GetComponent<UserTouch>().hand.theUser.userID;
+    void OnCollisionEnter(Collision collisionInfo) {
+        int feedbackNow = log.GetComponent<Logs>().whichFeedback;
+        print("Feedback on collider: " + feedbackNow);
+        int idUser = GetComponent<UserTouch>().hand.theUser.userID;
 
             var objTag = collisionInfo.gameObject.tag;
 
@@ -51,12 +56,12 @@ public class ColliderObj : MonoBehaviour
                 if (objTag == "square")
                 {
                     //userIDstring = u.GetComponent<User>().humanID;
-                    audioRequest.PlayRemoteAudio(idUser, 1, 1, transform.position, -1, -1);
+                    audioRequest.PlayRemoteAudio(idUser, 1, 1, transform.position, -1, -1, feedbackNow);
                     //print("ID OF USER: " + u.humanID);
                 }
                 else if (objTag == "circle")
                 {
-                    audioRequest.PlayRemoteAudio(idUser, 2, 2, transform.position, - 1, -1);
+                    audioRequest.PlayRemoteAudio(idUser, 2, 2, transform.position, - 1, -1, feedbackNow);
                 }
             }
 
@@ -65,7 +70,8 @@ public class ColliderObj : MonoBehaviour
 
     void OnCollisionStay(Collision collisionInfo)
     {
-
+        int feedbackNow = log.GetComponent<Logs>().whichFeedback;
+        print("Feedback on collider: " + feedbackNow);
         int idUser = GetComponent<UserTouch>().hand.theUser.userID;
 
         var objTag = collisionInfo.gameObject.tag;
@@ -74,11 +80,11 @@ public class ColliderObj : MonoBehaviour
         {
             if (objTag == "square")
             {
-                audioRequest.PlayRemoteAudio(idUser, 1, 1, transform.position, - 1, -1);
+                audioRequest.PlayRemoteAudio(idUser, 1, 1, transform.position, - 1, -1, feedbackNow);
             }
             else if (objTag == "circle")
             {
-                audioRequest.PlayRemoteAudio(idUser, 2, 2, transform.position, -1, -1);
+                audioRequest.PlayRemoteAudio(idUser, 2, 2, transform.position, -1, -1, feedbackNow);
             }
         }
 
@@ -87,7 +93,8 @@ public class ColliderObj : MonoBehaviour
 
     void OnCollisionExit(Collision collisionInfo)
     {
-
+        int feedbackNow = log.GetComponent<Logs>().whichFeedback;
+        print("Feedback on collider: " + feedbackNow);
         int idUser = GetComponent<UserTouch>().hand.theUser.userID;
 
         var objTag = collisionInfo.gameObject.tag;
@@ -103,26 +110,27 @@ public class ColliderObj : MonoBehaviour
 
     public void SelectObject()
     {
-
+        int feedbackNow = log.GetComponent<Logs>().whichFeedback;
+        print("Feedback on collider: " + feedbackNow);
         int idUser = GetComponent<UserTouch>().hand.theUser.userID;
 
         if (errorTap)
         {
-            audioRequest.PlayRemoteAudio(idUser, -1, 6, transform.position, -1, -1);
+            audioRequest.PlayRemoteAudio(idUser, -1, 6, transform.position, -1, -1, feedbackNow);
         }
         else
         {
             if (lastCollidingObject.tag == "square")
             {
                 squares_inc++;
-                audioRequest.PlayRemoteAudio(idUser, 1, 4, transform.position, squares_inc, squares_findTotal);
+                audioRequest.PlayRemoteAudio(idUser, 1, 4, transform.position, squares_inc, squares_findTotal, feedbackNow);
                 print("Selecionou " + squares_inc + " de " + squares_findTotal + " quadrados.");
             }
 
             else if(lastCollidingObject.tag == "circle")
             {
                 circles_inc++;
-                audioRequest.PlayRemoteAudio(idUser, 2, 4, transform.position, circles_inc, circles_findTotal);
+                audioRequest.PlayRemoteAudio(idUser, 2, 4, transform.position, circles_inc, circles_findTotal, feedbackNow);
                 print("Selecionou " + circles_inc + " de " + circles_findTotal + "circulos.");
             }
 
