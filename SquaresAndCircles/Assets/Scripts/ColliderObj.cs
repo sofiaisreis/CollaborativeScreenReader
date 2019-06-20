@@ -20,7 +20,6 @@ public class ColliderObj : MonoBehaviour
     public int circles_inc;
     public int squares_findTotal; // definido no inspector
     public int circles_findTotal;
-    public Logs log;
     public GameObject lastCollidingObject = null;
 
     private void Start()
@@ -44,33 +43,34 @@ public class ColliderObj : MonoBehaviour
     {
     }
 
-    void OnCollisionEnter(Collision collisionInfo) {
-        int feedbackNow = log.GetComponent<Logs>().whichFeedback;
+    void OnCollisionEnter(Collision collisionInfo)
+    {
+        int feedbackNow = GetComponent<Logs>().whichFeedback;
         print("Feedback on collider: " + feedbackNow);
         int idUser = GetComponent<UserTouch>().hand.theUser.userID;
 
-            var objTag = collisionInfo.gameObject.tag;
+        var objTag = collisionInfo.gameObject.tag;
 
-            if (collidingObject == null)
-            { 
-                if (objTag == "square")
-                {
-                    //userIDstring = u.GetComponent<User>().humanID;
-                    audioRequest.PlayRemoteAudio(idUser, 1, 1, transform.position, -1, -1, feedbackNow);
-                    //print("ID OF USER: " + u.humanID);
-                }
-                else if (objTag == "circle")
-                {
-                    audioRequest.PlayRemoteAudio(idUser, 2, 2, transform.position, - 1, -1, feedbackNow);
-                }
+        if (collidingObject == null)
+        {
+            if (objTag == "square")
+            {
+                //userIDstring = u.GetComponent<User>().humanID;
+                audioRequest.PlayRemoteAudio(idUser, 1, 1, transform.position, -1, -1, feedbackNow);
+                //print("ID OF USER: " + u.humanID);
             }
-
-            lastCollidingObject = collidingObject = collisionInfo.gameObject;
+            else if (objTag == "circle")
+            {
+                audioRequest.PlayRemoteAudio(idUser, 2, 2, transform.position, -1, -1, feedbackNow);
+            }
         }
+
+        lastCollidingObject = collidingObject = collisionInfo.gameObject;
+    }
 
     void OnCollisionStay(Collision collisionInfo)
     {
-        int feedbackNow = log.GetComponent<Logs>().whichFeedback;
+        int feedbackNow = GetComponent<Logs>().whichFeedback;
         print("Feedback on collider: " + feedbackNow);
         int idUser = GetComponent<UserTouch>().hand.theUser.userID;
 
@@ -93,7 +93,7 @@ public class ColliderObj : MonoBehaviour
 
     void OnCollisionExit(Collision collisionInfo)
     {
-        int feedbackNow = log.GetComponent<Logs>().whichFeedback;
+        int feedbackNow = GetComponent<Logs>().whichFeedback;
         print("Feedback on collider: " + feedbackNow);
         int idUser = GetComponent<UserTouch>().hand.theUser.userID;
 
@@ -110,7 +110,7 @@ public class ColliderObj : MonoBehaviour
 
     public void SelectObject()
     {
-        int feedbackNow = log.GetComponent<Logs>().whichFeedback;
+        int feedbackNow = GetComponent<Logs>().whichFeedback;
         print("Feedback on collider: " + feedbackNow);
         int idUser = GetComponent<UserTouch>().hand.theUser.userID;
 

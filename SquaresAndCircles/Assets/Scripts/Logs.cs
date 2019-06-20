@@ -12,7 +12,7 @@ public class Logs : MonoBehaviour
       Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
     public string feedbackType = null;
-    public int whichFeedback;
+    public int whichFeedback = -1;
 
     public AudioRequest audioRequest;
 
@@ -40,11 +40,11 @@ public class Logs : MonoBehaviour
             //StartLoggings();
         }
         // Write the string array to a new file named "WriteLines.txt".
-        using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "WriteLines.txt")))
+        /*using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "WriteLines.txt")))
         {
             foreach (string line in lines)
                 outputFile.WriteLine(line);
-        }
+        }*/
     }
 
     void OnGUI()
