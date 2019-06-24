@@ -22,6 +22,8 @@ public class ColliderObj : MonoBehaviour
     public int squares_findTotal; // definido no inspector
     public int circles_findTotal;
     public GameObject lastCollidingObject = null;
+    public string objectName;
+    public string actionIsNow = null;
 
     private void Start()
     {
@@ -59,10 +61,12 @@ public class ColliderObj : MonoBehaviour
                 //userIDstring = u.GetComponent<User>().humanID;
                 audioRequest.PlayRemoteAudio(idUser, 1, 1, transform.position, -1, -1, feedbackType);
                 //print("ID OF USER: " + u.humanID);
+                objectName = "square";
             }
             else if (objTag == "circle")
             {
                 audioRequest.PlayRemoteAudio(idUser, 2, 2, transform.position, -1, -1, feedbackType);
+                objectName = "circle";
             }
         }
 
@@ -82,10 +86,12 @@ public class ColliderObj : MonoBehaviour
             if (objTag == "square")
             {
                 audioRequest.PlayRemoteAudio(idUser, 1, 1, transform.position, - 1, -1, feedbackType);
+                objectName = "square";
             }
             else if (objTag == "circle")
             {
                 audioRequest.PlayRemoteAudio(idUser, 2, 2, transform.position, -1, -1, feedbackType);
+                objectName = "circle";
             }
         }
 
@@ -100,6 +106,7 @@ public class ColliderObj : MonoBehaviour
 
         var objTag = collisionInfo.gameObject.tag;
         audioRequest.StopRemoteAudio(idUser);
+        objectName = null;
 
         if (isBeingDragged) {
             //audioRequest.PlayRemoteAudio(idUser, 8, 5, transform.position);
@@ -107,6 +114,7 @@ public class ColliderObj : MonoBehaviour
         }
 
         collidingObject = null;
+        actionIsNow = "exit";
     }
 
     public void SelectObject()
@@ -118,9 +126,11 @@ public class ColliderObj : MonoBehaviour
         if (errorTap)
         {
             audioRequest.PlayRemoteAudio(idUser, -1, 6, transform.position, -1, -1, feedbackType);
+            actionIsNow = "error";
         }
         else
         {
+            actionIsNow = "selected";
             if (lastCollidingObject.tag == "square")
             {
                 squares_inc++;

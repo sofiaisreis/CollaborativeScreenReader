@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.43667555, g: 0.48427123, b: 0.5645229, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667546, g: 0.48427135, b: 0.5645225, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -253,6 +253,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b576413ea9e9c85408a01b42ff4a57e5, type: 3}
+--- !u!1 &9567905 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3462790539842953427, guid: b576413ea9e9c85408a01b42ff4a57e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 9567904}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9567906 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3462790539842953431, guid: b576413ea9e9c85408a01b42ff4a57e5,
@@ -1130,6 +1136,28 @@ MonoBehaviour:
   feedbackType: 
   timer: 0
   tarefaOn: -1
+  User1Pos: {fileID: 522154809}
+  User2Pos: {fileID: 662442358}
+  User1LeftHandPos: {fileID: 1266410111}
+  User2LeftHandPos: {fileID: 676111262}
+  User1RightHandPos: {fileID: 598936823}
+  User2RightHandPos: {fileID: 1569652333}
+  User1PosToque: {fileID: 0}
+  User2PosToque: {fileID: 0}
+  User1MaoDeToque: {fileID: 1367184147}
+  User2MaoDeToque: {fileID: 1367184147}
+  User1TouchType: {fileID: 9567905}
+  User2TouchType: {fileID: 1881834339}
+  User1Action: {fileID: 9567905}
+  User2Action: {fileID: 1881834339}
+  HoverU1: {fileID: 9567905}
+  HoverU2: {fileID: 1881834339}
+  NQuadToSelect: {fileID: 9567905}
+  NCircToSelect: {fileID: 1881834339}
+  LastCollidingObj1: {fileID: 9567905}
+  LastCollidingObj2: {fileID: 1881834339}
+  HandCube1Pos: {fileID: 9567905}
+  HandCube2Pos: {fileID: 1881834339}
   text: []
 --- !u!4 &633784403
 Transform:
@@ -1762,7 +1790,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 9567904}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 9567905}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b20ac13678667f48b827220df8d9352, type: 3}
@@ -2260,6 +2288,7 @@ MonoBehaviour:
   surfaceCenter: {fileID: 1230793024}
   borders: {fileID: 1378911206}
   logFeed: {fileID: 0}
+  closestP: {x: 0, y: 0, z: 0}
 --- !u!4 &1367184152
 Transform:
   m_ObjectHideFlags: 0
@@ -3075,13 +3104,19 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1881834337}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1881834339 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3462790539842953427, guid: b576413ea9e9c85408a01b42ff4a57e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1881834337}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1905842651 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4279992100563308375, guid: b576413ea9e9c85408a01b42ff4a57e5,
     type: 3}
   m_PrefabInstance: {fileID: 1881834337}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1881834339}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b20ac13678667f48b827220df8d9352, type: 3}

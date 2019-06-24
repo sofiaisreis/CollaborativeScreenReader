@@ -11,6 +11,7 @@ public class UserTouch : MonoBehaviour
     private DateTime lastTapTime;
     private Vector3 lastTapPosition;
     private bool possibleDoubleTap = false;
+    public string typeOfTouch = null;
 
     public UserHand hand;
     //public UserHand uHand2;
@@ -44,6 +45,7 @@ public class UserTouch : MonoBehaviour
     public void Drag(Vector3 position)
     {
         transform.position = position;
+        typeOfTouch = "drag";
     }
 
     public void DoubleTap()
@@ -62,6 +64,7 @@ public class UserTouch : MonoBehaviour
                 GetComponent<ColliderObj>().SelectObject();
             }
         }
+        typeOfTouch = "double-tap";
     }
 
     public void Tap(Vector3 position)
@@ -96,6 +99,7 @@ public class UserTouch : MonoBehaviour
     {
         transform.position = position;
         print("TAP");
+        typeOfTouch = "tap";
     }
 
     public void BeginDrag(Vector3 position)

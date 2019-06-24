@@ -19,11 +19,31 @@ public class Logs : MonoBehaviour
     public Timer Timer1;
     public int tarefaOn = -1;
     DateTime taskStart;
-
+    
     public GameObject User1Pos;
     public GameObject User2Pos;
     public GameObject User1LeftHandPos;
     public GameObject User2LeftHandPos;
+    public GameObject User1RightHandPos;
+    public GameObject User2RightHandPos;
+    public GameObject User1PosToque; //vazio, mas existe; coords, com toque
+    public GameObject User2PosToque; //vazio, mas existe; coords, com toque
+    public GameObject User1MaoDeToque;
+    public GameObject User2MaoDeToque;
+    public GameObject User1TouchType; //Tap, DoubleTap, Drag
+    public GameObject User2TouchType; //Tap, DoubleTap, Drag
+    public GameObject User1Action; //Select, Exit, Error
+    public GameObject User2Action; //Select, Exit, Error
+    public GameObject HoverU1;
+    public GameObject HoverU2;
+    public GameObject NQuadToSelect;
+    public GameObject NCircToSelect;
+    public GameObject LastCollidingObj1;
+    public GameObject LastCollidingObj2;
+    public GameObject HandCube1Pos;
+    public GameObject HandCube2Pos;
+
+    //Time:User:UserPos:UserRHPos:UserLHPos:UserPosToque:UserMaoDeToque:UserTouchType:UserAction:HoverUnityName:HoverObjectType:NQuadToSelect:NCircToSelect:LastCollidingObj:HandCubePos
 
     public List<string> text = new List<string>();
 
@@ -55,9 +75,8 @@ public class Logs : MonoBehaviour
             tarefaOn = 1;
             taskStart = DateTime.Now;
 
-            text.Add("TimeStamp:Action:Value");
-            
-            //StartLoggings();
+            //StartLogging
+            text.Add("Time:User:UserPos:UserRHPos:UserLHPos:UserPosToque:UserMaoDeToque:UserTouchType:UserAction:HoverUnityName:HoverObjectType:NQuadToSelect:NCircToSelect:LastCollidingObj:HandCubePos");
         }
 
         if (Input.GetKeyDown(KeyCode.S))
@@ -79,14 +98,8 @@ public class Logs : MonoBehaviour
 
         if (tarefaOn == 1)
         {
-            TimeSpan timestamp = DateTime.Now - taskStart;
-
-            System.Random r = new System.Random();
-
-            text.Add(timestamp.TotalMilliseconds + ":" + "Touch" + ":" + r.Next(0, 100));
-
-            //current += TimeSpan.FromSeconds(1);
-            //print("Current: " + timestamp.TotalMilliseconds);
+            LogFileFrameWriting();
+            
         }
 
         if ( tarefaOn == 0 )
@@ -94,15 +107,99 @@ public class Logs : MonoBehaviour
             
 
         }
-        // Write the string array to a new file named "WriteLines.txt".
-        /*using (StreamWriter outputFile = new StreamWriter(Path.Combine(docPath, "WriteLines.txt")))
+
+    }
+
+    private void LogFileFrameWriting()
+    {
+        TimeSpan timestamp = DateTime.Now - taskStart;
+        //System.Random r = new System.Random();
+        Vector3 User1Posicao;
+        Vector3 User2Posicao;
+        Vector3 U1RH;
+        Vector3 U1LH;
+        Vector3 U2RH;
+        Vector3 U2LH;
+        //Vector3 PosTouchU1;
+        //Vector3 PosTouchU2;
+        string MaoUser1;
+        string MaoUser2;
+
+        string U1TouchType;
+        string U2TouchType;
+        string U1Action;
+        string U2Action;
+        GameObject HoverUNU1; //unity name
+        GameObject HoverUNU2;
+        string HoverOTU1; //obj type
+        string HoverOTU2;
+        int NumQuadToSelect; //pelo User1
+        int NumCircToSelect; //pelo User2
+        GameObject U1LastColliding;
+        GameObject U2LastColliding;
+        Vector3 HandCubeU1;
+        Vector3 HandCubeU2;
+
+  
+        User1Posicao = User1Pos.transform.position;
+        User2Posicao = User2Pos.transform.position;
+        U1RH = User1RightHandPos.transform.position;
+        U1LH = User1LeftHandPos.transform.position;
+        U2RH = User2RightHandPos.transform.position;
+        U2LH = User1LeftHandPos.transform.position;
+        //PosTouchU1 = User1PosToque.transform.position;
+        //PosTouchU2 = User2PosToque.transform.position;
+        //User1MaoDeToque = ;
+        //User2MaoDeToque = ;
+        U1TouchType = User1TouchType.GetComponent<UserTouch>().typeOfTouch;
+        U2TouchType = User2TouchType.GetComponent<UserTouch>().typeOfTouch;
+        U1Action = User1Action.GetComponent<ColliderObj>().actionIsNow;
+        U2Action = User2Action.GetComponent<ColliderObj>().actionIsNow;
+        HoverUNU1 = HoverU1.GetComponent<ColliderObj>().collidingObject;
+        HoverUNU2 = HoverU2.GetComponent<ColliderObj>().collidingObject;
+        HoverOTU1 = HoverU1.GetComponent<ColliderObj>().objectName;
+        HoverOTU2 = HoverU2.GetComponent<ColliderObj>().objectName;
+        int sqTotal = NQuadToSelect.GetComponent<ColliderObj>().squares_findTotal;
+        int ccTotal = NCircToSelect.GetComponent<ColliderObj>().circles_findTotal;
+        int incSQ = NQuadToSelect.GetComponent<ColliderObj>().squares_inc;
+        int incCC = NCircToSelect.GetComponent<ColliderObj>().circles_inc;
+        NumQuadToSelect = sqTotal - incSQ;
+        NumCircToSelect = ccTotal - incCC;
+        U1LastColliding = LastCollidingObj1.GetComponent<ColliderObj>().lastCollidingObject;
+        U2LastColliding = LastCollidingObj2.GetComponent<ColliderObj>().lastCollidingObject;
+        HandCubeU1 = HandCube1Pos.transform.position;
+        HandCubeU2 = HandCube2Pos.transform.position;
+
+        if (User1MaoDeToque.GetComponent<TrackerClient>().handRightU1 != null)
         {
-            foreach (string line in lines)
-                outputFile.WriteLine(line);
-        }*/
+            MaoUser1 = "right";
+        }
+        else if (User1MaoDeToque.GetComponent<TrackerClient>().handLeftU1 != null)
+        {
+            MaoUser1 = "left";
+        }
+        else
+        {
+            MaoUser1 = null;
+        }
 
+        if (User2MaoDeToque.GetComponent<TrackerClient>().handRightU2 != null)
+        {
+            MaoUser2 = "right";
+        }
+        else if (User2MaoDeToque.GetComponent<TrackerClient>().handLeftU2 != null)
+        {
+            MaoUser2 = "left";
+        }
+        else
+        {
+            MaoUser2 = null;
+        }
+
+
+        text.Add(timestamp.TotalMilliseconds + ":" + "User 1" + ":" + User1Posicao + ":" + U1RH + ":" + U1LH + ":" + "PosTouchU1" + ":" + MaoUser1 + ":" + U1TouchType + ":" + U1Action + ":" + HoverUNU1 + ":" + HoverOTU1 + ":" + NumQuadToSelect + ":" + NumCircToSelect + ":" + U1LastColliding + ":" +  HandCubeU1);
+        text.Add(timestamp.TotalMilliseconds + ":" + "User 2" + ":" + User2Posicao + ":" + U2RH + ":" + U2LH + ":" + "PosTouchU2" + ":" + MaoUser2 + ":" + U2TouchType + ":" + U2Action + ":" + HoverUNU2 + ":" + HoverOTU2 + ":" + NumQuadToSelect + ":" + NumCircToSelect + ":" + U2LastColliding + ":" +  HandCubeU2);
         
-
     }
 
     void OnGUI()
@@ -110,7 +207,3 @@ public class Logs : MonoBehaviour
         GUI.Label(new Rect(10, 30, 200, 35), "Feedback Type: " + feedbackType);
     }
 }
-// The example creates a file named "WriteLines.txt" with the following contents:
-// First line
-// Second line
-// Third line

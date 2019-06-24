@@ -19,6 +19,7 @@ public class TrackerClient : MonoBehaviour
     public Transform surfaceCenter;
     public Transform borders;
     public Logs logFeed;
+    public Vector3 closestP;
 
     void Start()
     {
