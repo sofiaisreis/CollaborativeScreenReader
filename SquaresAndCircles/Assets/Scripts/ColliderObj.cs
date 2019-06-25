@@ -132,9 +132,10 @@ public class ColliderObj : MonoBehaviour
         }
         else
         {
-            actionIsNow = "selected";
+            actionIsNow = "error";
             if (lastCollidingObject.tag == "square")
             {
+                actionIsNow = "selected";
                 squares_inc++;
                 audioRequest.PlayRemoteAudio(idUser, 1, 4, transform.position, squares_inc, squares_findTotal, feedbackType);
                 print("Selecionou " + squares_inc + " de " + squares_findTotal + " quadrados.");
@@ -142,6 +143,7 @@ public class ColliderObj : MonoBehaviour
 
             else if(lastCollidingObject.tag == "circle")
             {
+                actionIsNow = "selected";
                 circles_inc++;
                 audioRequest.PlayRemoteAudio(idUser, 2, 4, transform.position, circles_inc, circles_findTotal, feedbackType);
                 print("Selecionou " + circles_inc + " de " + circles_findTotal + "circulos.");

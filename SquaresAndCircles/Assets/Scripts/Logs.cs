@@ -86,6 +86,7 @@ public class Logs : MonoBehaviour
         {
             tarefaOn = 0;
             print("Tarefa finito");
+            textStory.Add("At " + timestamp.TotalMilliseconds + " task was stopped");
 
             //print("Tarefa Terminada! Tempo: " + current);
             DateTime now = DateTime.Now;
@@ -117,8 +118,6 @@ public class Logs : MonoBehaviour
                     sws.WriteLine(s);
                 }
             }
-
-            textStory.Add("At " + timestamp.Seconds + " task was stopped");
         }
 
         if (tarefaOn == 1)
@@ -246,33 +245,33 @@ public class Logs : MonoBehaviour
         // Adiciona o texto ao documento Log Tell A Story
         // Time:User:Action:ObjUnity:NumSelectForSelection
 
-        if (U1Action == "selected")
+        if (U1Action == "selected" && NumQuadToSelect != 0)
         {
-            textStory.Add("At " + timestamp.Seconds + " User1 selected " + HoverOTU1 + " and there is still " + NumQuadToSelect + " squares to select.");
+            textStory.Add("At " + timestamp.TotalMilliseconds + " User1 selected " + HoverOTU1 + " and there is still " + NumQuadToSelect + " squares to select.");
         }
-        if (U1Action == "error")
+        if (U1TouchType == "double-tap" && HoverOTU1 == "circle") // aka error
         {
-            textStory.Add("At " + timestamp.Seconds + " User1 tried to select " + HoverOTU1 + " and that is not possible.");
+            textStory.Add("At " + timestamp.TotalMilliseconds + " User1 tried to select " + HoverOTU1 + " and that is not possible.");
         }
-        if (U2Action == "selected")
+        if (U2Action == "selected" && NumCircToSelect != 0)
         {
-            textStory.Add("At " + timestamp.Seconds + " User2 selected " + HoverOTU2 + " and there is still " + NumCircToSelect + " circles to select.");
+            textStory.Add("At " + timestamp.TotalMilliseconds + " User2 selected " + HoverOTU2 + " and there is still " + NumCircToSelect + " circles to select.");
         }
-        if (U2Action == "error")
+        if (U2TouchType == "double-tap" && HoverOTU2 == "square") //aka error
         {
-            textStory.Add("At " + timestamp.Seconds + " User2 tried to select " + HoverOTU2 + " and that is not possible.");
+            textStory.Add("At " + timestamp.TotalMilliseconds + " User2 tried to select " + HoverOTU2 + " and that is not possible.");
         }
-        if (NumQuadToSelect == 0)
+        if (U1Action == "selected" && NumQuadToSelect == 0)
         {
-            textStory.Add("At " + timestamp.Seconds + " User 1 selected all the squares.");
+            textStory.Add("At " + timestamp.TotalMilliseconds + " User 1 selected all the squares.");
         }
-        if (NumCircToSelect == 0)
+        if (U2Action == "selected" && NumCircToSelect == 0)
         {
-            textStory.Add("At " + timestamp.Seconds + " User 2 selected all the circles.");
+            textStory.Add("At " + timestamp.TotalMilliseconds + " User 2 selected all the circles.");
         }
         if (NumQuadToSelect == 0 && NumCircToSelect == 0)
         {
-            textStory.Add("At " + timestamp.Seconds + " All squares and circles were selected. Task completed!");
+            textStory.Add("At " + timestamp.TotalMilliseconds + " All squares and circles were selected. Task completed!");
         }
     }
 
