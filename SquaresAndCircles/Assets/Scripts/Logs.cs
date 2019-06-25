@@ -246,21 +246,21 @@ public class Logs : MonoBehaviour
         // Adiciona o texto ao documento Log Tell A Story
         // Time:User:Action:ObjUnity:NumSelectForSelection
 
-        if (U1Action == "select")
+        if (U1Action == "selected")
         {
-            textStory.Add("At " + timestamp.Seconds + " User1 selected " + HoverUNU1 + " and there is still " + NumQuadToSelect + " squares to select.");
+            textStory.Add("At " + timestamp.Seconds + " User1 selected " + HoverOTU1 + " and there is still " + NumQuadToSelect + " squares to select.");
         }
         if (U1Action == "error")
         {
-            textStory.Add("At " + timestamp.Seconds + " User1 tried to select " + HoverUNU1 + " and that is not possible.");
+            textStory.Add("At " + timestamp.Seconds + " User1 tried to select " + HoverOTU1 + " and that is not possible.");
         }
-        if (U2Action == "select")
+        if (U2Action == "selected")
         {
-            textStory.Add("At " + timestamp.Seconds + " User2 selected " + HoverUNU2 + " and there is still " + NumCircToSelect + " circles to select.");
+            textStory.Add("At " + timestamp.Seconds + " User2 selected " + HoverOTU2 + " and there is still " + NumCircToSelect + " circles to select.");
         }
         if (U2Action == "error")
         {
-            textStory.Add("At " + timestamp.Seconds + " User2 tried to select " + HoverUNU2 + " and that is not possible.");
+            textStory.Add("At " + timestamp.Seconds + " User2 tried to select " + HoverOTU2 + " and that is not possible.");
         }
         if (NumQuadToSelect == 0)
         {
