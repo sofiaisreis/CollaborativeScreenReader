@@ -48,8 +48,9 @@ public class ColliderObj : MonoBehaviour
 
     void OnCollisionEnter(Collision collisionInfo)
     {
+        actionIsNow = null;
         //int feedbackNow = GetComponent<Logs>().whichFeedback;
-        print("Feedback on collider: " + feedbackType);
+        //print("Feedback on collider: " + feedbackType);
         int idUser = GetComponent<UserTouch>().hand.theUser.userID;
 
         var objTag = collisionInfo.gameObject.tag;
@@ -75,8 +76,9 @@ public class ColliderObj : MonoBehaviour
 
     void OnCollisionStay(Collision collisionInfo)
     {
+        actionIsNow = null;
         //int feedbackNow = GetComponent<Logs>().whichFeedback;
-        print("Feedback on collider: " + feedbackType);
+        //print("Feedback on collider: " + feedbackType);
         int idUser = GetComponent<UserTouch>().hand.theUser.userID;
 
         var objTag = collisionInfo.gameObject.tag;
@@ -101,7 +103,7 @@ public class ColliderObj : MonoBehaviour
     void OnCollisionExit(Collision collisionInfo)
     {
         //int feedbackNow = GetComponent<Logs>().whichFeedback;
-        print("Feedback on collider: " + feedbackType);
+        //print("Feedback on collider: " + feedbackType);
         int idUser = GetComponent<UserTouch>().hand.theUser.userID;
 
         var objTag = collisionInfo.gameObject.tag;
@@ -120,7 +122,7 @@ public class ColliderObj : MonoBehaviour
     public void SelectObject()
     {
         //int feedbackNow = GetComponent<Logs>().whichFeedback;
-        print("Feedback on collider: " + feedbackType);
+        //print("Feedback on collider: " + feedbackType);
         int idUser = GetComponent<UserTouch>().hand.theUser.userID;
 
         if (errorTap)
