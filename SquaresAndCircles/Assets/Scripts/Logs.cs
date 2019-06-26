@@ -43,6 +43,18 @@ public class Logs : MonoBehaviour
     public GameObject U1LastColliding, U2LastColliding;
     public Vector3 HandCubeU1, HandCubeU2;
 
+    public bool CompletedTask = false;
+    public int SelectionsU1 = 0;
+    public int SelectionsU2 = 0;
+    public int ErrorsU1 = 0;
+    public int ErrorsU2 = 0;
+    public Double[] TimeStampQuadrados = new Double[5];
+    public Double[] TimeStampCirculos = new Double[5];
+    public Double[] TimeStampErros = new Double[20]; //what now?
+    public Double TempoSelecaoQuadrados;
+    public Double TempoSelecaoCirculos;
+    public Double TempoTotalTarefa;
+
     //Time:User:UserPos:UserRHPos:UserLHPos:UserPosToque:UserMaoDeToque:UserTouchType:UserAction:HoverUnityName:HoverObjectType:NQuadToSelect:NCircToSelect:LastCollidingObj:HandCubePos
 
     public List<string> text = new List<string>();
@@ -79,7 +91,7 @@ public class Logs : MonoBehaviour
 
             //StartLogging
             text.Add("Time:User:UserPos:UserRHPos:UserLHPos:UserPosToque:UserMaoDeToque:UserTouchType:UserAction:HoverUnityName:HoverObjectType:NQuadToSelect:NCircToSelect:LastCollidingObj:HandCubePos");
-            textStory.Add("Time:User:Action:ObjUnity:NumSelectForSelection");
+            //textStory.Add("Time:User:Action:ObjUnity:NumSelectForSelection");
         }
 
         if (Input.GetKeyDown(KeyCode.S))
@@ -101,14 +113,7 @@ public class Logs : MonoBehaviour
                 }
             }
 
-            // AGLOMERATE
-            using (StreamWriter swa = new StreamWriter(@"kinglogAglomerate" + now.Year + now.Month + now.Day + now.Hour + now.Minute + now.Second + ".txt"))
-            {
-                foreach (string s in textAglomerate)
-                {
-                    swa.WriteLine(s);
-                }
-            }
+            LogFileAglomerateWriting();
 
             // TELL A STORY
             using (StreamWriter sws = new StreamWriter(@"kinglogTellAStory" + now.Year + now.Month + now.Day + now.Hour + now.Minute + now.Second + ".txt"))
@@ -123,7 +128,6 @@ public class Logs : MonoBehaviour
         if (tarefaOn == 1)
         {
             LogFileFrameWriting();
-            LogFileAglomerateWriting();
             LogFileTellAStoryWriting();
 
 
@@ -131,6 +135,7 @@ public class Logs : MonoBehaviour
 
         if ( tarefaOn == 0 )
         {
+            
         }
 
     }
@@ -226,6 +231,32 @@ public class Logs : MonoBehaviour
             PosTouchU2 = Vector3.zero;
         }
 
+        //Numero de DT
+        if(U1TouchType == "double-tap")
+        {
+            SelectionsU1++;
+        }
+        if (U2TouchType == "double-tap")
+        {
+            SelectionsU2++;
+        }
+
+        //Numero de Erros
+        //timestamp erros cada user
+        for (int i = 0; i < TimeStampErros.Length - 1; i++)
+        {
+            if (U1Action == "error" || (U1Action == "selected" && U1LastColliding == null))
+            {
+                ErrorsU1++;
+                TimeStampErros[i] = timestamp.TotalMilliseconds;
+            }
+            if (U2Action == "error" || (U2Action == "selected" && U2LastColliding == null))
+            {
+                ErrorsU2++;
+                TimeStampErros[i] = timestamp.TotalMilliseconds;
+            }
+        }
+
         // Adiciona o texto ao documento Log frame-a-frame
         text.Add(timestamp.TotalMilliseconds + ":" + "User 1" + ":" + User1Posicao + ":" + U1RH + ":" + U1LH + ":" + PosTouchU1 + ":" + MaoUser1 + ":" + U1TouchType + ":" + U1Action + ":" + HoverUNU1 + ":" + HoverOTU1 + ":" + NumQuadToSelect + ":" + NumCircToSelect + ":" + U1LastColliding + ":" +  HandCubeU1);
         text.Add(timestamp.TotalMilliseconds + ":" + "User 2" + ":" + User2Posicao + ":" + U2RH + ":" + U2LH + ":" + PosTouchU2 + ":" + MaoUser2 + ":" + U2TouchType + ":" + U2Action + ":" + HoverUNU2 + ":" + HoverOTU2 + ":" + NumQuadToSelect + ":" + NumCircToSelect + ":" + U2LastColliding + ":" +  HandCubeU2);
@@ -234,10 +265,73 @@ public class Logs : MonoBehaviour
 
     public void LogFileAglomerateWriting()
     {
-        // Adiciona o texto ao documento Log Aglomerate
-        // 
-        
-        
+        //Numero de selecoes vazias de ambos users
+        int NumSelecoesVaziasU1 = 0;
+        int NumSelecoesVaziasU2 = 0;
+        if (U1Action == "selected" && U1LastColliding == null)
+        {
+            NumSelecoesVaziasU1++;
+        }
+        if (U2Action == "selected" && U2LastColliding == null)
+        {
+            NumSelecoesVaziasU2++;
+        }
+        int NumSelecoesVaziasAmbos = NumSelecoesVaziasU1 + NumSelecoesVaziasU2;
+        //Numero de selecoes erradas de ambos users - selecionar algo que nao pode, selecionar "nada" - first case
+        int NumSelecoesErradasU1 = ErrorsU1 + NumSelecoesVaziasU1;
+        int NumSelecoesErradasU2 = ErrorsU2 + NumSelecoesVaziasU2;
+        int NumSelecoesErradasAmbos = NumSelecoesErradasU1 + NumSelecoesErradasU2 + NumSelecoesVaziasAmbos;
+        //Numero de erros total
+        int NumErrosU1 = ErrorsU1;
+        int NumErrosU2 = ErrorsU2;
+        int NumErrosAmbos = NumErrosU1 + NumErrosU2;
+        //timestamp selecao cada user
+        for (int i = 0; i < TimeStampQuadrados.Length-1; i++)
+        {
+            if (U1Action == "selected" && HoverOTU1 == "square")
+            {
+                TimeStampQuadrados[i] = timestamp.TotalMilliseconds;
+            }
+        }
+        for (int i = 0; i < TimeStampCirculos.Length - 1; i++)
+        {
+            if (U2Action == "selected" && HoverOTU2 == "square")
+            {
+                TimeStampCirculos[i] = timestamp.TotalMilliseconds;
+            }
+        }
+
+        //tempo total de touch de cada user
+
+        //tempo total de toque em simultâneo
+
+        textAglomerate.Add("Tarefa Completada" + ":" + CompletedTask);
+        textAglomerate.Add("Numero de Quadrados Selecionados" + ":" + incSQ);
+        textAglomerate.Add("Numero de Circulos Selecionados" + ":" + incCC);
+        textAglomerate.Add("Numero de Selecoes Vazias" + ":" + NumSelecoesVaziasAmbos);
+        textAglomerate.Add("Numero de Selecoes Erradas" + ":" + NumSelecoesErradasAmbos);
+        textAglomerate.Add("Numero de Erros no Total" + ":" + NumErrosAmbos);
+
+        textAglomerate.Add("Selecoes Quadrados" + ":" + TimeStampQuadrados); //timestamps
+        textAglomerate.Add("Selecoes Circulos" + ":" + TimeStampCirculos); //timestamps
+        textAglomerate.Add("Erros" + ":" + TimeStampErros); //timestamps
+        textAglomerate.Add("Tempo Total de Selecao de Quadrados" + ":" + TempoSelecaoQuadrados);
+        textAglomerate.Add("Tempo Total de Selecao de Circulos" + ":" + TempoSelecaoCirculos);
+        textAglomerate.Add("Tempo total da tarefa" + ":" + TempoTotalTarefa);
+
+        textAglomerate.Add("Tempo Total de Toque do User 1" + ":" + " ");
+        textAglomerate.Add("Tempo Total de Toque do User 2" + ":" + " ");
+        textAglomerate.Add("Tempo Total de Toque em simultâneo" + ":" + " ");
+
+        DateTime now = DateTime.Now;
+        // AGLOMERATE
+        using (StreamWriter swa = new StreamWriter(@"kinglogAglomerate" + now.Year + now.Month + now.Day + now.Hour + now.Minute + now.Second + ".txt"))
+        {
+            foreach (string s in textAglomerate)
+            {
+                swa.WriteLine(s);
+            }
+        }
     }
 
     public void LogFileTellAStoryWriting()
@@ -261,17 +355,22 @@ public class Logs : MonoBehaviour
         {
             textStory.Add("At " + timestamp.TotalMilliseconds + " User2 tried to select " + HoverOTU2 + " and that is not possible.");
         }
+
         if (U1Action == "selected" && NumQuadToSelect == 0)
         {
             textStory.Add("At " + timestamp.TotalMilliseconds + " User 1 selected all the squares.");
+            TempoSelecaoQuadrados = timestamp.TotalMilliseconds;
         }
         if (U2Action == "selected" && NumCircToSelect == 0)
         {
             textStory.Add("At " + timestamp.TotalMilliseconds + " User 2 selected all the circles.");
+            TempoSelecaoCirculos = timestamp.TotalMilliseconds;
         }
         if (NumQuadToSelect == 0 && NumCircToSelect == 0)
         {
             textStory.Add("At " + timestamp.TotalMilliseconds + " All squares and circles were selected. Task completed!");
+            CompletedTask = true;
+            TempoTotalTarefa = timestamp.TotalMilliseconds;
         }
     }
 
