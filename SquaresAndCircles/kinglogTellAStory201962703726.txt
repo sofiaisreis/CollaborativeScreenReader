@@ -1,0 +1,629 @@
+At 11289.0248 User1 tried to select circle and that is not possible.
+At 11305.9778 User1 tried to select circle and that is not possible.
+At 11322.9318 User1 tried to select circle and that is not possible.
+At 11338.8909 User1 tried to select circle and that is not possible.
+At 11355.8448 User1 tried to select circle and that is not possible.
+At 11372.8 User1 tried to select circle and that is not possible.
+At 11389.7493 User1 tried to select circle and that is not possible.
+At 11406.7046 User1 tried to select circle and that is not possible.
+At 11422.6924 User1 tried to select circle and that is not possible.
+At 11440.6201 User1 tried to select circle and that is not possible.
+At 11457.5744 User1 tried to select circle and that is not possible.
+At 11474.5288 User1 tried to select circle and that is not possible.
+At 11491.4837 User1 tried to select circle and that is not possible.
+At 11507.4408 User1 tried to select circle and that is not possible.
+At 11524.3954 User1 tried to select circle and that is not possible.
+At 11541.3509 User1 tried to select circle and that is not possible.
+At 11558.3045 User1 tried to select circle and that is not possible.
+At 11575.2595 User1 tried to select circle and that is not possible.
+At 11592.2185 User1 tried to select circle and that is not possible.
+At 11608.2013 User1 tried to select circle and that is not possible.
+At 11625.1264 User1 tried to select circle and that is not possible.
+At 11642.0822 User1 tried to select circle and that is not possible.
+At 11660.0325 User1 tried to select circle and that is not possible.
+At 11675.9911 User1 tried to select circle and that is not possible.
+At 11692.9456 User1 tried to select circle and that is not possible.
+At 11709.903 User1 tried to select circle and that is not possible.
+At 11726.8547 User1 tried to select circle and that is not possible.
+At 11742.8117 User1 tried to select circle and that is not possible.
+At 11760.7641 User1 tried to select circle and that is not possible.
+At 11777.7182 User1 tried to select circle and that is not possible.
+At 11793.6783 User1 tried to select circle and that is not possible.
+At 11810.6309 User1 tried to select circle and that is not possible.
+At 11827.5851 User1 tried to select circle and that is not possible.
+At 11844.5397 User1 tried to select circle and that is not possible.
+At 11861.4944 User1 tried to select circle and that is not possible.
+At 11878.4484 User1 tried to select circle and that is not possible.
+At 11895.4032 User1 tried to select circle and that is not possible.
+At 11912.378 User1 tried to select circle and that is not possible.
+At 11929.3126 User1 tried to select circle and that is not possible.
+At 11945.2716 User1 tried to select circle and that is not possible.
+At 11963.2227 User1 tried to select circle and that is not possible.
+At 11979.1791 User1 tried to select circle and that is not possible.
+At 11996.1338 User1 tried to select circle and that is not possible.
+At 12013.089 User1 tried to select circle and that is not possible.
+At 12030.0431 User1 tried to select circle and that is not possible.
+At 12046.998 User1 tried to select circle and that is not possible.
+At 13445.9473 User1 selected square and there is still 4 squares to select.
+At 13461.9052 User1 selected square and there is still 4 squares to select.
+At 13478.8592 User1 selected square and there is still 4 squares to select.
+At 13495.8151 User1 selected square and there is still 4 squares to select.
+At 13512.7683 User1 selected square and there is still 4 squares to select.
+At 13529.7255 User1 selected square and there is still 4 squares to select.
+At 13545.6815 User1 selected square and there is still 4 squares to select.
+At 13563.6326 User1 selected square and there is still 4 squares to select.
+At 13580.5874 User1 selected square and there is still 4 squares to select.
+At 13596.5541 User1 selected square and there is still 4 squares to select.
+At 13613.4994 User1 selected square and there is still 4 squares to select.
+At 13630.4539 User1 selected square and there is still 4 squares to select.
+At 13647.4156 User1 selected square and there is still 4 squares to select.
+At 13664.3632 User1 selected square and there is still 4 squares to select.
+At 13681.3182 User1 selected square and there is still 4 squares to select.
+At 13698.2744 User1 selected square and there is still 4 squares to select.
+At 13714.2297 User1 selected square and there is still 4 squares to select.
+At 13731.1853 User1 selected square and there is still 4 squares to select.
+At 13748.139 User1 selected square and there is still 4 squares to select.
+At 13766.0934 User1 selected square and there is still 4 squares to select.
+At 13782.0488 User1 selected square and there is still 4 squares to select.
+At 13799.0035 User1 selected square and there is still 4 squares to select.
+At 13815.9579 User1 selected square and there is still 4 squares to select.
+At 13832.912 User1 selected square and there is still 4 squares to select.
+At 13849.8675 User1 selected square and there is still 4 squares to select.
+At 13866.8212 User1 selected square and there is still 4 squares to select.
+At 13882.7791 User1 selected square and there is still 4 squares to select.
+At 13900.36 User1 selected square and there is still 4 squares to select.
+At 13917.2966 User1 selected square and there is still 4 squares to select.
+At 13934.2501 User1 selected square and there is still 4 squares to select.
+At 13950.2096 User1 selected square and there is still 4 squares to select.
+At 13968.1607 User1 selected square and there is still 4 squares to select.
+At 13985.1148 User1 selected square and there is still 4 squares to select.
+At 14001.0709 User1 selected square and there is still 4 squares to select.
+At 14018.025 User1 selected square and there is still 4 squares to select.
+At 14034.9799 User1 selected square and there is still 4 squares to select.
+At 14051.9352 User1 selected square and there is still 4 squares to select.
+At 14068.8891 User1 selected square and there is still 4 squares to select.
+At 14085.8448 User1 selected square and there is still 4 squares to select.
+At 14101.8055 User1 selected square and there is still 4 squares to select.
+At 14119.7577 User1 selected square and there is still 4 squares to select.
+At 14135.7154 User1 selected square and there is still 4 squares to select.
+At 14152.6698 User1 selected square and there is still 4 squares to select.
+At 14169.625 User1 selected square and there is still 4 squares to select.
+At 14186.5792 User1 selected square and there is still 4 squares to select.
+At 14203.0687 User1 selected square and there is still 4 squares to select.
+At 14221.0233 User1 selected square and there is still 4 squares to select.
+At 14236.9782 User1 selected square and there is still 4 squares to select.
+At 15214.6314 User1 selected square and there is still 3 squares to select.
+At 15231.5883 User1 selected square and there is still 3 squares to select.
+At 15247.5425 User1 selected square and there is still 3 squares to select.
+At 15264.497 User1 selected square and there is still 3 squares to select.
+At 15281.4518 User1 selected square and there is still 3 squares to select.
+At 15298.4065 User1 selected square and there is still 3 squares to select.
+At 15315.361 User1 selected square and there is still 3 squares to select.
+At 15332.3158 User1 selected square and there is still 3 squares to select.
+At 15349.2711 User1 selected square and there is still 3 squares to select.
+At 15366.2247 User1 selected square and there is still 3 squares to select.
+At 15383.1804 User1 selected square and there is still 3 squares to select.
+At 15400.1343 User1 selected square and there is still 3 squares to select.
+At 15416.0966 User1 selected square and there is still 3 squares to select.
+At 15433.0472 User1 selected square and there is still 3 squares to select.
+At 15450.0013 User1 selected square and there is still 3 squares to select.
+At 15466.9557 User1 selected square and there is still 3 squares to select.
+At 15483.9111 User1 selected square and there is still 3 squares to select.
+At 15500.8649 User1 selected square and there is still 3 squares to select.
+At 15517.8198 User1 selected square and there is still 3 squares to select.
+At 15534.7752 User1 selected square and there is still 3 squares to select.
+At 15551.7289 User1 selected square and there is still 3 squares to select.
+At 15567.6866 User1 selected square and there is still 3 squares to select.
+At 15584.6414 User1 selected square and there is still 3 squares to select.
+At 15601.5982 User1 selected square and there is still 3 squares to select.
+At 15618.5504 User1 selected square and there is still 3 squares to select.
+At 15635.5057 User1 selected square and there is still 3 squares to select.
+At 15652.4602 User1 selected square and there is still 3 squares to select.
+At 15669.4187 User1 selected square and there is still 3 squares to select.
+At 15686.3693 User1 selected square and there is still 3 squares to select.
+At 15703.3241 User1 selected square and there is still 3 squares to select.
+At 15720.2802 User1 selected square and there is still 3 squares to select.
+At 15736.2353 User1 selected square and there is still 3 squares to select.
+At 15754.1878 User1 selected square and there is still 3 squares to select.
+At 15770.1454 User1 selected square and there is still 3 squares to select.
+At 15787.1017 User1 selected square and there is still 3 squares to select.
+At 15805.0526 User1 selected square and there is still 3 squares to select.
+At 15821.0094 User1 selected square and there is still 3 squares to select.
+At 15837.9632 User1 selected square and there is still 3 squares to select.
+At 15854.9197 User1 selected square and there is still 3 squares to select.
+At 15871.8727 User1 selected square and there is still 3 squares to select.
+At 15888.8277 User1 selected square and there is still 3 squares to select.
+At 15904.7851 User1 selected square and there is still 3 squares to select.
+At 15922.7388 User1 selected square and there is still 3 squares to select.
+At 15938.6943 User1 selected square and there is still 3 squares to select.
+At 15955.6504 User1 selected square and there is still 3 squares to select.
+At 15972.6049 User1 selected square and there is still 3 squares to select.
+At 15989.5578 User1 selected square and there is still 3 squares to select.
+At 16006.5139 User1 selected square and there is still 3 squares to select.
+At 16023.469 User1 selected square and there is still 3 squares to select.
+At 16040.4222 User1 selected square and there is still 3 squares to select.
+At 16056.3793 User1 selected square and there is still 3 squares to select.
+At 16074.3321 User1 selected square and there is still 3 squares to select.
+At 16090.2887 User1 selected square and there is still 3 squares to select.
+At 16107.244 User1 selected square and there is still 3 squares to select.
+At 16124.1982 User1 selected square and there is still 3 squares to select.
+At 16141.1541 User1 selected square and there is still 3 squares to select.
+At 16158.1075 User1 selected square and there is still 3 squares to select.
+At 16175.0628 User1 selected square and there is still 3 squares to select.
+At 16192.0166 User1 selected square and there is still 3 squares to select.
+At 16208.9722 User1 selected square and there is still 3 squares to select.
+At 16224.9287 User1 selected square and there is still 3 squares to select.
+At 17236.3682 User1 selected square and there is still 2 squares to select.
+At 17253.3237 User1 selected square and there is still 2 squares to select.
+At 17270.2776 User1 selected square and there is still 2 squares to select.
+At 17287.2335 User1 selected square and there is still 2 squares to select.
+At 17303.1911 User1 selected square and there is still 2 squares to select.
+At 17321.0341 User1 selected square and there is still 2 squares to select.
+At 17336.9669 User1 selected square and there is still 2 squares to select.
+At 17353.9211 User1 selected square and there is still 2 squares to select.
+At 17371.8736 User1 selected square and there is still 2 squares to select.
+At 17387.8319 User1 selected square and there is still 2 squares to select.
+At 17404.786 User1 selected square and there is still 2 squares to select.
+At 17421.9365 User1 selected square and there is still 2 squares to select.
+At 17438.8785 User1 selected square and there is still 2 squares to select.
+At 17454.8362 User1 selected square and there is still 2 squares to select.
+At 17472.7872 User1 selected square and there is still 2 squares to select.
+At 17488.7493 User1 selected square and there is still 2 squares to select.
+At 17505.6997 User1 selected square and there is still 2 squares to select.
+At 17522.6745 User1 selected square and there is still 2 squares to select.
+At 17539.6111 User1 selected square and there is still 2 squares to select.
+At 17556.5633 User1 selected square and there is still 2 squares to select.
+At 17573.5181 User1 selected square and there is still 2 squares to select.
+At 17590.473 User1 selected square and there is still 2 squares to select.
+At 17606.4293 User1 selected square and there is still 2 squares to select.
+At 17623.3854 User1 selected square and there is still 2 squares to select.
+At 17641.3407 User1 selected square and there is still 2 squares to select.
+At 17657.3178 User1 selected square and there is still 2 squares to select.
+At 17674.2504 User1 selected square and there is still 2 squares to select.
+At 17691.2037 User1 selected square and there is still 2 squares to select.
+At 17708.1584 User1 selected square and there is still 2 squares to select.
+At 17725.1146 User1 selected square and there is still 2 squares to select.
+At 17742.0681 User1 selected square and there is still 2 squares to select.
+At 17759.023 User1 selected square and there is still 2 squares to select.
+At 17774.9802 User1 selected square and there is still 2 squares to select.
+At 17792.9321 User1 selected square and there is still 2 squares to select.
+At 17808.8899 User1 selected square and there is still 2 squares to select.
+At 17825.8439 User1 selected square and there is still 2 squares to select.
+At 17842.7975 User1 selected square and there is still 2 squares to select.
+At 17859.7537 User1 selected square and there is still 2 squares to select.
+At 17876.7066 User1 selected square and there is still 2 squares to select.
+At 17893.6622 User1 selected square and there is still 2 squares to select.
+At 17910.6168 User1 selected square and there is still 2 squares to select.
+At 17927.572 User1 selected square and there is still 2 squares to select.
+At 17944.5263 User1 selected square and there is still 2 squares to select.
+At 17961.4814 User1 selected square and there is still 2 squares to select.
+At 17978.4357 User1 selected square and there is still 2 squares to select.
+At 17994.3929 User1 selected square and there is still 2 squares to select.
+At 18011.347 User1 selected square and there is still 2 squares to select.
+At 18028.3025 User1 selected square and there is still 2 squares to select.
+At 18045.2568 User1 selected square and there is still 2 squares to select.
+At 18062.2148 User1 selected square and there is still 2 squares to select.
+At 18080.1643 User1 selected square and there is still 2 squares to select.
+At 18096.1264 User1 selected square and there is still 2 squares to select.
+At 18113.0786 User1 selected square and there is still 2 squares to select.
+At 18130.0351 User1 selected square and there is still 2 squares to select.
+At 18145.9914 User1 selected square and there is still 2 squares to select.
+At 18162.9421 User1 selected square and there is still 2 squares to select.
+At 18179.8981 User1 selected square and there is still 2 squares to select.
+At 18196.8514 User1 selected square and there is still 2 squares to select.
+At 18213.8062 User1 selected square and there is still 2 squares to select.
+At 18230.7616 User1 selected square and there is still 2 squares to select.
+At 18247.7153 User1 selected square and there is still 2 squares to select.
+At 18263.6726 User1 selected square and there is still 2 squares to select.
+At 18280.6278 User1 selected square and there is still 2 squares to select.
+At 18298.5786 User1 selected square and there is still 2 squares to select.
+At 18314.5363 User1 selected square and there is still 2 squares to select.
+At 18331.4914 User1 selected square and there is still 2 squares to select.
+At 18348.4471 User1 selected square and there is still 2 squares to select.
+At 18365.4004 User1 selected square and there is still 2 squares to select.
+At 18382.3545 User1 selected square and there is still 2 squares to select.
+At 18399.3097 User1 selected square and there is still 2 squares to select.
+At 18416.2642 User1 selected square and there is still 2 squares to select.
+At 18433.221 User1 selected square and there is still 2 squares to select.
+At 18449.1761 User1 selected square and there is still 2 squares to select.
+At 18466.1322 User1 selected square and there is still 2 squares to select.
+At 18483.0925 User1 selected square and there is still 2 squares to select.
+At 18500.0458 User1 selected square and there is still 2 squares to select.
+At 18516.9948 User1 selected square and there is still 2 squares to select.
+At 18533.9514 User1 selected square and there is still 2 squares to select.
+At 18549.9113 User1 selected square and there is still 2 squares to select.
+At 18566.8623 User1 selected square and there is still 2 squares to select.
+At 18583.8169 User1 selected square and there is still 2 squares to select.
+At 18601.7677 User1 selected square and there is still 2 squares to select.
+At 18618.7229 User1 selected square and there is still 2 squares to select.
+At 18634.6809 User1 selected square and there is still 2 squares to select.
+At 18651.6355 User1 selected square and there is still 2 squares to select.
+At 18668.59 User1 selected square and there is still 2 squares to select.
+At 18684.5465 User1 selected square and there is still 2 squares to select.
+At 18702.501 User1 selected square and there is still 2 squares to select.
+At 18719.4538 User1 selected square and there is still 2 squares to select.
+At 18736.4087 User1 selected square and there is still 2 squares to select.
+At 18752.3652 User1 selected square and there is still 2 squares to select.
+At 18769.32 User1 selected square and there is still 2 squares to select.
+At 18786.2753 User1 selected square and there is still 2 squares to select.
+At 18803.2299 User1 selected square and there is still 2 squares to select.
+At 18820.1839 User1 selected square and there is still 2 squares to select.
+At 18837.1397 User1 selected square and there is still 2 squares to select.
+At 18854.0934 User1 selected square and there is still 2 squares to select.
+At 18871.0499 User1 selected square and there is still 2 squares to select.
+At 18887.0053 User1 selected square and there is still 2 squares to select.
+At 18903.9606 User1 selected square and there is still 2 squares to select.
+At 18921.9132 User1 selected square and there is still 2 squares to select.
+At 18937.8702 User1 selected square and there is still 2 squares to select.
+At 18954.8235 User1 selected square and there is still 2 squares to select.
+At 18971.7792 User1 selected square and there is still 2 squares to select.
+At 18988.7344 User1 selected square and there is still 2 squares to select.
+At 19005.688 User1 selected square and there is still 2 squares to select.
+At 19022.643 User1 selected square and there is still 2 squares to select.
+At 19039.5969 User1 selected square and there is still 2 squares to select.
+At 19056.5524 User1 selected square and there is still 2 squares to select.
+At 19073.5085 User1 selected square and there is still 2 squares to select.
+At 19089.4634 User1 selected square and there is still 2 squares to select.
+At 19106.4192 User1 selected square and there is still 2 squares to select.
+At 19123.3738 User1 selected square and there is still 2 squares to select.
+At 19140.3286 User1 selected square and there is still 2 squares to select.
+At 19157.2829 User1 selected square and there is still 2 squares to select.
+At 19173.2399 User1 selected square and there is still 2 squares to select.
+At 19191.1957 User1 selected square and there is still 2 squares to select.
+At 19208.1468 User1 selected square and there is still 2 squares to select.
+At 19224.1051 User1 selected square and there is still 2 squares to select.
+At 19241.0581 User1 selected square and there is still 2 squares to select.
+At 19259.0106 User1 selected square and there is still 2 squares to select.
+At 19274.9685 User1 selected square and there is still 2 squares to select.
+At 19291.9229 User1 selected square and there is still 2 squares to select.
+At 19308.8909 User1 selected square and there is still 2 squares to select.
+At 19325.8324 User1 selected square and there is still 2 squares to select.
+At 19342.7873 User1 selected square and there is still 2 squares to select.
+At 19359.7407 User1 selected square and there is still 2 squares to select.
+At 19376.6985 User1 selected square and there is still 2 squares to select.
+At 19392.653 User1 selected square and there is still 2 squares to select.
+At 19409.6082 User1 selected square and there is still 2 squares to select.
+At 19426.5624 User1 selected square and there is still 2 squares to select.
+At 19443.5174 User1 selected square and there is still 2 squares to select.
+At 19460.4719 User1 selected square and there is still 2 squares to select.
+At 19477.4273 User1 selected square and there is still 2 squares to select.
+At 19493.3838 User1 selected square and there is still 2 squares to select.
+At 19510.3396 User1 selected square and there is still 2 squares to select.
+At 19528.29 User1 selected square and there is still 2 squares to select.
+At 19544.2505 User1 selected square and there is still 2 squares to select.
+At 19561.2025 User1 selected square and there is still 2 squares to select.
+At 19578.1575 User1 selected square and there is still 2 squares to select.
+At 19594.9091 User1 selected square and there is still 2 squares to select.
+At 19611.8649 User1 selected square and there is still 2 squares to select.
+At 19628.8188 User1 selected square and there is still 2 squares to select.
+At 19645.7731 User1 selected square and there is still 2 squares to select.
+At 19662.7281 User1 selected square and there is still 2 squares to select.
+At 19679.6821 User1 selected square and there is still 2 squares to select.
+At 19696.3128 User1 selected square and there is still 2 squares to select.
+At 19713.2677 User1 selected square and there is still 2 squares to select.
+At 19730.2231 User1 selected square and there is still 2 squares to select.
+At 19747.1772 User1 selected square and there is still 2 squares to select.
+At 19763.1344 User1 selected square and there is still 2 squares to select.
+At 19780.0893 User1 selected square and there is still 2 squares to select.
+At 19797.0474 User1 selected square and there is still 2 squares to select.
+At 19814.0039 User1 selected square and there is still 2 squares to select.
+At 19830.9572 User1 selected square and there is still 2 squares to select.
+At 19847.908 User1 selected square and there is still 2 squares to select.
+At 19864.8637 User1 selected square and there is still 2 squares to select.
+At 19881.8177 User1 selected square and there is still 2 squares to select.
+At 19898.7714 User1 selected square and there is still 2 squares to select.
+At 19915.7265 User1 selected square and there is still 2 squares to select.
+At 19931.685 User1 selected square and there is still 2 squares to select.
+At 19949.6358 User1 selected square and there is still 2 squares to select.
+At 19966.5899 User1 selected square and there is still 2 squares to select.
+At 19982.5472 User1 selected square and there is still 2 squares to select.
+At 19999.3704 User1 selected square and there is still 2 squares to select.
+At 20016.3231 User1 selected square and there is still 2 squares to select.
+At 20033.2772 User1 selected square and there is still 2 squares to select.
+At 20050.2329 User1 selected square and there is still 2 squares to select.
+At 20067.2149 User1 selected square and there is still 2 squares to select.
+At 20084.1419 User1 selected square and there is still 2 squares to select.
+At 20100.1029 User1 selected square and there is still 2 squares to select.
+At 20118.0787 User1 selected square and there is still 2 squares to select.
+At 20134.061 User1 selected square and there is still 2 squares to select.
+At 20150.9872 User1 selected square and there is still 2 squares to select.
+At 21415.1083 User1 selected square and there is still 1 squares to select.
+At 21432.064 User1 selected square and there is still 1 squares to select.
+At 21450.0156 User1 selected square and there is still 1 squares to select.
+At 21465.0812 User1 selected square and there is still 1 squares to select.
+At 21483.0379 User1 selected square and there is still 1 squares to select.
+At 21500.0195 User1 selected square and there is still 1 squares to select.
+At 21516.1803 User1 selected square and there is still 1 squares to select.
+At 21533.1315 User1 selected square and there is still 1 squares to select.
+At 21549.2664 User1 selected square and there is still 1 squares to select.
+At 21566.398 User1 selected square and there is still 1 squares to select.
+At 21583.4088 User1 selected square and there is still 1 squares to select.
+At 21600.3116 User1 selected square and there is still 1 squares to select.
+At 21617.3515 User1 selected square and there is still 1 squares to select.
+At 21633.4184 User1 selected square and there is still 1 squares to select.
+At 21650.4865 User1 selected square and there is still 1 squares to select.
+At 21667.4361 User1 selected square and there is still 1 squares to select.
+At 21684.3919 User1 selected square and there is still 1 squares to select.
+At 21701.4121 User1 selected square and there is still 1 squares to select.
+At 21718.3302 User1 selected square and there is still 1 squares to select.
+At 21735.3675 User1 selected square and there is still 1 squares to select.
+At 21752.307 User1 selected square and there is still 1 squares to select.
+At 21768.334 User1 selected square and there is still 1 squares to select.
+At 21785.4028 User1 selected square and there is still 1 squares to select.
+At 21802.448 User1 selected square and there is still 1 squares to select.
+At 21819.4808 User1 selected square and there is still 1 squares to select.
+At 21836.3956 User1 selected square and there is still 1 squares to select.
+At 21853.3218 User1 selected square and there is still 1 squares to select.
+At 21869.3448 User1 selected square and there is still 1 squares to select.
+At 21887.2428 User1 selected square and there is still 1 squares to select.
+At 21903.2539 User1 selected square and there is still 1 squares to select.
+At 21920.3604 User1 selected square and there is still 1 squares to select.
+At 21937.3805 User1 selected square and there is still 1 squares to select.
+At 21954.4564 User1 selected square and there is still 1 squares to select.
+At 21970.4151 User1 selected square and there is still 1 squares to select.
+At 21988.2997 User1 selected square and there is still 1 squares to select.
+At 22004.256 User1 selected square and there is still 1 squares to select.
+At 22021.3141 User1 selected square and there is still 1 squares to select.
+At 22038.335 User1 selected square and there is still 1 squares to select.
+At 22055.3471 User1 selected square and there is still 1 squares to select.
+At 22072.3329 User1 selected square and there is still 1 squares to select.
+At 22088.4822 User1 selected square and there is still 1 squares to select.
+At 22106.3666 User1 selected square and there is still 1 squares to select.
+At 22122.4838 User1 selected square and there is still 1 squares to select.
+At 22139.3729 User1 selected square and there is still 1 squares to select.
+At 22156.3281 User1 selected square and there is still 1 squares to select.
+At 22173.3422 User1 selected square and there is still 1 squares to select.
+At 22190.4351 User1 selected square and there is still 1 squares to select.
+At 22206.3924 User1 selected square and there is still 1 squares to select.
+At 22223.2776 User1 selected square and there is still 1 squares to select.
+At 22241.3123 User1 selected square and there is still 1 squares to select.
+At 22257.268 User1 selected square and there is still 1 squares to select.
+At 22274.3765 User1 selected square and there is still 1 squares to select.
+At 22291.3095 User1 selected square and there is still 1 squares to select.
+At 22308.3634 User1 selected square and there is still 1 squares to select.
+At 22324.384 User1 selected square and there is still 1 squares to select.
+At 22341.2732 User1 selected square and there is still 1 squares to select.
+At 22358.2276 User1 selected square and there is still 1 squares to select.
+At 22375.3662 User1 selected square and there is still 1 squares to select.
+At 22392.3888 User1 selected square and there is still 1 squares to select.
+At 22409.2789 User1 selected square and there is still 1 squares to select.
+At 22426.2972 User1 selected square and there is still 1 squares to select.
+At 22443.2509 User1 selected square and there is still 1 squares to select.
+At 22459.3153 User1 selected square and there is still 1 squares to select.
+At 22476.455 User1 selected square and there is still 1 squares to select.
+At 22493.4227 User1 selected square and there is still 1 squares to select.
+At 22510.4374 User1 selected square and there is still 1 squares to select.
+At 22527.3211 User1 selected square and there is still 1 squares to select.
+At 22543.2798 User1 selected square and there is still 1 squares to select.
+At 22560.2563 User1 selected square and there is still 1 squares to select.
+At 22577.467 User1 selected square and there is still 1 squares to select.
+At 22594.376 User1 selected square and there is still 1 squares to select.
+At 22611.3808 User1 selected square and there is still 1 squares to select.
+At 22628.3496 User1 selected square and there is still 1 squares to select.
+At 22644.3738 User1 selected square and there is still 1 squares to select.
+At 22662.3933 User1 selected square and there is still 1 squares to select.
+At 22678.3972 User1 selected square and there is still 1 squares to select.
+At 22695.5098 User1 selected square and there is still 1 squares to select.
+At 22712.4662 User1 selected square and there is still 1 squares to select.
+At 22729.4188 User1 selected square and there is still 1 squares to select.
+At 22745.3773 User1 selected square and there is still 1 squares to select.
+At 22762.4583 User1 selected square and there is still 1 squares to select.
+At 22779.4531 User1 selected square and there is still 1 squares to select.
+At 22796.3413 User1 selected square and there is still 1 squares to select.
+At 22813.2961 User1 selected square and there is still 1 squares to select.
+At 22830.4396 User1 selected square and there is still 1 squares to select.
+At 22847.4485 User1 selected square and there is still 1 squares to select.
+At 22863.4961 User1 selected square and there is still 1 squares to select.
+At 22880.4249 User1 selected square and there is still 1 squares to select.
+At 24009.9907 User 1 selected all the squares.
+At 24025.9021 User 1 selected all the squares.
+At 24043.8547 User 1 selected all the squares.
+At 24059.8113 User 1 selected all the squares.
+At 24076.7679 User 1 selected all the squares.
+At 24094.7176 User 1 selected all the squares.
+At 24110.6758 User 1 selected all the squares.
+At 24127.6304 User 1 selected all the squares.
+At 24144.5839 User 1 selected all the squares.
+At 24161.5401 User 1 selected all the squares.
+At 24178.4964 User 1 selected all the squares.
+At 24195.4489 User 1 selected all the squares.
+At 24211.2599 User 1 selected all the squares.
+At 24229.2123 User 1 selected all the squares.
+At 24245.3523 User 1 selected all the squares.
+At 24262.5092 User 1 selected all the squares.
+At 24279.4634 User 1 selected all the squares.
+At 24295.4499 User 1 selected all the squares.
+At 24313.1032 User 1 selected all the squares.
+At 24330.0571 User 1 selected all the squares.
+At 24347.0405 User 1 selected all the squares.
+At 24362.9942 User 1 selected all the squares.
+At 24380.9216 User 1 selected all the squares.
+At 24396.945 User 1 selected all the squares.
+At 24413.834 User 1 selected all the squares.
+At 24430.7916 User 1 selected all the squares.
+At 24447.8109 User 1 selected all the squares.
+At 24464.8052 User 1 selected all the squares.
+At 24481.8232 User 1 selected all the squares.
+At 24498.7761 User 1 selected all the squares.
+At 24514.7077 User 1 selected all the squares.
+At 24531.6622 User 1 selected all the squares.
+At 24548.617 User 1 selected all the squares.
+At 24565.5737 User 1 selected all the squares.
+At 24582.5264 User 1 selected all the squares.
+At 24599.5548 User 1 selected all the squares.
+At 24616.5727 User 1 selected all the squares.
+At 24632.5397 User 1 selected all the squares.
+At 24650.5136 User 1 selected all the squares.
+At 24666.4407 User 1 selected all the squares.
+At 24683.4118 User 1 selected all the squares.
+At 24700.3492 User 1 selected all the squares.
+At 24717.4793 User 1 selected all the squares.
+At 24734.4405 User 1 selected all the squares.
+At 24751.3859 User 1 selected all the squares.
+At 24768.3397 User 1 selected all the squares.
+At 24784.3616 User 1 selected all the squares.
+At 24803.2488 User 1 selected all the squares.
+At 24818.2064 User 1 selected all the squares.
+At 24836.3773 User 1 selected all the squares.
+At 24853.4221 User 1 selected all the squares.
+At 24869.3841 User 1 selected all the squares.
+At 24886.427 User 1 selected all the squares.
+At 24902.3819 User 1 selected all the squares.
+At 24919.5053 User 1 selected all the squares.
+At 25930.4325 User1 tried to select circle and that is not possible.
+At 25947.4673 User1 tried to select circle and that is not possible.
+At 25963.4243 User1 tried to select circle and that is not possible.
+At 25981.3877 User1 tried to select circle and that is not possible.
+At 25997.4599 User1 tried to select circle and that is not possible.
+At 26014.4497 User1 tried to select circle and that is not possible.
+At 26032.4671 User1 tried to select circle and that is not possible.
+At 26048.4241 User1 tried to select circle and that is not possible.
+At 26065.316 User1 tried to select circle and that is not possible.
+At 26082.3344 User1 tried to select circle and that is not possible.
+At 26099.2294 User1 tried to select circle and that is not possible.
+At 26116.2428 User1 tried to select circle and that is not possible.
+At 26132.3742 User1 tried to select circle and that is not possible.
+At 26149.395 User1 tried to select circle and that is not possible.
+At 26166.4061 User1 tried to select circle and that is not possible.
+At 26183.4116 User1 tried to select circle and that is not possible.
+At 26200.3309 User1 tried to select circle and that is not possible.
+At 26217.2791 User1 tried to select circle and that is not possible.
+At 26233.4618 User1 tried to select circle and that is not possible.
+At 26250.4153 User1 tried to select circle and that is not possible.
+At 26267.3969 User1 tried to select circle and that is not possible.
+At 26284.3315 User1 tried to select circle and that is not possible.
+At 26301.3456 User1 tried to select circle and that is not possible.
+At 26318.235 User1 tried to select circle and that is not possible.
+At 26335.1889 User1 tried to select circle and that is not possible.
+At 26352.2091 User1 tried to select circle and that is not possible.
+At 26369.1003 User1 tried to select circle and that is not possible.
+At 26385.0793 User1 tried to select circle and that is not possible.
+At 26403.008 User1 tried to select circle and that is not possible.
+At 26418.9847 User1 tried to select circle and that is not possible.
+At 26435.9476 User1 tried to select circle and that is not possible.
+At 26452.8747 User1 tried to select circle and that is not possible.
+At 26470.0345 User1 tried to select circle and that is not possible.
+At 26486.1253 User1 tried to select circle and that is not possible.
+At 26503.059 User1 tried to select circle and that is not possible.
+At 26520.1344 User1 tried to select circle and that is not possible.
+At 26537.3544 User1 tried to select circle and that is not possible.
+At 26554.2463 User1 tried to select circle and that is not possible.
+At 26571.2012 User1 tried to select circle and that is not possible.
+At 26587.4211 User1 tried to select circle and that is not possible.
+At 26604.306 User1 tried to select circle and that is not possible.
+At 26621.2626 User1 tried to select circle and that is not possible.
+At 26638.2102 User1 tried to select circle and that is not possible.
+At 26655.4414 User1 tried to select circle and that is not possible.
+At 26671.3727 User1 tried to select circle and that is not possible.
+At 26689.3552 User1 tried to select circle and that is not possible.
+At 26705.3145 User1 tried to select circle and that is not possible.
+At 26722.3345 User1 tried to select circle and that is not possible.
+At 26739.4019 User1 tried to select circle and that is not possible.
+At 26755.4819 User1 tried to select circle and that is not possible.
+At 26773.3976 User1 tried to select circle and that is not possible.
+At 26789.4197 User1 tried to select circle and that is not possible.
+At 26806.3142 User1 tried to select circle and that is not possible.
+At 26823.2789 User1 tried to select circle and that is not possible.
+At 26840.2233 User1 tried to select circle and that is not possible.
+At 26857.2097 User1 tried to select circle and that is not possible.
+At 26874.2287 User1 tried to select circle and that is not possible.
+At 26891.2224 User1 tried to select circle and that is not possible.
+At 26907.2452 User1 tried to select circle and that is not possible.
+At 26924.3401 User1 tried to select circle and that is not possible.
+At 26941.3992 User1 tried to select circle and that is not possible.
+At 26958.3614 User1 tried to select circle and that is not possible.
+At 26975.427 User1 tried to select circle and that is not possible.
+At 26992.5366 User1 tried to select circle and that is not possible.
+At 27008.4952 User1 tried to select circle and that is not possible.
+At 27026.4699 User1 tried to select circle and that is not possible.
+At 27042.5601 User1 tried to select circle and that is not possible.
+At 27059.5454 User1 tried to select circle and that is not possible.
+At 27076.5346 User1 tried to select circle and that is not possible.
+At 27093.5171 User1 tried to select circle and that is not possible.
+At 27109.4917 User1 tried to select circle and that is not possible.
+At 27126.4931 User1 tried to select circle and that is not possible.
+At 27143.4546 User1 tried to select circle and that is not possible.
+At 27160.3782 User1 tried to select circle and that is not possible.
+At 27177.4341 User1 tried to select circle and that is not possible.
+At 27194.3923 User1 tried to select circle and that is not possible.
+At 27211.3438 User1 tried to select circle and that is not possible.
+At 27227.3648 User1 tried to select circle and that is not possible.
+At 27244.2551 User1 tried to select circle and that is not possible.
+At 27261.2628 User1 tried to select circle and that is not possible.
+At 27279.2284 User1 tried to select circle and that is not possible.
+At 27295.3646 User1 tried to select circle and that is not possible.
+At 27312.3009 User1 tried to select circle and that is not possible.
+At 27328.4162 User1 tried to select circle and that is not possible.
+At 27345.3436 User1 tried to select circle and that is not possible.
+At 27362.335 User1 tried to select circle and that is not possible.
+At 27379.3989 User1 tried to select circle and that is not possible.
+At 27396.3115 User1 tried to select circle and that is not possible.
+At 27413.2803 User1 tried to select circle and that is not possible.
+At 27430.3006 User1 tried to select circle and that is not possible.
+At 27447.1896 User1 tried to select circle and that is not possible.
+At 27463.3358 User1 tried to select circle and that is not possible.
+At 27480.4271 User1 tried to select circle and that is not possible.
+At 27497.3831 User1 tried to select circle and that is not possible.
+At 27514.434 User1 tried to select circle and that is not possible.
+At 27531.4722 User1 tried to select circle and that is not possible.
+At 27548.5759 User1 tried to select circle and that is not possible.
+At 27564.6781 User1 tried to select circle and that is not possible.
+At 27581.7151 User1 tried to select circle and that is not possible.
+At 27598.7386 User1 tried to select circle and that is not possible.
+At 27615.7897 User1 tried to select circle and that is not possible.
+At 27632.9353 User1 tried to select circle and that is not possible.
+At 27649.0048 User1 tried to select circle and that is not possible.
+At 27665.9485 User1 tried to select circle and that is not possible.
+At 27682.873 User1 tried to select circle and that is not possible.
+At 27699.8317 User1 tried to select circle and that is not possible.
+At 27716.8469 User1 tried to select circle and that is not possible.
+At 27733.9085 User1 tried to select circle and that is not possible.
+At 27750.0335 User1 tried to select circle and that is not possible.
+At 27767.0217 User1 tried to select circle and that is not possible.
+At 27784.065 User1 tried to select circle and that is not possible.
+At 27801.1101 User1 tried to select circle and that is not possible.
+At 27818.1512 User1 tried to select circle and that is not possible.
+At 27834.1099 User1 tried to select circle and that is not possible.
+At 27851.0629 User1 tried to select circle and that is not possible.
+At 27869.0156 User1 tried to select circle and that is not possible.
+At 27885.0407 User1 tried to select circle and that is not possible.
+At 27902.1348 User1 tried to select circle and that is not possible.
+At 27918.1573 User1 tried to select circle and that is not possible.
+At 27935.264 User1 tried to select circle and that is not possible.
+At 27952.2822 User1 tried to select circle and that is not possible.
+At 27969.325 User1 tried to select circle and that is not possible.
+At 27986.3164 User1 tried to select circle and that is not possible.
+At 28003.274 User1 tried to select circle and that is not possible.
+At 28020.3208 User1 tried to select circle and that is not possible.
+At 28036.4642 User1 tried to select circle and that is not possible.
+At 28053.4185 User1 tried to select circle and that is not possible.
+At 28070.4079 User1 tried to select circle and that is not possible.
+At 28087.4928 User1 tried to select circle and that is not possible.
+At 28104.3719 User1 tried to select circle and that is not possible.
+At 28121.3263 User1 tried to select circle and that is not possible.
+At 28138.2823 User1 tried to select circle and that is not possible.
+At 28154.3023 User1 tried to select circle and that is not possible.
+At 28171.219 User1 tried to select circle and that is not possible.
+At 28188.1924 User1 tried to select circle and that is not possible.
+At 28205.2649 User1 tried to select circle and that is not possible.
+At 28222.2218 User1 tried to select circle and that is not possible.
+At 28239.1774 User1 tried to select circle and that is not possible.
+At 28256.2156 User1 tried to select circle and that is not possible.
+At 28272.0854 User1 tried to select circle and that is not possible.
+At 28289.0431 User1 tried to select circle and that is not possible.
+At 28306.3806 User1 tried to select circle and that is not possible.
+At 28322.4216 User1 tried to select circle and that is not possible.
+At 28339.5144 User1 tried to select circle and that is not possible.
+At 28357.4938 User1 tried to select circle and that is not possible.
+At 28373.3871 User1 tried to select circle and that is not possible.
+At 28390.4065 User1 tried to select circle and that is not possible.
+At 28407.4171 User1 tried to select circle and that is not possible.
+At 28424.3725 User1 tried to select circle and that is not possible.
+At 28441.3271 User1 tried to select circle and that is not possible.
+At 28458.3467 User1 tried to select circle and that is not possible.
+At 28474.3487 User1 tried to select circle and that is not possible.
+At 28491.3028 User1 tried to select circle and that is not possible.
+At 28508.258 User1 tried to select circle and that is not possible.
+At 28525.416 User1 tried to select circle and that is not possible.
+At 28542.3325 User1 tried to select circle and that is not possible.
+At 28542.3325 task was stopped

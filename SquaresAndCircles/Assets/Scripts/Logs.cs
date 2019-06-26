@@ -48,12 +48,12 @@ public class Logs : MonoBehaviour
     public int SelectionsU2 = 0;
     public int ErrorsU1 = 0;
     public int ErrorsU2 = 0;
-    public Double[] TimeStampQuadrados = new Double[5];
-    public Double[] TimeStampCirculos = new Double[5];
-    public Double[] TimeStampErros = new Double[20]; //what now?
-    public Double TempoSelecaoQuadrados;
-    public Double TempoSelecaoCirculos;
-    public Double TempoTotalTarefa;
+    public List<double> TimeStampQuadrados = new List<double>();
+    public List<double> TimeStampCirculos = new List<double>();
+    public List<double> TimeStampErros = new List<double>();
+    public double TempoSelecaoQuadrados;
+    public double TempoSelecaoCirculos;
+    public double TempoTotalTarefa;
 
     //Time:User:UserPos:UserRHPos:UserLHPos:UserPosToque:UserMaoDeToque:UserTouchType:UserAction:HoverUnityName:HoverObjectType:NQuadToSelect:NCircToSelect:LastCollidingObj:HandCubePos
 
@@ -243,19 +243,16 @@ public class Logs : MonoBehaviour
 
         //Numero de Erros
         //timestamp erros cada user
-        for (int i = 0; i < TimeStampErros.Length - 1; i++)
-        {
             if (U1Action == "error" || (U1Action == "selected" && U1LastColliding == null))
             {
                 ErrorsU1++;
-                TimeStampErros[i] = timestamp.TotalMilliseconds;
+                TimeStampErros.Add(timestamp.TotalMilliseconds);
             }
             if (U2Action == "error" || (U2Action == "selected" && U2LastColliding == null))
             {
                 ErrorsU2++;
-                TimeStampErros[i] = timestamp.TotalMilliseconds;
+                TimeStampErros.Add(timestamp.TotalMilliseconds);
             }
-        }
 
         // Adiciona o texto ao documento Log frame-a-frame
         text.Add(timestamp.TotalMilliseconds + ":" + "User 1" + ":" + User1Posicao + ":" + U1RH + ":" + U1LH + ":" + PosTouchU1 + ":" + MaoUser1 + ":" + U1TouchType + ":" + U1Action + ":" + HoverUNU1 + ":" + HoverOTU1 + ":" + NumQuadToSelect + ":" + NumCircToSelect + ":" + U1LastColliding + ":" +  HandCubeU1);
@@ -286,19 +283,15 @@ public class Logs : MonoBehaviour
         int NumErrosU2 = ErrorsU2;
         int NumErrosAmbos = NumErrosU1 + NumErrosU2;
         //timestamp selecao cada user
-        for (int i = 0; i < TimeStampQuadrados.Length-1; i++)
+
+        if (U1Action == "selected" && HoverOTU1 == "square")
         {
-            if (U1Action == "selected" && HoverOTU1 == "square")
-            {
-                TimeStampQuadrados[i] = timestamp.TotalMilliseconds;
-            }
+            TimeStampQuadrados.Add(timestamp.TotalMilliseconds);
         }
-        for (int i = 0; i < TimeStampCirculos.Length - 1; i++)
+
+        if (U2Action == "selected" && HoverOTU2 == "square")
         {
-            if (U2Action == "selected" && HoverOTU2 == "square")
-            {
-                TimeStampCirculos[i] = timestamp.TotalMilliseconds;
-            }
+            TimeStampCirculos.Add(timestamp.TotalMilliseconds);
         }
 
         //tempo total de touch de cada user
