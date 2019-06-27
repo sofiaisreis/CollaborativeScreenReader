@@ -10,7 +10,7 @@ public class UserTouch : MonoBehaviour
     
     private DateTime lastTapTime;
     private Vector3 lastTapPosition;
-    private bool possibleDoubleTap = false;
+    public bool possibleDoubleTap = false;
     public string typeOfTouch = null;
 
     public UserHand hand;
@@ -64,6 +64,10 @@ public class UserTouch : MonoBehaviour
                 GetComponent<ColliderObj>().SelectObject();
             }
         }
+        else
+        {
+            // seleccao vazia
+        }
         typeOfTouch = "double-tap";
     }
 
@@ -76,7 +80,7 @@ public class UserTouch : MonoBehaviour
 
             if (difLastNowTime.TotalMilliseconds < 500 && difLastNowPosition < 15) //ver o 15 em coordenadas do mundo
             {
-                print("DOUBLE TAP");
+                //print("DOUBLE TAP");
                 possibleDoubleTap = false;
 
                 DoubleTap();
@@ -98,7 +102,7 @@ public class UserTouch : MonoBehaviour
     public void SingleTap(Vector3 position)
     {
         transform.position = position;
-        print("TAP");
+        //print("TAP");
         typeOfTouch = "tap";
     }
 
@@ -107,7 +111,7 @@ public class UserTouch : MonoBehaviour
         possibleDoubleTap = false;
         GetComponent<ColliderObj>().isBeingDragged = true;
         Drag(position);
-        print("DRAG");
+        //print("DRAG");
     }
 
     public void EndDrag(Vector3 position)

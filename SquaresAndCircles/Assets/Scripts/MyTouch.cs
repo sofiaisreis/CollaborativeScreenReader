@@ -51,6 +51,7 @@ public class MyTouch : MonoBehaviour
         else
         {
             Vector3 touchPosition = GetTouchWorldPosition(touch);
+            transform.position = touchPosition;
 
             if (touch.phase == TouchPhase.Stationary || touch.phase == TouchPhase.Moved)
             {
@@ -88,6 +89,13 @@ public class MyTouch : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+    }
+
+    // ganda martelada
+    public void setDrag()
+    {
+        isDrag = true;
+        hand.BeginDrag(transform.position);
     }
 
     public static Vector3 GetTouchWorldPosition(Touch touch)

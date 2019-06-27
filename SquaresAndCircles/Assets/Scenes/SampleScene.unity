@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.43667546, g: 0.48427135, b: 0.5645225, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667555, g: 0.48427123, b: 0.5645229, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1158,7 +1158,82 @@ MonoBehaviour:
   LastCollidingObj2: {fileID: 1881834339}
   HandCube1Pos: {fileID: 9567905}
   HandCube2Pos: {fileID: 1881834339}
+  User1Posicao: {x: 0, y: 0, z: 0}
+  User2Posicao: {x: 0, y: 0, z: 0}
+  U1RH: {x: 0, y: 0, z: 0}
+  U1LH: {x: 0, y: 0, z: 0}
+  U2RH: {x: 0, y: 0, z: 0}
+  U2LH: {x: 0, y: 0, z: 0}
+  User1hasTouch: 0
+  User2hasTouch: 0
+  User1TouchTime: 0
+  User2TouchTime: 0
+  PosTouchU1: {x: 0, y: 0, z: 0}
+  PosTouchU2: {x: 0, y: 0, z: 0}
+  MaoUser1: 
+  MaoUser2: 
+  U1TouchType: 
+  U2TouchType: 
+  U1Action: 
+  U2Action: 
+  HoverUNU1: {fileID: 0}
+  HoverUNU2: {fileID: 0}
+  HoverOTU1: 
+  HoverOTU2: 
+  sqTotal: 0
+  ccTotal: 0
+  incSQ: 0
+  incCC: 0
+  NumQuadToSelect: 0
+  NumCircToSelect: 0
+  U1LastColliding: {fileID: 0}
+  U2LastColliding: {fileID: 0}
+  HandCubeU1: {x: 0, y: 0, z: 0}
+  HandCubeU2: {x: 0, y: 0, z: 0}
+  CompletedTask: 0
+  SelectionsU1: 0
+  SelectionsU2: 0
+  ErrorsU1: 0
+  ErrorsU2: 0
+  TimeStampQuadrados:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  TimeStampCirculos:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  TimeStampErros:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  TempoSelecaoQuadrados: 0
+  TempoSelecaoCirculos: 0
+  TempoTotalTarefa: 0
   text: []
+  textAglomerate: []
+  textStory: []
 --- !u!4 &633784403
 Transform:
   m_ObjectHideFlags: 0
@@ -1602,6 +1677,7 @@ MonoBehaviour:
   User1: {fileID: 522154814}
   User2: {fileID: 662442363}
   distanceThreshold: 0.3
+  reprocessInterval: 2000
 --- !u!4 &756066670
 Transform:
   m_ObjectHideFlags: 0
