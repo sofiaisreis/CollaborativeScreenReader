@@ -302,12 +302,14 @@ public class Sounds : MonoBehaviour
                         else if (objTypeSound == 4)
                         {
                             female.GetComponent<Female>().PlaySelected(lastObj, selecionados, totais);
+                            //mudar user 2
                             female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                         }
                         else if (objTypeSound == 6)
                         {
                             print("Não podes selecionar isso!");
                             female.GetComponent<Female>().PlayError();
+                            //mudar user 2
                             female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                         }
                         break;

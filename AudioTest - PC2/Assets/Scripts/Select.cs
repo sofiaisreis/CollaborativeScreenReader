@@ -6,8 +6,8 @@ public class Select : MonoBehaviour
 {
     //select
     private AudioSource myAudioSource;
-    public AudioClip f1cF, f1cM, 
-                     f2cF, f2cM, 
+    public AudioClip f1cF, f1cM,
+                     f2cF, f2cM,
                      f3cF, f3cM,
                      f4cF, f4cM,
                      f5cF, f5cM,
@@ -19,7 +19,10 @@ public class Select : MonoBehaviour
                      tcF, tcM,
                      tqF, tqM,
                      ttF, ttM,
-                     selected;
+                     selected,
+                     errorSound,
+                     soPodeQuad,
+                     soPodeCirc;
     public bool ttfe = false;
     public bool ttma = false;
     /* Object:
@@ -30,7 +33,21 @@ public class Select : MonoBehaviour
     {
         myAudioSource = GetComponent<AudioSource>();
     }
-    
+
+    public void ErrorF()
+    {
+        myAudioSource.PlayOneShot(errorSound);
+        System.Threading.Thread.Sleep((int)errorSound.length + 300);
+        myAudioSource.PlayOneShot(soPodeQuad);
+    }
+
+    public void ErrorM()
+    {
+        myAudioSource.PlayOneShot(errorSound);
+        System.Threading.Thread.Sleep((int)errorSound.length + 300);
+        myAudioSource.PlayOneShot(soPodeCirc);
+    }
+
     public void SelectionF(int lastObj, int selecao, int totais)
     {
         myAudioSource.PlayOneShot(selected);

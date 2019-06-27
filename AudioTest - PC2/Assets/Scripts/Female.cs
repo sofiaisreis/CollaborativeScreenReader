@@ -8,7 +8,7 @@ public class Female : MonoBehaviour
     private AudioSource myAudioSource;
     public AudioClip
         F1_quadrado, F1_circulo, F1_triangulo,
-        ding, selected, error, gz;
+        ding, selected, error, gz, soPodeQuad;
     public Select selection;
 
 
@@ -50,14 +50,13 @@ public class Female : MonoBehaviour
     public void PlaySelected(int lastObj, int selecao, int totais)
     {
         gameObject.GetComponent<Renderer>().material.color = Color.magenta;
-        myAudioSource.PlayOneShot(selected);
         selection.GetComponent<Select>().SelectionF(lastObj, selecao, totais);
     }
 
     public void PlayError()
     {
         gameObject.GetComponent<Renderer>().material.color = Color.magenta;
-        myAudioSource.PlayOneShot(error);
+        selection.GetComponent<Select>().ErrorF();
     }
 
     public void Stop()

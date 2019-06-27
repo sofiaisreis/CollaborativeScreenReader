@@ -326,6 +326,7 @@ MonoBehaviour:
   selected: {fileID: 8300000, guid: 33b99a48d7dfcd7409dff33eb9a894b7, type: 3}
   error: {fileID: 8300000, guid: 75b0cb0bb44bdfc4aa4cbbf9ea1d9253, type: 3}
   gz: {fileID: 0}
+  soPodeCirc: {fileID: 8300000, guid: bd4b26b864eb24b43a022a6e1ee7458e, type: 3}
   selection: {fileID: 1215339070}
 --- !u!135 &461588508
 SphereCollider:
@@ -634,7 +635,11 @@ MonoBehaviour:
   ttF: {fileID: 8300000, guid: cb2a016f4fad3db4e9a2ab13f8b3ac75, type: 3}
   ttM: {fileID: 8300000, guid: 11389da48b09e77488134e583fee8c11, type: 3}
   selected: {fileID: 8300000, guid: 33b99a48d7dfcd7409dff33eb9a894b7, type: 3}
-  jaesta: 0
+  errorSound: {fileID: 8300000, guid: 75b0cb0bb44bdfc4aa4cbbf9ea1d9253, type: 3}
+  soPodeQuad: {fileID: 8300000, guid: cfd539856ed60634aad5ea6d7fed5831, type: 3}
+  soPodeCirc: {fileID: 8300000, guid: bd4b26b864eb24b43a022a6e1ee7458e, type: 3}
+  ttfe: 1
+  ttma: 0
 --- !u!4 &1215339071
 Transform:
   m_ObjectHideFlags: 0
@@ -761,6 +766,7 @@ MonoBehaviour:
   selected: {fileID: 8300000, guid: 33b99a48d7dfcd7409dff33eb9a894b7, type: 3}
   error: {fileID: 8300000, guid: 75b0cb0bb44bdfc4aa4cbbf9ea1d9253, type: 3}
   gz: {fileID: 0}
+  soPodeQuad: {fileID: 8300000, guid: cfd539856ed60634aad5ea6d7fed5831, type: 3}
   selection: {fileID: 1215339070}
 --- !u!82 &1812368703
 AudioSource:
@@ -904,6 +910,7 @@ MonoBehaviour:
   feedbackType: 
   port: 7001
   user: 1
+  userToPlay: 0
 --- !u!4 &2047352990
 Transform:
   m_ObjectHideFlags: 0
