@@ -72,10 +72,18 @@ public class TrackerClient : MonoBehaviour
 
             // qualquer uma das maos da para calibrar
             // mas depois óh associa ah mao direita
-            if (hand1.y > head.y || hand2.y > head.y)
+            if (hand1.y > head.y)
             {
                 u.humanID = h.id;
                 print("human id is " + h.id );
+                GUI.Label(new Rect(10, 50, 200, 35), "User 1 ID: " + h.id);
+                break;
+            }
+            if (hand2.y > head.y)
+            {
+                u.humanID = h.id;
+                print("human id is " + h.id );
+                GUI.Label(new Rect(10, 70, 200, 35), "User 2 ID: " + h.id);
                 break;
             }
         }
@@ -149,5 +157,7 @@ public class TrackerClient : MonoBehaviour
     void OnGUI()
     {
         GUI.Label(new Rect(10, 10, 200, 35), "Number of users: " + _humans.Count);
+        GUI.Label(new Rect(10, 50, 200, 35), "User 1 ID: ");
+        GUI.Label(new Rect(10, 70, 200, 35), "User 2 ID: ");
     }
 }

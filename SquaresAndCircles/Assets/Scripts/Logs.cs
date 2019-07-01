@@ -39,7 +39,6 @@ public class Logs : MonoBehaviour
     public double User1TouchTime;
     public double User2TouchTime;
     public Vector3 PosTouchU1, PosTouchU2;
-    public string MaoUser1, MaoUser2;
     public string U1TouchType, U2TouchType;
     public string U1Action, U2Action;
     public GameObject HoverUNU1, HoverUNU2;
@@ -54,6 +53,8 @@ public class Logs : MonoBehaviour
     public int SelectionsU2 = 0;
     public int ErrorsU1 = 0;
     public int ErrorsU2 = 0;
+    public int NumSelecoesVaziasU1 = 0;
+    public int NumSelecoesVaziasU2 = 0;
     public List<double> TimeStampQuadrados = new List<double>();
     public List<double> TimeStampCirculos = new List<double>();
 
@@ -107,10 +108,15 @@ public class Logs : MonoBehaviour
                 "UserPosX:" +
                 "UserPosY:" +
                 "UserPosZ:" +
-                "UserRHPos:" +
-                "UserLHPos:"+
-                "UserPosToque:"+
-                //"UserMaoDeToque:"+
+                "UserRHPosX:" +
+                "UserRHPosY:" +
+                "UserRHPosZ:" +
+                "UserLHPosX:"+
+                "UserLHPosY:"+
+                "UserLHPosZ:"+
+                "UserPosToqueX:"+
+                "UserPosToqueY:"+
+                "UserPosToqueZ:"+
                 "UserTouchType:"+
                 "UserAction:"+
                 "HoverUnityName:"+
@@ -118,8 +124,9 @@ public class Logs : MonoBehaviour
                 "NQuadToSelect:"+
                 "NCircToSelect:"+
                 "LastCollidingObj:" +
-                "HandCubePos");
-            //textStory.Add("Time:User:Action:ObjUnity:NumSelectForSelection");
+                "HandCubePosX:" + 
+                "HandCubePosY:" + 
+                "HandCubePosZ:");
         }
 
         if (Input.GetKeyDown(KeyCode.S))
@@ -127,8 +134,7 @@ public class Logs : MonoBehaviour
             tarefaOn = 0;
             print("Tarefa finito");
             textStory.Add("At " + timestamp.TotalMilliseconds + " task was stopped");
-
-            //print("Tarefa Terminada! Tempo: " + current);
+            
             DateTime now = DateTime.Now;
 
             // FRAME A FRAME
@@ -137,10 +143,10 @@ public class Logs : MonoBehaviour
                 foreach (string s in text)
                 {
                     sw.WriteLine(s);
-                    //System.IO.File.WriteAllText(@"Frame-A-Frame_Logs.txt", s);
                 }
             }
 
+            // AGLOMERATE
             LogFileAglomerateWriting();
 
             // TELL A STORY
@@ -157,106 +163,26 @@ public class Logs : MonoBehaviour
         {
             LogFileFrameWriting();
             LogFileTellAStoryWriting();
-
-
         }
-
-        if ( tarefaOn == 0 )
-        {
-            
-        }
-
     }
 
     public void LogFileFrameWriting()
     {
         timestamp = DateTime.Now - taskStart;
-        //System.Random r = new System.Random();
 
+        //POSICAO USER
         User1Posicao = User1Pos.transform.position;
         User2Posicao = User2Pos.transform.position;
 
+        //POSICAO MAOS USER
         U1RH = User1RightHandPos.transform.position;
         U1LH = User1LeftHandPos.transform.position;
         U2RH = User2RightHandPos.transform.position;
         U2LH = User1LeftHandPos.transform.position;
 
-        //PosTouchU1;
-        //PosTouchU2;
-        
-
-        U1TouchType = User1TouchType.GetComponent<UserTouch>().typeOfTouch; //T, DT, DR
-        U2TouchType = User2TouchType.GetComponent<UserTouch>().typeOfTouch;
-
-        U1Action = User1Action.GetComponent<ColliderObj>().actionIsNow; //Select...
-        U2Action = User2Action.GetComponent<ColliderObj>().actionIsNow;
-
-        User1Action.GetComponent<ColliderObj>().actionIsNow = User2Action.GetComponent<ColliderObj>().actionIsNow = null;
-
-        HoverUNU1 = HoverU1.GetComponent<ColliderObj>().collidingObject; //unity name
-        HoverUNU2 = HoverU2.GetComponent<ColliderObj>().collidingObject;
-
-        HoverOTU1 = HoverU1.GetComponent<ColliderObj>().objectName; //obj type
-        HoverOTU2 = HoverU2.GetComponent<ColliderObj>().objectName;
-
-        // Vars
-        sqTotal = NQuadToSelect.GetComponent<ColliderObj>().squares_findTotal;
-        ccTotal = NCircToSelect.GetComponent<ColliderObj>().circles_findTotal;
-        incSQ = NQuadToSelect.GetComponent<ColliderObj>().squares_inc;
-        incCC = NCircToSelect.GetComponent<ColliderObj>().circles_inc;
-        NumQuadToSelect = sqTotal - incSQ; //pelo User1
-        NumCircToSelect = ccTotal - incCC; //pelo User2
-
-        U1LastColliding = LastCollidingObj1.GetComponent<ColliderObj>().lastCollidingObject;
-        U2LastColliding = LastCollidingObj2.GetComponent<ColliderObj>().lastCollidingObject;
-        HandCubeU1 = HandCube1Pos.transform.position;
-        HandCubeU2 = HandCube2Pos.transform.position;
-
-        //MAO DO TOQUE - LEFT OR RIGHT - MAL
-        if (User1MaoDeToque.GetComponent<TrackerClient>().handRightU1 != null)
-        {
-            MaoUser1 = "right";
-        }
-        else if (User1MaoDeToque.GetComponent<TrackerClient>().handLeftU1 != null)
-        {
-            MaoUser1 = "left";
-        }
-        else
-        {
-            MaoUser1 = null;
-        }
-        if (User2MaoDeToque.GetComponent<TrackerClient>().handRightU2 != null)
-        {
-            MaoUser2 = "right";
-        }
-        else if (User2MaoDeToque.GetComponent<TrackerClient>().handLeftU2 != null)
-        {
-            MaoUser2 = "left";
-        }
-        else
-        {
-            MaoUser2 = null;
-        }
-
-        //POSICAO DO TOQUE : enquanto está a haver um tap, DT ou drag, significa que ha um toque criado
-        /*if (U1TouchType == "tap" || U1TouchType == "double-tap" || U1TouchType == "drag")
-        {
-            PosTouchU1 = User1PosToque.transform.position;
-        }
-        else
-        {
-            PosTouchU1 = Vector3.zero;
-        }
-        if (U2TouchType == "tap" || U2TouchType == "double-tap" || U2TouchType == "drag")
-        {
-            PosTouchU2 = User2PosToque.transform.position;
-        }
-        else
-        {
-            PosTouchU2 = Vector3.zero;
-        }*/
+        //POSICAO DO TOQUE e TEMPO:
         bool newUser1hasTouch = User1Pos.GetComponent<User>().handRight.userTouch.touch != null;
-        if(!User1hasTouch && newUser1hasTouch)
+        if (!User1hasTouch && newUser1hasTouch)
         {
             User1TouchStart = timestamp;
         }
@@ -282,10 +208,47 @@ public class Logs : MonoBehaviour
         if (User2hasTouch)
             PosTouchU2 = User2Pos.GetComponent<User>().handRight.userTouch.touch.transform.position;
 
+        //TIPO DE TOQUE - Tap, DoubleTap, Drag
+        U1TouchType = User1TouchType.GetComponent<UserTouch>().typeOfTouch;
+        U2TouchType = User2TouchType.GetComponent<UserTouch>().typeOfTouch;
+
+        //TIPO DE ACAO - Select, Error, Exit
+        U1Action = User1Action.GetComponent<ColliderObj>().actionIsNow;
+        U2Action = User2Action.GetComponent<ColliderObj>().actionIsNow;
+
+        User1Action.GetComponent<ColliderObj>().actionIsNow = User2Action.GetComponent<ColliderObj>().actionIsNow = null;
+
+        //NOME DO OBJETO NO UNITY
+        HoverUNU1 = HoverU1.GetComponent<ColliderObj>().collidingObject;
+        HoverUNU2 = HoverU2.GetComponent<ColliderObj>().collidingObject;
+
+        //TIPO DE OBJETO - Quadrado, Circulo, Triangulo
+        HoverOTU1 = HoverU1.GetComponent<ColliderObj>().objectName;
+        HoverOTU2 = HoverU2.GetComponent<ColliderObj>().objectName;
+
+        //CONTAGEM DE SELECOES E TOTAIS
+        sqTotal = NQuadToSelect.GetComponent<ColliderObj>().squares_findTotal;
+        ccTotal = NCircToSelect.GetComponent<ColliderObj>().circles_findTotal;
+        incSQ = NQuadToSelect.GetComponent<ColliderObj>().squares_inc;
+        incCC = NCircToSelect.GetComponent<ColliderObj>().circles_inc;
+        NumQuadToSelect = sqTotal - incSQ; //pelo User1
+        NumCircToSelect = ccTotal - incCC; //pelo User2
+
+        //LAST COLLIDING OBJECT
+        U1LastColliding = LastCollidingObj1.GetComponent<ColliderObj>().lastCollidingObject;
+        U2LastColliding = LastCollidingObj2.GetComponent<ColliderObj>().lastCollidingObject;
+
+        //POSICAO DO CUBINHO
+        HandCubeU1 = HandCube1Pos.transform.position;
+        HandCubeU2 = HandCube2Pos.transform.position;
+        
+
+        //PARA O AGLOMERATE:
         //Numero de DT
         if (U1TouchType == "double-tap")
         {
             SelectionsU1++;
+            print("Selections: " + SelectionsU1 + "and also " + SelectionsU2);
         }
         if (U2TouchType == "double-tap")
         {
@@ -294,25 +257,37 @@ public class Logs : MonoBehaviour
 
         //Numero de Erros
         //timestamp erros cada user
-            if (U1Action == "error" || (U1Action == "selected" && U1LastColliding == null))
-            {
-                ErrorsU1++;
-                TimeStampErros.Add(timestamp.TotalMilliseconds);
-            }
-            if (U2Action == "error" || (U2Action == "selected" && U2LastColliding == null))
-            {
-                ErrorsU2++;
-                TimeStampErros.Add(timestamp.TotalMilliseconds);
-            }
+        if (U1Action == "error" || (U1Action == "selected" && U1LastColliding == null))
+        {
+            ErrorsU1++;
+            TimeStampErros.Add(timestamp.TotalMilliseconds);
+        }
+        if (U2Action == "error" || (U2Action == "selected" && U2LastColliding == null))
+        {
+            ErrorsU2++;
+            TimeStampErros.Add(timestamp.TotalMilliseconds);
+        }
+
+        //Numero de Erros
+        //selecoes vazias
+        if (U1Action == "selected" && U1LastColliding == null)
+        {
+            NumSelecoesVaziasU1++;
+            TimeStampErros.Add(timestamp.TotalMilliseconds);
+        }
+        if (U2Action == "selected" && U2LastColliding == null)
+        {
+            NumSelecoesVaziasU2++;
+            TimeStampErros.Add(timestamp.TotalMilliseconds);
+        }
 
         // Adiciona o texto ao documento Log frame-a-frame
         text.Add(timestamp.TotalMilliseconds + ":" + "User 1" + ":" + 
             User1Posicao.x + ":" + User1Posicao.y + ":" + User1Posicao.z + ":" +
-            U1RH + ":" + 
-            U1LH + ":" + 
+            U1RH.x + ":" + U1RH.y + ":" + U1RH.z + ":" + 
+            U1LH.x + ":" + U1LH.y + ":" + U1LH.z + ":" + 
             User1hasTouch + ":" + 
-            (User1hasTouch? "" + PosTouchU1 : "") + ":" + 
-            //MaoUser1 + ":" + 
+            (User1hasTouch? "" + (PosTouchU1.x + ":" + PosTouchU1.y + ":" + PosTouchU1.z) : "") + ":" + 
             U1TouchType + ":" + 
             U1Action + ":" + 
             HoverUNU1 + ":" + 
@@ -320,50 +295,38 @@ public class Logs : MonoBehaviour
             NumQuadToSelect + ":" + 
             NumCircToSelect + ":" + 
             U1LastColliding + ":" +  
-            HandCubeU1);
+            HandCubeU1.x + ":" + HandCubeU1.y + ":" + HandCubeU1.z);
 
         text.Add(timestamp.TotalMilliseconds + ":" + "User 2" + ":" +
             User2Posicao.x + ":" + User2Posicao.y + ":" + User2Posicao.z + ":" +
-            U2RH + ":" + 
-            U2LH + ":" + 
+            U2RH.x + ":" + U2RH.y + ":" + U2RH.z + ":" +
+            U2LH.x + ":" + U2LH.y + ":" + U2LH.z + ":" +
             User2hasTouch + ":" + 
-            (User2hasTouch ? "" + PosTouchU2 : "") + ":" + 
-            //MaoUser2 + ":" + 
+            (User2hasTouch ? "" + (PosTouchU2.x + ":" + PosTouchU2.y + ":" + PosTouchU2.z) : "") + ":" + 
             U2TouchType + ":" + 
             U2Action + ":" + 
             HoverUNU2 + ":" + 
             HoverOTU2 + ":" + 
             NumQuadToSelect + ":" + 
             NumCircToSelect + ":" + 
-            U2LastColliding + ":" +  
-            HandCubeU2);
-        
+            U2LastColliding + ":" +
+            HandCubeU2.x + ":" + HandCubeU2.y + ":" + HandCubeU2.z);
+
     }
 
     public void LogFileAglomerateWriting()
     {
         //Numero de selecoes vazias de ambos users
-        int NumSelecoesVaziasU1 = 0;
-        int NumSelecoesVaziasU2 = 0;
-        if (U1Action == "selected" && U1LastColliding == null)
-        {
-            NumSelecoesVaziasU1++;
-        }
-        if (U2Action == "selected" && U2LastColliding == null)
-        {
-            NumSelecoesVaziasU2++;
-        }
-        int NumSelecoesVaziasAmbos = NumSelecoesVaziasU1 + NumSelecoesVaziasU2;
-        //Numero de selecoes erradas de ambos users - selecionar algo que nao pode, selecionar "nada" - first case
-        int NumSelecoesErradasU1 = ErrorsU1 + NumSelecoesVaziasU1;
-        int NumSelecoesErradasU2 = ErrorsU2 + NumSelecoesVaziasU2;
-        int NumSelecoesErradasAmbos = NumSelecoesErradasU1 + NumSelecoesErradasU2 + NumSelecoesVaziasAmbos;
+        int NumVaziasU1 = NumSelecoesVaziasU1;
+        int NumVaziasU2 = NumSelecoesVaziasU2;
+        int NumSelecoesVaziasAmbos = NumVaziasU1 + NumVaziasU2;
         //Numero de erros total
         int NumErrosU1 = ErrorsU1;
         int NumErrosU2 = ErrorsU2;
         int NumErrosAmbos = NumErrosU1 + NumErrosU2;
+        //Numero de selecoes erradas de ambos users - selecionar algo que nao pode, selecionar "nada" - first case
+        int NumSelecoesErradasAmbos = NumSelecoesVaziasAmbos + NumErrosAmbos;
         //timestamp selecao cada user
-
         if (U1Action == "selected" && HoverOTU1 == "square")
         {
             TimeStampQuadrados.Add(timestamp.TotalMilliseconds);
@@ -376,7 +339,9 @@ public class Logs : MonoBehaviour
 
         //tempo total de touch de cada user
 
+
         //tempo total de toque em simultâneo
+
 
         textAglomerate.Add("Tarefa Completada" + ":" + CompletedTask);
         textAglomerate.Add("Numero de Quadrados Selecionados" + ":" + incSQ);
@@ -384,10 +349,11 @@ public class Logs : MonoBehaviour
         textAglomerate.Add("Numero de Selecoes Vazias" + ":" + NumSelecoesVaziasAmbos);
         textAglomerate.Add("Numero de Selecoes Erradas" + ":" + NumSelecoesErradasAmbos);
         textAglomerate.Add("Numero de Erros no Total" + ":" + NumErrosAmbos);
-
-        textAglomerate.Add("Selecoes Quadrados" + ":" + TimeStampQuadrados); //timestamps
-        textAglomerate.Add("Selecoes Circulos" + ":" + TimeStampCirculos); //timestamps
-        textAglomerate.Add("Erros" + ":" + TimeStampErros); //timestamps
+        
+        //timestamps
+        textAglomerate.Add("Selecoes Quadrados" + ":" + TimeStampQuadrados);
+        textAglomerate.Add("Selecoes Circulos" + ":" + TimeStampCirculos);
+        textAglomerate.Add("Erros" + ":" + TimeStampErros);
         textAglomerate.Add("Tempo Total de Selecao de Quadrados" + ":" + TempoSelecaoQuadrados);
         textAglomerate.Add("Tempo Total de Selecao de Circulos" + ":" + TempoSelecaoCirculos);
         textAglomerate.Add("Tempo total da tarefa" + ":" + TempoTotalTarefa);
