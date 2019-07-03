@@ -20,6 +20,8 @@ public class TrackerClient : MonoBehaviour
     public Transform borders;
     public Logs logFeed;
     public Vector3 closestP;
+    public string h__1;
+    public string h__2;
 
     void Start()
     {
@@ -76,14 +78,14 @@ public class TrackerClient : MonoBehaviour
             {
                 u.humanID = h.id;
                 print("human id is " + h.id );
-                GUI.Label(new Rect(10, 50, 200, 35), "User 1 ID: " + h.id);
+                h__1 = h.id;
                 break;
             }
             if (hand2.y > head.y)
             {
                 u.humanID = h.id;
                 print("human id is " + h.id );
-                GUI.Label(new Rect(10, 70, 200, 35), "User 2 ID: " + h.id);
+                h__2 = h.id;
                 break;
             }
         }
@@ -157,7 +159,7 @@ public class TrackerClient : MonoBehaviour
     void OnGUI()
     {
         GUI.Label(new Rect(10, 10, 200, 35), "Number of users: " + _humans.Count);
-        GUI.Label(new Rect(10, 50, 200, 35), "User 1 ID: ");
-        GUI.Label(new Rect(10, 70, 200, 35), "User 2 ID: ");
+        GUI.Label(new Rect(10, 50, 200, 35), "User 1 ID: " + h__1);
+        GUI.Label(new Rect(10, 70, 200, 35), "User 2 ID: " + h__2);
     }
 }

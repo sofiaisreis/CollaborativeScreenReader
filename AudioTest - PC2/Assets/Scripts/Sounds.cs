@@ -336,12 +336,14 @@ public class Sounds : MonoBehaviour
                         else if (objTypeSound == 4)
                         {
                             male.GetComponent<Male>().PlaySelected(lastObj, selecionados, totais);
+                            //mudar user 1
                             male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                         }
                         else if (objTypeSound == 6)
                         {
                             print("Não podes selecionar isso!");
                             male.GetComponent<Male>().PlayError();
+                            //mudar user 1
                             male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                         }
                         break;

@@ -71,7 +71,9 @@
     <Compile Include="Assets\Scripts\SurfaceRequestListener.cs" />
     <Compile Include="Assets\Scripts\TableStalker.cs" />
     <Compile Include="Assets\Scripts\TableUser.cs" />
+    <Compile Include="Assets\Scripts\Tabuleiros.cs" />
     <Compile Include="Assets\Scripts\TrackerClient.cs" />
+    <Compile Include="Assets\Scripts\TriangleMaker.cs" />
     <Compile Include="Assets\Scripts\UDPListener.cs" />
     <Compile Include="Assets\Scripts\User.cs" />
     <Compile Include="Assets\Scripts\UserHand.cs" />
