@@ -208,79 +208,79 @@ public class Tabuleiros : MonoBehaviour
                 break;
 
             case 2:
-                quadrado1.x = (array2D[0, 12]) / 1000;
-                quadrado2.x = (array2D[1, 24]) / 1000;
-                quadrado3.x = (array2D[2, 12]) / 1000;
-                quadrado4.x = (array2D[3, 6]) / 1000;
-                quadrado5.x = (array2D[4, 21]) / 1000;
+                quadrado1.x = (array2D[0, 15]) / 1000;
+                quadrado2.x = (array2D[1, 6]) / 1000;
+                quadrado3.x = (array2D[2, 21]) / 1000;
+                quadrado4.x = (array2D[3, 12]) / 1000;
+                quadrado5.x = (array2D[4, 24]) / 1000;
 
-                quadrado1.y = (array2D[0, 13]) / 1000;
-                quadrado2.y = (array2D[1, 25]) / 1000;
-                quadrado3.y = (array2D[2, 12]) / 1000;
-                quadrado4.y = (array2D[3, 7]) / 1000;
-                quadrado5.y = (array2D[4, 22]) / 1000;
+                quadrado1.y = (array2D[0, 16]) / 1000;
+                quadrado2.y = (array2D[1, 7]) / 1000;
+                quadrado3.y = (array2D[2, 22]) / 1000;
+                quadrado4.y = (array2D[3, 13]) / 1000;
+                quadrado5.y = (array2D[4, 25]) / 1000;
 
-                quadrado1.z = (array2D[0, 14]) / 1000;
-                quadrado2.z = (array2D[1, 26]) / 1000;
-                quadrado3.z = (array2D[2, 14]) / 1000;
-                quadrado4.z = (array2D[3, 8]) / 1000;
-                quadrado5.z = (array2D[4, 23]) / 1000;
+                quadrado1.z = (array2D[0, 17]) / 1000;
+                quadrado2.z = (array2D[1, 8]) / 1000;
+                quadrado3.z = (array2D[2, 23]) / 1000;
+                quadrado4.z = (array2D[3, 14]) / 1000;
+                quadrado5.z = (array2D[4, 25]) / 1000;
 
-                circulo1.x = (array2D[0, 3]) / 1000;
-                circulo2.x = (array2D[1, 9]) / 1000;
-                circulo3.x = (array2D[2, 18]) / 1000;
-                circulo4.x = (array2D[3, 0]) / 1000;
-                circulo5.x = (array2D[4, 12]) / 1000;
+                circulo1.x = (array2D[0, 0]) / 1000;
+                circulo2.x = (array2D[1, 18]) / 1000;
+                circulo3.x = (array2D[2, 9]) / 1000;
+                circulo4.x = (array2D[3, 3]) / 1000;
+                circulo5.x = (array2D[4, 21]) / 1000;
 
-                circulo1.y = (array2D[0, 4]) / 1000;
-                circulo2.y = (array2D[1, 10]) / 1000;
-                circulo3.y = (array2D[2, 19]) / 1000;
-                circulo4.y = (array2D[3, 1]) / 1000;
-                circulo5.y = (array2D[4, 13]) / 1000;
+                circulo1.y = (array2D[0, 1]) / 1000;
+                circulo2.y = (array2D[1, 19]) / 1000;
+                circulo3.y = (array2D[2, 10]) / 1000;
+                circulo4.y = (array2D[3, 4]) / 1000;
+                circulo5.y = (array2D[4, 22]) / 1000;
 
-                circulo1.z = (array2D[0, 5]) / 1000;
-                circulo2.z = (array2D[1, 11]) / 1000;
-                circulo3.z = (array2D[2, 20]) / 1000;
-                circulo4.z = (array2D[3, 2]) / 1000;
-                circulo5.z = (array2D[4, 14]) / 1000;
+                circulo1.z = (array2D[0, 2]) / 1000;
+                circulo2.z = (array2D[1, 20]) / 1000;
+                circulo3.z = (array2D[2, 11]) / 1000;
+                circulo4.z = (array2D[3, 5]) / 1000;
+                circulo5.z = (array2D[4, 23]) / 1000;
                 break;
 
             case 3:
-                quadrado1.x = (array2D[0, 12]) / 1000;
-                quadrado2.x = (array2D[1, 24]) / 1000;
+                quadrado1.x = (array2D[0, 21]) / 1000;
+                quadrado2.x = (array2D[1, 6]) / 1000;
                 quadrado3.x = (array2D[2, 12]) / 1000;
-                quadrado4.x = (array2D[3, 6]) / 1000;
-                quadrado5.x = (array2D[4, 21]) / 1000;
+                quadrado4.x = (array2D[3, 24]) / 1000;
+                quadrado5.x = (array2D[4, 12]) / 1000;
 
-                quadrado1.y = (array2D[0, 13]) / 1000;
-                quadrado2.y = (array2D[1, 25]) / 1000;
+                quadrado1.y = (array2D[0, 22]) / 1000;
+                quadrado2.y = (array2D[1, 7]) / 1000;
                 quadrado3.y = (array2D[2, 12]) / 1000;
-                quadrado4.y = (array2D[3, 7]) / 1000;
-                quadrado5.y = (array2D[4, 22]) / 1000;
+                quadrado4.y = (array2D[3, 25]) / 1000;
+                quadrado5.y = (array2D[4, 13]) / 1000;
 
-                quadrado1.z = (array2D[0, 14]) / 1000;
-                quadrado2.z = (array2D[1, 26]) / 1000;
+                quadrado1.z = (array2D[0, 23]) / 1000;
+                quadrado2.z = (array2D[1, 8]) / 1000;
                 quadrado3.z = (array2D[2, 14]) / 1000;
-                quadrado4.z = (array2D[3, 8]) / 1000;
-                quadrado5.z = (array2D[4, 23]) / 1000;
+                quadrado4.z = (array2D[3, 26]) / 1000;
+                quadrado5.z = (array2D[4, 14]) / 1000;
 
-                circulo1.x = (array2D[0, 3]) / 1000;
-                circulo2.x = (array2D[1, 9]) / 1000;
+                circulo1.x = (array2D[0, 12]) / 1000;
+                circulo2.x = (array2D[1, 0]) / 1000;
                 circulo3.x = (array2D[2, 18]) / 1000;
-                circulo4.x = (array2D[3, 0]) / 1000;
-                circulo5.x = (array2D[4, 12]) / 1000;
+                circulo4.x = (array2D[3, 9]) / 1000;
+                circulo5.x = (array2D[4, 3]) / 1000;
 
-                circulo1.y = (array2D[0, 4]) / 1000;
-                circulo2.y = (array2D[1, 10]) / 1000;
+                circulo1.y = (array2D[0, 13]) / 1000;
+                circulo2.y = (array2D[1, 1]) / 1000;
                 circulo3.y = (array2D[2, 19]) / 1000;
-                circulo4.y = (array2D[3, 1]) / 1000;
-                circulo5.y = (array2D[4, 13]) / 1000;
+                circulo4.y = (array2D[3, 10]) / 1000;
+                circulo5.y = (array2D[4, 4]) / 1000;
 
-                circulo1.z = (array2D[0, 5]) / 1000;
-                circulo2.z = (array2D[1, 11]) / 1000;
+                circulo1.z = (array2D[0, 14]) / 1000;
+                circulo2.z = (array2D[1, 2]) / 1000;
                 circulo3.z = (array2D[2, 20]) / 1000;
-                circulo4.z = (array2D[3, 2]) / 1000;
-                circulo5.z = (array2D[4, 14]) / 1000;
+                circulo4.z = (array2D[3, 11]) / 1000;
+                circulo5.z = (array2D[4, 5]) / 1000;
                 break;
         }
         
@@ -385,53 +385,53 @@ public class Tabuleiros : MonoBehaviour
                 break;
 
             case 5:
-                quadrado1.x = (array2D[0, 12]) / 1000;
-                quadrado2.x = (array2D[1, 24]) / 1000;
-                quadrado3.x = (array2D[2, 12]) / 1000;
-                quadrado4.x = (array2D[3, 6]) / 1000;
-                quadrado5.x = (array2D[4, 21]) / 1000;
+                quadrado1.x = (array2D[0, 15]) / 1000;
+                quadrado2.x = (array2D[1, 6]) / 1000;
+                quadrado3.x = (array2D[2, 21]) / 1000;
+                quadrado4.x = (array2D[3, 12]) / 1000;
+                quadrado5.x = (array2D[4, 24]) / 1000;
 
-                quadrado1.y = (array2D[0, 13]) / 1000;
-                quadrado2.y = (array2D[1, 25]) / 1000;
-                quadrado3.y = (array2D[2, 12]) / 1000;
-                quadrado4.y = (array2D[3, 7]) / 1000;
-                quadrado5.y = (array2D[4, 22]) / 1000;
+                quadrado1.y = (array2D[0, 16]) / 1000;
+                quadrado2.y = (array2D[1, 7]) / 1000;
+                quadrado3.y = (array2D[2, 22]) / 1000;
+                quadrado4.y = (array2D[3, 13]) / 1000;
+                quadrado5.y = (array2D[4, 25]) / 1000;
 
-                quadrado1.z = (array2D[0, 14]) / 1000;
-                quadrado2.z = (array2D[1, 26]) / 1000;
-                quadrado3.z = (array2D[2, 14]) / 1000;
-                quadrado4.z = (array2D[3, 8]) / 1000;
-                quadrado5.z = (array2D[4, 23]) / 1000;
+                quadrado1.z = (array2D[0, 17]) / 1000;
+                quadrado2.z = (array2D[1, 8]) / 1000;
+                quadrado3.z = (array2D[2, 23]) / 1000;
+                quadrado4.z = (array2D[3, 14]) / 1000;
+                quadrado5.z = (array2D[4, 25]) / 1000;
 
-                circulo1.x = (array2D[0, 3]) / 1000;
-                circulo2.x = (array2D[1, 9]) / 1000;
-                circulo3.x = (array2D[2, 18]) / 1000;
-                circulo4.x = (array2D[3, 0]) / 1000;
-                circulo5.x = (array2D[4, 12]) / 1000;
+                circulo1.x = (array2D[0, 0]) / 1000;
+                circulo2.x = (array2D[1, 18]) / 1000;
+                circulo3.x = (array2D[2, 9]) / 1000;
+                circulo4.x = (array2D[3, 3]) / 1000;
+                circulo5.x = (array2D[4, 21]) / 1000;
 
-                circulo1.y = (array2D[0, 4]) / 1000;
-                circulo2.y = (array2D[1, 10]) / 1000;
-                circulo3.y = (array2D[2, 19]) / 1000;
-                circulo4.y = (array2D[3, 1]) / 1000;
-                circulo5.y = (array2D[4, 13]) / 1000;
+                circulo1.y = (array2D[0, 1]) / 1000;
+                circulo2.y = (array2D[1, 19]) / 1000;
+                circulo3.y = (array2D[2, 10]) / 1000;
+                circulo4.y = (array2D[3, 4]) / 1000;
+                circulo5.y = (array2D[4, 22]) / 1000;
 
-                circulo1.z = (array2D[0, 5]) / 1000;
-                circulo2.z = (array2D[1, 11]) / 1000;
-                circulo3.z = (array2D[2, 20]) / 1000;
-                circulo4.z = (array2D[3, 2]) / 1000;
-                circulo5.z = (array2D[4, 14]) / 1000;
+                circulo1.z = (array2D[0, 2]) / 1000;
+                circulo2.z = (array2D[1, 20]) / 1000;
+                circulo3.z = (array2D[2, 11]) / 1000;
+                circulo4.z = (array2D[3, 5]) / 1000;
+                circulo5.z = (array2D[4, 23]) / 1000;
 
-                triangulo1.x = (array2D[0, 18]) / 1000;
-                triangulo2.x = (array2D[1, 6]) / 1000;
-                triangulo3.x = (array2D[2, 0]) / 1000;
-                triangulo4.x = (array2D[3, 12]) / 1000;
-                triangulo5.x = (array2D[4, 24]) / 1000;
+                triangulo1.x = (array2D[0, 9]) / 1000;
+                triangulo2.x = (array2D[1, 21]) / 1000;
+                triangulo3.x = (array2D[2, 18]) / 1000;
+                triangulo4.x = (array2D[3, 6]) / 1000;
+                triangulo5.x = (array2D[4, 0]) / 1000;
 
-                triangulo1.y = (array2D[0, 19]) / 1000;
-                triangulo2.y = (array2D[1, 7]) / 1000;
-                triangulo3.y = (array2D[2, 1]) / 1000;
-                triangulo4.y = (array2D[3, 13]) / 1000;
-                triangulo5.y = (array2D[4, 25]) / 1000;
+                triangulo1.y = (array2D[0, 10]) / 1000;
+                triangulo2.y = (array2D[1, 22]) / 1000;
+                triangulo3.y = (array2D[2, 19]) / 1000;
+                triangulo4.y = (array2D[3, 7]) / 1000;
+                triangulo5.y = (array2D[4, 1]) / 1000;
 
                 triangulo1.z = -(10 / 1000);
                 triangulo2.z = -(10 / 1000);
@@ -441,53 +441,53 @@ public class Tabuleiros : MonoBehaviour
                 break;
 
             case 6:
-                quadrado1.x = (array2D[0, 12]) / 1000;
-                quadrado2.x = (array2D[1, 24]) / 1000;
+                quadrado1.x = (array2D[0, 21]) / 1000;
+                quadrado2.x = (array2D[1, 6]) / 1000;
                 quadrado3.x = (array2D[2, 12]) / 1000;
-                quadrado4.x = (array2D[3, 6]) / 1000;
-                quadrado5.x = (array2D[4, 21]) / 1000;
+                quadrado4.x = (array2D[3, 24]) / 1000;
+                quadrado5.x = (array2D[4, 12]) / 1000;
 
-                quadrado1.y = (array2D[0, 13]) / 1000;
-                quadrado2.y = (array2D[1, 25]) / 1000;
+                quadrado1.y = (array2D[0, 22]) / 1000;
+                quadrado2.y = (array2D[1, 7]) / 1000;
                 quadrado3.y = (array2D[2, 12]) / 1000;
-                quadrado4.y = (array2D[3, 7]) / 1000;
-                quadrado5.y = (array2D[4, 22]) / 1000;
+                quadrado4.y = (array2D[3, 25]) / 1000;
+                quadrado5.y = (array2D[4, 13]) / 1000;
 
-                quadrado1.z = (array2D[0, 14]) / 1000;
-                quadrado2.z = (array2D[1, 26]) / 1000;
+                quadrado1.z = (array2D[0, 23]) / 1000;
+                quadrado2.z = (array2D[1, 8]) / 1000;
                 quadrado3.z = (array2D[2, 14]) / 1000;
-                quadrado4.z = (array2D[3, 8]) / 1000;
-                quadrado5.z = (array2D[4, 23]) / 1000;
+                quadrado4.z = (array2D[3, 26]) / 1000;
+                quadrado5.z = (array2D[4, 14]) / 1000;
 
-                circulo1.x = (array2D[0, 3]) / 1000;
-                circulo2.x = (array2D[1, 9]) / 1000;
+                circulo1.x = (array2D[0, 12]) / 1000;
+                circulo2.x = (array2D[1, 0]) / 1000;
                 circulo3.x = (array2D[2, 18]) / 1000;
-                circulo4.x = (array2D[3, 0]) / 1000;
-                circulo5.x = (array2D[4, 12]) / 1000;
+                circulo4.x = (array2D[3, 9]) / 1000;
+                circulo5.x = (array2D[4, 3]) / 1000;
 
-                circulo1.y = (array2D[0, 4]) / 1000;
-                circulo2.y = (array2D[1, 10]) / 1000;
+                circulo1.y = (array2D[0, 13]) / 1000;
+                circulo2.y = (array2D[1, 1]) / 1000;
                 circulo3.y = (array2D[2, 19]) / 1000;
-                circulo4.y = (array2D[3, 1]) / 1000;
-                circulo5.y = (array2D[4, 13]) / 1000;
+                circulo4.y = (array2D[3, 10]) / 1000;
+                circulo5.y = (array2D[4, 4]) / 1000;
 
-                circulo1.z = (array2D[0, 5]) / 1000;
-                circulo2.z = (array2D[1, 11]) / 1000;
+                circulo1.z = (array2D[0, 14]) / 1000;
+                circulo2.z = (array2D[1, 2]) / 1000;
                 circulo3.z = (array2D[2, 20]) / 1000;
-                circulo4.z = (array2D[3, 2]) / 1000;
-                circulo5.z = (array2D[4, 14]) / 1000;
+                circulo4.z = (array2D[3, 11]) / 1000;
+                circulo5.z = (array2D[4, 5]) / 1000;
 
-                triangulo1.x = (array2D[0, 18]) / 1000;
-                triangulo2.x = (array2D[1, 6]) / 1000;
+                triangulo1.x = (array2D[0, 24]) / 1000;
+                triangulo2.x = (array2D[1, 12]) / 1000;
                 triangulo3.x = (array2D[2, 0]) / 1000;
-                triangulo4.x = (array2D[3, 12]) / 1000;
-                triangulo5.x = (array2D[4, 24]) / 1000;
+                triangulo4.x = (array2D[3, 6]) / 1000;
+                triangulo5.x = (array2D[4, 18]) / 1000;
 
-                triangulo1.y = (array2D[0, 19]) / 1000;
-                triangulo2.y = (array2D[1, 7]) / 1000;
+                triangulo1.y = (array2D[0, 25]) / 1000;
+                triangulo2.y = (array2D[1, 13]) / 1000;
                 triangulo3.y = (array2D[2, 1]) / 1000;
-                triangulo4.y = (array2D[3, 13]) / 1000;
-                triangulo5.y = (array2D[4, 25]) / 1000;
+                triangulo4.y = (array2D[3, 7]) / 1000;
+                triangulo5.y = (array2D[4, 19]) / 1000;
 
                 triangulo1.z = -(10 / 1000);
                 triangulo2.z = -(10 / 1000);

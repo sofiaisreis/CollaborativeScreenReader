@@ -1,0 +1,14 @@
+Tarefa Completada: :
+OLA
+Numero de Quadrados Selecionados: :
+Numero de Circulos Selecionados: :
+Numero de Selecoes Vazias: :
+Numero de Selecoes Erradas: :
+Numero de Erros no Total: :
+Selecoes: :
+Erros: :
+Tempo Total de Selecao de Quadrados: :
+Tempo Total de Selecao de Circulos: :
+Tempo Total de Toque do User 2: :
+Tempo Total de Toque em simultâneo: :
+Tempo total da tarefa: :
