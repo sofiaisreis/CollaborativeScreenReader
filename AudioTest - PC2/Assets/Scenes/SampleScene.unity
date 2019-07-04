@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -321,7 +321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   M2_quadrado: {fileID: 8300000, guid: 5273d4dea8f48b84b83f51e26b8f6829, type: 3}
   M2_circulo: {fileID: 8300000, guid: 90c7e8395377ce646ab983a3f94b5282, type: 3}
-  M2_triangulo: {fileID: 8300000, guid: b4eb919ad6b635c4691c7012e2c831b5, type: 3}
+  M2_triangulo: {fileID: 8300000, guid: 10c38af906c59bc459b117bc0da37292, type: 3}
   ding: {fileID: 8300000, guid: 827c34b61b011914cba5d74ed21366a8, type: 3}
   selected: {fileID: 8300000, guid: 33b99a48d7dfcd7409dff33eb9a894b7, type: 3}
   error: {fileID: 8300000, guid: 75b0cb0bb44bdfc4aa4cbbf9ea1d9253, type: 3}
@@ -761,7 +761,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   F1_quadrado: {fileID: 8300000, guid: ea1f27a29e198ff41acaf157c0c0ba7c, type: 3}
   F1_circulo: {fileID: 8300000, guid: b20be83946b5cf3418aa3a6ed1652889, type: 3}
-  F1_triangulo: {fileID: 8300000, guid: cc8a788bf111dbd4c8a6a47bc3f1a4a0, type: 3}
+  F1_triangulo: {fileID: 8300000, guid: 792202480c9523e48879834e30f1449c, type: 3}
   ding: {fileID: 8300000, guid: 827c34b61b011914cba5d74ed21366a8, type: 3}
   selected: {fileID: 8300000, guid: 33b99a48d7dfcd7409dff33eb9a894b7, type: 3}
   error: {fileID: 8300000, guid: 75b0cb0bb44bdfc4aa4cbbf9ea1d9253, type: 3}

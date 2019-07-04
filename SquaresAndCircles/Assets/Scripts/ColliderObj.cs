@@ -24,6 +24,7 @@ public class ColliderObj : MonoBehaviour
     public GameObject lastCollidingObject = null;
     public string objectName;
     public string actionIsNow = null;
+    public int numErros = 0;
 
     private void Start()
     {
@@ -69,6 +70,11 @@ public class ColliderObj : MonoBehaviour
                 audioRequest.PlayRemoteAudio(idUser, 2, 2, transform.position, -1, -1, feedbackType);
                 objectName = "circle";
             }
+            else if (objTag == "triangle")
+            {
+                audioRequest.PlayRemoteAudio(idUser, 3, 3, transform.position, -1, -1, feedbackType);
+                objectName = "triangle";
+            }
         }
 
         lastCollidingObject = collidingObject = collisionInfo.gameObject;
@@ -94,6 +100,11 @@ public class ColliderObj : MonoBehaviour
             {
                 audioRequest.PlayRemoteAudio(idUser, 2, 2, transform.position, -1, -1, feedbackType);
                 objectName = "circle";
+            }
+            else if (objTag == "triangle")
+            {
+                audioRequest.PlayRemoteAudio(idUser, 3, 3, transform.position, -1, -1, feedbackType);
+                objectName = "triangle";
             }
         }
 
@@ -129,6 +140,7 @@ public class ColliderObj : MonoBehaviour
         {
             audioRequest.PlayRemoteAudio(idUser, -1, 6, transform.position, -1, -1, feedbackType);
             actionIsNow = "error";
+            numErros++; //TO DO , passar
         }
         else
         {
@@ -147,6 +159,12 @@ public class ColliderObj : MonoBehaviour
                 circles_inc++;
                 audioRequest.PlayRemoteAudio(idUser, 2, 4, transform.position, circles_inc, circles_findTotal, feedbackType);
                 print("Selecionou " + circles_inc + " de " + circles_findTotal + "circulos.");
+            }
+            else if(lastCollidingObject.tag == "triangle")
+            {
+                actionIsNow = "selected";
+                numErros++;
+                audioRequest.PlayRemoteAudio(idUser, 3, 6, transform.position, -1, -1, feedbackType);
             }
 
             Destroy(lastCollidingObject);

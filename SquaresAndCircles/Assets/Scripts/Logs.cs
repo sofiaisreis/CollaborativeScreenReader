@@ -217,7 +217,7 @@ public class Logs : MonoBehaviour
         U2Action = User2Action.GetComponent<ColliderObj>().actionIsNow;
 
         User1Action.GetComponent<ColliderObj>().actionIsNow = User2Action.GetComponent<ColliderObj>().actionIsNow = null;
-
+        
         //NOME DO OBJETO NO UNITY
         HoverUNU1 = HoverU1.GetComponent<ColliderObj>().collidingObject;
         HoverUNU2 = HoverU2.GetComponent<ColliderObj>().collidingObject;
@@ -268,6 +268,7 @@ public class Logs : MonoBehaviour
             TimeStampErros.Add(timestamp.TotalMilliseconds);
         }
 
+        // NAO sera melhor User1Action.GetComponent<ColliderObj>().numErros; ? TO DO
         //Numero de Erros
         //selecoes vazias
         if (U1Action == "selected" && U1LastColliding == null)
