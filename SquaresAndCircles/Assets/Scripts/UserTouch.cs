@@ -50,23 +50,32 @@ public class UserTouch : MonoBehaviour
 
     public void DoubleTap()
     {
-        if (GetComponent<ColliderObj>().lastCollidingObject != null)
+        ColliderObj collider = GetComponent<ColliderObj>();
+
+        if (collider.GodOn)
         {
-            if ((GetComponent<ColliderObj>().lastCollidingObject.tag == "square" && hand.theUser.shapeType == ShapeType.Square) ||
-                (GetComponent<ColliderObj>().lastCollidingObject.tag == "circle" && hand.theUser.shapeType == ShapeType.Circle))
-            {
-                GetComponent<ColliderObj>().SelectObject();
-            }
-            else
-            {
-                // som erro!
-                GetComponent<ColliderObj>().errorTap = true;
-                GetComponent<ColliderObj>().SelectObject();
-            }
+            collider.GodSelects();
         }
         else
         {
-            // seleccao vazia
+            if (collider.lastCollidingObject != null)
+            {
+                if ((collider.lastCollidingObject.tag == "square" && hand.theUser.shapeType == ShapeType.Square) ||
+                    (collider.lastCollidingObject.tag == "circle" && hand.theUser.shapeType == ShapeType.Circle))
+                {
+                    collider.SelectObject();
+                }
+                else
+                {
+                    // som erro!
+                    collider.errorTap = true;
+                    collider.SelectObject();
+                }
+            }
+            else
+            {
+                // seleccao vazia
+            }
         }
         typeOfTouch = "double-tap";
     }

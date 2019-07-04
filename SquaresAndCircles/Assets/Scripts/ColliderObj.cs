@@ -9,6 +9,7 @@ using UnityEngine;
 public class ColliderObj : MonoBehaviour
 {
     public static int feedbackType;
+    public static int feedbackTypeLast;
 
     public bool isBeingDragged = false;
     public bool errorTap = false;
@@ -25,6 +26,10 @@ public class ColliderObj : MonoBehaviour
     public string objectName;
     public string actionIsNow = null;
     public int numErros = 0;
+    public bool GodOn = false;
+
+    public static GameObject lastCollidingObjectGlobal = null;
+
 
     private void Start()
     {
@@ -45,6 +50,20 @@ public class ColliderObj : MonoBehaviour
 
     private void Update()
     {
+        // GOD mode
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            feedbackTypeLast = feedbackType;
+            feedbackType = 4;
+            GodOn = true;
+        }
+        else if (Input.GetKeyUp(KeyCode.G))
+        {
+            feedbackType = feedbackTypeLast;
+            GodOn = false;
+        }
+
+        print("Feedback type: " + feedbackType);
     }
 
     void OnCollisionEnter(Collision collisionInfo)
@@ -77,7 +96,7 @@ public class ColliderObj : MonoBehaviour
             }
         }
 
-        lastCollidingObject = collidingObject = collisionInfo.gameObject;
+        lastCollidingObject = collidingObject = lastCollidingObjectGlobal = collisionInfo.gameObject;
     }
 
     void OnCollisionStay(Collision collisionInfo)
@@ -108,7 +127,7 @@ public class ColliderObj : MonoBehaviour
             }
         }
 
-        lastCollidingObject = collidingObject = collisionInfo.gameObject;
+        lastCollidingObject = collidingObject = lastCollidingObjectGlobal = collisionInfo.gameObject;
     }
 
     void OnCollisionExit(Collision collisionInfo)
@@ -128,6 +147,46 @@ public class ColliderObj : MonoBehaviour
 
         collidingObject = null;
         actionIsNow = "exit";
+    }
+
+    public void GodSelects()
+    {
+        int idUser = -1;
+
+        if (lastCollidingObjectGlobal != null)
+        {
+            if(lastCollidingObjectGlobal.tag == "square")
+            {
+                actionIsNow = "selected";
+                squares_inc++;
+                audioRequest.PlayRemoteAudio(idUser, 1, 4, transform.position, squares_inc, squares_findTotal, feedbackType);
+                print("Selecionou " + squares_inc + " de " + squares_findTotal + " quadrados.");
+
+                Destroy(lastCollidingObject);
+                lastCollidingObject = collidingObject = lastCollidingObjectGlobal = null;
+            }
+            else if (lastCollidingObjectGlobal.tag == "circle")
+            {
+                actionIsNow = "selected";
+                squares_inc++;
+                audioRequest.PlayRemoteAudio(idUser, 2, 4, transform.position, squares_inc, squares_findTotal, feedbackType);
+                print("Selecionou " + squares_inc + " de " + squares_findTotal + " quadrados.");
+
+                Destroy(lastCollidingObject);
+                lastCollidingObject = collidingObject = lastCollidingObjectGlobal = null;
+            }
+            else if (lastCollidingObjectGlobal.tag == "triangle")
+            {
+                actionIsNow = "selected";
+                numErros++;
+                audioRequest.PlayRemoteAudio(idUser, 3, 6, transform.position, -1, -1, feedbackType);
+            }
+        }
+        else
+        {
+            audioRequest.PlayRemoteAudio(idUser, -1, 6, transform.position, -1, -1, feedbackType);
+            actionIsNow = "error";
+        }
     }
 
     public void SelectObject()
@@ -168,8 +227,16 @@ public class ColliderObj : MonoBehaviour
             }
 
             Destroy(lastCollidingObject);
-            lastCollidingObject = collidingObject = null;
+            lastCollidingObject = collidingObject = lastCollidingObjectGlobal = null;
         }    
         errorTap = false;
+    }
+
+    private void OnGUI()
+    {
+        if (GodOn)
+        {
+            GUI.Label(new Rect(10, 130, 200, 35), "God ON!");
+        }
     }
 }

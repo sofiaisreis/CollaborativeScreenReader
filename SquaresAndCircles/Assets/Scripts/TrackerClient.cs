@@ -120,7 +120,7 @@ public class TrackerClient : MonoBehaviour
         //u.transform.parent = surfaceCenter;
         //u.transform.localPosition = new Vector3(u.transform.localPosition.x, u.transform.localPosition.y, 0);
         //u.transform.parent = null;
-        u.transform.position = closestP;
+        u.transform.position = closestP - closestB.forward * 0.3f;
     }
 
     public void setNewFrame(Body[] bodies)

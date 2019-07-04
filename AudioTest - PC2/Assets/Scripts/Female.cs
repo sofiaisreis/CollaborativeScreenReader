@@ -53,10 +53,10 @@ public class Female : MonoBehaviour
         selection.GetComponent<Select>().SelectionF(lastObj, selecao, totais);
     }
 
-    public void PlayError()
+    public void PlayError(bool soPode = true)
     {
         gameObject.GetComponent<Renderer>().material.color = Color.magenta;
-        selection.GetComponent<Select>().ErrorF();
+        selection.GetComponent<Select>().ErrorF(soPode);
     }
 
     public void Stop()

@@ -54,10 +54,10 @@ public class Male : MonoBehaviour
         selection.GetComponent<Select>().SelectionM(lastObj, selecao, totais);
     }
 
-    public void PlayError()
+    public void PlayError(bool soPode = true)
     {
         gameObject.GetComponent<Renderer>().material.color = Color.blue;
-        selection.GetComponent<Select>().ErrorM();
+        selection.GetComponent<Select>().ErrorM(soPode);
     }
 
     public void Stop()

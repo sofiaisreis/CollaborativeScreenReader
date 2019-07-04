@@ -146,27 +146,6 @@ public class Tabuleiros : MonoBehaviour
 
     public void ChangeTabuleiro()
     {
-        //Quadrados
-        square1.transform.position = quadrado1;
-        square2.transform.position = quadrado2;
-        square3.transform.position = quadrado3;
-        square4.transform.position = quadrado4;
-        square5.transform.position = quadrado5;
-
-        //Circulos
-        circle1.transform.position = circulo1;
-        circle2.transform.position = circulo2;
-        circle3.transform.position = circulo3;
-        circle4.transform.position = circulo4;
-        circle5.transform.position = circulo5;
-        
-        //Triangulos ao cantinho
-        triangle1.transform.position = triangulo1;
-        triangle2.transform.position = triangulo2;
-        triangle3.transform.position = triangulo3;
-        triangle4.transform.position = triangulo4;
-        triangle5.transform.position = triangulo5;
-
         switch (code)
         {
             case 1:
@@ -301,31 +280,31 @@ public class Tabuleiros : MonoBehaviour
         triangulo3.z = -10 / 1000;
         triangulo4.z = -(10 / 1000);
         triangulo5.z = -(10 / 1000);
+
+        //Quadrados
+        square1.transform.localPosition = quadrado1;
+        square2.transform.localPosition = quadrado2;
+        square3.transform.localPosition = quadrado3;
+        square4.transform.localPosition = quadrado4;
+        square5.transform.localPosition = quadrado5;
+
+        //Circulos
+        circle1.transform.localPosition = circulo1;
+        circle2.transform.localPosition = circulo2;
+        circle3.transform.localPosition = circulo3;
+        circle4.transform.localPosition = circulo4;
+        circle5.transform.localPosition = circulo5;
+
+        //Triangulos ao cantinho
+        triangle1.transform.localPosition = triangulo1;
+        triangle2.transform.localPosition = triangulo2;
+        triangle3.transform.localPosition = triangulo3;
+        triangle4.transform.localPosition = triangulo4;
+        triangle5.transform.localPosition = triangulo5;
     }
 
     public void ChangeTabuleiroDistratores()
     {
-        //Quadrados
-        square1.transform.position = quadrado1;
-        square2.transform.position = quadrado2;
-        square3.transform.position = quadrado3;
-        square4.transform.position = quadrado4;
-        square5.transform.position = quadrado5;
-
-        //Circulos
-        circle1.transform.position = circulo1;
-        circle2.transform.position = circulo2;
-        circle3.transform.position = circulo3;
-        circle4.transform.position = circulo4;
-        circle5.transform.position = circulo5;
-        
-        //Triangulos
-        triangle1.transform.position = triangulo1;
-        triangle2.transform.position = triangulo2;
-        triangle3.transform.position = triangulo3;
-        triangle4.transform.position = triangulo4;
-        triangle5.transform.position = triangulo5;
-
         switch (code)
         {
             case 4:
@@ -496,6 +475,27 @@ public class Tabuleiros : MonoBehaviour
                 triangulo5.z = -(10 / 1000);
                 break;
         }
+
+        //Quadrados
+        square1.transform.localPosition = quadrado1;
+        square2.transform.localPosition = quadrado2;
+        square3.transform.localPosition = quadrado3;
+        square4.transform.localPosition = quadrado4;
+        square5.transform.localPosition = quadrado5;
+
+        //Circulos
+        circle1.transform.localPosition = circulo1;
+        circle2.transform.localPosition = circulo2;
+        circle3.transform.localPosition = circulo3;
+        circle4.transform.localPosition = circulo4;
+        circle5.transform.localPosition = circulo5;
+
+        //Triangulos ao cantinho
+        triangle1.transform.localPosition = triangulo1;
+        triangle2.transform.localPosition = triangulo2;
+        triangle3.transform.localPosition = triangulo3;
+        triangle4.transform.localPosition = triangulo4;
+        triangle5.transform.localPosition = triangulo5;
     }
 
     void OnGUI()

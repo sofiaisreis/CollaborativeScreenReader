@@ -34,18 +34,18 @@ public class Select : MonoBehaviour
         myAudioSource = GetComponent<AudioSource>();
     }
 
-    public void ErrorF()
+    public void ErrorF(bool soPode = true)
     {
         myAudioSource.PlayOneShot(errorSound);
         System.Threading.Thread.Sleep((int)errorSound.length + 300);
-        myAudioSource.PlayOneShot(soPodeQuad);
+        if(soPode) myAudioSource.PlayOneShot(soPodeQuad);
     }
 
-    public void ErrorM()
+    public void ErrorM(bool soPode = true)
     {
         myAudioSource.PlayOneShot(errorSound);
         System.Threading.Thread.Sleep((int)errorSound.length + 300);
-        myAudioSource.PlayOneShot(soPodeCirc);
+        if (soPode) myAudioSource.PlayOneShot(soPodeCirc);
     }
 
     public void SelectionF(int lastObj, int selecao, int totais)
@@ -145,8 +145,8 @@ public class Select : MonoBehaviour
         System.Threading.Thread.Sleep((int)selected.length + 300);
 
         switch (lastObj)
-        {
-            /* Nao acontece porque M seleciona apenas circulos
+        {/*
+            //Nao acontece porque M seleciona apenas circulos
             case 1: //quadrado
                 if (selecao < totais)
                 {
@@ -183,7 +183,6 @@ public class Select : MonoBehaviour
                 }
                 break;
                 */
-
             case 2: //circulo
                 if (selecao < totais)
                 {
