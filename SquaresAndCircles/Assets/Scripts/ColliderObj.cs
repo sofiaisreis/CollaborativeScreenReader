@@ -168,9 +168,9 @@ public class ColliderObj : MonoBehaviour
             else if (lastCollidingObjectGlobal.tag == "circle")
             {
                 actionIsNow = "selected";
-                squares_inc++;
-                audioRequest.PlayRemoteAudio(idUser, 2, 4, transform.position, squares_inc, squares_findTotal, feedbackType);
-                print("Selecionou " + squares_inc + " de " + squares_findTotal + " quadrados.");
+                circles_inc++;
+                audioRequest.PlayRemoteAudio(idUser, 2, 4, transform.position, circles_inc, circles_findTotal, feedbackType);
+                print("Selecionou " + circles_inc + " de " + circles_findTotal + " circulos.");
 
                 Destroy(lastCollidingObject);
                 lastCollidingObject = collidingObject = lastCollidingObjectGlobal = null;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.43667546, g: 0.48427135, b: 0.5645225, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667555, g: 0.48427123, b: 0.5645229, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -240,6 +240,11 @@ PrefabInstance:
         type: 3}
       propertyPath: idUser
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462790539842953432, guid: b576413ea9e9c85408a01b42ff4a57e5,
+        type: 3}
+      propertyPath: circles_findTotal
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4279992100563308375, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}
@@ -3544,6 +3549,11 @@ PrefabInstance:
       propertyPath: idUser
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3462790539842953432, guid: b576413ea9e9c85408a01b42ff4a57e5,
+        type: 3}
+      propertyPath: circles_findTotal
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4279992100563308375, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}
       propertyPath: touch
@@ -3677,7 +3687,7 @@ MonoBehaviour:
   triangulo3: {x: 0, y: 0, z: 0}
   triangulo4: {x: 0, y: 0, z: 0}
   triangulo5: {x: 0, y: 0, z: 0}
-  key: 
+  key: 0
   code: 0
 --- !u!4 &1895074542
 Transform:

@@ -38,12 +38,12 @@ public class TrackerClient : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            setUser(u1);
+            h__1 = setUser(u1);
         }
         
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            setUser(u2);
+            h__2 = setUser(u2);
         }
         
         if (_humans.Count > 0)
@@ -64,7 +64,7 @@ public class TrackerClient : MonoBehaviour
         _cleanDeadHumans();
     }
 
-    private void setUser(User u)
+    private string setUser(User u)
     {
         foreach (Human h in _humans.Values)
         {
@@ -78,17 +78,16 @@ public class TrackerClient : MonoBehaviour
             {
                 u.humanID = h.id;
                 print("human id is " + h.id );
-                h__1 = h.id;
-                break;
+                return h.id;
             }
             if (hand2.y > head.y)
             {
                 u.humanID = h.id;
                 print("human id is " + h.id );
-                h__2 = h.id;
-                break;
+                return h.id;
             }
         }
+        return "";
     }
 
     private void updateUser(User u, Human h)
