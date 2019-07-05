@@ -267,7 +267,7 @@ public class Logs : MonoBehaviour
             ErrorsU2++;
             TimeStampErros.Add(timestamp.TotalMilliseconds);
         }
-
+         
         // NAO sera melhor User1Action.GetComponent<ColliderObj>().numErros; ? TO DO  
         //Numero de Erros
         //selecoes vazias

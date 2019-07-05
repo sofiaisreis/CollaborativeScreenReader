@@ -41,6 +41,11 @@ public class Select : MonoBehaviour
         if(soPode) myAudioSource.PlayOneShot(soPodeQuad);
     }
 
+    public void ErrorPublic()
+    {
+        myAudioSource.PlayOneShot(errorSound);
+    }
+
     public void ErrorM(bool soPode = true)
     {
         myAudioSource.PlayOneShot(errorSound);

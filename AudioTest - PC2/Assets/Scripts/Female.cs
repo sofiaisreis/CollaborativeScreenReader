@@ -59,6 +59,12 @@ public class Female : MonoBehaviour
         selection.GetComponent<Select>().ErrorF(soPode);
     }
 
+    public void PlayErrorPublic()
+    {
+        gameObject.GetComponent<Renderer>().material.color = Color.blue;
+        selection.GetComponent<Select>().ErrorPublic();
+    }
+
     public void Stop()
     {
         myAudioSource.Stop();
