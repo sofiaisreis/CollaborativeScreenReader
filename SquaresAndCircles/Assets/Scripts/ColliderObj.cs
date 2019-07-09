@@ -62,8 +62,6 @@ public class ColliderObj : MonoBehaviour
             feedbackType = feedbackTypeLast;
             GodOn = false;
         }
-
-        print("Feedback type: " + feedbackType);
     }
 
     void OnCollisionEnter(Collision collisionInfo)

@@ -279,18 +279,12 @@ public class Sounds : MonoBehaviour
                             }
                             else if (objTypeSound == 4)
                             {
-                                if (user == 2)
-                                {
-                                    female.transform.position = Vector3.zero;
-                                }
+                                //Select Alto para ela
                                 female.GetComponent<Female>().PlaySelected(lastObj, selecionados, totais);
                             }
                             else if (objTypeSound == 6)
                             {
-                                if (user == 2)
-                                {
-                                    female.transform.position = Vector3.zero;
-                                }
+                                //Select Alto para ela
                                 female.GetComponent<Female>().PlayError();
                             }
                         }
@@ -318,18 +312,14 @@ public class Sounds : MonoBehaviour
                             }
                             else if (objTypeSound == 4)
                             {
-                                if (user == 1)
-                                {
-                                    female.transform.position = Vector3.zero;
-                                }
+                                //Select Baixo para ela
+                                //female.transform.position =;
                                 female.GetComponent<Female>().PlaySelected(lastObj, selecionados, totais);
                             }
                             else if (objTypeSound == 6)
                             {
-                                if (user == 1)
-                                {
-                                    female.transform.position = Vector3.zero;
-                                }
+                                //Select Baixo para ela
+                                //female.transform.position =
                                 female.GetComponent<Female>().PlayErrorPublic();
                             }
                         }
@@ -359,18 +349,15 @@ public class Sounds : MonoBehaviour
                             }
                             else if (objTypeSound == 4)
                             {
-                                if (user == 2)
-                                {
-                                    male.transform.position = Vector3.zero;
-                                }
+
+                                //Select Baixo para ele
+                                //male.transform.position =;
                                 male.GetComponent<Male>().PlaySelected(lastObj, selecionados, totais);
                             }
                             else if (objTypeSound == 6)
                             {
-                                if (user == 2)
-                                {
-                                    male.transform.position = Vector3.zero;
-                                }
+                                //Selected Baixo para ele
+                                //male.transform.position =
                                 male.GetComponent<Male>().PlayErrorPublic();
                             }
                         }
@@ -397,18 +384,12 @@ public class Sounds : MonoBehaviour
                             }
                             else if (objTypeSound == 4)
                             {
-                                if (user == 1)
-                                {
-                                    male.transform.position = Vector3.zero;
-                                }
+                                //Select Alto para ele
                                 male.GetComponent<Male>().PlaySelected(lastObj, selecionados, totais);
                             }
                             else if (objTypeSound == 6)
                             {
-                                if (user == 1)
-                                {
-                                    male.transform.position = Vector3.zero;
-                                }
+                                //Select Alto para ele
                                 male.GetComponent<Male>().PlayError();
                             }
                         }
