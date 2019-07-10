@@ -59,6 +59,7 @@ public class Logs : MonoBehaviour
     public List<double> TimeStampCirculos = new List<double>();
 
     public List<double> TimeStampErros = new List<double>();
+    public List<double> TimeStampErrosExtra = new List<double>();
     public double TempoSelecaoQuadrados;
     public double TempoSelecaoCirculos;
     public double TempoTotalTarefa;
@@ -114,6 +115,7 @@ public class Logs : MonoBehaviour
                 "UserLHPosX:"+
                 "UserLHPosY:"+
                 "UserLHPosZ:"+
+                "UserHasTouch:" +
                 "UserPosToqueX:"+
                 "UserPosToqueY:"+
                 "UserPosToqueZ:"+
@@ -241,9 +243,12 @@ public class Logs : MonoBehaviour
         //POSICAO DO CUBINHO
         HandCubeU1 = HandCube1Pos.transform.position;
         HandCubeU2 = HandCube2Pos.transform.position;
-        
 
-        //PARA O AGLOMERATE:
+
+        /*****************
+         PARA O AGLOMERATE
+         *****************/
+
         //Numero de DT
         if (U1TouchType == "double-tap")
         {
@@ -271,6 +276,11 @@ public class Logs : MonoBehaviour
         // NAO sera melhor User1Action.GetComponent<ColliderObj>().numErros; ? TO DO  
         //Numero de Erros
         //selecoes vazias
+        if (U1Action == "selected" && U1LastColliding == null)
+        {
+            NumSelecoesVaziasU1++;
+            TimeStampErros.Add(timestamp.TotalMilliseconds);
+        }
         if (U1Action == "selected" && U1LastColliding == null)
         {
             NumSelecoesVaziasU1++;
@@ -317,16 +327,27 @@ public class Logs : MonoBehaviour
 
     public void LogFileAglomerateWriting()
     {
+        // Completed Task?
+        if (NumQuadToSelect == 0 && NumCircToSelect == 0)
+        {
+            CompletedTask = true;
+        }
+        
         //Numero de selecoes vazias de ambos users
         int NumVaziasU1 = NumSelecoesVaziasU1;
-        int NumVaziasU2 = NumSelecoesVaziasU2;
+        int NumVaziasU2 = NumSelecoesVaziasU1;
+        int NumTriangulosErrosU1 = NumSelecoesTriangulosU1;
+        int NumTriangulosErrosU2 = NumSelecoesTriangulosU2;
         int NumSelecoesVaziasAmbos = NumVaziasU1 + NumVaziasU2;
-        //Numero de erros total
-        int NumErrosU1 = ErrorsU1;
-        int NumErrosU2 = ErrorsU2;
+        
+        //Numero de selecoes erradas de ambos users - selecionar algo que nao pode, selecionar triangulos
+        int NumSelecoesErradasAmbos = NumTriangulosErrosU1 +  NumTriangulosErrosU2;
+        
+        //Numero de erros total (Selecoes vazias e erradas)
+        int NumErrosU1 = NumSelecoesVaziasU1 + NumTriangulosErrosU1;
+        int NumErrosU2 = NumSelecoesVaziasU2 + NumTriangulosErrosU2;
         int NumErrosAmbos = NumErrosU1 + NumErrosU2;
-        //Numero de selecoes erradas de ambos users - selecionar algo que nao pode, selecionar "nada" - first case
-        int NumSelecoesErradasAmbos = NumSelecoesVaziasAmbos + NumErrosAmbos;
+
         //timestamp selecao cada user
         if (U1Action == "selected" && HoverOTU1 == "square")
         {
@@ -354,7 +375,10 @@ public class Logs : MonoBehaviour
         //timestamps
         textAglomerate.Add("Selecoes Quadrados" + ":" + TimeStampQuadrados);
         textAglomerate.Add("Selecoes Circulos" + ":" + TimeStampCirculos);
-        textAglomerate.Add("Erros" + ":" + TimeStampErros);
+        textAglomerate.Add("Erros Vazios User 1" + ":" + TimeStampErros);
+        textAglomerate.Add("Erros Vazios User 2" + ":" + TimeStampErros);
+        textAglomerate.Add("Erros Triangulo User 1" + ":" + TimeStampErrosExtra);
+        textAglomerate.Add("Erros Triangulo User 2" + ":" + TimeStampErrosExtra);
         textAglomerate.Add("Tempo Total de Selecao de Quadrados" + ":" + TempoSelecaoQuadrados);
         textAglomerate.Add("Tempo Total de Selecao de Circulos" + ":" + TempoSelecaoCirculos);
         textAglomerate.Add("Tempo total da tarefa" + ":" + TempoTotalTarefa);
@@ -409,7 +433,6 @@ public class Logs : MonoBehaviour
         if (NumQuadToSelect == 0 && NumCircToSelect == 0)
         {
             textStory.Add("At " + timestamp.TotalMilliseconds + " All squares and circles were selected. Task completed!");
-            CompletedTask = true;
             TempoTotalTarefa = timestamp.TotalMilliseconds;
         }
     }

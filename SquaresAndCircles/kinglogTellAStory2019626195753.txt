@@ -1,2 +1,0 @@
-Time:User:Action:ObjUnity:NumSelectForSelection
-At 3593,9409 task was stopped
