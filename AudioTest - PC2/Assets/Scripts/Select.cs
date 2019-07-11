@@ -33,7 +33,14 @@ public class Select : MonoBehaviour
     {
         myAudioSource = GetComponent<AudioSource>();
     }
+    public void ErrorF(bool soPode = true)
+    {
+        myAudioSource.PlayOneShot(errorSound);
 
+            System.Threading.Thread.Sleep((int)errorSound.length + 300);
+            if (soPode) myAudioSource.PlayOneShot(soPodeQuad);
+    }
+    /*
     public void ErrorF(bool soPode)
     {
         myAudioSource.PlayOneShot(errorSound);
@@ -42,7 +49,7 @@ public class Select : MonoBehaviour
             System.Threading.Thread.Sleep((int)errorSound.length + 300);
             if (soPode) myAudioSource.PlayOneShot(soPodeQuad);
         }
-    }
+    }*/
 
     public void ErrorPublic()
     {

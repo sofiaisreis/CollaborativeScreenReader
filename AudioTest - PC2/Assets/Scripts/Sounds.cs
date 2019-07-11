@@ -100,14 +100,16 @@ public class Sounds : MonoBehaviour
                             else if (objTypeSound == 6)
                             {//TODO EM ALL
                                
-                                if (lastObj == -1)
+                                /*if (lastObj == -1)
                                 {
+                                    print("Entrou 1");
                                     female.GetComponent<Female>().PlayErrorVazio();
                                 }
                                 else
                                 {
+                                    print("Entrou 2");*/
                                     female.GetComponent<Female>().PlayError();
-                                }
+                                
                             }
                         }
                         break;
