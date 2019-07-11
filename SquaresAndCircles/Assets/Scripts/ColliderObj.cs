@@ -37,6 +37,7 @@ public class ColliderObj : MonoBehaviour
     {
         squares_inc = 0;
         circles_inc = 0;
+        objectName = "";
     }
 
     /* CODE OF OBJECT TYPE SOUND
@@ -58,13 +59,13 @@ public class ColliderObj : MonoBehaviour
             feedbackTypeLast = feedbackType;
             feedbackType = 4;
             GodOn = true;
+            isG = true;
         }
         else if (Input.GetKeyUp(KeyCode.G))
         {
             feedbackType = feedbackTypeLast;
             GodOn = false;
             pressGod++;
-            isG = true;
         }
         isG = false;
     }
@@ -203,6 +204,7 @@ public class ColliderObj : MonoBehaviour
             audioRequest.PlayRemoteAudio(idUser, -1, 6, transform.position, -1, -1, feedbackType);
             actionIsNow = "error";
             numErros++; //TO DO , passar
+            //objectName = "";
         }
         else
         {

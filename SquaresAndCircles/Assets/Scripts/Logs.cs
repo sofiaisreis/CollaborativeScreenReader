@@ -17,6 +17,8 @@ public class Logs : MonoBehaviour
     public Timer Timer1;
     public int tarefaOn = -1;
     DateTime taskStart;
+    DateTime comecou;
+    DateTime finalizou;
     
     public GameObject User1Pos, User2Pos;
     public GameObject User1LeftHandPos, User2LeftHandPos;
@@ -87,6 +89,7 @@ public class Logs : MonoBehaviour
     public int GodTimes = 0;
     public int SpaceTimes = 0;
 
+    public int happening = -1;
     //Time:User:UserPos:UserRHPos:UserLHPos:UserPosToque:UserMaoDeToque:UserTouchType:UserAction:HoverUnityName:HoverObjectType:NQuadToSelect:NCircToSelect:LastCollidingObj:HandCubePos
 
     public List<string> text = new List<string>();
@@ -122,7 +125,6 @@ public class Logs : MonoBehaviour
             User1TouchTime = 0;
             User2TouchTime = 0;
 
-            // TODO: fazer reset as variaveis para o aglomerate 
             taskStart = DateTime.Now;
 
             //StartLogging
@@ -159,7 +161,8 @@ public class Logs : MonoBehaviour
             tarefaOn = 0;
             print("Tarefa finito");
             textStory.Add("At " + timestamp.TotalMilliseconds + " task was stopped");
-            TempoTotalTarefa = timestamp.TotalMilliseconds;
+            finalizou = DateTime.Now;
+            TempoTotalTarefa = (finalizou - taskStart).TotalMilliseconds;
 
             DateTime now = DateTime.Now;
 
@@ -353,7 +356,7 @@ public class Logs : MonoBehaviour
                 NumSelecoesErradasTU2++;
                 TimeStampSelecoesErradasU2.Add(timestamp.TotalMilliseconds);
             }
-            if (HoverOTU1 == "square")
+            if (HoverOTU2 == "square")
             {
                 NumSelecoesErradasOU2++;
                 TimeStampSelecoesErradasU2.Add(timestamp.TotalMilliseconds);
@@ -525,7 +528,8 @@ public class Logs : MonoBehaviour
         if (NumQuadToSelect == 0 && NumCircToSelect == 0)
         {
             textStory.Add("At " + timestamp.TotalMilliseconds + " All squares and circles were selected. Task completed!");
-            TempoTotalTarefa = timestamp.TotalMilliseconds;
+            finalizou = DateTime.Now;
+            TempoTotalTarefa = (finalizou-taskStart).TotalMilliseconds;
         }
         //if(HoverU1.GetComponent<ColliderObj>().GodOn) textStory.Add("At " + timestamp.TotalMilliseconds + " GOD was turned On!");
         //if(repocess.GetComponent<NewTouch>().isRep) textStory.Add("At " + timestamp.TotalMilliseconds + " RREPROCESS was turned On!");
@@ -534,5 +538,7 @@ public class Logs : MonoBehaviour
     void OnGUI()
     {
         GUI.Label(new Rect(10, 30, 200, 35), "Feedback Type: " + feedbackType);
+        if(tarefaOn == 1) GUI.Label(new Rect(10, 160, 200, 35), "Tarefa a Decorrer!");
+        if(tarefaOn == 0) GUI.Label(new Rect(10, 160, 200, 35), "Tarefa Terminada!");
     }
 }

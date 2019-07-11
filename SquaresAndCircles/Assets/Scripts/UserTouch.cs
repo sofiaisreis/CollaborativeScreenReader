@@ -75,6 +75,10 @@ public class UserTouch : MonoBehaviour
             else
             {
                 // seleccao vazia
+                collider.errorTap = true;
+                // Som erro
+                collider.SelectObject();
+                collider.objectName = "";
             }
         }
         typeOfTouch = "double-tap";

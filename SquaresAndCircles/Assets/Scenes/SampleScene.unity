@@ -1163,8 +1163,11 @@ MonoBehaviour:
   U2LH: {x: 0, y: 0, z: 0}
   User1hasTouch: 0
   User2hasTouch: 0
+  User1TouchStartbool: 0
+  User2TouchStartbool: 0
   User1TouchTime: 0
   User2TouchTime: 0
+  UserSimultaneousTouchTime: 0
   PosTouchU1: {x: 0, y: 0, z: 0}
   PosTouchU2: {x: 0, y: 0, z: 0}
   U1TouchType: 
@@ -1657,8 +1660,9 @@ MonoBehaviour:
   User1: {fileID: 522154814}
   User2: {fileID: 662442363}
   distanceThreshold: 0.3
-  reprocessInterval: 2000
+  reprocessInterval: -1
   repro: 0
+  isRep: 0
 --- !u!4 &756066670
 Transform:
   m_ObjectHideFlags: 0
