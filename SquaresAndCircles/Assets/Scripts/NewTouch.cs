@@ -27,7 +27,10 @@ public class NewTouch : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             ReprocessTouches();
-            
+        }
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            TrocaToques();
         }
         if (Input.GetKeyUp(KeyCode.Space))
         {
@@ -69,6 +72,21 @@ public class NewTouch : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void TrocaToques()
+    {
+        MyTouch tmp = User1.handRight.userTouch.touch;
+
+        if (User2.handRight.userTouch.touch != null)
+            User1.handRight.userTouch.NewTouchStarts(User2.handRight.userTouch.touch.gameObject);
+        else
+            User1.handRight.userTouch.touch = null;
+
+        if (tmp != null)
+            User2.handRight.userTouch.NewTouchStarts(tmp.gameObject);
+        else
+            User2.handRight.userTouch.touch = null;
     }
 
     private void ReprocessTouches()

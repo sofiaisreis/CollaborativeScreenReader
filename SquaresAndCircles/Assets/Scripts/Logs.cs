@@ -158,47 +158,52 @@ public class Logs : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.S))
         {
-            tarefaOn = 0;
-            print("Tarefa finito");
-            textStory.Add("At " + timestamp.TotalMilliseconds + " task was stopped");
-            finalizou = DateTime.Now;
-            TempoTotalTarefa = (finalizou - taskStart).TotalMilliseconds;
-
-            DateTime now = DateTime.Now;
-
-            // FRAME A FRAME
-            using (StreamWriter sw = new StreamWriter(@"kinglog" + now.Year + now.Month + now.Day + now.Hour + now.Minute + now.Second + ".txt"))
-            {
-                foreach (string s in text)
-                {
-                    sw.WriteLine(s);
-                }
-            }
-
-            // AGLOMERATE
-            //Rolling dos TS
-            foreach (double t in TimeStampQuadrados) TSQuadrados += t + ":";
-            foreach (double t in TimeStampCirculos) TSCirculos += t + ":";
-            foreach (double t in TimeStampVaziosU1) TSVaziosU1 += t + ":";
-            foreach (double t in TimeStampVaziosU2) TSVaziosU2 += t + ":";
-            foreach (double t in TimeStampSelecoesErradasU1) TSErradasU1 += t + ":";
-            foreach (double t in TimeStampSelecoesErradasU2) TSErradasU2 += t + ":";
-            LogFileAglomerateWriting();
-
-            // TELL A STORY
-            using (StreamWriter sws = new StreamWriter(@"kinglogTellAStory" + now.Year + now.Month + now.Day + now.Hour + now.Minute + now.Second + ".txt"))
-            {
-                foreach (string s in textStory)
-                {
-                    sws.WriteLine(s);
-                }
-            }
+            carregouNoS();
         }
 
         if (tarefaOn == 1)
         {
             LogFileFrameWriting();
             LogFileTellAStoryWriting();
+        }
+    }
+
+    private void carregouNoS()
+    {
+        tarefaOn = 0;
+        print("Tarefa finito");
+        textStory.Add("At " + timestamp.TotalMilliseconds + " task was stopped");
+        finalizou = DateTime.Now;
+        TempoTotalTarefa = (finalizou - taskStart).TotalMilliseconds;
+
+        DateTime now = DateTime.Now;
+
+        // FRAME A FRAME
+        using (StreamWriter sw = new StreamWriter(@"kinglog" + now.Year + now.Month + now.Day + now.Hour + now.Minute + now.Second + ".txt"))
+        {
+            foreach (string s in text)
+            {
+                sw.WriteLine(s);
+            }
+        }
+
+        // AGLOMERATE
+        //Rolling dos TS
+        foreach (double t in TimeStampQuadrados) TSQuadrados += t + ":";
+        foreach (double t in TimeStampCirculos) TSCirculos += t + ":";
+        foreach (double t in TimeStampVaziosU1) TSVaziosU1 += t + ":";
+        foreach (double t in TimeStampVaziosU2) TSVaziosU2 += t + ":";
+        foreach (double t in TimeStampSelecoesErradasU1) TSErradasU1 += t + ":";
+        foreach (double t in TimeStampSelecoesErradasU2) TSErradasU2 += t + ":";
+        LogFileAglomerateWriting();
+
+        // TELL A STORY
+        using (StreamWriter sws = new StreamWriter(@"kinglogTellAStory" + now.Year + now.Month + now.Day + now.Hour + now.Minute + now.Second + ".txt"))
+        {
+            foreach (string s in textStory)
+            {
+                sws.WriteLine(s);
+            }
         }
     }
 
@@ -530,6 +535,8 @@ public class Logs : MonoBehaviour
             textStory.Add("At " + timestamp.TotalMilliseconds + " All squares and circles were selected. Task completed!");
             finalizou = DateTime.Now;
             TempoTotalTarefa = (finalizou-taskStart).TotalMilliseconds;
+
+            carregouNoS();
         }
         //if(HoverU1.GetComponent<ColliderObj>().GodOn) textStory.Add("At " + timestamp.TotalMilliseconds + " GOD was turned On!");
         //if(repocess.GetComponent<NewTouch>().isRep) textStory.Add("At " + timestamp.TotalMilliseconds + " RREPROCESS was turned On!");

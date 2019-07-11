@@ -318,6 +318,11 @@ public class Tabuleiros : MonoBehaviour
         square3.transform.localPosition = quadrados[2];
         square4.transform.localPosition = quadrados[3];
         square5.transform.localPosition = quadrados[4];
+        square1.SetActive(true);
+        square2.SetActive(true);
+        square3.SetActive(true);
+        square4.SetActive(true);
+        square5.SetActive(true);
 
         //Circulos
         circle1.transform.localPosition = circulos[0];
@@ -325,6 +330,11 @@ public class Tabuleiros : MonoBehaviour
         circle3.transform.localPosition = circulos[2];
         circle4.transform.localPosition = circulos[3];
         circle5.transform.localPosition = circulos[4];
+        circle1.SetActive(true);
+        circle2.SetActive(true);
+        circle3.SetActive(true);
+        circle4.SetActive(true);
+        circle5.SetActive(true);
 
         //Triangulos ao cantinho
         triangle1.transform.localPosition = triangulos[0];
@@ -332,6 +342,11 @@ public class Tabuleiros : MonoBehaviour
         triangle3.transform.localPosition = triangulos[2];
         triangle4.transform.localPosition = triangulos[3];
         triangle5.transform.localPosition = triangulos[4];
+        triangle1.SetActive(true);
+        triangle2.SetActive(true);
+        triangle3.SetActive(true);
+        triangle4.SetActive(true);
+        triangle5.SetActive(true);
     }
 
     public void ChangeTabuleiroDistratores()
@@ -347,6 +362,11 @@ public class Tabuleiros : MonoBehaviour
         square3.transform.localPosition = quadrados[2];
         square4.transform.localPosition = quadrados[3];
         square5.transform.localPosition = quadrados[4];
+        square1.SetActive(true);
+        square2.SetActive(true);
+        square3.SetActive(true);
+        square4.SetActive(true);
+        square5.SetActive(true);
 
         //Circulos
         circle1.transform.localPosition = circulos[0];
@@ -354,6 +374,11 @@ public class Tabuleiros : MonoBehaviour
         circle3.transform.localPosition = circulos[2];
         circle4.transform.localPosition = circulos[3];
         circle5.transform.localPosition = circulos[4];
+        circle1.SetActive(true);
+        circle2.SetActive(true);
+        circle3.SetActive(true);
+        circle4.SetActive(true);
+        circle5.SetActive(true);
 
         //Triangulos ao cantinho
         triangle1.transform.localPosition = triangulos[0];
@@ -361,6 +386,11 @@ public class Tabuleiros : MonoBehaviour
         triangle3.transform.localPosition = triangulos[2];
         triangle4.transform.localPosition = triangulos[3];
         triangle5.transform.localPosition = triangulos[4];
+        triangle1.SetActive(true);
+        triangle2.SetActive(true);
+        triangle3.SetActive(true);
+        triangle4.SetActive(true);
+        triangle5.SetActive(true);
     }
 
     void OnGUI()
