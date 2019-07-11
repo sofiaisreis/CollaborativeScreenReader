@@ -34,11 +34,14 @@ public class Select : MonoBehaviour
         myAudioSource = GetComponent<AudioSource>();
     }
 
-    public void ErrorF(bool soPode = true)
+    public void ErrorF(bool soPode)
     {
         myAudioSource.PlayOneShot(errorSound);
-        System.Threading.Thread.Sleep((int)errorSound.length + 300);
-        if(soPode) myAudioSource.PlayOneShot(soPodeQuad);
+        if (soPode)
+        {
+            System.Threading.Thread.Sleep((int)errorSound.length + 300);
+            if (soPode) myAudioSource.PlayOneShot(soPodeQuad);
+        }
     }
 
     public void ErrorPublic()
@@ -46,11 +49,15 @@ public class Select : MonoBehaviour
         myAudioSource.PlayOneShot(errorSound);
     }
 
-    public void ErrorM(bool soPode = true)
+    public void ErrorM(bool soPode)
     {
         myAudioSource.PlayOneShot(errorSound);
-        System.Threading.Thread.Sleep((int)errorSound.length + 300);
-        if (soPode) myAudioSource.PlayOneShot(soPodeCirc);
+        if (soPode)
+        {
+            System.Threading.Thread.Sleep((int)errorSound.length + 300);
+            if (soPode) myAudioSource.PlayOneShot(soPodeCirc);
+        }
+
     }
 
     public void SelectionF(int lastObj, int selecao, int totais)

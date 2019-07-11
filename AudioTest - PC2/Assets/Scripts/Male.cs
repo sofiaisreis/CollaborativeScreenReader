@@ -60,6 +60,12 @@ public class Male : MonoBehaviour
         selection.GetComponent<Select>().ErrorM(soPode);
     }
 
+    public void PlayErrorVazio(bool soPode = false)
+    {
+        gameObject.GetComponent<Renderer>().material.color = Color.blue;
+        selection.GetComponent<Select>().ErrorM(soPode);
+    }
+
     public void PlayErrorPublic()
     {
         gameObject.GetComponent<Renderer>().material.color = Color.blue;

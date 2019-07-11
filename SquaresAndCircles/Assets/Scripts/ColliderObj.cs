@@ -46,7 +46,7 @@ public class ColliderObj : MonoBehaviour
      * 3 - triangle
      * 4 - select
      * 5 - exit
-     * 6 - error
+     * 6 - errorT
      */
 
     // (userID, lastObj, objTypeSound, relativePos1, relativePos2, selecionados, totais);
@@ -203,8 +203,7 @@ public class ColliderObj : MonoBehaviour
         {
             audioRequest.PlayRemoteAudio(idUser, -1, 6, transform.position, -1, -1, feedbackType);
             actionIsNow = "error";
-            numErros++; //TO DO , passar
-            //objectName = "";
+            numErros++;
         }
         else
         {
@@ -226,7 +225,7 @@ public class ColliderObj : MonoBehaviour
             }
             else if(lastCollidingObject.tag == "triangle")
             {
-                actionIsNow = "selected";
+                actionIsNow = "error";
                 numErros++;
                 audioRequest.PlayRemoteAudio(idUser, 3, 6, transform.position, -1, -1, feedbackType);
             }

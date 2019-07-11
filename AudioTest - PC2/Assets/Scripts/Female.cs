@@ -59,6 +59,13 @@ public class Female : MonoBehaviour
         selection.GetComponent<Select>().ErrorF(soPode);
     }
 
+    public void PlayErrorVazio(bool soPode = false)
+    {
+        gameObject.GetComponent<Renderer>().material.color = Color.magenta;
+        selection.GetComponent<Select>().ErrorF(soPode);
+    }
+
+
     public void PlayErrorPublic()
     {
         gameObject.GetComponent<Renderer>().material.color = Color.blue;

@@ -98,8 +98,16 @@ public class Sounds : MonoBehaviour
                                 female.GetComponent<Female>().PlaySelected(lastObj, selecionados, totais);
                             }
                             else if (objTypeSound == 6)
-                            {
-                               female.GetComponent<Female>().PlayError();
+                            {//TODO EM ALL
+                               
+                                if (lastObj == -1)
+                                {
+                                    female.GetComponent<Female>().PlayErrorVazio();
+                                }
+                                else
+                                {
+                                    female.GetComponent<Female>().PlayError();
+                                }
                             }
                         }
                         break;
