@@ -50,22 +50,20 @@ public class Logs : MonoBehaviour
     public Vector3 HandCubeU1, HandCubeU2;
 
     public bool CompletedTask = false;
-    public int SelectionsU1 = 0;
-    public int SelectionsU2 = 0;
-    public int ErrorsU1 = 0;
-    public int ErrorsU2 = 0;
     public int NumSelecoesVaziasU1 = 0;
     public int NumSelecoesVaziasU2 = 0;
-    public int NumSelecoesTriangulosU1 = 0;
-    public int NumSelecoesTriangulosU2 = 0;
+    public int NumSelecoesErradasTU1 = 0;
+    public int NumSelecoesErradasOU1 = 0;
+    public int NumSelecoesErradasTU2 = 0;
+    public int NumSelecoesErradasOU2 = 0;
 
 
     public ArrayList TimeStampQuadrados = new ArrayList();
     public ArrayList TimeStampCirculos = new ArrayList();
     public ArrayList TimeStampVaziosU1 = new ArrayList();
     public ArrayList TimeStampVaziosU2 = new ArrayList();
-    public ArrayList TimeStampTriangulosU1 = new ArrayList();
-    public ArrayList TimeStampTriangulosU2 = new ArrayList();
+    public ArrayList TimeStampSelecoesErradasU1 = new ArrayList();
+    public ArrayList TimeStampSelecoesErradasU2 = new ArrayList();
     
     public double TempoSelecaoQuadrados;
     public double TempoSelecaoCirculos;
@@ -264,29 +262,42 @@ public class Logs : MonoBehaviour
          
         //Numero de triangulos que tentaram ser selecionados // else selecoes vazias
         //E TIMESTAMPS
-        if (U1TouchType == "double-tap" && U1Action == "error")
+        if (U1Action == "error" || U1Action == "selected" && U1LastColliding == null) //U1TouchType == "double-tap")//
         {
             if (HoverOTU1 == "triangle")
             {
-                NumSelecoesTriangulosU1++;
-
-                TimeStampTriangulosU1.Add(timestamp.TotalMilliseconds);
+                NumSelecoesErradasTU1++;
+                TimeStampSelecoesErradasU1.Add(timestamp.TotalMilliseconds);
+            }
+            if (HoverOTU1 == "circle")
+            {
+                NumSelecoesErradasOU1++;
+                TimeStampSelecoesErradasU1.Add(timestamp.TotalMilliseconds);
             }
             // TO DO NOT SURE
-            else
+            if (U1LastColliding == null)
             {
                 NumSelecoesVaziasU1++;
                 TimeStampVaziosU1.Add(timestamp.TotalMilliseconds);
             }
+            else
+            {
+                print("ignorou tudo no DT");
+            }
         }
-        if (U2TouchType == "double-tap" && U2Action == "error")
+        if (U2Action == "error" || U1Action == "selected" && U2LastColliding == null)
         {
             if (HoverOTU2 == "triangle")
             {
-                NumSelecoesTriangulosU2++;
-                TimeStampTriangulosU2.Add(timestamp.TotalMilliseconds);
+                NumSelecoesErradasTU2++;
+                TimeStampSelecoesErradasU2.Add(timestamp.TotalMilliseconds);
             }
-            else
+            if (HoverOTU1 == "square")
+            {
+                NumSelecoesErradasOU2++;
+                TimeStampSelecoesErradasU2.Add(timestamp.TotalMilliseconds);
+            }
+            if (U2LastColliding == null)
             {
                 NumSelecoesVaziasU2++;
                 TimeStampVaziosU2.Add(timestamp.TotalMilliseconds);
@@ -340,14 +351,17 @@ public class Logs : MonoBehaviour
         int NumSelecoesVaziasAmbos = NumVaziasU1 + NumVaziasU2;
 
         //Numero de selecoes de triangulos de cada
-        int NumTriangulosErrosU1 = NumSelecoesTriangulosU1;
-        int NumTriangulosErrosU2 = NumSelecoesTriangulosU2;
-        int NumSelecoesErradasAmbos = NumTriangulosErrosU1 + NumTriangulosErrosU2;
-        
-        //Numero de selecoes erradas de ambos users - selecionar algo que nao pode e selecionar triangulos
-        int NumErrosU1 = NumVaziasU1 + NumTriangulosErrosU1;
-        int NumErrosU2 = NumVaziasU2 + NumTriangulosErrosU2;
-        int NumErrosAmbos = NumErrosU1 + NumErrosU2;
+        int NumTriangulosErrosU1 = NumSelecoesErradasTU1;
+        int NumTriangulosErrosU2 = NumSelecoesErradasTU2;
+        int NumSelecoesErradasTAmbos = NumTriangulosErrosU1 + NumTriangulosErrosU2;
+
+        //Numero de selecoes erradas obj
+        int NumErradasU1 = NumSelecoesErradasOU1;
+        int NumErradasU2 = NumSelecoesErradasOU2;
+        int NumErradasOAmbos = NumErradasU1 + NumErradasU2;
+
+        //Numero de erros no total
+        int NumErrosAmbosTOTAL = NumSelecoesVaziasAmbos + NumSelecoesErradasTAmbos + NumErradasOAmbos;
 
         //timestamp selecao cada user
         if (U1Action == "selected" && HoverOTU1 == "square")
@@ -363,25 +377,45 @@ public class Logs : MonoBehaviour
         //tempo total de toque em simultâneo
 
 
+
+
+        //Rolling dos TS
+        string TSQuadrados = "";
+        string TSCirculos = "";
+        string TSVaziosU1 = "";
+        string TSVaziosU2 = "";
+        string TSErradasU1 = "";
+        string TSErradasU2 = "";
+
+
+        foreach (double t in TimeStampQuadrados) TSQuadrados += t + ":";
+        foreach (double t in TimeStampCirculos) TSCirculos += t + ":";
+        foreach (double t in TimeStampVaziosU1) TSVaziosU1 += t + ":";
+        foreach (double t in TimeStampVaziosU2) TSVaziosU2 += t + ":";
+        foreach (double t in TimeStampSelecoesErradasU1) TSErradasU1 += t + ":";
+        foreach (double t in TimeStampSelecoesErradasU2) TSErradasU2 += t + ":";
+
+
         textAglomerate.Add("Tarefa Completada" + ":" + CompletedTask);
         textAglomerate.Add("Numero de Quadrados Selecionados" + ":" + incSQ);
         textAglomerate.Add("Numero de Circulos Selecionados" + ":" + incCC);
         textAglomerate.Add("Numero de Selecoes Vazias" + ":" + NumSelecoesVaziasAmbos);
-        textAglomerate.Add("Numero de Selecoes Erradas" + ":" + NumSelecoesErradasAmbos);
-        textAglomerate.Add("Numero de Erros no Total" + ":" + NumErrosAmbos);
+        textAglomerate.Add("Numero de Selecoes Triangulos" + ":" + NumSelecoesErradasTAmbos);
+        textAglomerate.Add("Numero de Selecoes de Objetos indevidos" + ":" + NumErradasOAmbos);
+        textAglomerate.Add("Numero de Erros no Total" + ":" + NumErrosAmbosTOTAL);
         
         //timestamps
-        textAglomerate.Add("Selecoes Quadrados" + ":" + TimeStampQuadrados);
-        textAglomerate.Add("Selecoes Circulos" + ":" + TimeStampCirculos);
-        textAglomerate.Add("Erros Vazios User 1" + ":" + TimeStampVaziosU1);
-        textAglomerate.Add("Erros Vazios User 2" + ":" + TimeStampVaziosU2);
-        textAglomerate.Add("Erros Triangulo User 1" + ":" + TimeStampTriangulosU1);
-        textAglomerate.Add("Erros Triangulo User 2" + ":" + TimeStampTriangulosU2);
-        textAglomerate.Add("Tempo Total de Selecao de Quadrados" + ":" + (TempoSelecaoQuadrados/1000) + "segundos");
-        textAglomerate.Add("Tempo Total de Selecao de Circulos" + ":" + (TempoSelecaoCirculos / 1000) + "segundos");
+        textAglomerate.Add("Selecoes Quadrados" + ":" + TSQuadrados);
+        textAglomerate.Add("Selecoes Circulos" + ":" + TSCirculos);
+        textAglomerate.Add("Erros Vazios User 1" + ":" + TSVaziosU1);
+        textAglomerate.Add("Erros Vazios User 2" + ":" + TSVaziosU2);
+        textAglomerate.Add("Erros Triangulo ou Circulo User 1" + ":" + TSErradasU1);
+        textAglomerate.Add("Erros Triangulo ou Quadrado User 2" + ":" + TSErradasU2);
+        textAglomerate.Add("Tempo Total de Selecao de Quadrados" + ":" + TempoSelecaoQuadrados);
+        textAglomerate.Add("Tempo Total de Selecao de Circulos" + ":" + TempoSelecaoCirculos);
         
         // Ou quando sao todos selecionados ou quando se carrega na tecla "s"
-        textAglomerate.Add("Tempo total da tarefa" + ":" + (TempoTotalTarefa / 1000) + "segundos");
+        textAglomerate.Add("Tempo total da tarefa" + ":" + TempoTotalTarefa);
 
         textAglomerate.Add("Tempo Total de Toque do User 1" + ":" + User1TouchTime);
         textAglomerate.Add("Tempo Total de Toque do User 2" + ":" + User2TouchTime);
