@@ -13,6 +13,8 @@ public class NewTouch : MonoBehaviour
 
     public int reprocessInterval;
     private DateTime lastReprocess;
+    public int repro = 0;
+    public bool isRep = false;
 
     void Start()
     {
@@ -25,8 +27,14 @@ public class NewTouch : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             ReprocessTouches();
+            
         }
-
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            repro++;
+            isRep = true;
+        }
+        isRep = false;
         if (Input.touchCount > 0)
         {
             //  print("Touch!");

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.43667546, g: 0.48427135, b: 0.5645225, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667555, g: 0.48427123, b: 0.5645229, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1154,6 +1154,7 @@ MonoBehaviour:
   LastCollidingObj2: {fileID: 1881834339}
   HandCube1Pos: {fileID: 9567905}
   HandCube2Pos: {fileID: 1881834339}
+  repocess: {fileID: 756066668}
   User1Posicao: {x: 0, y: 0, z: 0}
   User2Posicao: {x: 0, y: 0, z: 0}
   U1RH: {x: 0, y: 0, z: 0}
@@ -1184,49 +1185,26 @@ MonoBehaviour:
   U2LastColliding: {fileID: 0}
   HandCubeU1: {x: 0, y: 0, z: 0}
   HandCubeU2: {x: 0, y: 0, z: 0}
+  GodIs: 
+  SpaceIs: 
   CompletedTask: 0
-  SelectionsU1: 0
-  SelectionsU2: 0
-  ErrorsU1: 0
-  ErrorsU2: 0
   NumSelecoesVaziasU1: 0
   NumSelecoesVaziasU2: 0
-  TimeStampQuadrados:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  TimeStampCirculos:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  TimeStampErros:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
+  NumSelecoesErradasTU1: 0
+  NumSelecoesErradasOU1: 0
+  NumSelecoesErradasTU2: 0
+  NumSelecoesErradasOU2: 0
+  TSQuadrados: 
+  TSCirculos: 
+  TSVaziosU1: 
+  TSVaziosU2: 
+  TSErradasU1: 
+  TSErradasU2: 
   TempoSelecaoQuadrados: 0
   TempoSelecaoCirculos: 0
   TempoTotalTarefa: 0
+  GodTimes: 0
+  SpaceTimes: 0
   text: []
   textAglomerate: []
   textStory: []
@@ -1680,6 +1658,7 @@ MonoBehaviour:
   User2: {fileID: 662442363}
   distanceThreshold: 0.3
   reprocessInterval: 2000
+  repro: 0
 --- !u!4 &756066670
 Transform:
   m_ObjectHideFlags: 0
@@ -3687,8 +3666,14 @@ MonoBehaviour:
   triangulo3: {x: 0, y: 0, z: 0}
   triangulo4: {x: 0, y: 0, z: 0}
   triangulo5: {x: 0, y: 0, z: 0}
-  key: 0
+  quadrados: []
+  circulos: []
+  triangulos: []
   code: 0
+  AllPositionsTabuleiro: []
+  AglomeradoDeVectosrs3Pos: []
+  tabuleiros: []
+  tabuleirosD: []
 --- !u!4 &1895074542
 Transform:
   m_ObjectHideFlags: 0

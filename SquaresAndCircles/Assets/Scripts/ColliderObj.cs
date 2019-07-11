@@ -27,6 +27,8 @@ public class ColliderObj : MonoBehaviour
     public string actionIsNow = null;
     public int numErros = 0;
     public bool GodOn = false;
+    public int pressGod = 0;
+    public bool isG = false;
 
     public static GameObject lastCollidingObjectGlobal = null;
 
@@ -61,7 +63,10 @@ public class ColliderObj : MonoBehaviour
         {
             feedbackType = feedbackTypeLast;
             GodOn = false;
+            pressGod++;
+            isG = true;
         }
+        isG = false;
     }
 
     void OnCollisionEnter(Collision collisionInfo)
