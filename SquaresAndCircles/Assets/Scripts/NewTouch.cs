@@ -14,7 +14,9 @@ public class NewTouch : MonoBehaviour
     public int reprocessInterval;
     private DateTime lastReprocess;
     public int repro = 0;
+    public int agás = 0;
     public bool isRep = false;
+    public bool isH = false;
 
     void Start()
     {
@@ -34,10 +36,13 @@ public class NewTouch : MonoBehaviour
         }
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            repro++;
-            isRep = true;
+            isRep = false;            
         }
-        isRep = false;
+        if (Input.GetKeyUp(KeyCode.H))
+        {
+            isH = false;
+        }
+
         if (Input.touchCount > 0)
         {
             //  print("Touch!");
@@ -76,6 +81,9 @@ public class NewTouch : MonoBehaviour
 
     private void TrocaToques()
     {
+        agás++;
+        isH = true;
+
         MyTouch tmp = User1.handRight.userTouch.touch;
 
         if (User2.handRight.userTouch.touch != null)
@@ -91,6 +99,9 @@ public class NewTouch : MonoBehaviour
 
     private void ReprocessTouches()
     {
+        repro++;
+        isRep = true;
+
         if (User1.handRight.userTouch.touch != null)
             Destroy(User1.handRight.userTouch.touch.gameObject);
 

@@ -64,61 +64,16 @@ public class Tabuleiros : MonoBehaviour
     void Update()
     {
         // Vamos Escolher Tabuleiros para guardar
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.T))
         {
             code = 1;
             ChangeTabuleiro();
         }
 
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            code = 2;
-            ChangeTabuleiroDistratores();
-        }
-
-        // GUARDA TABULEIROS NOS FICHEIROS
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            PrintTabuleiroCompleto();
-
-            if (code == 1)
-            {
-                using (StreamWriter tab = new StreamWriter(@"Tabuleiros.txt"))
-                {
-                    foreach (string t in tabuleiros)
-                    {
-                        tab.WriteLine(t);
-                    }
-                }
-            }
-            else if (code == 2)
-            {
-                using (StreamWriter tabD = new StreamWriter(@"TabuleirosDistratores.txt"))
-                {
-                    foreach (Vector3 tD in tabuleirosD)
-                    {
-                        tabD.WriteLine(tD);
-                    }
-                }
-            }
-
-        }
-        
-        // Vai ler do ficheiro
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            code = 1;
-            int lineCount = File.ReadLines(@"Tabuleiros.txt").Count();
-            for (int i = 0; i < lineCount; i++)
-            {
-
-            }
-        }
         if (Input.GetKeyDown(KeyCode.Y))
         {
             code = 2;
-            int lineCountD = File.ReadLines(@"TabuleirosDistratores.txt").Count();
-
+            ChangeTabuleiroDistratores();
         }
     }
 
@@ -223,51 +178,10 @@ public class Tabuleiros : MonoBehaviour
                 if (triangulos[i].x == quadrados[i - 1].x) return true;
                 if (triangulos[i].x == circulos[i - 1].x) return true;
                 if (triangulos[i].x == triangulos[i - 1].x) return true;
-
-            /*NOT WORKING
-                   //print("Adjacentes Laterais checked!");
-               if (i > 0)
-               {
-                   print("A ir as diagonais");
-                   //v se os quadrados e os circulos estao a 800 de distancia
-                   if ((Math.Abs(quadrados[i].x - quadrados[i - 1].x) == (float)400 / 1000)
-                       && (Math.Abs(circulos[i].x - circulos[i - 1].x) == (float)400 / 1000))
-                   //^se o que esta acima deles esta a 400 dele /\ , ou seja, no meio deles
-                   //um deles tem que mudar de sitio!
-                   {
-                       print("Entrou na Switch");
-                       //RandomizeLine(i);
-                       SwitchDiagonals(i);
-                   }
-                       print("Adjacentes Diagonais Checked para linha: " + i);
-               }
-               */
         }
         return false;
     }
-    
-    public void SwitchDiagonals(int i)
-    {
-        //H3 - nao estao em diagonais adjacentes para baixo
-        print("Ha colisoes Diagonais:" + HasAdjacents(i));
 
-                print("Vou randomizar");
-                int r = Randomerino(2);
-                if (r == 0)
-                {
-                    quadrados[i].x = (array2D[0, Randomerino(8)]) / 1000;
-                    print("quadrado na linha " + (i) + "recolocado!!");
-                }
-                if (r == 1)
-                {
-                    circulos[i].x = (array2D[0, Randomerino(8)]) / 1000;
-                    print("circulo na linha " + (i) + "recolocado!!");
-                }
-        print("Adjacentes diagonais para baixo checked!");
-
-        //if (Math.Abs((quadrados[i].x) - (triangulos[i].x)) == (float)800 / 1000)
-          //  if ((Math.Abs(quadrados[i - 1].x - quadrados[i].x) == (float)400 / 1000) && (Math.Abs(triangulos[i - 1].x - triangulos[i].x) == (float)400 / 1000))
-    }
 
     public void HeuristicOne()
     {

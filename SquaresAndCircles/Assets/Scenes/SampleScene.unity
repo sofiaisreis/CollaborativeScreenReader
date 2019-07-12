@@ -244,7 +244,12 @@ PrefabInstance:
     - target: {fileID: 3462790539842953432, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}
       propertyPath: circles_findTotal
-      value: 5
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462790539842953432, guid: b576413ea9e9c85408a01b42ff4a57e5,
+        type: 3}
+      propertyPath: squares_findTotal
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4279992100563308375, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}
@@ -1208,6 +1213,7 @@ MonoBehaviour:
   TempoTotalTarefa: 0
   GodTimes: 0
   SpaceTimes: 0
+  happening: -1
   text: []
   textAglomerate: []
   textStory: []
@@ -3535,7 +3541,12 @@ PrefabInstance:
     - target: {fileID: 3462790539842953432, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}
       propertyPath: circles_findTotal
-      value: 5
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462790539842953432, guid: b576413ea9e9c85408a01b42ff4a57e5,
+        type: 3}
+      propertyPath: squares_findTotal
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4279992100563308375, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}

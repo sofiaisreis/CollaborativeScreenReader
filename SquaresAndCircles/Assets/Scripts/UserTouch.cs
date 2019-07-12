@@ -54,6 +54,7 @@ public class UserTouch : MonoBehaviour
 
         if (collider.GodOn)
         {
+            collider.isG = true;
             collider.GodSelects();
         }
         else

@@ -12,7 +12,7 @@ public class Logs : MonoBehaviour
 
     public string docPath =
       Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-    public string feedbackType = null;
+    public string feedbackType = "";
     public int timer = 0;
     public Timer Timer1;
     public int tarefaOn = -1;
@@ -32,6 +32,8 @@ public class Logs : MonoBehaviour
     public GameObject LastCollidingObj1, LastCollidingObj2;
     public GameObject HandCube1Pos, HandCube2Pos;
     public GameObject repocess;
+    public GameObject colliderino;
+    public GameObject tabuleirino;
 
     public TimeSpan timestamp;
     public Vector3 User1Posicao, User2Posicao;
@@ -52,12 +54,13 @@ public class Logs : MonoBehaviour
     public string U1Action, U2Action;
     public GameObject HoverUNU1, HoverUNU2;
     public string HoverOTU1, HoverOTU2;
-    public int sqTotal, ccTotal, incSQ, incCC;
+    public int sqTotal, ccTotal, squares_inc, circles_inc;
     public int NumQuadToSelect, NumCircToSelect;
     public GameObject U1LastColliding, U2LastColliding;
     public Vector3 HandCubeU1, HandCubeU2;
     public string GodIs = "";
     public string SpaceIs = "";
+    public string HIs = "";
 
     public bool CompletedTask = false;
     public int NumSelecoesVaziasU1 = 0;
@@ -88,8 +91,10 @@ public class Logs : MonoBehaviour
 
     public int GodTimes = 0;
     public int SpaceTimes = 0;
+    public int HTimes = 0;
 
     public int happening = -1;
+   
     //Time:User:UserPos:UserRHPos:UserLHPos:UserPosToque:UserMaoDeToque:UserTouchType:UserAction:HoverUnityName:HoverObjectType:NQuadToSelect:NCircToSelect:LastCollidingObj:HandCubePos
 
     public List<string> text = new List<string>();
@@ -109,35 +114,32 @@ public class Logs : MonoBehaviour
             User1TouchTime = 0;
             User2TouchTime = 0;
 
-            taskStart = DateTime.Now;
+            int collidersFB = colliderino.GetComponent<ColliderObj>().feedbackType;
+            int tabuleirosCode = tabuleirino.GetComponent<Tabuleiros>().code;
 
-            //StartLogging
-            text.Add(
-                "Time:"+
-                "User:"+
-                "UserPosX:" +
-                "UserPosY:" +
-                "UserPosZ:" +
-                "UserRHPosX:" +
-                "UserRHPosY:" +
-                "UserRHPosZ:" +
-                "UserLHPosX:"+
-                "UserLHPosY:"+
-                "UserLHPosZ:"+
-                "UserHasTouch:" +
-                "UserPosToqueX:"+
-                "UserPosToqueY:"+
-                "UserPosToqueZ:"+
-                "UserTouchType:"+
-                "UserAction:"+
-                "HoverUnityName:"+
-                "HoverObjectType:"+
-                "NQuadToSelect:"+
-                "NCircToSelect:"+
-                "LastCollidingObj:" +
-                "HandCubePosX:" + 
-                "HandCubePosY:" + 
-                "HandCubePosZ:");
+            //Frames
+            if (collidersFB == 1) text.Add("FEEDBACK IS PRIVATE!");
+            if (collidersFB == 2) text.Add("FEEDBACK IS TASK DEPENDENT!");
+            if (collidersFB == 3) text.Add("FEEDBACK IS PUBLIC!");
+            if (tabuleirosCode == 1) text.Add("BOARD WITHOUT TRIANGLES");
+            if (tabuleirosCode == 2) text.Add("BOARD WITH TRIANGLES");
+
+            //Aglomerado
+            if (collidersFB == 1) textAglomerate.Add("FEEDBACK IS PRIVATE!");
+            if (collidersFB == 2) textAglomerate.Add("FEEDBACK IS TASK DEPENDENT!");
+            if (collidersFB == 3) textAglomerate.Add("FEEDBACK IS PUBLIC!");
+            if (tabuleirosCode == 1) textAglomerate.Add("BOARD WITHOUT TRIANGLES");
+            if (tabuleirosCode == 2) textAglomerate.Add("BOARD WITH TRIANGLES");
+
+            //Story
+            if (collidersFB == 1) textStory.Add("FEEDBACK IS PRIVATE!");
+            if (collidersFB == 2) textStory.Add("FEEDBACK IS TASK DEPENDENT!");
+            if (collidersFB == 3) textStory.Add("FEEDBACK IS PUBLIC!");
+            if (tabuleirosCode == 1) textStory.Add("BOARD WITHOUT TRIANGLES");
+            if (tabuleirosCode == 2) textStory.Add("BOARD WITH TRIANGLES");
+
+
+            taskStart = DateTime.Now;
         }
 
         if (Input.GetKeyDown(KeyCode.S))
@@ -160,11 +162,44 @@ public class Logs : MonoBehaviour
         finalizou = DateTime.Now;
         TempoTotalTarefa = (finalizou - taskStart).TotalMilliseconds;
 
-        DateTime now = DateTime.Now;
+
+         DateTime now = DateTime.Now;
 
         // FRAME A FRAME
         using (StreamWriter sw = new StreamWriter(@"kinglog" + now.Year + now.Month + now.Day + now.Hour + now.Minute + now.Second + ".txt"))
         {
+            //StartLogging
+            text.Add(
+                "Time:" +
+                "User:" +
+                "UserPosX:" +
+                "UserPosY:" +
+                "UserPosZ:" +
+                "UserRHPosX:" +
+                "UserRHPosY:" +
+                "UserRHPosZ:" +
+                "UserLHPosX:" +
+                "UserLHPosY:" +
+                "UserLHPosZ:" +
+                "UserHasTouch:" +
+                "UserPosToqueX:" +
+                "UserPosToqueY:" +
+                "UserPosToqueZ:" +
+                "UserTouchType:" +
+                "UserAction:" +
+                "HoverUnityName:" +
+                "HoverObjectType:" +
+                "NQuadToSelect:" +
+                "NCircToSelect:" +
+                "LastCollidingObj:" +
+                "HandCubePosX:" +
+                "HandCubePosY:" +
+                "HandCubePosZ:" +
+                "God Key: " +
+                "Space Key: " +
+                "H Key: ");
+
+
             foreach (string s in text)
             {
                 sw.WriteLine(s);
@@ -189,6 +224,47 @@ public class Logs : MonoBehaviour
                 sws.WriteLine(s);
             }
         }
+
+        // Reiniciar Variáveis
+        taskStart = DateTime.Now;
+        squares_inc = 0; //incSQ
+        circles_inc = 0; //incCC
+        sqTotal = NQuadToSelect.GetComponent<ColliderObj>().squaresTotal;
+        ccTotal = NCircToSelect.GetComponent<ColliderObj>().circlesTotal;
+        NumQuadToSelect = sqTotal; //pelo User1
+        NumCircToSelect = ccTotal; //pelo User2
+        U1LastColliding = null;
+        U2LastColliding = null;
+        HoverOTU1 = "";
+        HoverOTU2 = "";
+        CompletedTask = false;
+        NumSelecoesVaziasU1 = 0;
+        NumSelecoesVaziasU2 = 0;
+        NumSelecoesErradasTU1 = 0;
+        NumSelecoesErradasTU2 = 0;
+        NumSelecoesErradasOU1 = 0;
+        NumSelecoesErradasOU2 = 0;
+        TSQuadrados = "";
+        TSCirculos = "";
+        TSVaziosU1 = "";
+        TSVaziosU2 = "";
+        TSErradasU1 = "";
+        TSErradasU2 = "";
+        TimeStampQuadrados = new ArrayList();
+        TimeStampCirculos = new ArrayList();
+        TimeStampVaziosU1 = new ArrayList();
+        TimeStampVaziosU2 = new ArrayList();
+        TimeStampSelecoesErradasU1 = new ArrayList();
+        TimeStampSelecoesErradasU2 = new ArrayList();
+        TempoSelecaoQuadrados = 0;
+        TempoSelecaoCirculos = 0;
+        TempoTotalTarefa = 0;
+        User1TouchTime = 0;
+        User2TouchTime = 0;
+        UserSimultaneousTouchTime = 0;
+        GodTimes = 0;
+        SpaceTimes = 0;
+        HTimes = 0;
     }
 
     public void LogFileFrameWriting()
@@ -275,12 +351,10 @@ public class Logs : MonoBehaviour
         HoverOTU2 = HoverU2.GetComponent<ColliderObj>().objectName;
 
         //CONTAGEM DE SELECOES E TOTAIS
-        sqTotal = NQuadToSelect.GetComponent<ColliderObj>().squares_findTotal;
-        ccTotal = NCircToSelect.GetComponent<ColliderObj>().circles_findTotal;
-        incSQ = NQuadToSelect.GetComponent<ColliderObj>().squares_inc;
-        incCC = NCircToSelect.GetComponent<ColliderObj>().circles_inc;
-        NumQuadToSelect = sqTotal - incSQ; //pelo User1
-        NumCircToSelect = ccTotal - incCC; //pelo User2
+        squares_inc = NQuadToSelect.GetComponent<ColliderObj>().squares_inc_collider;
+        circles_inc = NCircToSelect.GetComponent<ColliderObj>().circles_inc_collider;
+        NumQuadToSelect = sqTotal - squares_inc; //pelo User1
+        NumCircToSelect = ccTotal - circles_inc; //pelo User2
 
         //LAST COLLIDING OBJECT
         U1LastColliding = LastCollidingObj1.GetComponent<ColliderObj>().lastCollidingObject;
@@ -293,9 +367,11 @@ public class Logs : MonoBehaviour
         //Keys
         GodTimes = HoverU1.GetComponent<ColliderObj>().pressGod;
         SpaceTimes = repocess.GetComponent<NewTouch>().repro;
+        HTimes = repocess.GetComponent<NewTouch>().agás;
 
-        if (HoverU1.GetComponent<ColliderObj>().isG) GodIs = "GOD ON"; else GodIs = "-";
+        if (HoverU1.GetComponent<ColliderObj>().PressingG) GodIs = "GOD ON"; else GodIs = "-";
         if (repocess.GetComponent<NewTouch>().isRep) SpaceIs = "SPACE ON"; else SpaceIs = "-";
+        if (repocess.GetComponent<NewTouch>().isH) HIs = "Trocou toque com tecla"; else HIs = "-";
 
         /*****************
          PARA O AGLOMERATE
@@ -306,14 +382,6 @@ public class Logs : MonoBehaviour
        
         if (U1TouchType == "double-tap")
         {
-            /*if(HoverOTU1 == null)
-            {
-                if(U1LastColliding == null)
-                {
-                    NumSelecoesVaziasU1++;
-                    TimeStampVaziosU1.Add(timestamp.TotalMilliseconds);
-                }
-            }*/
             if (HoverOTU1 == "triangle")
             {
                 NumSelecoesErradasTU1++;
@@ -332,14 +400,6 @@ public class Logs : MonoBehaviour
         }
         if (U2TouchType == "double-tap")
         {
-            /*if(HoverOTU2 == null)
-            {
-                if(U2LastColliding == null)
-                {
-                    NumSelecoesVaziasU2++;
-                    TimeStampVaziosU2.Add(timestamp.TotalMilliseconds);
-                }
-            }*/
             if (HoverOTU2 == "triangle")
             {
                 NumSelecoesErradasTU2++;
@@ -373,7 +433,8 @@ public class Logs : MonoBehaviour
             U1LastColliding + ":" +  
             HandCubeU1.x + ":" + HandCubeU1.y + ":" + HandCubeU1.z + ":" +
             GodIs + ":" +
-            SpaceIs);
+            SpaceIs + ":" +
+            HIs);
 
         text.Add(timestamp.TotalMilliseconds + ":" + "User 2" + ":" +
             User2Posicao.x + ":" + User2Posicao.y + ":" + User2Posicao.z + ":" +
@@ -390,7 +451,8 @@ public class Logs : MonoBehaviour
             U2LastColliding + ":" +
             HandCubeU2.x + ":" + HandCubeU2.y + ":" + HandCubeU2.z + ":" + 
             GodIs + ":" +
-            SpaceIs);
+            SpaceIs + ":" + 
+            HIs);
 
     }
 
@@ -420,14 +482,9 @@ public class Logs : MonoBehaviour
         //Numero de erros no total
         int NumErrosAmbosTOTAL = NumSelecoesVaziasAmbos + NumSelecoesErradasTAmbos + NumErradasOAmbos;
 
-
-        //tempo total de toque em simultâneo
-
-
-
         textAglomerate.Add("Tarefa Completada" + ":" + CompletedTask);
-        textAglomerate.Add("Numero de Quadrados Selecionados" + ":" + incSQ);
-        textAglomerate.Add("Numero de Circulos Selecionados" + ":" + incCC);
+        textAglomerate.Add("Numero de Quadrados Selecionados" + ":" + squares_inc);
+        textAglomerate.Add("Numero de Circulos Selecionados" + ":" + circles_inc);
         textAglomerate.Add("Numero de Selecoes Vazias" + ":" + NumSelecoesVaziasAmbos);
         textAglomerate.Add("Numero de Selecoes Triangulos" + ":" + NumSelecoesErradasTAmbos);
         textAglomerate.Add("Numero de Selecoes de Objetos indevidos" + ":" + NumErradasOAmbos);
@@ -451,6 +508,7 @@ public class Logs : MonoBehaviour
         textAglomerate.Add("Tempo Total de Toque em simultâneo" + ":" + UserSimultaneousTouchTime);
         textAglomerate.Add("GOD times" + ":" + GodTimes);
         textAglomerate.Add("SPACE times" + ":" + SpaceTimes);
+        textAglomerate.Add("H times" + ":" + HTimes);
 
 
         DateTime now = DateTime.Now;
@@ -505,14 +563,8 @@ public class Logs : MonoBehaviour
         {
             textStory.Add("At " + timestamp.TotalMilliseconds + " User2 tried to select " + HoverOTU2 + " and that is not possible.");
         }
-        /*if (U1TouchType == "double-tap" && U1LastColliding == null) //aka vazio
-        {
-            textStory.Add("At " + timestamp.TotalMilliseconds + " User1 tried to select NULL.");
-        }
-        if (U2TouchType == "double-tap" && U2LastColliding == null) //aka vazio
-        {
-            textStory.Add("At " + timestamp.TotalMilliseconds + " User2 tried to select NULL.");
-        }*/
+
+        // TO DO God mode and other keys prints
        
         if (NumQuadToSelect == 0 && NumCircToSelect == 0)
         {
@@ -522,8 +574,10 @@ public class Logs : MonoBehaviour
 
             carregouNoS();
         }
-        //if(HoverU1.GetComponent<ColliderObj>().GodOn) textStory.Add("At " + timestamp.TotalMilliseconds + " GOD was turned On!");
-        //if(repocess.GetComponent<NewTouch>().isRep) textStory.Add("At " + timestamp.TotalMilliseconds + " RREPROCESS was turned On!");
+
+        if(HoverU1.GetComponent<ColliderObj>().isG) textStory.Add("At " + timestamp.TotalMilliseconds + " GOD was turned On!");
+        if(repocess.GetComponent<NewTouch>().isRep) textStory.Add("At " + timestamp.TotalMilliseconds + " REPROCESS was Pressed!");
+        if(repocess.GetComponent<NewTouch>().isH) textStory.Add("At " + timestamp.TotalMilliseconds + " Troca Toques Occurred!");
     }
 
     void OnGUI()
