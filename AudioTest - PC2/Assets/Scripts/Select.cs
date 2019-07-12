@@ -17,15 +17,19 @@ public class Select : MonoBehaviour
                      f3qF, f3qM,
                      f4qF, f4qM,
                      f5qF, f5qM,
-                     tcF, tcM,
-                     tqF, tqM,
-                     ttF, ttM,
+                     todosCirculosF, todosCirculosM,
+                     todosQuadradosF, todosQuadradosM,
+                     tarefaterminadaF, tarefaterminadaM,
+                     tarefaterminadaAmobs,
                      selected,
                      errorSound,
                      soPodeQuad,
                      soPodeCirc;
-    public bool ttfe = false;
-    public bool ttma = false;
+    public bool TarefaQuadradosFemale = false;
+    public bool TarefaCirculosMale = false;
+    public bool TarefaChegouAoFim = false;
+    public int selecf = -1;
+    public int selecm = -1;
     /* Object:
      * quad = 1
      * circ = 2 */
@@ -34,6 +38,10 @@ public class Select : MonoBehaviour
     {
         myAudioSource = GetComponent<AudioSource>();
     }
+    public void Update()
+    {
+    }
+
     public void ErrorF(bool soPode = true)
     {
         myAudioSource.PlayOneShot(errorSound);
@@ -43,7 +51,7 @@ public class Select : MonoBehaviour
             myAudioSource.PlayOneShot(soPodeQuad);
         }
     }
-    public void ErrorM(bool soPode)
+    public void ErrorM(bool soPode = true)
     {
         myAudioSource.PlayOneShot(errorSound);
         if (soPode)
@@ -66,16 +74,14 @@ public class Select : MonoBehaviour
     public void SelectionF(int lastObj, int selecao, int totais)
     {
         myAudioSource.PlayOneShot(selected);
-        print("Secs: " + (int)selected.length);
         System.Threading.Thread.Sleep((int)selected.length + 300);
-        print("lastObj: " + lastObj + "selecao: " + selecao + "totais: " + totais);
-        print("SELECT_entrou");
+        selecf = totais - selecao;
+
         switch (lastObj)
         {
             case 1: //quadrado
-                if (selecao < totais)
+                if (selecao <= totais)
                 {
-                    int selecf = totais - selecao;
                     if (selecf == 1)
                     {
                         myAudioSource.PlayOneShot(f1qF);
@@ -96,123 +102,105 @@ public class Select : MonoBehaviour
                     {
                         myAudioSource.PlayOneShot(f5qF);
                     }
-                }
-                else if (selecao == totais)
-                {
-                    myAudioSource.PlayOneShot(tqF);
-                    ttfe = true;
-                    System.Threading.Thread.Sleep(2000);
-                    if (ttfe && ttma)
+                    else if (selecf == 0)
                     {
-                        myAudioSource.PlayOneShot(ttF);
+                        myAudioSource.PlayOneShot(todosQuadradosF);
+                        TarefaQuadradosFemale = true;
+                        if (TarefaCirculosMale)
+                        {
+                            System.Threading.Thread.Sleep(2000);
+                            myAudioSource.PlayOneShot(tarefaterminadaAmobs);
+                        }
                     }
-                }
-                else
-                {
-                    print("Something is wrong!");
                 }
                 break;
 
             //Acontece em God Mode
             case 2: //circulo
-                if (selecao < totais)
+                if (selecao <= totais)
                 {
-                    int selecf = totais - selecao;
-                    if (selecf == 1)
+                    if (selecm == 1)
                     {
                         myAudioSource.PlayOneShot(f1cM);
                     }
-                    else if (selecf == 2)
+                    else if (selecm == 2)
                     {
                         myAudioSource.PlayOneShot(f2cM);
                     }
-                    else if (selecf == 3)
+                    else if (selecm == 3)
                     {
                         myAudioSource.PlayOneShot(f3cM);
                     }
-                    else if (selecf == 4)
+                    else if (selecm == 4)
                     {
                         myAudioSource.PlayOneShot(f4cM);
                     }
-                    else if (selecf == 5)
+                    else if (selecm == 5)
                     {
                         myAudioSource.PlayOneShot(f5cM);
                     }
-                }
-                else if (selecao == totais)
-                {
-                    myAudioSource.PlayOneShot(tcM);
-                    ttma = true;
-                    ttfe = true;
-                    System.Threading.Thread.Sleep(2000);
-                    if (ttfe && ttma)
+                    else if (selecm == 0)
                     {
-                        myAudioSource.PlayOneShot(ttM);
+                        myAudioSource.PlayOneShot(todosCirculosM);
+                        TarefaCirculosMale = true;
+                        if (TarefaQuadradosFemale)
+                        {
+                            System.Threading.Thread.Sleep(2000);
+                            myAudioSource.PlayOneShot(tarefaterminadaAmobs);
+                        }
                     }
                 }
-
-                else
-                {
-                    print("Something is wrong!");
-                }
                 break;
-        }        
+        }
     }
 
     public void SelectionM(int lastObj, int selecao, int totais)
     {
         myAudioSource.PlayOneShot(selected);
-        print("Secs: " + (int)selected.length);
         System.Threading.Thread.Sleep((int)selected.length + 300);
-
+        selecm = totais - selecao;
         switch (lastObj)
         {
             //Acontece em God Mode
             case 1: //quadrado
-                if (selecao < totais)
+                if (selecao <= totais)
                 {
-                    int selecm = totais - selecao;
-                    if (selecm == 1)
+                    if (selecf == 1)
                     {
                         myAudioSource.PlayOneShot(f1qF);
                     }
-                    else if (selecm == 2)
+                    else if (selecf == 2)
                     {
                         myAudioSource.PlayOneShot(f2qF);
                     }
-                    else if (selecm == 3)
+                    else if (selecf == 3)
                     {
                         myAudioSource.PlayOneShot(f3qF);
                     }
-                    else if (selecm == 4)
+                    else if (selecf == 4)
                     {
                         myAudioSource.PlayOneShot(f4qF);
                     }
-                    else if (selecm == 5)
+                    else if (selecf == 5)
                     {
                         myAudioSource.PlayOneShot(f5qF);
                     }
-                }
-                else if (selecao == totais)
-                {
-                    myAudioSource.PlayOneShot(tqF);
-                    ttfe = true;
-                    System.Threading.Thread.Sleep(2000);
-                    if (ttfe && ttma)
+                    else if (selecf == 0)
                     {
-                        myAudioSource.PlayOneShot(ttF);
+                        myAudioSource.PlayOneShot(todosQuadradosF);
+                        TarefaQuadradosFemale = true;
+                        if (TarefaCirculosMale)
+                        {
+                            System.Threading.Thread.Sleep(2000);
+                            myAudioSource.PlayOneShot(tarefaterminadaAmobs);
+                        }
                     }
-                }
-                else
-                {
-                    print("Something is wrong!");
                 }
                 break;
 
             case 2: //circulo
-                if (selecao < totais)
+                if (selecao <= totais)
                 {
-                    int selecm = totais - selecao;
                     if (selecm == 1)
                     {
                         myAudioSource.PlayOneShot(f1cM);
@@ -233,20 +221,16 @@ public class Select : MonoBehaviour
                     {
                         myAudioSource.PlayOneShot(f5cM);
                     }
-                }
-                else if (selecao == totais)
-                {
-                    myAudioSource.PlayOneShot(tcM);
-                    ttma = true;
-                    System.Threading.Thread.Sleep(2000);
-                    if (ttfe && ttma)
+                    else if (selecm == 0)
                     {
-                        myAudioSource.PlayOneShot(ttM);
+
+                        myAudioSource.PlayOneShot(todosCirculosM);
+                        TarefaCirculosMale = true;
+                        if (TarefaQuadradosFemale) {
+                            System.Threading.Thread.Sleep(2000);
+                            myAudioSource.PlayOneShot(tarefaterminadaAmobs);
+                        }
                     }
-                }
-                else
-                {
-                    print("Something is wrong!");
                 }
                 break;
         }

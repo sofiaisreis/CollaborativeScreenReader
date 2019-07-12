@@ -53,7 +53,6 @@ public class Sounds : MonoBehaviour
             if (feedback == 1)
             {
                 feedbackType = "Private";
-                print("Private");
                 switch (userID)
                 {
                     //FEMALE - User 1 - verdinho
@@ -155,7 +154,6 @@ public class Sounds : MonoBehaviour
             if (feedback == 2)
             {
                 feedbackType = "Task-Dependent";
-                print("Task-Dependent");
                 switch (userID)
                 {
                     //FEMALE - User 1 - verdinho
@@ -268,7 +266,6 @@ public class Sounds : MonoBehaviour
             if (feedback == 3)
             {
                 feedbackType = "Public";
-                print("Private");
                 switch (userID)
                 {
                     //FEMALE - User 1 - verdinho
@@ -438,7 +435,6 @@ public class Sounds : MonoBehaviour
             if (feedback == 4)
             {
                 feedbackType = "GOD";
-                print("GOD");
                 switch (user)
                 {
                     //FEMALE - User 1 - verdinho
