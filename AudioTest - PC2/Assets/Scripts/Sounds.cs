@@ -98,18 +98,12 @@ public class Sounds : MonoBehaviour
                                 female.GetComponent<Female>().PlaySelected(lastObj, selecionados, totais);
                             }
                             else if (objTypeSound == 6)
-                            {//TODO EM ALL
-                               
-                                /*if (lastObj == -1)
-                                {
-                                    print("Entrou 1");
-                                    female.GetComponent<Female>().PlayErrorVazio();
-                                }
-                                else
-                                {
-                                    print("Entrou 2");*/
-                                    female.GetComponent<Female>().PlayError();
-                                
+                            {                              
+                                female.GetComponent<Female>().PlayError();                             
+                            }
+                            else if (objTypeSound == 7)
+                            {
+                                female.GetComponent<Female>().PlayErrorVazio();                             
                             }
                         }
                         break;
@@ -144,6 +138,10 @@ public class Sounds : MonoBehaviour
                             else if (objTypeSound == 6)
                             {
                                 male.GetComponent<Male>().PlayError();
+                            }
+                            else if (objTypeSound == 7)
+                            {
+                                male.GetComponent<Male>().PlayErrorVazio();
                             }
                         }
                         break;
@@ -191,6 +189,10 @@ public class Sounds : MonoBehaviour
                             else if (objTypeSound == 6)
                             {
                                 female.GetComponent<Female>().PlayError();
+                            }
+                            else if (objTypeSound == 7)
+                            {
+                                female.GetComponent<Female>().PlayErrorVazio();
                             }
                         }
                         //APLICACAO PARTE DELE
@@ -249,6 +251,10 @@ public class Sounds : MonoBehaviour
                             {
                                 male.GetComponent<Male>().PlayError();
                             }
+                            else if (objTypeSound == 7)
+                            {
+                                male.GetComponent<Male>().PlayErrorVazio();
+                            }
                         }
                         break;
                     default:
@@ -289,13 +295,18 @@ public class Sounds : MonoBehaviour
                             }
                             else if (objTypeSound == 4)
                             {
-                                //Select Alto para ela
+                                //Select Alto/Normal para ela
                                 female.GetComponent<Female>().PlaySelected(lastObj, selecionados, totais);
                             }
                             else if (objTypeSound == 6)
                             {
-                                //Select Alto para ela
+                                //Select Alto/Normal para ela
                                 female.GetComponent<Female>().PlayError();
+                            }
+                            else if (objTypeSound == 7)
+                            {
+                                //Select Alto/Normal para ela
+                                female.GetComponent<Female>().PlayErrorVazio();
                             }
                         }
                         // APLICACAO PARTE DELE
@@ -322,15 +333,20 @@ public class Sounds : MonoBehaviour
                             }
                             else if (objTypeSound == 4)
                             {
-                                //Select Baixo para ela
+                                //Select Baixo para ele ouvir baixo
                                 //female.transform.position =;
-                                female.GetComponent<Female>().PlaySelected(lastObj, selecionados, totais);
+                                female.GetComponent<Female>().PlaySelectedPublic(lastObj, selecionados, totais);
                             }
                             else if (objTypeSound == 6)
                             {
-                                //Select Baixo para ela
+                                //Erro Baixo para ele ouvir baixo
                                 //female.transform.position =
                                 female.GetComponent<Female>().PlayErrorPublic();
+                            }
+                            else if (objTypeSound == 7)
+                            {
+                                //Erro Baixo para ele ouvir baixo
+                                female.GetComponent<Female>().PlayErrorVazioPublic();
                             }
                         }
                         break;
@@ -360,15 +376,19 @@ public class Sounds : MonoBehaviour
                             else if (objTypeSound == 4)
                             {
 
-                                //Select Baixo para ele
+                                //Select Baixo para ela ouvir baixo
                                 //male.transform.position =;
-                                male.GetComponent<Male>().PlaySelected(lastObj, selecionados, totais);
+                                male.GetComponent<Male>().PlaySelectedPublic(lastObj, selecionados, totais);
                             }
                             else if (objTypeSound == 6)
                             {
-                                //Selected Baixo para ele
+                                //Selected Baixo para ela ouvir baixo
                                 //male.transform.position =
                                 male.GetComponent<Male>().PlayErrorPublic();
+                            }
+                            else if (objTypeSound == 7)
+                            {
+                                male.GetComponent<Male>().PlayErrorVazioPublic();
                             }
                         }
                         // APLICACAO PARTE DELE
@@ -394,13 +414,17 @@ public class Sounds : MonoBehaviour
                             }
                             else if (objTypeSound == 4)
                             {
-                                //Select Alto para ele
+                                //Select Alto/Normal para ele
                                 male.GetComponent<Male>().PlaySelected(lastObj, selecionados, totais);
                             }
                             else if (objTypeSound == 6)
                             {
-                                //Select Alto para ele
+                                //Erro Alto/Normal para ele
                                 male.GetComponent<Male>().PlayError();
+                            }
+                            else if (objTypeSound == 7)
+                            {
+                                male.GetComponent<Male>().PlayErrorVazio();
                             }
                         }
                         break;
@@ -445,6 +469,10 @@ public class Sounds : MonoBehaviour
                         {
                             female.GetComponent<Female>().PlayErrorPublic();
                         }
+                        else if (objTypeSound == 7)
+                        {
+                            female.GetComponent<Female>().PlayErrorVazio();
+                        }
                         break;
 
                     //MALE - User 2 - Vermelho
@@ -474,6 +502,10 @@ public class Sounds : MonoBehaviour
                         else if (objTypeSound == 6)
                         {
                             male.GetComponent<Male>().PlayErrorPublic();
+                        }
+                        else if (objTypeSound == 7)
+                        {
+                            male.GetComponent<Male>().PlayErrorVazio();
                         }
                         break;
                     default:

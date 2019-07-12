@@ -47,6 +47,7 @@ public class ColliderObj : MonoBehaviour
      * 4 - select
      * 5 - exit
      * 6 - errorT
+     * 7 - vazio
      */
 
     // (userID, lastObj, objTypeSound, relativePos1, relativePos2, selecionados, totais);
@@ -203,7 +204,15 @@ public class ColliderObj : MonoBehaviour
 
         if (errorTap)
         {
-            audioRequest.PlayRemoteAudio(idUser, -1, 6, transform.position, -1, -1, feedbackType);
+            //vazio
+            if (lastCollidingObject == null)
+            {
+                audioRequest.PlayRemoteAudio(idUser, -1, 7, transform.position, -1, -1, feedbackType);
+            }
+            else
+            {
+                audioRequest.PlayRemoteAudio(idUser, -1, 6, transform.position, -1, -1, feedbackType);
+            }
             actionIsNow = "error";
             numErros++;
         }

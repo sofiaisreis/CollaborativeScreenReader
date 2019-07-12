@@ -75,6 +75,7 @@ public class UserTouch : MonoBehaviour
             else
             {
                 // seleccao vazia
+                collider.lastCollidingObject = null;
                 collider.errorTap = true;
                 // Som erro
                 collider.SelectObject();

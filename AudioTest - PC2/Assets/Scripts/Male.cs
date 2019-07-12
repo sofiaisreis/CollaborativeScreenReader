@@ -12,6 +12,7 @@ public class Male : MonoBehaviour
         M2_quadrado, M2_circulo, M2_triangulo,
         ding, selected, error, gz, soPodeCirc;
     public Select selection;
+    public Public publicos;
 
     // Start is called before the first frame update
     void Start()
@@ -60,16 +61,29 @@ public class Male : MonoBehaviour
         selection.GetComponent<Select>().ErrorM(soPode);
     }
 
-    public void PlayErrorVazio(bool soPode = false)
+    public void PlayErrorVazio()
     {
-        gameObject.GetComponent<Renderer>().material.color = Color.blue;
-        selection.GetComponent<Select>().ErrorM(soPode);
+        selection.GetComponent<Select>().ErrorFVazio();
     }
 
-    public void PlayErrorPublic()
+
+    //PUBLICS LOWER VOLUME
+    public void PlaySelectedPublic(int lastObj, int selecao, int totais)
     {
         gameObject.GetComponent<Renderer>().material.color = Color.blue;
-        selection.GetComponent<Select>().ErrorPublic();
+        publicos.GetComponent<Public>().SelectedPublicM(lastObj, selecao, totais);
+    }
+
+    public void PlayErrorPublic(bool soPode = true)
+    {
+        gameObject.GetComponent<Renderer>().material.color = Color.blue;
+        publicos.GetComponent<Public>().ErrorPublicM(soPode);
+    }
+
+    public void PlayErrorVazioPublic()
+    {
+        gameObject.GetComponent<Renderer>().material.color = Color.blue;
+        publicos.GetComponent<Public>().ErrorVazioPublicM();
     }
 
     public void Stop()

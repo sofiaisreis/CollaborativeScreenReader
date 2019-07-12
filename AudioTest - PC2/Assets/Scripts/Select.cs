@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
 [RequireComponent(typeof(AudioSource))]
 public class Select : MonoBehaviour
@@ -36,26 +37,12 @@ public class Select : MonoBehaviour
     public void ErrorF(bool soPode = true)
     {
         myAudioSource.PlayOneShot(errorSound);
-
-            System.Threading.Thread.Sleep((int)errorSound.length + 300);
-            if (soPode) myAudioSource.PlayOneShot(soPodeQuad);
-    }
-    /*
-    public void ErrorF(bool soPode)
-    {
-        myAudioSource.PlayOneShot(errorSound);
         if (soPode)
         {
             System.Threading.Thread.Sleep((int)errorSound.length + 300);
-            if (soPode) myAudioSource.PlayOneShot(soPodeQuad);
+            myAudioSource.PlayOneShot(soPodeQuad);
         }
-    }*/
-
-    public void ErrorPublic()
-    {
-        myAudioSource.PlayOneShot(errorSound);
     }
-
     public void ErrorM(bool soPode)
     {
         myAudioSource.PlayOneShot(errorSound);
@@ -65,6 +52,15 @@ public class Select : MonoBehaviour
             if (soPode) myAudioSource.PlayOneShot(soPodeCirc);
         }
 
+    }
+
+    public void ErrorFVazio()
+    {
+        myAudioSource.PlayOneShot(errorSound);
+    }
+    public void ErrorMVazio()
+    {
+        myAudioSource.PlayOneShot(errorSound);
     }
 
     public void SelectionF(int lastObj, int selecao, int totais)
