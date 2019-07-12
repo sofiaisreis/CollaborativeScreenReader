@@ -465,11 +465,8 @@ public class Sounds : MonoBehaviour
                         {
                             female.GetComponent<Female>().PlaySelected(lastObj, selecionados, totais);
                         }
-                        else if (objTypeSound == 6)
-                        {
-                            female.GetComponent<Female>().PlayErrorPublic();
-                        }
-                        else if (objTypeSound == 7)
+
+                        else if (objTypeSound == 6 || objTypeSound == 7)
                         {
                             female.GetComponent<Female>().PlayErrorVazio();
                         }
@@ -499,11 +496,7 @@ public class Sounds : MonoBehaviour
                         {
                             male.GetComponent<Male>().PlaySelected(lastObj, selecionados, totais);
                         }
-                        else if (objTypeSound == 6)
-                        {
-                            male.GetComponent<Male>().PlayErrorPublic();
-                        }
-                        else if (objTypeSound == 7)
+                        else if (objTypeSound == 6 || objTypeSound == 7)
                         {
                             male.GetComponent<Male>().PlayErrorVazio();
                         }

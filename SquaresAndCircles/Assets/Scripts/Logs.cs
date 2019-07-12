@@ -102,22 +102,6 @@ public class Logs : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            feedbackType = "Private";
-            ColliderObj.feedbackType = 1;
-        }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            feedbackType = "Task-Dependent";
-            ColliderObj.feedbackType = 2;
-        }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            feedbackType = "Public";
-            ColliderObj.feedbackType = 3;
-        }
-
         if (Input.GetKeyDown(KeyCode.A))
         {
             print("Comecou a tarefa!");
@@ -544,7 +528,6 @@ public class Logs : MonoBehaviour
 
     void OnGUI()
     {
-        GUI.Label(new Rect(10, 30, 200, 35), "Feedback Type: " + feedbackType);
         if(tarefaOn == 1) GUI.Label(new Rect(10, 160, 200, 35), "Tarefa a Decorrer!");
         if(tarefaOn == 0) GUI.Label(new Rect(10, 160, 200, 35), "Tarefa Terminada!");
     }

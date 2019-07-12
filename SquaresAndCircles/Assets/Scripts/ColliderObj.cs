@@ -8,8 +8,8 @@ using UnityEngine;
 
 public class ColliderObj : MonoBehaviour
 {
-    public static int feedbackType;
-    public static int feedbackTypeLast;
+    public int feedbackType;
+    public int feedbackTypeLast;
 
     public bool isBeingDragged = false;
     public bool errorTap = false;
@@ -54,17 +54,37 @@ public class ColliderObj : MonoBehaviour
 
     private void Update()
     {
+        //Private
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            feedbackType = 1;
+            audioRequest.PlayRemoteAudio(-1, -1, -1, transform.position, -1, -1, feedbackType);
+        }
+        //Task-Dependent
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            feedbackType = 2;
+            audioRequest.PlayRemoteAudio(-1, -1, -1, transform.position, -1, -1, feedbackType);
+        }
+        //Public
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            feedbackType = 3;
+            audioRequest.PlayRemoteAudio(-1, -1, -1, transform.position, -1, -1, feedbackType);
+        }
         // GOD mode
         if (Input.GetKeyDown(KeyCode.G))
         {
             feedbackTypeLast = feedbackType;
             feedbackType = 4;
+            audioRequest.PlayRemoteAudio(-1, -1, -1, transform.position, -1, -1, feedbackType);
             GodOn = true;
             isG = true;
         }
         else if (Input.GetKeyUp(KeyCode.G))
         {
             feedbackType = feedbackTypeLast;
+            audioRequest.PlayRemoteAudio(-1, -1, -1, transform.position, -1, -1, feedbackType);
             GodOn = false;
             pressGod++;
         }
@@ -250,9 +270,23 @@ public class ColliderObj : MonoBehaviour
 
     private void OnGUI()
     {
-        if (GodOn)
+        if (feedbackType == 1)
         {
-            GUI.Label(new Rect(10, 130, 200, 35), "God ON!");
+            GUI.Label(new Rect(10, 30, 200, 35), "Feedback Type: Private");
         }
+        if (feedbackType == 2)
+        {
+            GUI.Label(new Rect(10, 30, 200, 35), "Feedback Type: Task-Dependent");
+        }
+        if (feedbackType == 3)
+        {
+            GUI.Label(new Rect(10, 30, 200, 35), "Feedback Type: Public");
+        }
+        if (feedbackType == 4)
+        {
+            GUI.Label(new Rect(10, 30, 200, 35), "Feedback Type: God knows...");
+        }
+
+        if (GodOn) GUI.Label(new Rect(10, 130, 200, 35), "God ON!");
     }
 }
