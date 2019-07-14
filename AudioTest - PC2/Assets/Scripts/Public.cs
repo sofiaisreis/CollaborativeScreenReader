@@ -125,7 +125,7 @@ public class Public : MonoBehaviour
         if (soPode)
         {
             System.Threading.Thread.Sleep((int)errorSound.length + 300);
-            myAudioSourceLow.PlayOneShot(soPodeQuad);
+            //myAudioSourceLow.PlayOneShot(soPodeQuad);
         }
     }
 
@@ -135,7 +135,7 @@ public class Public : MonoBehaviour
         if (soPode)
         {
             System.Threading.Thread.Sleep((int)errorSound.length + 300);
-            myAudioSourceLow.PlayOneShot(soPodeCirc);
+            //myAudioSourceLow.PlayOneShot(soPodeCirc);
         }
     }
 

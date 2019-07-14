@@ -1,0 +1,7 @@
+FEEDBACK IS PUBLIC!
+BOARD WITHOUT TRIANGLES
+At 2.9924 User1 selected square and there is still 5 squares to select.
+At 1599.6721 task was stopped
+FEEDBACK IS TASK DEPENDENT!
+BOARD WITHOUT TRIANGLES
+At 975.9121 task was stopped
