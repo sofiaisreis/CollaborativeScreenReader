@@ -56,6 +56,12 @@ public class Female : MonoBehaviour
         selection.GetComponent<Select>().SelectionF(lastObj, selecao, totais);
     }
 
+    public void PlaySelectedGod(int lastObj, int selecaoQuad, int selecaoCirc, int totais)
+    {
+        gameObject.GetComponent<Renderer>().material.color = Color.magenta;
+        selection.GetComponent<Select>().SelectionGod(lastObj, selecaoQuad, selecaoCirc, totais);
+    }
+
     public void PlayError(bool soPode = true)
     {
         gameObject.GetComponent<Renderer>().material.color = Color.magenta;

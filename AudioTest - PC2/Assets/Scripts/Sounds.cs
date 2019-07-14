@@ -13,6 +13,8 @@ public class Sounds : MonoBehaviour
     public int port;
     public int user;
     public int userToPlay = 0;
+    public int quadSelecionadosAteAgora = 0;
+    public int circSelecionadosAteAgora = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +50,15 @@ public class Sounds : MonoBehaviour
             int totais = int.Parse(ourStrings[11]);
             int feedback = int.Parse(ourStrings[12]);
 
+            /** backup num quad circ **/
+            if(userID == 1)
+            {
+                quadSelecionadosAteAgora = selecionados;
+            }
+            if(userID == 2)
+            {
+                circSelecionadosAteAgora = selecionados;
+            }
 
             /*********** Feedback Private **********/
             if (feedback == 1)
@@ -459,7 +470,7 @@ public class Sounds : MonoBehaviour
                         }
                         else if (objTypeSound == 4)
                         {
-                            female.GetComponent<Female>().PlaySelected(lastObj, selecionados, totais);
+                            female.GetComponent<Female>().PlaySelectedGod(lastObj, quadSelecionadosAteAgora, circSelecionadosAteAgora, totais);
                         }
 
                         else if (objTypeSound == 6 || objTypeSound == 7)
@@ -490,7 +501,7 @@ public class Sounds : MonoBehaviour
                         }
                         else if (objTypeSound == 4)
                         {
-                            male.GetComponent<Male>().PlaySelected(lastObj, selecionados, totais);
+                            male.GetComponent<Male>().PlaySelectedGod(lastObj, quadSelecionadosAteAgora, circSelecionadosAteAgora, totais);
                         }
                         else if (objTypeSound == 6 || objTypeSound == 7)
                         {

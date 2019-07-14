@@ -28,6 +28,9 @@ public class Tabuleiros : MonoBehaviour
     public Vector3 triangulo1, triangulo2, triangulo3, triangulo4, triangulo5;
 
     public Vector3[] quadrados, circulos, triangulos;
+    public int squaresOnBoard = 0;
+    public int circlesOnBoard = 0;
+    public int trianglesOnBoard = 0;
 
     public float[,] array2D;
     public int code = 0;
@@ -43,7 +46,7 @@ public class Tabuleiros : MonoBehaviour
     /*
         1 * Há sempre 1 quadrado, 1 círculo e, no caso dos distratores, 1 triângulo por linha;
         2 * Não existem dois polígonos adjacentes;
-        3 * A definir - maneira de balancear numero de objetos do lado direito e lado esquerdo.
+        3 * Maneira de balancear numero de objetos do lado direito e lado esquerdo. Entre 2 a 4 de um lado
     */
 
     // Start is called before the first frame update
@@ -53,7 +56,8 @@ public class Tabuleiros : MonoBehaviour
         AllPositionsTabuleiro = new Vector3[] {
             quadrado1, quadrado2, quadrado3, quadrado4, quadrado5,
             circulo1, circulo2, circulo3, circulo4, circulo5,
-            triangulo1, triangulo2, triangulo3, triangulo4, triangulo5};
+            triangulo1, triangulo2, triangulo3, triangulo4, triangulo5
+        };
 
         quadrados = new Vector3[] { quadrado1, quadrado2, quadrado3, quadrado4, quadrado5 };
         circulos = new Vector3[] { circulo1, circulo2, circulo3, circulo4, circulo5 };
@@ -68,14 +72,17 @@ public class Tabuleiros : MonoBehaviour
         {
             code = 1;
             ChangeTabuleiro();
+            HeuristicThreeSem();
         }
 
         if (Input.GetKeyDown(KeyCode.Y))
         {
             code = 2;
             ChangeTabuleiroDistratores();
+            HeuristicThreeCom();
         }
     }
+
 
     public void AllPositions()
     {
@@ -294,7 +301,7 @@ public class Tabuleiros : MonoBehaviour
         circle4.SetActive(true);
         circle5.SetActive(true);
 
-        //Triangulos ao cantinho
+        //Triangulos
         triangle1.transform.localPosition = triangulos[0];
         triangle2.transform.localPosition = triangulos[1];
         triangle3.transform.localPosition = triangulos[2];
@@ -305,6 +312,77 @@ public class Tabuleiros : MonoBehaviour
         triangle3.SetActive(true);
         triangle4.SetActive(true);
         triangle5.SetActive(true);
+    }
+
+    private void HeuristicThreeSem()
+    {
+        //TO DO, VER ARRAY
+        // so quero ver ate metade. 
+        for (int colunas = 0; colunas < 5; colunas++)
+        {
+            for (int numObj = 0; numObj < 5; numObj++)
+            {
+                if (quadrados[numObj].x == array2D[numObj, colunas])
+                {
+                    squaresOnBoard++;
+                }
+                if(circulos[numObj].x == array2D[numObj, colunas])
+                {
+                    circlesOnBoard++;
+                }
+            }
+        }
+        print("Squares: " + squaresOnBoard + " and Circles: " + circlesOnBoard);
+
+        // Se no lado esquerdo do tabuleiro houver menos que 2 objetos de cada e mais que 4: refaz
+        if (squaresOnBoard < 2 || squaresOnBoard > 4 || circlesOnBoard < 2 || circlesOnBoard > 4)
+        {
+            ChangeTabuleiro();
+            print("Fiz refactor");
+            squaresOnBoard = 0;
+            circlesOnBoard = 0;
+        }
+        else
+        {
+            print("Board Accepted!");
+        }
+    }
+
+    private void HeuristicThreeCom()
+    {
+        // so quero ver ate metade. 
+        for (int colunas = 0; colunas < 5; colunas++)
+        {
+            for (int numObj = 0; numObj < 5; numObj++)
+            {
+                if (quadrados[numObj].x == array2D[numObj, colunas])
+                {
+                    squaresOnBoard++;
+                }
+                if (circulos[numObj].x == array2D[numObj, colunas])
+                {
+                    circlesOnBoard++;
+                }
+                if(triangulos[numObj].x == array2D[numObj, colunas])
+                {
+                    trianglesOnBoard++;
+                }
+            }
+        }
+
+        // Se no lado esquerdo do tabuleiro houver menos que 2 objetos de cada e mais que 4: refaz
+        if (squaresOnBoard < 2 || squaresOnBoard > 4 || circlesOnBoard < 2 || circlesOnBoard > 4 || trianglesOnBoard < 2 || trianglesOnBoard > 4)
+        {
+            ChangeTabuleiroDistratores();
+            print("Fiz refactor");
+            squaresOnBoard = 0;
+            circlesOnBoard = 0;
+            trianglesOnBoard = 0;
+        }
+        else
+        {
+            print("Board Accepted!");
+        }
     }
 
     void OnGUI()

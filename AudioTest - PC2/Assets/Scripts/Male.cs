@@ -55,6 +55,13 @@ public class Male : MonoBehaviour
         selection.GetComponent<Select>().SelectionM(lastObj, selecao, totais);
     }
 
+    public void PlaySelectedGod(int lastObj, int selecaoQuad, int selecaoCirc, int totais)
+    {
+        gameObject.GetComponent<Renderer>().material.color = Color.blue;
+        myAudioSource.PlayOneShot(selected);
+        selection.GetComponent<Select>().SelectionGod(lastObj, selecaoQuad, selecaoCirc, totais);
+    }
+
     public void PlayError(bool soPode = true)
     {
         gameObject.GetComponent<Renderer>().material.color = Color.blue;
