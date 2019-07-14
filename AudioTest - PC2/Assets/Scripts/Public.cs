@@ -22,6 +22,7 @@ public class Public : MonoBehaviour
                      soPodeQuad,
                      soPodeCirc;
     public Select sele;
+    public GameObject somEntrada;
 
     public int faltamTotalF = -1;
     public int faltamTotalM = -1;
@@ -53,7 +54,7 @@ public class Public : MonoBehaviour
                     else if (faltamTotalF == 3) myAudioSourceLow.PlayOneShot(f3qF);
                     else if (faltamTotalF == 4) myAudioSourceLow.PlayOneShot(f4qF);
                     else if (faltamTotalF == 5) myAudioSourceLow.PlayOneShot(f5qF);
-                    else if (faltamTotalF == 0)
+                    else if (faltamTotalF == 0 || somEntrada.GetComponent<Sounds>().faltamXQuad == 0)
                     {
                         sele.GetComponent<Select>().TarefaQuadradosFemale = true;
                     }
@@ -79,7 +80,7 @@ public class Public : MonoBehaviour
                     else if (faltamTotalM == 3) myAudioSourceLow.PlayOneShot(f3cM);
                     else if (faltamTotalM == 4) myAudioSourceLow.PlayOneShot(f4cM);
                     else if (faltamTotalM == 5) myAudioSourceLow.PlayOneShot(f5cM);
-                    else if (faltamTotalM == 0)
+                    else if (faltamTotalM == 0 || somEntrada.GetComponent<Sounds>().faltamXCirc == 0)
                     {
                         sele.GetComponent<Select>().TarefaCirculosMale = true;
                     }

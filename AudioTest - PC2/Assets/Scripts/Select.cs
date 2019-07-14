@@ -31,6 +31,7 @@ public class Select : MonoBehaviour
     public bool TarefaChegouAoFim = false;
     public int faltamTotalF = -1;
     public int faltamTotalM = -1;
+    public GameObject somEntrada;
     /* Object:
      * quad = 1
      * circ = 2 */
@@ -79,6 +80,7 @@ public class Select : MonoBehaviour
         faltamTotalF = totais - selecaoQuad;
         faltamTotalM = totais - selecaoCirc;
 
+
         switch (lastObj)
         {
             case 1: //quadrado
@@ -104,10 +106,16 @@ public class Select : MonoBehaviour
                     {
                         myAudioSource.PlayOneShot(f5qF);
                     }
-                    else if (faltamTotalF == 0)
+                    else if (faltamTotalF == 0 || somEntrada.GetComponent<Sounds>().faltamXQuad == 0)
                     {
                         myAudioSource.PlayOneShot(todosQuadradosF);
                         TarefaQuadradosFemale = true;
+
+                        if (TarefaCirculosMale || somEntrada.GetComponent<Sounds>().faltamXCirc == 0)
+                        {
+                            System.Threading.Thread.Sleep(2000);
+                            myAudioSource.PlayOneShot(tarefaterminadaAmobs);
+                        }
                         
                         // feedback ao outro
                         System.Threading.Thread.Sleep((int)todosQuadradosF.length + 2000);
@@ -140,11 +148,6 @@ public class Select : MonoBehaviour
                             myAudioSource.PlayOneShot(f5cF);
                             System.Threading.Thread.Sleep((int)todosQuadradosF.length + 1500);
                             myAudioSource.PlayOneShot(aoSeuParceiroF);
-                        }
-                        if (TarefaCirculosMale)
-                        {
-                            System.Threading.Thread.Sleep(2000);
-                            myAudioSource.PlayOneShot(tarefaterminadaAmobs);
                         }
                     }
                 }
@@ -258,12 +261,17 @@ public class Select : MonoBehaviour
                     {
                         myAudioSource.PlayOneShot(f5cM);
                     }
-                    else if (faltamTotalM == 0)
+                    else if (faltamTotalM == 0 || somEntrada.GetComponent<Sounds>().faltamXCirc == 0)
                     {
 
                         myAudioSource.PlayOneShot(todosCirculosM);
                         TarefaCirculosMale = true;
                         
+                        if (TarefaQuadradosFemale || somEntrada.GetComponent<Sounds>().faltamXQuad == 0) {
+                            System.Threading.Thread.Sleep(2000);
+                            myAudioSource.PlayOneShot(tarefaterminadaAmobs);
+                        }
+
                         //feedback ao outro
                         System.Threading.Thread.Sleep((int)todosCirculosM.length + 2000);
                         if (faltamTotalF == 1)
@@ -295,10 +303,6 @@ public class Select : MonoBehaviour
                             myAudioSource.PlayOneShot(f5qM);
                             System.Threading.Thread.Sleep((int)f5qM.length + 1500);
                             myAudioSource.PlayOneShot(aoSeuParceiroM);
-                        }
-                        if (TarefaQuadradosFemale) {
-                            System.Threading.Thread.Sleep(2000);
-                            myAudioSource.PlayOneShot(tarefaterminadaAmobs);
                         }
                     }
                 }
@@ -339,11 +343,11 @@ public class Select : MonoBehaviour
                     {
                         myAudioSource.PlayOneShot(f5qF);
                     }
-                    else if (faltamTotalF == 0)
+                    else if (faltamTotalF == 0 || somEntrada.GetComponent<Sounds>().faltamXQuad == 0)
                     {
                         myAudioSource.PlayOneShot(todosQuadradosF);
                         TarefaQuadradosFemale = true;
-                        if (TarefaCirculosMale)
+                        if (TarefaCirculosMale || somEntrada.GetComponent<Sounds>().faltamXCirc == 0)
                         {
                             System.Threading.Thread.Sleep(2000);
                             myAudioSource.PlayOneShot(tarefaterminadaAmobs);
@@ -374,11 +378,11 @@ public class Select : MonoBehaviour
                     {
                         myAudioSource.PlayOneShot(f5cM);
                     }
-                    else if (faltamTotalM == 0)
+                    else if (faltamTotalM == 0 || somEntrada.GetComponent<Sounds>().faltamXCirc == 0)
                     {
                         myAudioSource.PlayOneShot(todosCirculosM);
                         TarefaCirculosMale = true;
-                        if (TarefaQuadradosFemale)
+                        if (TarefaQuadradosFemale || somEntrada.GetComponent<Sounds>().faltamXQuad == 0)
                         {
                             System.Threading.Thread.Sleep(2000);
                             myAudioSource.PlayOneShot(tarefaterminadaAmobs);

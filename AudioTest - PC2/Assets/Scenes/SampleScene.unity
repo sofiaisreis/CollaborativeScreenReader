@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -550,10 +550,9 @@ MonoBehaviour:
   TarefaQuadradosFemale: 0
   TarefaCirculosMale: 0
   TarefaChegouAoFim: 0
-  selecf: 0
-  selecm: 0
   faltamTotalF: -1
   faltamTotalM: -1
+  somEntrada: {fileID: 2047352987}
 --- !u!4 &1215339071
 Transform:
   m_ObjectHideFlags: 0
@@ -1035,8 +1034,9 @@ MonoBehaviour:
   soPodeQuad: {fileID: 8300000, guid: cfd539856ed60634aad5ea6d7fed5831, type: 3}
   soPodeCirc: {fileID: 8300000, guid: bd4b26b864eb24b43a022a6e1ee7458e, type: 3}
   sele: {fileID: 1215339070}
-  selecf: -1
-  selecm: -1
+  somEntrada: {fileID: 2047352987}
+  faltamTotalF: -1
+  faltamTotalM: -1
 --- !u!4 &1940797361
 Transform:
   m_ObjectHideFlags: 0

@@ -15,6 +15,8 @@ public class Sounds : MonoBehaviour
     public int userToPlay = 0;
     public int quadSelecionadosAteAgora = 0;
     public int circSelecionadosAteAgora = 0;
+    public int faltamXQuad = 5;
+    public int faltamXCirc = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -55,14 +57,19 @@ public class Sounds : MonoBehaviour
             {
                 quadSelecionadosAteAgora = 0;
                 circSelecionadosAteAgora = 0;
+                faltamXQuad = 5;
+                faltamXCirc = 5;
+                select.GetComponent<Select>().TarefaQuadradosFemale = select.GetComponent<Select>().TarefaCirculosMale = false;
             }
-            if(userID == 1 && objTypeSound == 4)
+            if(userID == 1 && objTypeSound == 4 || objTypeSound == 4 && feedback == 4)
             {
                 quadSelecionadosAteAgora = selecionados;
+                faltamXQuad = 5 - quadSelecionadosAteAgora;
             }
-            if(userID == 2 && objTypeSound == 4)
+            if(userID == 2 && objTypeSound == 4 || objTypeSound == 4 && feedback == 4)
             {
                 circSelecionadosAteAgora = selecionados;
+                faltamXCirc = 5 - circSelecionadosAteAgora;
             }
 
             /*********** Feedback Private **********/
