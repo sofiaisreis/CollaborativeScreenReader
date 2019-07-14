@@ -546,14 +546,14 @@ MonoBehaviour:
   selected: {fileID: 8300000, guid: 33b99a48d7dfcd7409dff33eb9a894b7, type: 3}
   errorSound: {fileID: 8300000, guid: 75b0cb0bb44bdfc4aa4cbbf9ea1d9253, type: 3}
   soPodeQuad: {fileID: 8300000, guid: cfd539856ed60634aad5ea6d7fed5831, type: 3}
-  soPodeCirc: {fileID: 8300000, guid: bd4b26b864eb24b43a022a6e1ee7458e, type: 3}
+  soPodeCirc: {fileID: 8300000, guid: e211251571615114082a8dd8788dfb01, type: 3}
   TarefaQuadradosFemale: 0
   TarefaCirculosMale: 0
   TarefaChegouAoFim: 0
   selecf: 0
   selecm: 0
-  selecTotalF: -1
-  selecTotalM: -1
+  faltamTotalF: -1
+  faltamTotalM: -1
 --- !u!4 &1215339071
 Transform:
   m_ObjectHideFlags: 0
