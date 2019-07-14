@@ -80,10 +80,9 @@ public class UserTouch : MonoBehaviour
                 collider.errorTap = true;
                 // Som erro
                 collider.SelectObject();
-                collider.objectName = "";
+                collider.objectHoverName = null;
             }
         }
-        typeOfTouch = "double-tap";
     }
 
     public void Tap(Vector3 position)
@@ -97,7 +96,7 @@ public class UserTouch : MonoBehaviour
             {
                 //print("DOUBLE TAP");
                 possibleDoubleTap = false;
-
+                typeOfTouch = "double-tap";
                 DoubleTap();
             }
             else
@@ -132,6 +131,7 @@ public class UserTouch : MonoBehaviour
     public void EndDrag(Vector3 position)
     {
         GetComponent<ColliderObj>().isBeingDragged = false;
+        typeOfTouch = null;
     }
 }
 

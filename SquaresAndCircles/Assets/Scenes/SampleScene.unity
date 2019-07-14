@@ -1167,6 +1167,8 @@ MonoBehaviour:
   repocess: {fileID: 756066668}
   colliderino: {fileID: 9567905}
   tabuleirino: {fileID: 1895074540}
+  LastLastColliding1: {fileID: 9567905}
+  LastLastColliding2: {fileID: 1881834339}
   User1Posicao: {x: 0, y: 0, z: 0}
   User2Posicao: {x: 0, y: 0, z: 0}
   U1RH: {x: 0, y: 0, z: 0}
@@ -1194,12 +1196,16 @@ MonoBehaviour:
   ccTotal: 0
   incSQ: 0
   incCC: 0
-  NumQuadToSelect: 0
-  NumCircToSelect: 0
+  NumQuadsToSelect: 0
+  NumCircsToSelect: 0
   U1LastColliding: {fileID: 0}
   U2LastColliding: {fileID: 0}
+  LastCollidingTypeU1: 
+  LastCollidingTypeU2: 
   HandCubeU1: {x: 0, y: 0, z: 0}
   HandCubeU2: {x: 0, y: 0, z: 0}
+  TargetReentersU1: 0
+  TargetReentersU2: 0
   GodIs: 
   SpaceIs: 
   HIs: 
@@ -1222,7 +1228,6 @@ MonoBehaviour:
   GodTimes: 0
   SpaceTimes: 0
   HTimes: 0
-  happeningAReset: 0
   text: []
   textAglomerate: []
   textStory: []
