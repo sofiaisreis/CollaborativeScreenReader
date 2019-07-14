@@ -31,8 +31,8 @@ public class Select : MonoBehaviour
     public bool TarefaChegouAoFim = false;
     public int selecf = -1;
     public int selecm = -1;
-    public int faltamTotalF = 5;
-    public int faltamTotalM = 5;
+    public int faltamTotalF = -1;
+    public int faltamTotalM = -1;
     /* Object:
      * quad = 1
      * circ = 2 */

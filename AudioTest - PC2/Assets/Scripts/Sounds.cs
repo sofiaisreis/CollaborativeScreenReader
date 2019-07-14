@@ -55,7 +55,6 @@ public class Sounds : MonoBehaviour
             {
                 quadSelecionadosAteAgora = 0;
                 circSelecionadosAteAgora = 0;
-                totais = 5;
             }
             if(userID == 1 && objTypeSound == 4)
             {

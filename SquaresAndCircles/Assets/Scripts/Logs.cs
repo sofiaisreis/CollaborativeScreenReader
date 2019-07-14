@@ -241,6 +241,23 @@ public class Logs : MonoBehaviour
         List<string> text = new List<string>();
         List<string> textAglomerate = new List<string>();
         List<string> textStory = new List<string>();
+        //POSICAO USER de novo
+        User1Posicao = User1Pos.transform.position;
+        User2Posicao = User2Pos.transform.position;
+
+        //POSICAO MAOS USER de novo
+        U1RH = User1RightHandPos.transform.position;
+        U1LH = User1LeftHandPos.transform.position;
+        U2RH = User2RightHandPos.transform.position;
+        U2LH = User1LeftHandPos.transform.position;
+        User1hasTouch = false;
+        User2hasTouch = false;
+        HandCubeU1.x = -1000;
+        HandCubeU2.x = -1000;
+        HandCubeU1.y = -1000;
+        HandCubeU2.y = -1000;
+        HandCubeU1.z = -1000;
+        HandCubeU2.z = -1000;
         //incSQ = NQuadToSelect.GetComponent<ColliderObj>().squares_inc;
         //incCC = NCircToSelect.GetComponent<ColliderObj>().circles_inc;
         incSQ = 0;
@@ -249,6 +266,8 @@ public class Logs : MonoBehaviour
         NumCircsToSelect = NCircToSelect.GetComponent<ColliderObj>().circles_findTotal;
         U1LastColliding = null;
         U2LastColliding = null;
+        LastCollidingTypeU1 = null;
+        LastCollidingTypeU2 = null;
         HoverOTU1 = null;
         HoverOTU2 = null;
         LastCollidingTypeU1 = null;

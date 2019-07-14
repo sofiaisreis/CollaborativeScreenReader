@@ -70,6 +70,7 @@ public class ColliderObj : MonoBehaviour
             circles_inc = 0;
             squares_inc = 0;
             haveTime = DateTime.Now;
+            audioRequest.PlayRemoteAudio(-1, -2, -1, transform.position, -1, -1, feedbackType);
         }
         //Reiniciar valores de incrementos no som:  passar -2 no lastObj
 
@@ -77,19 +78,19 @@ public class ColliderObj : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Z))
         {
             feedbackType = 1;
-            audioRequest.PlayRemoteAudio(-1, -2, -1, transform.position, -1, -1, feedbackType);
+            audioRequest.PlayRemoteAudio(-1, -1, -1, transform.position, -1, -1, feedbackType);
         }
         //Task-Dependent
         if (Input.GetKeyDown(KeyCode.X))
         {
             feedbackType = 2;
-            audioRequest.PlayRemoteAudio(-1, -2, -1, transform.position, -1, -1, feedbackType);
+            audioRequest.PlayRemoteAudio(-1, -1, -1, transform.position, -1, -1, feedbackType);
         }
         //Public
         if (Input.GetKeyDown(KeyCode.C))
         {
             feedbackType = 3;
-            audioRequest.PlayRemoteAudio(-1, -2, -1, transform.position, -1, -1, feedbackType);
+            audioRequest.PlayRemoteAudio(-1, -1, -1, transform.position, -1, -1, feedbackType);
         }
         // GOD mode
         if (Input.GetKeyDown(KeyCode.G))
