@@ -54,8 +54,8 @@ public class Logs : MonoBehaviour
     public string U1Action, U2Action;
     public GameObject HoverUNU1, HoverUNU2;
     public string HoverOTU1, HoverOTU2;
-    public int sqTotal, ccTotal, squares_inc, circles_inc;
-    public int NumQuadToSelect, NumCircToSelect;
+    public int sqTotal, ccTotal, incSQ, incCC;
+    public int NumQuadsToSelect, NumCircsToSelect;
     public GameObject U1LastColliding, U2LastColliding;
     public Vector3 HandCubeU1, HandCubeU2;
     public string GodIs = "";
@@ -92,8 +92,6 @@ public class Logs : MonoBehaviour
     public int GodTimes = 0;
     public int SpaceTimes = 0;
     public int HTimes = 0;
-
-    public int happening = -1;
    
     //Time:User:UserPos:UserRHPos:UserLHPos:UserPosToque:UserMaoDeToque:UserTouchType:UserAction:HoverUnityName:HoverObjectType:NQuadToSelect:NCircToSelect:LastCollidingObj:HandCubePos
 
@@ -103,6 +101,7 @@ public class Logs : MonoBehaviour
 
     public void Start()
     {
+
     }
 
     public void Update()
@@ -111,9 +110,9 @@ public class Logs : MonoBehaviour
         {
             print("Comecou a tarefa!");
             tarefaOn = 1;
-            User1TouchTime = 0;
-            User2TouchTime = 0;
 
+            //Reiniciar Variáveis aqui 
+            ResetAll();
             int collidersFB = colliderino.GetComponent<ColliderObj>().feedbackType;
             int tabuleirosCode = tabuleirino.GetComponent<Tabuleiros>().code;
 
@@ -138,36 +137,6 @@ public class Logs : MonoBehaviour
             if (tabuleirosCode == 1) textStory.Add("BOARD WITHOUT TRIANGLES");
             if (tabuleirosCode == 2) textStory.Add("BOARD WITH TRIANGLES");
 
-
-            taskStart = DateTime.Now;
-        }
-
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            carregouNoS();
-        }
-
-        if (tarefaOn == 1)
-        {
-            LogFileFrameWriting();
-            LogFileTellAStoryWriting();
-        }
-    }
-
-    private void carregouNoS()
-    {
-        tarefaOn = 0;
-        print("Tarefa finito");
-        textStory.Add("At " + timestamp.TotalMilliseconds + " task was stopped");
-        finalizou = DateTime.Now;
-        TempoTotalTarefa = (finalizou - taskStart).TotalMilliseconds;
-
-
-         DateTime now = DateTime.Now;
-
-        // FRAME A FRAME
-        using (StreamWriter sw = new StreamWriter(@"kinglog" + now.Year + now.Month + now.Day + now.Hour + now.Minute + now.Second + ".txt"))
-        {
             //StartLogging
             text.Add(
                 "Time:" +
@@ -199,11 +168,41 @@ public class Logs : MonoBehaviour
                 "Space Key: " +
                 "H Key: ");
 
+        }
+        
+        if (tarefaOn == 1)
+        {
+            LogFileFrameWriting();
+            LogFileTellAStoryWriting();
+        }
 
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            carregouNoS();
+        }
+    }
+
+
+    private void carregouNoS()
+    {
+        tarefaOn = 0;
+        print("Tarefa finito");
+        textStory.Add("At " + timestamp.TotalMilliseconds + " task was stopped");
+        finalizou = DateTime.Now;
+        TempoTotalTarefa = (finalizou - taskStart).TotalMilliseconds;
+
+
+         DateTime now = DateTime.Now;
+
+        // FRAME A FRAME
+        using (StreamWriter sw = new StreamWriter(@"kinglog" + now.Year + now.Month + now.Day + now.Hour + now.Minute + now.Second + ".txt"))
+        {
             foreach (string s in text)
             {
                 sw.WriteLine(s);
             }
+            sw.Flush();
+            sw.Close();
         }
 
         // AGLOMERATE
@@ -223,21 +222,29 @@ public class Logs : MonoBehaviour
             {
                 sws.WriteLine(s);
             }
+            sws.Flush();
+            sws.Close();
         }
+    }
 
-        // Reiniciar Variáveis
+    private void ResetAll()
+    {
         taskStart = DateTime.Now;
-        squares_inc = 0; //incSQ
-        circles_inc = 0; //incCC
-        sqTotal = NQuadToSelect.GetComponent<ColliderObj>().squaresTotal;
-        ccTotal = NCircToSelect.GetComponent<ColliderObj>().circlesTotal;
-        NumQuadToSelect = sqTotal; //pelo User1
-        NumCircToSelect = ccTotal; //pelo User2
+
+        CompletedTask = false;
+        List<string> text = new List<string>();
+        List<string> textAglomerate = new List<string>();
+        List<string> textStory = new List<string>();
+        //incSQ = NQuadToSelect.GetComponent<ColliderObj>().squares_inc;
+        //incCC = NCircToSelect.GetComponent<ColliderObj>().circles_inc;
+        incSQ = 0;
+        incCC = 0;
+        NumQuadsToSelect = NQuadToSelect.GetComponent<ColliderObj>().squares_findTotal;
+        NumCircsToSelect = NCircToSelect.GetComponent<ColliderObj>().circles_findTotal;
         U1LastColliding = null;
         U2LastColliding = null;
         HoverOTU1 = "";
         HoverOTU2 = "";
-        CompletedTask = false;
         NumSelecoesVaziasU1 = 0;
         NumSelecoesVaziasU2 = 0;
         NumSelecoesErradasTU1 = 0;
@@ -265,6 +272,8 @@ public class Logs : MonoBehaviour
         GodTimes = 0;
         SpaceTimes = 0;
         HTimes = 0;
+        User1TouchTime = 0;
+        User2TouchTime = 0;
     }
 
     public void LogFileFrameWriting()
@@ -351,10 +360,12 @@ public class Logs : MonoBehaviour
         HoverOTU2 = HoverU2.GetComponent<ColliderObj>().objectName;
 
         //CONTAGEM DE SELECOES E TOTAIS
-        squares_inc = NQuadToSelect.GetComponent<ColliderObj>().squares_inc_collider;
-        circles_inc = NCircToSelect.GetComponent<ColliderObj>().circles_inc_collider;
-        NumQuadToSelect = sqTotal - squares_inc; //pelo User1
-        NumCircToSelect = ccTotal - circles_inc; //pelo User2
+        sqTotal = NQuadToSelect.GetComponent<ColliderObj>().squares_findTotal;
+        ccTotal = NCircToSelect.GetComponent<ColliderObj>().circles_findTotal;
+        incSQ = NQuadToSelect.GetComponent<ColliderObj>().squares_inc;
+        incCC = NCircToSelect.GetComponent<ColliderObj>().circles_inc;
+        NumQuadsToSelect = sqTotal - incSQ; //pelo User1
+        NumCircsToSelect = ccTotal - incCC; //pelo User2
 
         //LAST COLLIDING OBJECT
         U1LastColliding = LastCollidingObj1.GetComponent<ColliderObj>().lastCollidingObject;
@@ -428,8 +439,8 @@ public class Logs : MonoBehaviour
             U1Action + ":" + 
             HoverUNU1 + ":" + 
             HoverOTU1 + ":" + 
-            NumQuadToSelect + ":" + 
-            NumCircToSelect + ":" + 
+            NumQuadsToSelect + ":" + 
+            NumCircsToSelect + ":" + 
             U1LastColliding + ":" +  
             HandCubeU1.x + ":" + HandCubeU1.y + ":" + HandCubeU1.z + ":" +
             GodIs + ":" +
@@ -446,8 +457,8 @@ public class Logs : MonoBehaviour
             U2Action + ":" + 
             HoverUNU2 + ":" + 
             HoverOTU2 + ":" + 
-            NumQuadToSelect + ":" + 
-            NumCircToSelect + ":" + 
+            NumQuadsToSelect + ":" + 
+            NumCircsToSelect + ":" + 
             U2LastColliding + ":" +
             HandCubeU2.x + ":" + HandCubeU2.y + ":" + HandCubeU2.z + ":" + 
             GodIs + ":" +
@@ -458,12 +469,6 @@ public class Logs : MonoBehaviour
 
     public void LogFileAglomerateWriting()
     {
-        // Completed Task?
-        if (NumQuadToSelect == 0 && NumCircToSelect == 0)
-        {
-            CompletedTask = true;
-        }
-        
         //Numero de selecoes vazias de ambos users
         int NumVaziasU1 = NumSelecoesVaziasU1;
         int NumVaziasU2 = NumSelecoesVaziasU2;
@@ -483,8 +488,8 @@ public class Logs : MonoBehaviour
         int NumErrosAmbosTOTAL = NumSelecoesVaziasAmbos + NumSelecoesErradasTAmbos + NumErradasOAmbos;
 
         textAglomerate.Add("Tarefa Completada" + ":" + CompletedTask);
-        textAglomerate.Add("Numero de Quadrados Selecionados" + ":" + squares_inc);
-        textAglomerate.Add("Numero de Circulos Selecionados" + ":" + circles_inc);
+        textAglomerate.Add("Numero de Quadrados Selecionados" + ":" + incSQ);
+        textAglomerate.Add("Numero de Circulos Selecionados" + ":" + incCC);
         textAglomerate.Add("Numero de Selecoes Vazias" + ":" + NumSelecoesVaziasAmbos);
         textAglomerate.Add("Numero de Selecoes Triangulos" + ":" + NumSelecoesErradasTAmbos);
         textAglomerate.Add("Numero de Selecoes de Objetos indevidos" + ":" + NumErradasOAmbos);
@@ -519,6 +524,8 @@ public class Logs : MonoBehaviour
             {
                 swa.WriteLine(s);
             }
+            swa.Flush();
+            swa.Close();
         }
     }
 
@@ -527,12 +534,12 @@ public class Logs : MonoBehaviour
         // Adiciona o texto ao documento Log Tell A Story
         // Time:User:Action:ObjUnity:NumSelectForSelection
         //timestamp selecao cada user
-        if (U1Action == "selected" && NumQuadToSelect >= 0)
+        if (U1Action == "selected" && NumQuadsToSelect >= 0)
         {
-            if(NumQuadToSelect != 0)
+            if(NumQuadsToSelect != 0)
             {
                 TimeStampQuadrados.Add(timestamp.TotalMilliseconds);
-                textStory.Add("At " + timestamp.TotalMilliseconds + " User1 selected " + HoverOTU1 + " and there is still " + NumQuadToSelect + " squares to select.");
+                textStory.Add("At " + timestamp.TotalMilliseconds + " User1 selected " + HoverOTU1 + " and there is still " + NumQuadsToSelect + " squares to select.");
             }
             else
             {
@@ -545,12 +552,12 @@ public class Logs : MonoBehaviour
         {
             textStory.Add("At " + timestamp.TotalMilliseconds + " User1 tried to select " + HoverOTU1 + " and that is not possible.");
         }
-        if (U2Action == "selected" && NumCircToSelect >= 0)
+        if (U2Action == "selected" && NumCircsToSelect >= 0)
         {
-            if(NumCircToSelect != 0)
+            if(NumCircsToSelect != 0)
             {
                 TimeStampCirculos.Add(timestamp.TotalMilliseconds);
-                textStory.Add("At " + timestamp.TotalMilliseconds + " User2 selected " + HoverOTU2 + " and there is still " + NumCircToSelect + " circles to select.");
+                textStory.Add("At " + timestamp.TotalMilliseconds + " User2 selected " + HoverOTU2 + " and there is still " + NumCircsToSelect + " circles to select.");
             }
             else
             {
@@ -566,12 +573,12 @@ public class Logs : MonoBehaviour
 
         // TO DO God mode and other keys prints
        
-        if (NumQuadToSelect == 0 && NumCircToSelect == 0)
+        if (NumQuadsToSelect == 0 && NumCircsToSelect == 0) //squares_inc == sqTotal && circles_inc == ccTotal)
         {
             textStory.Add("At " + timestamp.TotalMilliseconds + " All squares and circles were selected. Task completed!");
+            CompletedTask = true;
             finalizou = DateTime.Now;
             TempoTotalTarefa = (finalizou-taskStart).TotalMilliseconds;
-
             carregouNoS();
         }
 

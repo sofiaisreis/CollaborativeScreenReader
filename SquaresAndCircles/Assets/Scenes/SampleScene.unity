@@ -251,6 +251,11 @@ PrefabInstance:
       propertyPath: squares_findTotal
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3462790539842953432, guid: b576413ea9e9c85408a01b42ff4a57e5,
+        type: 3}
+      propertyPath: loggs
+      value: 
+      objectReference: {fileID: 633784402}
     - target: {fileID: 4279992100563308375, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}
       propertyPath: touch
@@ -1160,6 +1165,8 @@ MonoBehaviour:
   HandCube1Pos: {fileID: 9567905}
   HandCube2Pos: {fileID: 1881834339}
   repocess: {fileID: 756066668}
+  colliderino: {fileID: 9567905}
+  tabuleirino: {fileID: 1895074540}
   User1Posicao: {x: 0, y: 0, z: 0}
   User2Posicao: {x: 0, y: 0, z: 0}
   U1RH: {x: 0, y: 0, z: 0}
@@ -1195,6 +1202,7 @@ MonoBehaviour:
   HandCubeU2: {x: 0, y: 0, z: 0}
   GodIs: 
   SpaceIs: 
+  HIs: 
   CompletedTask: 0
   NumSelecoesVaziasU1: 0
   NumSelecoesVaziasU2: 0
@@ -1213,7 +1221,8 @@ MonoBehaviour:
   TempoTotalTarefa: 0
   GodTimes: 0
   SpaceTimes: 0
-  happening: -1
+  HTimes: 0
+  happeningAReset: 0
   text: []
   textAglomerate: []
   textStory: []
@@ -1668,7 +1677,9 @@ MonoBehaviour:
   distanceThreshold: 0.3
   reprocessInterval: -1
   repro: 0
+  "ag\xE1s": 0
   isRep: 0
+  isH: 0
 --- !u!4 &756066670
 Transform:
   m_ObjectHideFlags: 0
@@ -3548,6 +3559,11 @@ PrefabInstance:
       propertyPath: squares_findTotal
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3462790539842953432, guid: b576413ea9e9c85408a01b42ff4a57e5,
+        type: 3}
+      propertyPath: loggs
+      value: 
+      objectReference: {fileID: 633784402}
     - target: {fileID: 4279992100563308375, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}
       propertyPath: touch
