@@ -75,10 +75,10 @@ public class Male : MonoBehaviour
 
 
     //PUBLICS LOWER VOLUME
-    public void PlaySelectedPublic(int lastObj, int selecao, int totais)
+    public void PlaySelectedPublic(int lastObj, int selecaoQuad, int selecaoCirc, int totais)
     {
         gameObject.GetComponent<Renderer>().material.color = Color.blue;
-        publicos.GetComponent<Public>().SelectedPublicM(lastObj, selecao, totais);
+        publicos.GetComponent<Public>().SelectedPublicM(lastObj, selecaoQuad, selecaoCirc, totais);
     }
 
     public void PlayErrorPublic(bool soPode = true)

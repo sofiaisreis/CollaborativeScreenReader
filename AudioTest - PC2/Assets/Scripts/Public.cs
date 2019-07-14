@@ -22,8 +22,10 @@ public class Public : MonoBehaviour
                      soPodeQuad,
                      soPodeCirc;
     public Select sele;
-    public int selecf = -1;
-    public int selecm = -1;
+
+    public int faltamTotalF = -1;
+    public int faltamTotalM = -1;
+
     /* Object:
      * quad = 1
      * circ = 2 */
@@ -35,81 +37,49 @@ public class Public : MonoBehaviour
     
     //PUBLICS
 
-    public void SelectedPublicF(int lastObj, int selecao, int totais)
+    public void SelectedPublicF(int lastObj, int selecaoQuad, int selecaoCirc, int totais)
     {
-        selecf = totais - selecao;
+        faltamTotalF = totais - selecaoQuad;
+        faltamTotalM = totais - selecaoCirc;
         myAudioSourceLow.PlayOneShot(selected);
         System.Threading.Thread.Sleep((int)selected.length + 300);
         switch (lastObj)
         {
             case 1: //quadrado
-                if (selecao < totais)
+                if (selecaoQuad <= totais)
                 {
-                    if (selecf == 1) myAudioSourceLow.PlayOneShot(f1qF);
-                    else if (selecf == 2) myAudioSourceLow.PlayOneShot(f2qF);
-                    else if (selecf == 3) myAudioSourceLow.PlayOneShot(f3qF);
-                    else if (selecf == 4) myAudioSourceLow.PlayOneShot(f4qF);
-                    else if (selecf == 5) myAudioSourceLow.PlayOneShot(f5qF);
-                    else if (selecf == 0)
+                    if (faltamTotalF == 1) myAudioSourceLow.PlayOneShot(f1qF);
+                    else if (faltamTotalF == 2) myAudioSourceLow.PlayOneShot(f2qF);
+                    else if (faltamTotalF == 3) myAudioSourceLow.PlayOneShot(f3qF);
+                    else if (faltamTotalF == 4) myAudioSourceLow.PlayOneShot(f4qF);
+                    else if (faltamTotalF == 5) myAudioSourceLow.PlayOneShot(f5qF);
+                    else if (faltamTotalF == 0)
                     {
                         sele.GetComponent<Select>().TarefaQuadradosFemale = true;
                     }
                 }
                 break;
-
-            //Acontece em God Mode
-            case 2: //circulo
-                if (selecao < totais)
-                {
-                    if (selecm == 1) myAudioSourceLow.PlayOneShot(f1cM);
-                    else if (selecm == 2) myAudioSourceLow.PlayOneShot(f2cM);
-                    else if (selecm == 3) myAudioSourceLow.PlayOneShot(f3cM);
-                    else if (selecm == 4) myAudioSourceLow.PlayOneShot(f4cM);
-                    else if (selecm == 5) myAudioSourceLow.PlayOneShot(f5cM);
-                    else if (selecm == 0)
-                    {
-                        sele.GetComponent<Select>().TarefaCirculosMale = true;
-                    }
-                }
-                    break;
         }
     }
 
-    public void SelectedPublicM(int lastObj, int selecao, int totais)
+    public void SelectedPublicM(int lastObj,int selecaoQuad, int selecaoCirc, int totais)
     {
-        selecm = totais - selecao;
+        faltamTotalF = totais - selecaoQuad;
+        faltamTotalM = totais - selecaoCirc;
         myAudioSourceLow.PlayOneShot(selected);
         System.Threading.Thread.Sleep((int)selected.length + 300);
 
         switch (lastObj)
         {
-            //Acontece em God Mode
-            case 1: //quadrado
-                if (selecao < totais)
-                {
-                    int selecf = totais - selecao;
-                    if (selecf == 1) myAudioSourceLow.PlayOneShot(f1qF);
-                    else if (selecf == 2) myAudioSourceLow.PlayOneShot(f2qF);
-                    else if (selecf == 3) myAudioSourceLow.PlayOneShot(f3qF);
-                    else if (selecf == 4) myAudioSourceLow.PlayOneShot(f4qF);
-                    else if (selecf == 5) myAudioSourceLow.PlayOneShot(f5qF);
-                    else if (selecf == 0)
-                    {
-                        sele.GetComponent<Select>().TarefaQuadradosFemale = true;
-                    }
-                }
-                break;
-
             case 2: //circulo
-                if (selecao < totais)
+                if (selecaoCirc <= totais)
                 {
-                    int selecm = totais - selecao;
-                    if (selecm == 1) myAudioSourceLow.PlayOneShot(f1cM);
-                    else if (selecm == 2) myAudioSourceLow.PlayOneShot(f2cM);
-                    else if (selecm == 3) myAudioSourceLow.PlayOneShot(f3cM);
-                    else if (selecm == 4) myAudioSourceLow.PlayOneShot(f4cM);
-                    else if (selecm == 5) myAudioSourceLow.PlayOneShot(f5cM);
-                    else if (selecm == 0)
+                    if (faltamTotalM == 1) myAudioSourceLow.PlayOneShot(f1cM);
+                    else if (faltamTotalM == 2) myAudioSourceLow.PlayOneShot(f2cM);
+                    else if (faltamTotalM == 3) myAudioSourceLow.PlayOneShot(f3cM);
+                    else if (faltamTotalM == 4) myAudioSourceLow.PlayOneShot(f4cM);
+                    else if (faltamTotalM == 5) myAudioSourceLow.PlayOneShot(f5cM);
+                    else if (faltamTotalM == 0)
                     {
                         sele.GetComponent<Select>().TarefaCirculosMale = true;
                     }

@@ -77,9 +77,9 @@ public class Female : MonoBehaviour
 
 
     // PUBLICS LOWER VOLUME
-    public void PlaySelectedPublic(int lastObj, int selecao, int totais)
+    public void PlaySelectedPublic(int lastObj, int selecaoQuad, int selecaoCirc, int totais)
     {
-        publicos.GetComponent<Public>().SelectedPublicF(lastObj, selecao, totais);
+        publicos.GetComponent<Public>().SelectedPublicF(lastObj, selecaoQuad, selecaoCirc, totais);
     }
 
     public void PlayErrorPublic(bool soPode = true)

@@ -29,8 +29,6 @@ public class Select : MonoBehaviour
     public bool TarefaQuadradosFemale = false;
     public bool TarefaCirculosMale = false;
     public bool TarefaChegouAoFim = false;
-    public int selecf = -1;
-    public int selecm = -1;
     public int faltamTotalF = -1;
     public int faltamTotalM = -1;
     /* Object:
@@ -84,7 +82,7 @@ public class Select : MonoBehaviour
         switch (lastObj)
         {
             case 1: //quadrado
-                if (faltamTotalF <= totais)
+                if (selecaoQuad <= totais)
                 {
                     if (faltamTotalF == 1)
                     {
@@ -109,7 +107,6 @@ public class Select : MonoBehaviour
                     else if (faltamTotalF == 0)
                     {
                         myAudioSource.PlayOneShot(todosQuadradosF);
-                        faltamTotalF = 5;
                         TarefaQuadradosFemale = true;
                         
                         // feedback ao outro
@@ -239,7 +236,7 @@ public class Select : MonoBehaviour
                 break;*/
 
             case 2: //circulo
-                if (faltamTotalM <= totais)
+                if (selecaoCirc <= totais)
                 {
                     if (faltamTotalM == 1)
                     {
@@ -265,7 +262,6 @@ public class Select : MonoBehaviour
                     {
 
                         myAudioSource.PlayOneShot(todosCirculosM);
-                        faltamTotalM = 5;
                         TarefaCirculosMale = true;
                         
                         //feedback ao outro
@@ -321,7 +317,7 @@ public class Select : MonoBehaviour
         switch (lastObj)
         {
             case 1: //quadrado
-                if (faltamTotalF <= totais)
+                if (selecaoQuad <= totais)
                 {
                     if (faltamTotalF == 1)
                     {
@@ -346,7 +342,6 @@ public class Select : MonoBehaviour
                     else if (faltamTotalF == 0)
                     {
                         myAudioSource.PlayOneShot(todosQuadradosF);
-                        faltamTotalF = 5;
                         TarefaQuadradosFemale = true;
                         if (TarefaCirculosMale)
                         {
@@ -357,7 +352,7 @@ public class Select : MonoBehaviour
                 }
                 break;
             case 2: //circulo
-                if (faltamTotalM <= totais)
+                if (selecaoCirc <= totais)
                 {
                     if (faltamTotalM == 1)
                     {
@@ -382,7 +377,6 @@ public class Select : MonoBehaviour
                     else if (faltamTotalM == 0)
                     {
                         myAudioSource.PlayOneShot(todosCirculosM);
-                        faltamTotalM = 5;
                         TarefaCirculosMale = true;
                         if (TarefaQuadradosFemale)
                         {
