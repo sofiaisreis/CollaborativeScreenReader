@@ -50,12 +50,17 @@ public class Sounds : MonoBehaviour
             int totais = int.Parse(ourStrings[11]);
             int feedback = int.Parse(ourStrings[12]);
 
-            /** backup num quad circ **/
-            if(userID == 1)
+            // Reinicia a contagem dos selecionados, porque se escolheu um novo feedback. Logo, à partida, estamos numa nova tarefa
+            if(lastObj == -2)
+            {
+                quadSelecionadosAteAgora = 0;
+                circSelecionadosAteAgora = 0;
+            }
+            if(userID == 1 && objTypeSound == 4)
             {
                 quadSelecionadosAteAgora = selecionados;
             }
-            if(userID == 2)
+            if(userID == 2 && objTypeSound == 4)
             {
                 circSelecionadosAteAgora = selecionados;
             }

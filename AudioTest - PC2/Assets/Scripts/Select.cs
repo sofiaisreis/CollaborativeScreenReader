@@ -270,32 +270,32 @@ public class Select : MonoBehaviour
                         System.Threading.Thread.Sleep((int)todosCirculosM.length + 1000);
                         if (faltamTotalF == 1)
                         {
-                            myAudioSource.PlayOneShot(f1cM);
-                            System.Threading.Thread.Sleep((int)f1cM.length + 300);
+                            myAudioSource.PlayOneShot(f1qM);
+                            System.Threading.Thread.Sleep((int)f1qM.length + 300);
                             myAudioSource.PlayOneShot(aoSeuParceiroM);
                         }
                         else if (faltamTotalF == 2)
                         {
-                            myAudioSource.PlayOneShot(f2cM);
-                            System.Threading.Thread.Sleep((int)f2cM.length + 300);
+                            myAudioSource.PlayOneShot(f2qM);
+                            System.Threading.Thread.Sleep((int)f2qM.length + 300);
                             myAudioSource.PlayOneShot(aoSeuParceiroM);
                         }
                         else if (faltamTotalF == 3)
                         {
-                            myAudioSource.PlayOneShot(f3cM);
-                            System.Threading.Thread.Sleep((int)f3cM.length + 300);
+                            myAudioSource.PlayOneShot(f3qM);
+                            System.Threading.Thread.Sleep((int)f3qM.length + 300);
                             myAudioSource.PlayOneShot(aoSeuParceiroM);
                         }
                         else if (faltamTotalF == 4)
                         {
-                            myAudioSource.PlayOneShot(f4cM);
-                            System.Threading.Thread.Sleep((int)f4cM.length + 300);
+                            myAudioSource.PlayOneShot(f4qM);
+                            System.Threading.Thread.Sleep((int)f4qM.length + 300);
                             myAudioSource.PlayOneShot(aoSeuParceiroM);
                         }
                         else if (faltamTotalF == 5)
                         {
-                            myAudioSource.PlayOneShot(f5cM);
-                            System.Threading.Thread.Sleep((int)f5cM.length + 300);
+                            myAudioSource.PlayOneShot(f5qM);
+                            System.Threading.Thread.Sleep((int)f5qM.length + 300);
                             myAudioSource.PlayOneShot(aoSeuParceiroM);
                         }
                         if (TarefaQuadradosFemale) {
