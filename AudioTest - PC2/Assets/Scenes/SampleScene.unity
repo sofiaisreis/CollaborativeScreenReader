@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -533,6 +533,8 @@ MonoBehaviour:
   f4qM: {fileID: 8300000, guid: 12d0a93738c90ca4487423bcbc611586, type: 3}
   f5qF: {fileID: 8300000, guid: 9e5e97bb6e3be474ca4a25a1569fac7b, type: 3}
   f5qM: {fileID: 8300000, guid: d485417318bba6d499eed1d9e8a27c53, type: 3}
+  aoSeuParceiroF: {fileID: 8300000, guid: 2fa29d7ebee5d454f818a8d4b2bb60ea, type: 3}
+  aoSeuParceiroM: {fileID: 8300000, guid: 2d7399fe12d38484bb9cf1947e03a0ba, type: 3}
   todosCirculosF: {fileID: 8300000, guid: c71beb9772befd8438927d78902e46e4, type: 3}
   todosCirculosM: {fileID: 8300000, guid: f6f877710689298479ba44a0756e0dd8, type: 3}
   todosQuadradosF: {fileID: 8300000, guid: 4979752b18bfdf144a0e4dc13a6d3dca, type: 3}
@@ -550,6 +552,8 @@ MonoBehaviour:
   TarefaChegouAoFim: 0
   selecf: 0
   selecm: 0
+  selecTotalF: -1
+  selecTotalM: -1
 --- !u!4 &1215339071
 Transform:
   m_ObjectHideFlags: 0
@@ -1031,6 +1035,8 @@ MonoBehaviour:
   soPodeQuad: {fileID: 8300000, guid: cfd539856ed60634aad5ea6d7fed5831, type: 3}
   soPodeCirc: {fileID: 8300000, guid: bd4b26b864eb24b43a022a6e1ee7458e, type: 3}
   sele: {fileID: 1215339070}
+  selecf: -1
+  selecm: -1
 --- !u!4 &1940797361
 Transform:
   m_ObjectHideFlags: 0
@@ -1083,6 +1089,8 @@ MonoBehaviour:
   port: 7001
   user: 1
   userToPlay: 0
+  quadSelecionadosAteAgora: 0
+  circSelecionadosAteAgora: 0
 --- !u!4 &2047352990
 Transform:
   m_ObjectHideFlags: 0

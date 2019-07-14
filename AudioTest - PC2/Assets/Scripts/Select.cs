@@ -17,6 +17,7 @@ public class Select : MonoBehaviour
                      f3qF, f3qM,
                      f4qF, f4qM,
                      f5qF, f5qM,
+                     aoSeuParceiroF, aoSeuParceiroM,
                      todosCirculosF, todosCirculosM,
                      todosQuadradosF, todosQuadradosM,
                      tarefaterminadaF, tarefaterminadaM,
@@ -30,8 +31,8 @@ public class Select : MonoBehaviour
     public bool TarefaChegouAoFim = false;
     public int selecf = -1;
     public int selecm = -1;
-    public int selecTotalF = -1;
-    public int selecTotalM = -1;
+    public int faltamTotalF = -1;
+    public int faltamTotalM = -1;
     /* Object:
      * quad = 1
      * circ = 2 */
@@ -73,42 +74,75 @@ public class Select : MonoBehaviour
         myAudioSource.PlayOneShot(errorSound);
     }
 
-    public void SelectionF(int lastObj, int selecao, int totais)
+    public void SelectionF(int lastObj, int selecaoQuad, int selecaoCirc, int totais)
     {
         myAudioSource.PlayOneShot(selected);
         System.Threading.Thread.Sleep((int)selected.length + 300);
-        selecf = totais - selecao;
+        faltamTotalF = totais - selecaoQuad;
+        faltamTotalM = totais - selecaoCirc;
 
         switch (lastObj)
         {
             case 1: //quadrado
-                if (selecao <= totais)
+                if (faltamTotalF <= totais)
                 {
-                    if (selecf == 1)
+                    if (faltamTotalF == 1)
                     {
                         myAudioSource.PlayOneShot(f1qF);
                     }
-                    else if (selecf == 2)
+                    else if (faltamTotalF == 2)
                     {
                         myAudioSource.PlayOneShot(f2qF);
                     }
-                    else if (selecf == 3)
+                    else if (faltamTotalF == 3)
                     {
                         myAudioSource.PlayOneShot(f3qF);
                     }
-                    else if (selecf == 4)
+                    else if (faltamTotalF == 4)
                     {
                         myAudioSource.PlayOneShot(f4qF);
                     }
-                    else if (selecf == 5)
+                    else if (faltamTotalF == 5)
                     {
                         myAudioSource.PlayOneShot(f5qF);
                     }
-                    else if (selecf == 0)
+                    else if (faltamTotalF == 0)
                     {
                         myAudioSource.PlayOneShot(todosQuadradosF);
                         TarefaQuadradosFemale = true;
-                        //TO DO feedback ao outro
+                        
+                        // feedback ao outro
+                        System.Threading.Thread.Sleep((int)todosQuadradosF.length + 1000);
+                        if(faltamTotalM == 1)
+                        {
+                            myAudioSource.PlayOneShot(f1cF);
+                            System.Threading.Thread.Sleep((int)f1cF.length + 300);
+                            myAudioSource.PlayOneShot(aoSeuParceiroF);
+                        }
+                        else if(faltamTotalM == 2)
+                        {
+                            myAudioSource.PlayOneShot(f2cF);
+                            System.Threading.Thread.Sleep((int)f2cF.length + 300);
+                            myAudioSource.PlayOneShot(aoSeuParceiroF);
+                        }
+                        else if(faltamTotalM == 3)
+                        {
+                            myAudioSource.PlayOneShot(f3cF);
+                            System.Threading.Thread.Sleep((int)f3cF.length + 300);
+                            myAudioSource.PlayOneShot(aoSeuParceiroF);
+                        }
+                        else if(faltamTotalM == 4)
+                        {
+                            myAudioSource.PlayOneShot(f4cF);
+                            System.Threading.Thread.Sleep((int)f4cF.length + 300);
+                            myAudioSource.PlayOneShot(aoSeuParceiroF);
+                        }
+                        else if(faltamTotalM == 5)
+                        {
+                            myAudioSource.PlayOneShot(f5cF);
+                            System.Threading.Thread.Sleep((int)f5cF.length + 300);
+                            myAudioSource.PlayOneShot(aoSeuParceiroF);
+                        }
                         if (TarefaCirculosMale)
                         {
                             System.Threading.Thread.Sleep(2000);
@@ -157,11 +191,13 @@ public class Select : MonoBehaviour
         }
     }
 
-    public void SelectionM(int lastObj, int selecao, int totais)
+    public void SelectionM(int lastObj, int selecaoQuad, int selecaoCirc, int totais)
     {
         myAudioSource.PlayOneShot(selected);
         System.Threading.Thread.Sleep((int)selected.length + 300);
-        selecm = totais - selecao;
+        faltamTotalF = totais - selecaoQuad;
+        faltamTotalM = totais - selecaoCirc;
+
         switch (lastObj)
         {/*
             //Acontece em God Mode
@@ -202,34 +238,66 @@ public class Select : MonoBehaviour
                 break;*/
 
             case 2: //circulo
-                if (selecao <= totais)
+                if (faltamTotalM <= totais)
                 {
-                    if (selecm == 1)
+                    if (faltamTotalM == 1)
                     {
                         myAudioSource.PlayOneShot(f1cM);
                     }
-                    else if (selecm == 2)
+                    else if (faltamTotalM == 2)
                     {
                         myAudioSource.PlayOneShot(f2cM);
                     }
-                    else if (selecm == 3)
+                    else if (faltamTotalM == 3)
                     {
                         myAudioSource.PlayOneShot(f3cM);
                     }
-                    else if (selecm == 4)
+                    else if (faltamTotalM == 4)
                     {
                         myAudioSource.PlayOneShot(f4cM);
                     }
-                    else if (selecm == 5)
+                    else if (faltamTotalM == 5)
                     {
                         myAudioSource.PlayOneShot(f5cM);
                     }
-                    else if (selecm == 0)
+                    else if (faltamTotalM == 0)
                     {
 
                         myAudioSource.PlayOneShot(todosCirculosM);
                         TarefaCirculosMale = true;
-                        //TO DO feedback ao outro
+                        
+                        //feedback ao outro
+                        System.Threading.Thread.Sleep((int)todosCirculosM.length + 1000);
+                        if (faltamTotalF == 1)
+                        {
+                            myAudioSource.PlayOneShot(f1cM);
+                            System.Threading.Thread.Sleep((int)f1cM.length + 300);
+                            myAudioSource.PlayOneShot(aoSeuParceiroM);
+                        }
+                        else if (faltamTotalF == 2)
+                        {
+                            myAudioSource.PlayOneShot(f2cM);
+                            System.Threading.Thread.Sleep((int)f2cM.length + 300);
+                            myAudioSource.PlayOneShot(aoSeuParceiroM);
+                        }
+                        else if (faltamTotalF == 3)
+                        {
+                            myAudioSource.PlayOneShot(f3cM);
+                            System.Threading.Thread.Sleep((int)f3cM.length + 300);
+                            myAudioSource.PlayOneShot(aoSeuParceiroM);
+                        }
+                        else if (faltamTotalF == 4)
+                        {
+                            myAudioSource.PlayOneShot(f4cM);
+                            System.Threading.Thread.Sleep((int)f4cM.length + 300);
+                            myAudioSource.PlayOneShot(aoSeuParceiroM);
+                        }
+                        else if (faltamTotalF == 5)
+                        {
+                            myAudioSource.PlayOneShot(f5cM);
+                            System.Threading.Thread.Sleep((int)f5cM.length + 300);
+                            myAudioSource.PlayOneShot(aoSeuParceiroM);
+                        }
                         if (TarefaQuadradosFemale) {
                             System.Threading.Thread.Sleep(2000);
                             myAudioSource.PlayOneShot(tarefaterminadaAmobs);
@@ -245,35 +313,35 @@ public class Select : MonoBehaviour
     {
         myAudioSource.PlayOneShot(selected);
         System.Threading.Thread.Sleep((int)selected.length + 300);
-        selecTotalF = totais - selecaoQuad;
-        selecTotalM = totais - selecaoCirc;
+        faltamTotalF = totais - selecaoQuad;
+        faltamTotalM = totais - selecaoCirc;
 
         switch (lastObj)
         {
             case 1: //quadrado
-                if (selecTotalF <= totais)
+                if (faltamTotalF <= totais)
                 {
-                    if (selecTotalF == 1)
+                    if (faltamTotalF == 1)
                     {
                         myAudioSource.PlayOneShot(f1qF);
                     }
-                    else if (selecTotalF == 2)
+                    else if (faltamTotalF == 2)
                     {
                         myAudioSource.PlayOneShot(f2qF);
                     }
-                    else if (selecTotalF == 3)
+                    else if (faltamTotalF == 3)
                     {
                         myAudioSource.PlayOneShot(f3qF);
                     }
-                    else if (selecTotalF == 4)
+                    else if (faltamTotalF == 4)
                     {
                         myAudioSource.PlayOneShot(f4qF);
                     }
-                    else if (selecTotalF == 5)
+                    else if (faltamTotalF == 5)
                     {
                         myAudioSource.PlayOneShot(f5qF);
                     }
-                    else if (selecTotalF == 0)
+                    else if (faltamTotalF == 0)
                     {
                         myAudioSource.PlayOneShot(todosQuadradosF);
                         TarefaQuadradosFemale = true;
@@ -286,29 +354,29 @@ public class Select : MonoBehaviour
                 }
                 break;
             case 2: //circulo
-                if (selecTotalM <= totais)
+                if (faltamTotalM <= totais)
                 {
-                    if (selecTotalM == 1)
+                    if (faltamTotalM == 1)
                     {
                         myAudioSource.PlayOneShot(f1cM);
                     }
-                    else if (selecTotalM == 2)
+                    else if (faltamTotalM == 2)
                     {
                         myAudioSource.PlayOneShot(f2cM);
                     }
-                    else if (selecTotalM == 3)
+                    else if (faltamTotalM == 3)
                     {
                         myAudioSource.PlayOneShot(f3cM);
                     }
-                    else if (selecTotalM == 4)
+                    else if (faltamTotalM == 4)
                     {
                         myAudioSource.PlayOneShot(f4cM);
                     }
-                    else if (selecTotalM == 5)
+                    else if (faltamTotalM == 5)
                     {
                         myAudioSource.PlayOneShot(f5cM);
                     }
-                    else if (selecTotalM == 0)
+                    else if (faltamTotalM == 0)
                     {
                         myAudioSource.PlayOneShot(todosCirculosM);
                         TarefaCirculosMale = true;

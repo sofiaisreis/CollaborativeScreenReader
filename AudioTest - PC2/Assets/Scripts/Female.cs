@@ -50,10 +50,10 @@ public class Female : MonoBehaviour
         myAudioSource.PlayOneShot(F1_triangulo);
     }
 
-    public void PlaySelected(int lastObj, int selecao, int totais)
+    public void PlaySelected(int lastObj, int selecaoQuad, int selecaoCirc, int totais)
     {
         gameObject.GetComponent<Renderer>().material.color = Color.magenta;
-        selection.GetComponent<Select>().SelectionF(lastObj, selecao, totais);
+        selection.GetComponent<Select>().SelectionF(lastObj, selecaoQuad, selecaoCirc, totais);
     }
 
     public void PlaySelectedGod(int lastObj, int selecaoQuad, int selecaoCirc, int totais)

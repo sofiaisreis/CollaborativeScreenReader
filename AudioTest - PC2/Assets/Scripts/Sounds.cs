@@ -105,7 +105,7 @@ public class Sounds : MonoBehaviour
                             }
                             else if (objTypeSound == 4)
                             {
-                                female.GetComponent<Female>().PlaySelected(lastObj, selecionados, totais);
+                                female.GetComponent<Female>().PlaySelected(lastObj, quadSelecionadosAteAgora, circSelecionadosAteAgora, totais);
                             }
                             else if (objTypeSound == 6)
                             {                              
@@ -143,7 +143,7 @@ public class Sounds : MonoBehaviour
                             }
                             else if (objTypeSound == 4)
                             {
-                                male.GetComponent<Male>().PlaySelected(lastObj, selecionados, totais);
+                                male.GetComponent<Male>().PlaySelected(lastObj, quadSelecionadosAteAgora, circSelecionadosAteAgora, totais);
                             }
                             else if (objTypeSound == 6)
                             {
@@ -193,7 +193,7 @@ public class Sounds : MonoBehaviour
                             }
                             else if (objTypeSound == 4)
                             {
-                                female.GetComponent<Female>().PlaySelected(lastObj, selecionados, totais);
+                                female.GetComponent<Female>().PlaySelected(lastObj, quadSelecionadosAteAgora, circSelecionadosAteAgora, totais);
                             }
                             else if (objTypeSound == 6)
                             {
@@ -254,7 +254,7 @@ public class Sounds : MonoBehaviour
                             }
                             else if (objTypeSound == 4)
                             {
-                                male.GetComponent<Male>().PlaySelected(lastObj, selecionados, totais);
+                                male.GetComponent<Male>().PlaySelected(lastObj, quadSelecionadosAteAgora, circSelecionadosAteAgora, totais);
                             }
                             else if (objTypeSound == 6)
                             {
@@ -304,7 +304,7 @@ public class Sounds : MonoBehaviour
                             else if (objTypeSound == 4)
                             {
                                 //Select Alto/Normal para ela
-                                female.GetComponent<Female>().PlaySelected(lastObj, selecionados, totais);
+                                female.GetComponent<Female>().PlaySelected(lastObj, quadSelecionadosAteAgora, circSelecionadosAteAgora, totais);
                             }
                             else if (objTypeSound == 6)
                             {
@@ -423,7 +423,7 @@ public class Sounds : MonoBehaviour
                             else if (objTypeSound == 4)
                             {
                                 //Select Alto/Normal para ele
-                                male.GetComponent<Male>().PlaySelected(lastObj, selecionados, totais);
+                                male.GetComponent<Male>().PlaySelected(lastObj, quadSelecionadosAteAgora, circSelecionadosAteAgora, totais);
                             }
                             else if (objTypeSound == 6)
                             {
