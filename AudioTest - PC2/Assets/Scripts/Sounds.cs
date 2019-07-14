@@ -348,7 +348,7 @@ public class Sounds : MonoBehaviour
                             {
                                 //Select Baixo para ele ouvir baixo
                                 //female.transform.position =;
-                                female.GetComponent<Female>().PlaySelectedPublic(lastObj, selecionados, totais);
+                                female.GetComponent<Female>().PlaySelectedPublic(lastObj, quadSelecionadosAteAgora, circSelecionadosAteAgora, totais);
                             }
                             else if (objTypeSound == 6)
                             {
@@ -391,7 +391,7 @@ public class Sounds : MonoBehaviour
 
                                 //Select Baixo para ela ouvir baixo
                                 //male.transform.position =;
-                                male.GetComponent<Male>().PlaySelectedPublic(lastObj, selecionados, totais);
+                                male.GetComponent<Male>().PlaySelectedPublic(lastObj, quadSelecionadosAteAgora, circSelecionadosAteAgora, totais);
                             }
                             else if (objTypeSound == 6)
                             {
