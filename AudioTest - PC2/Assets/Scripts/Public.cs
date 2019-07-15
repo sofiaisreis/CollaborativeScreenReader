@@ -49,13 +49,13 @@ public class Public : MonoBehaviour
             case 1: //quadrado
                 if (selecao <= totais)
                 {
-                    int selecm = totais - selecao;
-                    if (selecm == 1) myAudioSourceLow.PlayOneShot(f1cF);
-                    else if (selecm == 2) myAudioSourceLow.PlayOneShot(f2cF);
-                    else if (selecm == 3) myAudioSourceLow.PlayOneShot(f3cF);
-                    else if (selecm == 4) myAudioSourceLow.PlayOneShot(f4cF);
-                    else if (selecm == 5) myAudioSourceLow.PlayOneShot(f5cF);
-                    else if (selecm == 0) print("Acabaram os circulos!");
+                    int selecf = totais - selecao;
+                    if (selecf == 1) myAudioSourceLow.PlayOneShot(f1qF);
+                    else if (selecf == 2) myAudioSourceLow.PlayOneShot(f2qF);
+                    else if (selecf == 3) myAudioSourceLow.PlayOneShot(f3qF);
+                    else if (selecf == 4) myAudioSourceLow.PlayOneShot(f4qF);
+                    else if (selecf == 5) myAudioSourceLow.PlayOneShot(f5qF);
+                    else if (selecf == 0) print("Acabaram os quadrados!");
                 }
                 else
                 {
@@ -74,13 +74,13 @@ public class Public : MonoBehaviour
             case 2: //circulo
                 if (selecao <= totais)
                 {
-                    int selecf = totais - selecao;
-                    if (selecf == 1) myAudioSourceLow.PlayOneShot(f1qF);
-                    else if (selecf == 2) myAudioSourceLow.PlayOneShot(f2qF);
-                    else if (selecf == 3) myAudioSourceLow.PlayOneShot(f3qF);
-                    else if (selecf == 4) myAudioSourceLow.PlayOneShot(f4qF);
-                    else if (selecf == 5) myAudioSourceLow.PlayOneShot(f5qF);
-                    else if (selecf == 0) print("Acabaram os quadrados!"); 
+                    int selecm = totais - selecao;
+                    if (selecm == 1) myAudioSourceLow.PlayOneShot(f1cF);
+                    else if (selecm == 2) myAudioSourceLow.PlayOneShot(f2cF);
+                    else if (selecm == 3) myAudioSourceLow.PlayOneShot(f3cF);
+                    else if (selecm == 4) myAudioSourceLow.PlayOneShot(f4cF);
+                    else if (selecm == 5) myAudioSourceLow.PlayOneShot(f5cF);
+                    else if (selecm == 0) print("Acabaram os circulos!");
                 }
                 else
                 {
