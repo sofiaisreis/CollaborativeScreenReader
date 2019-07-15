@@ -75,11 +75,11 @@ public class Public : MonoBehaviour
                 if (selecao <= totais)
                 {
                     int selecm = totais - selecao;
-                    if (selecm == 1) myAudioSourceLow.PlayOneShot(f1cF);
-                    else if (selecm == 2) myAudioSourceLow.PlayOneShot(f2cF);
-                    else if (selecm == 3) myAudioSourceLow.PlayOneShot(f3cF);
-                    else if (selecm == 4) myAudioSourceLow.PlayOneShot(f4cF);
-                    else if (selecm == 5) myAudioSourceLow.PlayOneShot(f5cF);
+                    if (selecm == 1) myAudioSourceLow.PlayOneShot(f1cM);
+                    else if (selecm == 2) myAudioSourceLow.PlayOneShot(f2cM);
+                    else if (selecm == 3) myAudioSourceLow.PlayOneShot(f3cM);
+                    else if (selecm == 4) myAudioSourceLow.PlayOneShot(f4cM);
+                    else if (selecm == 5) myAudioSourceLow.PlayOneShot(f5cM);
                     else if (selecm == 0) print("Acabaram os circulos!");
                 }
                 else
