@@ -166,7 +166,7 @@ public class Select : MonoBehaviour
             {
                 System.Threading.Thread.Sleep((int)todosQuadradosF.length + 2000);
                 myAudioSource.PlayOneShot(f1cF);
-                System.Threading.Thread.Sleep((int)todosQuadradosF.length + 1500);
+                System.Threading.Thread.Sleep((int)f1cF.length + 1500);
                 myAudioSource.PlayOneShot(aoSeuParceiroF);
             }
             else if(FaltamXCirculos == 2)
@@ -194,7 +194,7 @@ public class Select : MonoBehaviour
             {
                 System.Threading.Thread.Sleep((int)todosQuadradosF.length + 2000);
                 myAudioSource.PlayOneShot(f5cF);
-                System.Threading.Thread.Sleep((int)todosQuadradosF.length + 1500);
+                System.Threading.Thread.Sleep((int)f5cF.length + 1500);
                 myAudioSource.PlayOneShot(aoSeuParceiroF);
             }
         }
