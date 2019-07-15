@@ -29,8 +29,8 @@ public class Select : MonoBehaviour
 
     public bool TarefaQuadradosFemale = false;
     public bool TarefaCirculosMale = false;
-    public int selecf;
-    public int selecm;
+    public int selecf = -1;
+    public int selecm = -1;
     int FaltamXCirculos;
     int FaltamXQuadrados;
     public Sounds ofSound;
