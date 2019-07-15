@@ -548,7 +548,7 @@ MonoBehaviour:
   soPodeQuad: {fileID: 8300000, guid: cfd539856ed60634aad5ea6d7fed5831, type: 3}
   soPodeCirc: {fileID: 8300000, guid: e211251571615114082a8dd8788dfb01, type: 3}
   TarefaQuadradosFemale: 0
-  TarefaCirculosMale: 1
+  TarefaCirculosMale: 0
   selecf: -1
   selecm: -1
   ofSound: {fileID: 2047352989}

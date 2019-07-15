@@ -193,7 +193,6 @@ public class Select : MonoBehaviour
                 myAudioSource.PlayOneShot(aoSeuParceiroF);
             }
         }
-
         // finaliza em God Mode
         //feedback ao outro
         if (TarefaCirculosMale)
@@ -361,8 +360,7 @@ public class Select : MonoBehaviour
                 myAudioSource.PlayOneShot(aoSeuParceiroM);
             }
         }
-
-        //finaliza em God Mode
+        
         if (TarefaQuadradosFemale)
         {
             FaltamXCirculos = ofSound.faltamXCirc;
