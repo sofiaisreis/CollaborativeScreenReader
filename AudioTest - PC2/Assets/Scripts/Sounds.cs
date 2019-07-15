@@ -39,6 +39,8 @@ public class Sounds : MonoBehaviour
             System.Threading.Thread.Sleep(2000);
             select.GetComponent<Select>().TarefaTerminada();
             estaoTodosSelecionados = false;
+            quadSelecionadosAteAgora = 0;
+            circSelecionadosAteAgora = 0;
         }
     }
 
