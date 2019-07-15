@@ -48,20 +48,13 @@ public class Male : MonoBehaviour
         myAudioSource.PlayOneShot(M2_triangulo);
     }
 
-    public void PlaySelected(int lastObj, int selecaoQuad, int selecaoCirc, int totais)
+    public void PlaySelected(int lastObj, int selecao, int totais)
     {
         gameObject.GetComponent<Renderer>().material.color = Color.blue;
         myAudioSource.PlayOneShot(selected);
-        selection.GetComponent<Select>().SelectionM(lastObj, selecaoQuad, selecaoCirc, totais);
+        selection.GetComponent<Select>().SelectionM(lastObj, selecao, totais);
     }
-
-    public void PlaySelectedGod(int lastObj, int selecaoQuad, int selecaoCirc, int totais)
-    {
-        gameObject.GetComponent<Renderer>().material.color = Color.blue;
-        myAudioSource.PlayOneShot(selected);
-        selection.GetComponent<Select>().SelectionGod(lastObj, selecaoQuad, selecaoCirc, totais);
-    }
-
+    
     public void PlayError(bool soPode = true)
     {
         gameObject.GetComponent<Renderer>().material.color = Color.blue;
@@ -75,10 +68,10 @@ public class Male : MonoBehaviour
 
 
     //PUBLICS LOWER VOLUME
-    public void PlaySelectedPublic(int lastObj, int selecaoQuad, int selecaoCirc, int totais)
+    public void PlaySelectedPublic(int lastObj, int selecao, int totais)
     {
         gameObject.GetComponent<Renderer>().material.color = Color.blue;
-        publicos.GetComponent<Public>().SelectedPublicM(lastObj, selecaoQuad, selecaoCirc, totais);
+        publicos.GetComponent<Public>().SelectedPublicM(lastObj, selecao, totais);
     }
 
     public void PlayErrorPublic(bool soPode = true)

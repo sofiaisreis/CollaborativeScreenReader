@@ -40,56 +40,53 @@ public class Public : MonoBehaviour
     
     //PUBLICS
 
-    public void SelectedPublicF(int lastObj, int selecaoQuad, int selecaoCirc, int totais)
+    public void SelectedPublicF(int lastObj, int selecao, int totais)
     {
-        faltamTotalF = totais - selecaoQuad;
-        faltamTotalM = totais - selecaoCirc;
         myAudioSourceLow.PlayOneShot(selected);
         System.Threading.Thread.Sleep((int)selected.length + 300);
         switch (lastObj)
         {
             case 1: //quadrado
-                if (selecaoQuad <= totais)
+                if (selecao <= totais)
                 {
-                    if (faltamTotalF == 1) myAudioSourceLow.PlayOneShot(f1qF);
-                    else if (faltamTotalF == 2) myAudioSourceLow.PlayOneShot(f2qF);
-                    else if (faltamTotalF == 3) myAudioSourceLow.PlayOneShot(f3qF);
-                    else if (faltamTotalF == 4) myAudioSourceLow.PlayOneShot(f4qF);
-                    else if (faltamTotalF == 5) myAudioSourceLow.PlayOneShot(f5qF);
-                    else if (faltamTotalF == 0 || somEntrada.GetComponent<Sounds>().faltamXQuad == 0)
-                    {
-                        TTF = true;
-                        sele.GetComponent<Select>().TarefaQuadradosFemale = TTF;
-                    }
+                    int selecf = totais - selecao;
+                    if (selecf == 1) myAudioSourceLow.PlayOneShot(f1qF);
+                    else if (selecf == 2) myAudioSourceLow.PlayOneShot(f2qF);
+                    else if (selecf == 3) myAudioSourceLow.PlayOneShot(f3qF);
+                    else if (selecf == 4) myAudioSourceLow.PlayOneShot(f4qF);
+                    else if (selecf == 5) myAudioSourceLow.PlayOneShot(f5qF);
+                    else if (selecf == 0) print("Acabaram os quadrados!");
+                }
+                else
+                {
+                    print("Something is wrong!");
                 }
                 break;
         }
     }
 
-    public void SelectedPublicM(int lastObj,int selecaoQuad, int selecaoCirc, int totais)
+    public void SelectedPublicM(int lastObj,int selecao, int totais)
     {
-        faltamTotalF = totais - selecaoQuad;
-        faltamTotalM = totais - selecaoCirc;
         myAudioSourceLow.PlayOneShot(selected);
         System.Threading.Thread.Sleep((int)selected.length + 300);
-
         switch (lastObj)
         {
             case 2: //circulo
-                if (selecaoCirc <= totais)
+                if (selecao <= totais)
                 {
-                    if (faltamTotalM == 1) myAudioSourceLow.PlayOneShot(f1cM);
-                    else if (faltamTotalM == 2) myAudioSourceLow.PlayOneShot(f2cM);
-                    else if (faltamTotalM == 3) myAudioSourceLow.PlayOneShot(f3cM);
-                    else if (faltamTotalM == 4) myAudioSourceLow.PlayOneShot(f4cM);
-                    else if (faltamTotalM == 5) myAudioSourceLow.PlayOneShot(f5cM);
-                    else if (faltamTotalM == 0 || somEntrada.GetComponent<Sounds>().faltamXCirc == 0)
-                    {
-                        TTM = true;
-                        sele.GetComponent<Select>().TarefaCirculosMale = TTM;
-                    }
+                    int selecm = totais - selecao;
+                    if (selecm == 1) myAudioSourceLow.PlayOneShot(f1qF);
+                    else if (selecm == 2) myAudioSourceLow.PlayOneShot(f2qF);
+                    else if (selecm == 3) myAudioSourceLow.PlayOneShot(f3qF);
+                    else if (selecm == 4) myAudioSourceLow.PlayOneShot(f4qF);
+                    else if (selecm == 5) myAudioSourceLow.PlayOneShot(f5qF);
+                    else if (selecm == 0) print("Acabaram os circulos!");
                 }
-                    break;
+                else
+                {
+                    print("Something is wrong!");
+                }
+                break;
         }
     }
     

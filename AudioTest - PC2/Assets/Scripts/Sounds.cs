@@ -77,12 +77,6 @@ public class Sounds : MonoBehaviour
                 faltamXCirc = 5 - circSelecionadosAteAgora;
             }
 
-            if ((select.GetComponent<Select>().TarefaQuadradosFemale || publics.GetComponent<Public>().TTF) && (select.GetComponent<Select>().TarefaCirculosMale || publics.GetComponent<Public>().TTM))
-            {
-                print("Entrei!");
-                estaoTodosSelecionados = true;
-                select.GetComponent<Select>().
-            }
 
             /*********** Feedback Private **********/
             if (feedback == 1)
@@ -129,7 +123,7 @@ public class Sounds : MonoBehaviour
                             }
                             else if (objTypeSound == 4)
                             {
-                                female.GetComponent<Female>().PlaySelected(lastObj, quadSelecionadosAteAgora, circSelecionadosAteAgora, totais);
+                                female.GetComponent<Female>().PlaySelected(lastObj, selecionados, totais);
                             }
                             else if (objTypeSound == 6)
                             {                              
@@ -167,7 +161,7 @@ public class Sounds : MonoBehaviour
                             }
                             else if (objTypeSound == 4)
                             {
-                                male.GetComponent<Male>().PlaySelected(lastObj, quadSelecionadosAteAgora, circSelecionadosAteAgora, totais);
+                                male.GetComponent<Male>().PlaySelected(lastObj, selecionados, totais);
                             }
                             else if (objTypeSound == 6)
                             {
@@ -217,7 +211,7 @@ public class Sounds : MonoBehaviour
                             }
                             else if (objTypeSound == 4)
                             {
-                                female.GetComponent<Female>().PlaySelected(lastObj, quadSelecionadosAteAgora, circSelecionadosAteAgora, totais);
+                                female.GetComponent<Female>().PlaySelected(lastObj, selecionados, totais);
                             }
                             else if (objTypeSound == 6)
                             {
@@ -278,7 +272,7 @@ public class Sounds : MonoBehaviour
                             }
                             else if (objTypeSound == 4)
                             {
-                                male.GetComponent<Male>().PlaySelected(lastObj, quadSelecionadosAteAgora, circSelecionadosAteAgora, totais);
+                                male.GetComponent<Male>().PlaySelected(lastObj, selecionados, totais);
                             }
                             else if (objTypeSound == 6)
                             {
@@ -328,7 +322,7 @@ public class Sounds : MonoBehaviour
                             else if (objTypeSound == 4)
                             {
                                 //Select Alto/Normal para ela
-                                female.GetComponent<Female>().PlaySelected(lastObj, quadSelecionadosAteAgora, circSelecionadosAteAgora, totais);
+                                female.GetComponent<Female>().PlaySelected(lastObj, selecionados, totais);
                             }
                             else if (objTypeSound == 6)
                             {
@@ -367,7 +361,7 @@ public class Sounds : MonoBehaviour
                             {
                                 //Select Baixo para ele ouvir baixo
                                 //female.transform.position =;
-                                female.GetComponent<Female>().PlaySelectedPublic(lastObj, quadSelecionadosAteAgora, circSelecionadosAteAgora, totais);
+                                female.GetComponent<Female>().PlaySelectedPublic(lastObj, selecionados, totais);
                             }
                             else if (objTypeSound == 6)
                             {
@@ -410,7 +404,7 @@ public class Sounds : MonoBehaviour
 
                                 //Select Baixo para ela ouvir baixo
                                 //male.transform.position =;
-                                male.GetComponent<Male>().PlaySelectedPublic(lastObj, quadSelecionadosAteAgora, circSelecionadosAteAgora, totais);
+                                male.GetComponent<Male>().PlaySelectedPublic(lastObj, selecionados, totais);
                             }
                             else if (objTypeSound == 6)
                             {
@@ -447,7 +441,7 @@ public class Sounds : MonoBehaviour
                             else if (objTypeSound == 4)
                             {
                                 //Select Alto/Normal para ele
-                                male.GetComponent<Male>().PlaySelected(lastObj, quadSelecionadosAteAgora, circSelecionadosAteAgora, totais);
+                                male.GetComponent<Male>().PlaySelected(lastObj, selecionados, totais);
                             }
                             else if (objTypeSound == 6)
                             {
@@ -494,7 +488,7 @@ public class Sounds : MonoBehaviour
                         }
                         else if (objTypeSound == 4)
                         {
-                            female.GetComponent<Female>().PlaySelectedGod(lastObj, quadSelecionadosAteAgora, circSelecionadosAteAgora, totais);
+                            female.GetComponent<Female>().PlaySelected(lastObj, selecionados, totais);
                         }
 
                         else if (objTypeSound == 6 || objTypeSound == 7)
@@ -525,7 +519,7 @@ public class Sounds : MonoBehaviour
                         }
                         else if (objTypeSound == 4)
                         {
-                            male.GetComponent<Male>().PlaySelectedGod(lastObj, quadSelecionadosAteAgora, circSelecionadosAteAgora, totais);
+                            male.GetComponent<Male>().PlaySelected(lastObj, selecionados, totais);
                         }
                         else if (objTypeSound == 6 || objTypeSound == 7)
                         {

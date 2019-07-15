@@ -50,16 +50,10 @@ public class Female : MonoBehaviour
         myAudioSource.PlayOneShot(F1_triangulo);
     }
 
-    public void PlaySelected(int lastObj, int selecaoQuad, int selecaoCirc, int totais)
+    public void PlaySelected(int lastObj, int selecao, int totais)
     {
         gameObject.GetComponent<Renderer>().material.color = Color.magenta;
-        selection.GetComponent<Select>().SelectionF(lastObj, selecaoQuad, selecaoCirc, totais);
-    }
-
-    public void PlaySelectedGod(int lastObj, int selecaoQuad, int selecaoCirc, int totais)
-    {
-        gameObject.GetComponent<Renderer>().material.color = Color.magenta;
-        selection.GetComponent<Select>().SelectionGod(lastObj, selecaoQuad, selecaoCirc, totais);
+        selection.GetComponent<Select>().SelectionF(lastObj, selecao, totais);
     }
 
     public void PlayError(bool soPode = true)
@@ -77,9 +71,9 @@ public class Female : MonoBehaviour
 
 
     // PUBLICS LOWER VOLUME
-    public void PlaySelectedPublic(int lastObj, int selecaoQuad, int selecaoCirc, int totais)
+    public void PlaySelectedPublic(int lastObj, int selecao, int totais)
     {
-        publicos.GetComponent<Public>().SelectedPublicF(lastObj, selecaoQuad, selecaoCirc, totais);
+        publicos.GetComponent<Public>().SelectedPublicF(lastObj, selecao, totais);
     }
 
     public void PlayErrorPublic(bool soPode = true)
