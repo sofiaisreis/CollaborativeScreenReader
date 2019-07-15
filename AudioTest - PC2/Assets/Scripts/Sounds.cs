@@ -33,10 +33,12 @@ public class Sounds : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha2))
             user = 2;
         if (select.GetComponent<Select>().TarefaQuadradosFemale && select.GetComponent<Select>().TarefaCirculosMale) estaoTodosSelecionados = true;
+        if (quadSelecionadosAteAgora == 5 && circSelecionadosAteAgora == 5) estaoTodosSelecionados = true;
         if (estaoTodosSelecionados)
         {
             System.Threading.Thread.Sleep(2000);
             select.GetComponent<Select>().TarefaTerminada();
+            estaoTodosSelecionados = false;
         }
     }
 
