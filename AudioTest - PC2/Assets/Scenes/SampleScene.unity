@@ -550,9 +550,11 @@ MonoBehaviour:
   TarefaQuadradosFemale: 0
   TarefaCirculosMale: 0
   TarefaChegouAoFim: 0
-  faltamTotalF: -1
-  faltamTotalM: -1
-  somEntrada: {fileID: 2047352987}
+  selecf: -1
+  selecm: -1
+  FaltamXQuadrados: 5
+  FaltamXCirculos: 5
+  sounds: {fileID: 2047352987}
 --- !u!4 &1215339071
 Transform:
   m_ObjectHideFlags: 0
