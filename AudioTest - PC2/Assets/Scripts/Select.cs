@@ -112,6 +112,11 @@ public class Select : MonoBehaviour
                     {
                         myAudioSource.PlayOneShot(todosQuadradosF);
                         TarefaQuadradosFemale = true;
+                        if (TarefaCirculosMale)
+                        {
+                            System.Threading.Thread.Sleep(2000);
+                            myAudioSource.PlayOneShot(tarefaterminadaAmobs);
+                        }
                     }
                 }
                 break;
@@ -279,6 +284,11 @@ public class Select : MonoBehaviour
                     {
                         myAudioSource.PlayOneShot(todosQuadradosF);
                         TarefaQuadradosFemale = true;
+                        if (TarefaCirculosMale)
+                        {
+                            System.Threading.Thread.Sleep(2000);
+                            myAudioSource.PlayOneShot(tarefaterminadaAmobs);
+                        }
                     }
                 }
                 break;
