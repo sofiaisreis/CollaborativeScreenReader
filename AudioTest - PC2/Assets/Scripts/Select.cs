@@ -76,6 +76,11 @@ public class Select : MonoBehaviour
         myAudioSource.PlayOneShot(errorSound);
     }
 
+    public void TarefaTerminada()
+    {
+        myAudioSource.PlayOneShot(tarefaterminadaAmobs);
+    }
+
     public void SelectionF(int lastObj, int selecao, int totais)
     {
         myAudioSource.PlayOneShot(selected);
@@ -115,13 +120,13 @@ public class Select : MonoBehaviour
                         if (TarefaCirculosMale)
                         {
                             System.Threading.Thread.Sleep(2000);
-                            myAudioSource.PlayOneShot(tarefaterminadaAmobs);
+                            TarefaTerminada();
                         }
                     }
                 }
                 break;
             //Acontece em GOD MODE
-            case 2: //circulo
+            /*case 2: //circulo
                 print("God indeed");
                 if (selecao <= totais)
                 {
@@ -149,20 +154,16 @@ public class Select : MonoBehaviour
                     {
                         myAudioSource.PlayOneShot(todosCirculosM);
                         TarefaCirculosMale = true;
+
                     }
                 }
-                break;
+                break;*/
         }
         // feedback ao outro
         if (TarefaQuadradosFemale)
         {
             FaltamXCirculos = ofSound.faltamXCirc;
-            if (FaltamXCirculos == 0)
-            {
-                System.Threading.Thread.Sleep((int)todosQuadradosF.length + 2000);
-                myAudioSource.PlayOneShot(tarefaterminadaAmobs);
-            }
-            else if (FaltamXCirculos == 1)
+            if (FaltamXCirculos == 1)
             {
                 System.Threading.Thread.Sleep((int)todosQuadradosF.length + 2000);
                 myAudioSource.PlayOneShot(f1cF);
@@ -198,7 +199,7 @@ public class Select : MonoBehaviour
                 myAudioSource.PlayOneShot(aoSeuParceiroF);
             }
         }
-        // finaliza em God Mode
+        /*// finaliza em God Mode
         //feedback ao outro
         if (TarefaCirculosMale)
         {
@@ -243,7 +244,7 @@ public class Select : MonoBehaviour
                 System.Threading.Thread.Sleep((int)f5qM.length + 1500);
                 myAudioSource.PlayOneShot(aoSeuParceiroM);
             }
-        }
+        }*/
 
     }
 
@@ -255,7 +256,7 @@ public class Select : MonoBehaviour
 
         switch (lastObj)
         {
-            //Acontece em God Mode
+            /*//Acontece em God Mode
             case 1: //quadrado
                 print("God indeed");
                 if (selecao <= totais)
@@ -291,7 +292,7 @@ public class Select : MonoBehaviour
                         }
                     }
                 }
-                break;
+                break;*/
 
             case 2: //circulo
                 if (selecao <= totais)
@@ -318,23 +319,23 @@ public class Select : MonoBehaviour
                     }
                     else if (selecm == 0)
                     {
-
                         myAudioSource.PlayOneShot(todosCirculosM);
                         TarefaCirculosMale = true;
+                        if (TarefaQuadradosFemale)
+                        {
+                            System.Threading.Thread.Sleep(2000);
+                            TarefaTerminada();
+                        }
                     }
                 }
                 break;
         }
-        //feedback ao outro
+        /*
+        //feedback ao outro GOD
         if (TarefaCirculosMale)
         {
             FaltamXQuadrados = ofSound.faltamXQuad;
-            if (FaltamXQuadrados == 0)
-            {
-                System.Threading.Thread.Sleep((int)todosQuadradosF.length + 2000);
-                myAudioSource.PlayOneShot(tarefaterminadaAmobs);
-            }
-            else if (FaltamXQuadrados == 1)
+            if (FaltamXQuadrados == 1)
             {
                 System.Threading.Thread.Sleep((int)todosQuadradosF.length + 2000);
                 myAudioSource.PlayOneShot(f1qM);
@@ -370,16 +371,11 @@ public class Select : MonoBehaviour
                 myAudioSource.PlayOneShot(aoSeuParceiroM);
             }
         }
-        
+        */
         if (TarefaQuadradosFemale)
         {
             FaltamXCirculos = ofSound.faltamXCirc;
-            if (FaltamXCirculos == 0)
-            {
-                System.Threading.Thread.Sleep((int)todosQuadradosF.length + 2000);
-                myAudioSource.PlayOneShot(tarefaterminadaAmobs);
-            }
-            else if (FaltamXCirculos == 1)
+            if (FaltamXCirculos == 1)
             {
                 System.Threading.Thread.Sleep((int)todosQuadradosF.length + 2000);
                 myAudioSource.PlayOneShot(f1cF);
