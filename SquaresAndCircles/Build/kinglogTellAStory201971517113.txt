@@ -1,0 +1,5 @@
+FEEDBACK IS PUBLIC!
+BOARD WITHOUT TRIANGLES
+At 6775.8966 User1 selected square and there is still 4 squares to select.
+At 6775.8966 User1 tried to select square, but it's empty, so that is not possible.
+At 8560.7748 task was stopped

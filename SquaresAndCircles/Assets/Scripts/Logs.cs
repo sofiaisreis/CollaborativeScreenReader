@@ -238,9 +238,9 @@ public class Logs : MonoBehaviour
         taskStart = DateTime.Now;
 
         CompletedTask = false;
-        List<string> text = new List<string>();
-        List<string> textAglomerate = new List<string>();
-        List<string> textStory = new List<string>();
+        text = new List<string>();
+        textAglomerate = new List<string>();
+        textStory = new List<string>();
         //POSICAO USER de novo
         User1Posicao = User1Pos.transform.position;
         User2Posicao = User2Pos.transform.position;
