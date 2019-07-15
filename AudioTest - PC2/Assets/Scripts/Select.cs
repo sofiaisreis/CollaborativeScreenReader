@@ -26,6 +26,12 @@ public class Select : MonoBehaviour
                      errorSound,
                      soPodeQuad,
                      soPodeCirc;
+
+    internal void TocaOFinal()
+    {
+        throw new NotImplementedException();
+    }
+
     public bool TarefaQuadradosFemale = false;
     public bool TarefaCirculosMale = false;
     public bool TarefaChegouAoFim = false;
@@ -113,8 +119,7 @@ public class Select : MonoBehaviour
 
                         if (TarefaCirculosMale || somEntrada.GetComponent<Sounds>().faltamXCirc == 0)
                         {
-                            System.Threading.Thread.Sleep(2000);
-                            myAudioSource.PlayOneShot(tarefaterminadaAmobs);
+                            TocaTodos();
                         }
                         
                         // feedback ao outro
@@ -152,43 +157,6 @@ public class Select : MonoBehaviour
                     }
                 }
                 break;
-                /*
-            //Acontece em God Mode
-            case 2: //circulo
-                if (selecao <= totais)
-                {
-                    if (selecm == 1)
-                    {
-                        myAudioSource.PlayOneShot(f1cM);
-                    }
-                    else if (selecm == 2)
-                    {
-                        myAudioSource.PlayOneShot(f2cM);
-                    }
-                    else if (selecm == 3)
-                    {
-                        myAudioSource.PlayOneShot(f3cM);
-                    }
-                    else if (selecm == 4)
-                    {
-                        myAudioSource.PlayOneShot(f4cM);
-                    }
-                    else if (selecm == 5)
-                    {
-                        myAudioSource.PlayOneShot(f5cM);
-                    }
-                    else if (selecm == 0)
-                    {
-                        myAudioSource.PlayOneShot(todosCirculosM);
-                        TarefaCirculosMale = true;
-                        if (TarefaQuadradosFemale)
-                        {
-                            System.Threading.Thread.Sleep(2000);
-                            myAudioSource.PlayOneShot(tarefaterminadaAmobs);
-                        }
-                    }
-                }
-                break;*/
         }
     }
 
@@ -200,44 +168,7 @@ public class Select : MonoBehaviour
         faltamTotalM = totais - selecaoCirc;
 
         switch (lastObj)
-        {/*
-            //Acontece em God Mode
-            case 1: //quadrado
-                if (selecao <= totais)
-                {
-                    if (selecf == 1)
-                    {
-                        myAudioSource.PlayOneShot(f1qF);
-                    }
-                    else if (selecf == 2)
-                    {
-                        myAudioSource.PlayOneShot(f2qF);
-                    }
-                    else if (selecf == 3)
-                    {
-                        myAudioSource.PlayOneShot(f3qF);
-                    }
-                    else if (selecf == 4)
-                    {
-                        myAudioSource.PlayOneShot(f4qF);
-                    }
-                    else if (selecf == 5)
-                    {
-                        myAudioSource.PlayOneShot(f5qF);
-                    }
-                    else if (selecf == 0)
-                    {
-                        myAudioSource.PlayOneShot(todosQuadradosF);
-                        TarefaQuadradosFemale = true;
-                        if (TarefaCirculosMale)
-                        {
-                            System.Threading.Thread.Sleep(2000);
-                            myAudioSource.PlayOneShot(tarefaterminadaAmobs);
-                        }
-                    }
-                }
-                break;*/
-
+        {
             case 2: //circulo
                 if (selecaoCirc <= totais)
                 {
@@ -268,8 +199,7 @@ public class Select : MonoBehaviour
                         TarefaCirculosMale = true;
                         
                         if (TarefaQuadradosFemale || somEntrada.GetComponent<Sounds>().faltamXQuad == 0) {
-                            System.Threading.Thread.Sleep(2000);
-                            myAudioSource.PlayOneShot(tarefaterminadaAmobs);
+                            TocaTodos();
                         }
 
                         //feedback ao outro
@@ -349,8 +279,7 @@ public class Select : MonoBehaviour
                         TarefaQuadradosFemale = true;
                         if (TarefaCirculosMale || somEntrada.GetComponent<Sounds>().faltamXCirc == 0)
                         {
-                            System.Threading.Thread.Sleep(2000);
-                            myAudioSource.PlayOneShot(tarefaterminadaAmobs);
+                            TocaTodos();
                         }
                     }
                 }
@@ -384,12 +313,18 @@ public class Select : MonoBehaviour
                         TarefaCirculosMale = true;
                         if (TarefaQuadradosFemale || somEntrada.GetComponent<Sounds>().faltamXQuad == 0)
                         {
-                            System.Threading.Thread.Sleep(2000);
-                            myAudioSource.PlayOneShot(tarefaterminadaAmobs);
+                            TocaTodos();
                         }
                     }
                 }
                 break;
         }
     }
+
+    public void TocaTodos()
+    {
+        System.Threading.Thread.Sleep(2000);
+        myAudioSource.PlayOneShot(tarefaterminadaAmobs);
+    }
+
 }

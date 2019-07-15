@@ -23,6 +23,8 @@ public class Public : MonoBehaviour
                      soPodeCirc;
     public Select sele;
     public GameObject somEntrada;
+    public bool TTF = false;
+    public bool TTM = false;
 
     public int faltamTotalF = -1;
     public int faltamTotalM = -1;
@@ -56,7 +58,8 @@ public class Public : MonoBehaviour
                     else if (faltamTotalF == 5) myAudioSourceLow.PlayOneShot(f5qF);
                     else if (faltamTotalF == 0 || somEntrada.GetComponent<Sounds>().faltamXQuad == 0)
                     {
-                        sele.GetComponent<Select>().TarefaQuadradosFemale = true;
+                        TTF = true;
+                        sele.GetComponent<Select>().TarefaQuadradosFemale = TTF;
                     }
                 }
                 break;
@@ -82,7 +85,8 @@ public class Public : MonoBehaviour
                     else if (faltamTotalM == 5) myAudioSourceLow.PlayOneShot(f5cM);
                     else if (faltamTotalM == 0 || somEntrada.GetComponent<Sounds>().faltamXCirc == 0)
                     {
-                        sele.GetComponent<Select>().TarefaCirculosMale = true;
+                        TTM = true;
+                        sele.GetComponent<Select>().TarefaCirculosMale = TTM;
                     }
                 }
                     break;

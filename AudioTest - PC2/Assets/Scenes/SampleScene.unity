@@ -1035,6 +1035,8 @@ MonoBehaviour:
   soPodeCirc: {fileID: 8300000, guid: bd4b26b864eb24b43a022a6e1ee7458e, type: 3}
   sele: {fileID: 1215339070}
   somEntrada: {fileID: 2047352987}
+  TTF: 0
+  TTM: 0
   faltamTotalF: -1
   faltamTotalM: -1
 --- !u!4 &1940797361
@@ -1084,6 +1086,7 @@ MonoBehaviour:
   female: {fileID: 1812368696}
   male: {fileID: 461588493}
   select: {fileID: 1215339068}
+  publics: {fileID: 1940797357}
   udpConnection: {fileID: 0}
   feedbackType: 
   port: 7001
@@ -1091,6 +1094,9 @@ MonoBehaviour:
   userToPlay: 0
   quadSelecionadosAteAgora: 0
   circSelecionadosAteAgora: 0
+  faltamXQuad: 5
+  faltamXCirc: 5
+  estaoTodosSelecionados: 0
 --- !u!4 &2047352990
 Transform:
   m_ObjectHideFlags: 0

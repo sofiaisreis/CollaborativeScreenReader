@@ -8,6 +8,7 @@ public class Sounds : MonoBehaviour
     public GameObject female;
     public GameObject male;
     public GameObject select;
+    public GameObject publics;
     public UDPListener udpConnection;
     public string feedbackType;
     public int port;
@@ -17,6 +18,7 @@ public class Sounds : MonoBehaviour
     public int circSelecionadosAteAgora = 0;
     public int faltamXQuad = 5;
     public int faltamXCirc = 5;
+    public bool estaoTodosSelecionados = false;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +34,7 @@ public class Sounds : MonoBehaviour
             user = 2;
     }
 
-    internal void ParseAndPlay(string stringToParse)
+    public void ParseAndPlay(string stringToParse)
     {
         print("string_ " + stringToParse);
         string[] ourStrings = stringToParse.Split(':');
@@ -52,24 +54,34 @@ public class Sounds : MonoBehaviour
             int totais = int.Parse(ourStrings[11]);
             int feedback = int.Parse(ourStrings[12]);
 
-            // Reinicia a contagem dos selecionados, porque se escolheu um novo feedback. Logo, à partida, estamos numa nova tarefa
+            // Reinicia a contagem dos selecionados, porque se clicou 'a' estamos numa nova tarefa
             if(lastObj == -2)
             {
                 quadSelecionadosAteAgora = 0;
                 circSelecionadosAteAgora = 0;
                 faltamXQuad = 5;
                 faltamXCirc = 5;
+                lastObj = -1;
+                objTypeSound = -1;
+                estaoTodosSelecionados = false;
                 select.GetComponent<Select>().TarefaQuadradosFemale = select.GetComponent<Select>().TarefaCirculosMale = false;
             }
-            if(userID == 1 && objTypeSound == 4 || objTypeSound == 4 && feedback == 4)
+            if(userID == 1 && objTypeSound == 4 || lastObj == 1 && objTypeSound == 4 && feedback == 4)
             {
                 quadSelecionadosAteAgora = selecionados;
                 faltamXQuad = 5 - quadSelecionadosAteAgora;
             }
-            if(userID == 2 && objTypeSound == 4 || objTypeSound == 4 && feedback == 4)
+            if(userID == 2 && objTypeSound == 4 || lastObj == 2 && objTypeSound == 4 && feedback == 4)
             {
                 circSelecionadosAteAgora = selecionados;
                 faltamXCirc = 5 - circSelecionadosAteAgora;
+            }
+
+            if ((select.GetComponent<Select>().TarefaQuadradosFemale || publics.GetComponent<Public>().TTF) && (select.GetComponent<Select>().TarefaCirculosMale || publics.GetComponent<Public>().TTM))
+            {
+                print("Entrei!");
+                estaoTodosSelecionados = true;
+                select.GetComponent<Select>().
             }
 
             /*********** Feedback Private **********/

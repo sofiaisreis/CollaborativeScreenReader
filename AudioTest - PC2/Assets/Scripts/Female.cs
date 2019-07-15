@@ -85,7 +85,8 @@ public class Female : MonoBehaviour
     public void PlayErrorPublic(bool soPode = true)
     {
         gameObject.GetComponent<Renderer>().material.color = Color.magenta;
-        publicos.GetComponent<Public>().ErrorPublicF(soPode);
+        publicos.GetComponent<Public>().ErrorVazioPublicF();
+        //publicos.GetComponent<Public>().ErrorPublicF(soPode);
     }
 
     public void PlayErrorVazioPublic()
