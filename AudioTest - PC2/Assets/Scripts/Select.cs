@@ -29,12 +29,11 @@ public class Select : MonoBehaviour
 
     public bool TarefaQuadradosFemale = false;
     public bool TarefaCirculosMale = false;
-    public bool TarefaChegouAoFim = false;
-    public int selecf = -1;
-    public int selecm = -1;
-    public int FaltamXQuadrados = 5;
-    public int FaltamXCirculos = 5;
-    public GameObject sounds;
+    public int selecf;
+    public int selecm;
+    int FaltamXCirculos;
+    int FaltamXQuadrados;
+    public Sounds ofSound;
 
     /* Object:
      * quad = 1
@@ -152,7 +151,7 @@ public class Select : MonoBehaviour
         // feedback ao outro
         if (TarefaQuadradosFemale)
         {
-        //FaltamXCirculos = sounds.getComponent<Sounds>().faltamXCirc
+            FaltamXCirculos = ofSound.faltamXCirc;
             if (FaltamXCirculos == 0)
             {
                 System.Threading.Thread.Sleep((int)todosQuadradosF.length + 2000);
@@ -199,7 +198,7 @@ public class Select : MonoBehaviour
         //feedback ao outro
         if (TarefaCirculosMale)
         {
-            //FaltamXQuadrados = sounds.getComponent<Sounds>().faltamXQuad
+            FaltamXQuadrados = ofSound.faltamXQuad;
             if (FaltamXQuadrados == 0)
             {
                 System.Threading.Thread.Sleep((int)todosQuadradosF.length + 2000);
@@ -320,7 +319,7 @@ public class Select : MonoBehaviour
         //feedback ao outro
         if (TarefaCirculosMale)
         {
-            //FaltamXQuadrados = sounds.getComponent<Sounds>().faltamXQuad
+            FaltamXQuadrados = ofSound.faltamXQuad;
             if (FaltamXQuadrados == 0)
             {
                 System.Threading.Thread.Sleep((int)todosQuadradosF.length + 2000);
@@ -366,7 +365,7 @@ public class Select : MonoBehaviour
         //finaliza em God Mode
         if (TarefaQuadradosFemale)
         {
-            //FaltamXCirculos = sounds.getComponent<Sounds>().faltamXCirc
+            FaltamXCirculos = ofSound.faltamXCirc;
             if (FaltamXCirculos == 0)
             {
                 System.Threading.Thread.Sleep((int)todosQuadradosF.length + 2000);

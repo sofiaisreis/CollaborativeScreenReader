@@ -16,8 +16,8 @@ public class Sounds : MonoBehaviour
     public int userToPlay = 0;
     public int quadSelecionadosAteAgora = 0;
     public int circSelecionadosAteAgora = 0;
-    public int faltamXQuad = 5;
-    public int faltamXCirc = 5;
+    public int faltamXQuad;
+    public int faltamXCirc;
     public bool estaoTodosSelecionados = false;
 
     // Start is called before the first frame update
