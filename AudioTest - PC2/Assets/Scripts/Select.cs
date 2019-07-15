@@ -117,11 +117,6 @@ public class Select : MonoBehaviour
                     {
                         myAudioSource.PlayOneShot(todosQuadradosF);
                         TarefaQuadradosFemale = true;
-                        if (TarefaCirculosMale)
-                        {
-                            System.Threading.Thread.Sleep(2000);
-                            TarefaTerminada();
-                        }
                     }
                 }
                 break;
@@ -321,17 +316,12 @@ public class Select : MonoBehaviour
                     {
                         myAudioSource.PlayOneShot(todosCirculosM);
                         TarefaCirculosMale = true;
-                        if (TarefaQuadradosFemale)
-                        {
-                            System.Threading.Thread.Sleep(2000);
-                            TarefaTerminada();
-                        }
                     }
                 }
                 break;
         }
-        /*
-        //feedback ao outro GOD
+        
+        //feedback ao outro
         if (TarefaCirculosMale)
         {
             FaltamXQuadrados = ofSound.faltamXQuad;
@@ -371,7 +361,7 @@ public class Select : MonoBehaviour
                 myAudioSource.PlayOneShot(aoSeuParceiroM);
             }
         }
-        */
+        /*
         if (TarefaQuadradosFemale)
         {
             FaltamXCirculos = ofSound.faltamXCirc;
@@ -410,6 +400,6 @@ public class Select : MonoBehaviour
                 System.Threading.Thread.Sleep((int)todosQuadradosF.length + 1500);
                 myAudioSource.PlayOneShot(aoSeuParceiroF);
             }
-        }
+        }*/
     }
 }
