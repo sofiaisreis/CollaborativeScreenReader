@@ -252,12 +252,8 @@ public class Logs : MonoBehaviour
         U2LH = User1LeftHandPos.transform.position;
         User1hasTouch = false;
         User2hasTouch = false;
-        HandCubeU1.x = -1000;
-        HandCubeU2.x = -1000;
-        HandCubeU1.y = -1000;
-        HandCubeU2.y = -1000;
-        HandCubeU1.z = -1000;
-        HandCubeU2.z = -1000;
+        HandCube1Pos.transform.position = Vector3.zero;
+        HandCube2Pos.transform.position = Vector3.zero;
         //incSQ = NQuadToSelect.GetComponent<ColliderObj>().squares_inc;
         //incCC = NCircToSelect.GetComponent<ColliderObj>().circles_inc;
         incSQ = 0;
@@ -266,8 +262,6 @@ public class Logs : MonoBehaviour
         NumCircsToSelect = NCircToSelect.GetComponent<ColliderObj>().circles_findTotal;
         U1LastColliding = null;
         U2LastColliding = null;
-        LastCollidingTypeU1 = null;
-        LastCollidingTypeU2 = null;
         HoverOTU1 = null;
         HoverOTU2 = null;
         LastCollidingTypeU1 = null;
@@ -437,7 +431,7 @@ public class Logs : MonoBehaviour
                 NumSelecoesErradasOU1++;
                 TimeStampSelecoesErradasU1.Add(timestamp.TotalMilliseconds);
             }
-            if (LastCollidingTypeU1 != "square" && LastCollidingTypeU1 != "circle" && LastCollidingTypeU1 != "triangle")
+            if (LastCollidingTypeU1 != "circle" && LastCollidingTypeU1 != "triangle")
             {
                 NumSelecoesVaziasU1++;
                 TimeStampVaziosU1.Add(timestamp.TotalMilliseconds);
@@ -455,7 +449,7 @@ public class Logs : MonoBehaviour
                 NumSelecoesErradasOU2++;
                 TimeStampSelecoesErradasU2.Add(timestamp.TotalMilliseconds);
             }
-            if (LastCollidingTypeU2 != "circle" && LastCollidingTypeU2 != "square" && LastCollidingTypeU2 != "triangle")
+            if (LastCollidingTypeU2 != "square" && LastCollidingTypeU2 != "triangle")
             {
                 NumSelecoesVaziasU2++;
                 TimeStampVaziosU2.Add(timestamp.TotalMilliseconds);
@@ -607,6 +601,7 @@ public class Logs : MonoBehaviour
             if(NumQuadsToSelect != 0)
             {
                 TimeStampQuadrados.Add(timestamp.TotalMilliseconds);
+                TempoSelecaoQuadrados = timestamp.TotalMilliseconds;
                 textStory.Add("At " + timestamp.TotalMilliseconds + " User1 selected " + LastCollidingTypeU1 + " and there is still " + NumQuadsToSelect + " squares to select.");
             }
             else
@@ -620,11 +615,16 @@ public class Logs : MonoBehaviour
         {
             textStory.Add("At " + timestamp.TotalMilliseconds + " User1 tried to select " + LastCollidingTypeU1 + " and that is not possible.");
         }
+        if (U1TouchType == "double-tap" && LastCollidingTypeU1 == "square" || U1TouchType == "double-tap" && LastCollidingTypeU1 == null) // aka error do vazio
+        {
+            textStory.Add("At " + timestamp.TotalMilliseconds + " User1 tried to select " + LastCollidingTypeU1 + ", but it's empty, so that is not possible.");
+        }
         if (U2Action == "selected" && NumCircsToSelect >= 0)
         {
             if(NumCircsToSelect != 0)
             {
                 TimeStampCirculos.Add(timestamp.TotalMilliseconds);
+                TempoSelecaoCirculos = timestamp.TotalMilliseconds;
                 textStory.Add("At " + timestamp.TotalMilliseconds + " User2 selected " + LastCollidingTypeU2 + " and there is still " + NumCircsToSelect + " circles to select.");
             }
             else
@@ -638,7 +638,11 @@ public class Logs : MonoBehaviour
         {
             textStory.Add("At " + timestamp.TotalMilliseconds + " User2 tried to select " + LastCollidingTypeU2 + " and that is not possible.");
         }
-       
+        if (U2TouchType == "double-tap" && LastCollidingTypeU2 == "circle" || U2TouchType == "double-tap" && LastCollidingTypeU2 == null) //aka error vazio
+        {
+            textStory.Add("At " + timestamp.TotalMilliseconds + " User2 tried to select " + LastCollidingTypeU2 + ", but it's empty, so that is not possible.");
+        }
+
         if (NumQuadsToSelect == 0 && NumCircsToSelect == 0) //squares_inc == sqTotal && circles_inc == ccTotal)
         {
             textStory.Add("At " + timestamp.TotalMilliseconds + " All squares and circles were selected. Task completed!");

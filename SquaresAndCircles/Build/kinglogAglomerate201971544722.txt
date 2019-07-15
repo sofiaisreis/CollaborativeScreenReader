@@ -1,0 +1,206 @@
+FEEDBACK IS PRIVATE!
+BOARD WITHOUT TRIANGLES
+Tarefa Completada:True
+Numero de Quadrados Selecionados:5
+Numero de Circulos Selecionados:5
+Numero de Selecoes Vazias:0
+Numero de Selecoes Triangulos:0
+Numero de Selecoes de Objetos indevidos:1
+Numero de Erros no Total:1
+Selecoes Quadrados:14046.5802:25324.9637:31063.4878:46528.1415:66213.8545:
+Selecoes Circulos:92157.3819:107189.4331:109726.3147:112745.3596:116114.3958:
+Erros Vazios User 1:
+Erros Vazios User 2:
+Erros Triangulo ou Circulo User 1:9358.491:
+Erros Triangulo ou Quadrado User 2:
+Tempo Total de Selecao de Quadrados:66213.8545
+Tempo Total de Selecao de Circulos:116114.3958
+Tempo total da tarefa:116116.3875
+Tempo Total de Toque do User 1:54319.4261
+Tempo Total de Toque do User 2:20414.8151
+Tempo Total de Toque em simultâneo:0
+Target Re-enters User 1:0
+Target Re-enters User 2:1
+GOD times:0
+SPACE times:0
+H times:0
+FEEDBACK IS PRIVATE!
+BOARD WITHOUT TRIANGLES
+Tarefa Completada:True
+Numero de Quadrados Selecionados:5
+Numero de Circulos Selecionados:5
+Numero de Selecoes Vazias:0
+Numero de Selecoes Triangulos:0
+Numero de Selecoes de Objetos indevidos:0
+Numero de Erros no Total:0
+Selecoes Quadrados:
+Selecoes Circulos:
+Erros Vazios User 1:
+Erros Vazios User 2:
+Erros Triangulo ou Circulo User 1:
+Erros Triangulo ou Quadrado User 2:
+Tempo Total de Selecao de Quadrados:0
+Tempo Total de Selecao de Circulos:0
+Tempo total da tarefa:0
+Tempo Total de Toque do User 1:0
+Tempo Total de Toque do User 2:0
+Tempo Total de Toque em simultâneo:0
+Target Re-enters User 1:0
+Target Re-enters User 2:0
+GOD times:0
+SPACE times:0
+H times:0
+Tarefa Completada:True
+Numero de Quadrados Selecionados:5
+Numero de Circulos Selecionados:5
+Numero de Selecoes Vazias:0
+Numero de Selecoes Triangulos:0
+Numero de Selecoes de Objetos indevidos:0
+Numero de Erros no Total:0
+Selecoes Quadrados:
+Selecoes Circulos:
+Erros Vazios User 1:
+Erros Vazios User 2:
+Erros Triangulo ou Circulo User 1:
+Erros Triangulo ou Quadrado User 2:
+Tempo Total de Selecao de Quadrados:0
+Tempo Total de Selecao de Circulos:0
+Tempo total da tarefa:4220.822
+Tempo Total de Toque do User 1:0
+Tempo Total de Toque do User 2:0
+Tempo Total de Toque em simultâneo:0
+Target Re-enters User 1:0
+Target Re-enters User 2:0
+GOD times:0
+SPACE times:0
+H times:0
+FEEDBACK IS PRIVATE!
+BOARD WITHOUT TRIANGLES
+Tarefa Completada:False
+Numero de Quadrados Selecionados:0
+Numero de Circulos Selecionados:0
+Numero de Selecoes Vazias:0
+Numero de Selecoes Triangulos:0
+Numero de Selecoes de Objetos indevidos:0
+Numero de Erros no Total:0
+Selecoes Quadrados:
+Selecoes Circulos:
+Erros Vazios User 1:
+Erros Vazios User 2:
+Erros Triangulo ou Circulo User 1:
+Erros Triangulo ou Quadrado User 2:
+Tempo Total de Selecao de Quadrados:0
+Tempo Total de Selecao de Circulos:0
+Tempo total da tarefa:3586.4379
+Tempo Total de Toque do User 1:0
+Tempo Total de Toque do User 2:0
+Tempo Total de Toque em simultâneo:0
+Target Re-enters User 1:0
+Target Re-enters User 2:0
+GOD times:0
+SPACE times:0
+H times:0
+FEEDBACK IS PUBLIC!
+BOARD WITH TRIANGLES
+Tarefa Completada:False
+Numero de Quadrados Selecionados:2
+Numero de Circulos Selecionados:5
+Numero de Selecoes Vazias:0
+Numero de Selecoes Triangulos:1
+Numero de Selecoes de Objetos indevidos:1
+Numero de Erros no Total:2
+Selecoes Quadrados:60443.4058:63580.0928:
+Selecoes Circulos:5956.0459:9609.5137:14530.4998:20552.9401:34233.6574:
+Erros Vazios User 1:
+Erros Vazios User 2:
+Erros Triangulo ou Circulo User 1:
+Erros Triangulo ou Quadrado User 2:25575.2613:31781.6422:
+Tempo Total de Selecao de Quadrados:0
+Tempo Total de Selecao de Circulos:34233.6574
+Tempo total da tarefa:66682.8738
+Tempo Total de Toque do User 1:4239.3778
+Tempo Total de Toque do User 2:21105.4335
+Tempo Total de Toque em simultâneo:0
+Target Re-enters User 1:0
+Target Re-enters User 2:1
+GOD times:0
+SPACE times:0
+H times:0
+FEEDBACK IS TASK DEPENDENT!
+BOARD WITHOUT TRIANGLES
+Tarefa Completada:False
+Numero de Quadrados Selecionados:5
+Numero de Circulos Selecionados:0
+Numero de Selecoes Vazias:0
+Numero de Selecoes Triangulos:0
+Numero de Selecoes de Objetos indevidos:1
+Numero de Erros no Total:1
+Selecoes Quadrados:7573.8027:17284.5356:22105.4326:24925.1944:27678.0883:
+Selecoes Circulos:
+Erros Vazios User 1:
+Erros Vazios User 2:
+Erros Triangulo ou Circulo User 1:11528.4715:
+Erros Triangulo ou Quadrado User 2:
+Tempo Total de Selecao de Quadrados:27678.0883
+Tempo Total de Selecao de Circulos:0
+Tempo total da tarefa:39606.6428
+Tempo Total de Toque do User 1:15631.2123
+Tempo Total de Toque do User 2:0
+Tempo Total de Toque em simultâneo:0
+Target Re-enters User 1:1
+Target Re-enters User 2:0
+GOD times:0
+SPACE times:0
+H times:0
+FEEDBACK IS TASK DEPENDENT!
+BOARD WITHOUT TRIANGLES
+Tarefa Completada:False
+Numero de Quadrados Selecionados:0
+Numero de Circulos Selecionados:0
+Numero de Selecoes Vazias:0
+Numero de Selecoes Triangulos:0
+Numero de Selecoes de Objetos indevidos:0
+Numero de Erros no Total:0
+Selecoes Quadrados:
+Selecoes Circulos:
+Erros Vazios User 1:
+Erros Vazios User 2:
+Erros Triangulo ou Circulo User 1:
+Erros Triangulo ou Quadrado User 2:
+Tempo Total de Selecao de Quadrados:0
+Tempo Total de Selecao de Circulos:0
+Tempo total da tarefa:4203.6535
+Tempo Total de Toque do User 1:0
+Tempo Total de Toque do User 2:0
+Tempo Total de Toque em simultâneo:0
+Target Re-enters User 1:0
+Target Re-enters User 2:0
+GOD times:0
+SPACE times:0
+H times:0
+FEEDBACK IS TASK DEPENDENT!
+BOARD WITHOUT TRIANGLES
+Tarefa Completada:False
+Numero de Quadrados Selecionados:2
+Numero de Circulos Selecionados:5
+Numero de Selecoes Vazias:0
+Numero de Selecoes Triangulos:0
+Numero de Selecoes de Objetos indevidos:0
+Numero de Erros no Total:0
+Selecoes Quadrados:3636.6067:5956.5578:
+Selecoes Circulos:21222.0391:23240.3317:24658.8685:26459.1345:28279.9872:
+Erros Vazios User 1:
+Erros Vazios User 2:
+Erros Triangulo ou Circulo User 1:
+Erros Triangulo ou Quadrado User 2:
+Tempo Total de Selecao de Quadrados:0
+Tempo Total de Selecao de Circulos:28279.9872
+Tempo total da tarefa:38938.7054
+Tempo Total de Toque do User 1:3501.2909
+Tempo Total de Toque do User 2:7355.2173
+Tempo Total de Toque em simultâneo:0
+Target Re-enters User 1:0
+Target Re-enters User 2:0
+GOD times:0
+SPACE times:0
+H times:0

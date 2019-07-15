@@ -1,0 +1,57 @@
+FEEDBACK IS PRIVATE!
+BOARD WITHOUT TRIANGLES
+At 9358.491 User1 tried to select circle and that is not possible.
+At 14046.5802 User1 selected square and there is still 4 squares to select.
+At 25324.9637 User1 selected square and there is still 3 squares to select.
+At 31063.4878 User1 selected square and there is still 2 squares to select.
+At 46528.1415 User1 selected square and there is still 1 squares to select.
+At 66213.8545 User 1 selected all the squares.
+At 92157.3819 User2 selected circle and there is still 4 circles to select.
+At 107189.4331 User2 selected circle and there is still 3 circles to select.
+At 109726.3147 User2 selected circle and there is still 2 circles to select.
+At 112745.3596 User2 selected circle and there is still 1 circles to select.
+At 116114.3958 User 2 selected all the circles.
+At 116114.3958 All squares and circles were selected. Task completed!
+At 116114.3958 task was stopped
+FEEDBACK IS PRIVATE!
+BOARD WITHOUT TRIANGLES
+At 0 All squares and circles were selected. Task completed!
+At 0 task was stopped
+At 0 task was stopped
+FEEDBACK IS PRIVATE!
+BOARD WITHOUT TRIANGLES
+At 3586.4379 task was stopped
+FEEDBACK IS PUBLIC!
+BOARD WITH TRIANGLES
+At 5956.0459 User2 selected circle and there is still 4 circles to select.
+At 9609.5137 User2 selected circle and there is still 3 circles to select.
+At 14530.4998 User2 selected circle and there is still 2 circles to select.
+At 20552.9401 User2 selected circle and there is still 1 circles to select.
+At 25575.2613 User2 tried to select square and that is not possible.
+At 31781.6422 User2 tried to select triangle and that is not possible.
+At 34233.6574 User 2 selected all the circles.
+At 60443.4058 User1 selected square and there is still 4 squares to select.
+At 63580.0928 User1 selected square and there is still 3 squares to select.
+At 66682.8738 task was stopped
+FEEDBACK IS TASK DEPENDENT!
+BOARD WITHOUT TRIANGLES
+At 7573.8027 User1 selected square and there is still 4 squares to select.
+At 11528.4715 User1 tried to select circle and that is not possible.
+At 17284.5356 User1 selected square and there is still 3 squares to select.
+At 22105.4326 User1 selected square and there is still 2 squares to select.
+At 24925.1944 User1 selected square and there is still 1 squares to select.
+At 27678.0883 User 1 selected all the squares.
+At 39606.6428 task was stopped
+FEEDBACK IS TASK DEPENDENT!
+BOARD WITHOUT TRIANGLES
+At 4203.6535 task was stopped
+FEEDBACK IS TASK DEPENDENT!
+BOARD WITHOUT TRIANGLES
+At 3636.6067 User1 selected square and there is still 4 squares to select.
+At 5956.5578 User1 selected square and there is still 3 squares to select.
+At 21222.0391 User2 selected circle and there is still 4 circles to select.
+At 23240.3317 User2 selected circle and there is still 3 circles to select.
+At 24658.8685 User2 selected circle and there is still 2 circles to select.
+At 26459.1345 User2 selected circle and there is still 1 circles to select.
+At 28279.9872 User 2 selected all the circles.
+At 38938.7054 task was stopped
