@@ -118,29 +118,23 @@ public class Logs : MonoBehaviour
 
             //Reiniciar Variáveis aqui 
             ResetAll();
+
             int collidersFB = colliderino.GetComponent<ColliderObj>().feedbackType;
             int tabuleirosCode = tabuleirino.GetComponent<Tabuleiros>().code;
 
-            //Frames
-            if (collidersFB == 1) text.Add("FEEDBACK IS PRIVATE!");
-            if (collidersFB == 2) text.Add("FEEDBACK IS TASK DEPENDENT!");
-            if (collidersFB == 3) text.Add("FEEDBACK IS PUBLIC!");
-            if (tabuleirosCode == 1) text.Add("BOARD WITHOUT TRIANGLES");
-            if (tabuleirosCode == 2) text.Add("BOARD WITH TRIANGLES");
-
             //Aglomerado
-            if (collidersFB == 1) textAglomerate.Add("FEEDBACK IS PRIVATE!");
-            if (collidersFB == 2) textAglomerate.Add("FEEDBACK IS TASK DEPENDENT!");
-            if (collidersFB == 3) textAglomerate.Add("FEEDBACK IS PUBLIC!");
-            if (tabuleirosCode == 1) textAglomerate.Add("BOARD WITHOUT TRIANGLES");
-            if (tabuleirosCode == 2) textAglomerate.Add("BOARD WITH TRIANGLES");
+            if (collidersFB == 1) textAglomerate.Add("Feedback is PRIVATE!");
+            if (collidersFB == 2) textAglomerate.Add("Feedback is TASK DEPENDENT!");
+            if (collidersFB == 3) textAglomerate.Add("Feedback is PUBLIC!");
+            if (tabuleirosCode == 1) textAglomerate.Add("Board WITHOUT TRIANGLES");
+            if (tabuleirosCode == 2) textAglomerate.Add("Board WITH TRIANGLES");
 
             //Story
-            if (collidersFB == 1) textStory.Add("FEEDBACK IS PRIVATE!");
-            if (collidersFB == 2) textStory.Add("FEEDBACK IS TASK DEPENDENT!");
-            if (collidersFB == 3) textStory.Add("FEEDBACK IS PUBLIC!");
-            if (tabuleirosCode == 1) textStory.Add("BOARD WITHOUT TRIANGLES");
-            if (tabuleirosCode == 2) textStory.Add("BOARD WITH TRIANGLES");
+            if (collidersFB == 1) textStory.Add("Feedback is PRIVATE!");
+            if (collidersFB == 2) textStory.Add("Feedback is TASK DEPENDENT!");
+            if (collidersFB == 3) textStory.Add("Feedback is PUBLIC!");
+            if (tabuleirosCode == 1) textStory.Add("Board WITHOUT TRIANGLES");
+            if (tabuleirosCode == 2) textStory.Add("Board WITH TRIANGLES");
 
             //StartLogging
             text.Add(
@@ -194,9 +188,11 @@ public class Logs : MonoBehaviour
         tarefaOn = 0;
         print("Tarefa finito");
         textStory.Add("At " + timestamp.TotalMilliseconds + " task was stopped");
-        finalizou = DateTime.Now;
-        TempoTotalTarefa = (finalizou - taskStart).TotalMilliseconds;
-
+        if (NumQuadsToSelect != 0 || NumCircsToSelect != 0)
+        {
+            finalizou = DateTime.Now;
+            TempoTotalTarefa = (finalizou - taskStart).TotalMilliseconds;
+        }
 
          DateTime now = DateTime.Now;
 
@@ -252,8 +248,12 @@ public class Logs : MonoBehaviour
         U2LH = User1LeftHandPos.transform.position;
         User1hasTouch = false;
         User2hasTouch = false;
-        HandCube1Pos.transform.position = Vector3.zero;
-        HandCube2Pos.transform.position = Vector3.zero;
+        HandCubeU1.x = -1000;
+        HandCubeU1.y = -1000;
+        HandCubeU1.z = -1000;
+        HandCubeU2.x = -1000;
+        HandCubeU2.y = -1000;
+        HandCubeU2.z = -1000;
         //incSQ = NQuadToSelect.GetComponent<ColliderObj>().squares_inc;
         //incCC = NCircToSelect.GetComponent<ColliderObj>().circles_inc;
         incSQ = 0;
@@ -262,10 +262,12 @@ public class Logs : MonoBehaviour
         NumCircsToSelect = NCircToSelect.GetComponent<ColliderObj>().circles_findTotal;
         U1LastColliding = null;
         U2LastColliding = null;
-        HoverOTU1 = null;
-        HoverOTU2 = null;
-        LastCollidingTypeU1 = null;
-        LastCollidingTypeU2 = null;
+        LastLastColliding1 = null;
+        LastLastColliding2 = null;
+        HoverOTU1 = "";
+        HoverOTU2 = "";
+        LastCollidingTypeU1 = "";
+        LastCollidingTypeU2 = "";
         U1TouchType = null;
         U2TouchType = null;
         NumSelecoesVaziasU1 = 0;
@@ -396,8 +398,8 @@ public class Logs : MonoBehaviour
         //LAST COLLIDING OBJECT
         U1LastColliding = LastCollidingObj1.GetComponent<ColliderObj>().lastCollidingObject;
         U2LastColliding = LastCollidingObj2.GetComponent<ColliderObj>().lastCollidingObject;
-        LastCollidingTypeU1 = HoverU1.GetComponent<ColliderObj>().objectName;
-        LastCollidingTypeU2 = HoverU2.GetComponent<ColliderObj>().objectName;
+        LastCollidingTypeU1 = HoverU1.GetComponent<ColliderObj>().objectLastCollidingName;
+        LastCollidingTypeU2 = HoverU2.GetComponent<ColliderObj>().objectLastCollidingName;
 
         //POSICAO DO CUBINHO
         HandCubeU1 = HandCube1Pos.transform.position;
@@ -431,7 +433,7 @@ public class Logs : MonoBehaviour
                 NumSelecoesErradasOU1++;
                 TimeStampSelecoesErradasU1.Add(timestamp.TotalMilliseconds);
             }
-            if (LastCollidingTypeU1 != "circle" && LastCollidingTypeU1 != "triangle")
+            if (LastCollidingTypeU1 == "square" && U1Action == "vazio" || LastCollidingTypeU1 == "")
             {
                 NumSelecoesVaziasU1++;
                 TimeStampVaziosU1.Add(timestamp.TotalMilliseconds);
@@ -449,7 +451,7 @@ public class Logs : MonoBehaviour
                 NumSelecoesErradasOU2++;
                 TimeStampSelecoesErradasU2.Add(timestamp.TotalMilliseconds);
             }
-            if (LastCollidingTypeU2 != "square" && LastCollidingTypeU2 != "triangle")
+            if (LastCollidingTypeU2 == "circle" && U2Action == "vazio" || LastCollidingTypeU2 == "")
             {
                 NumSelecoesVaziasU2++;
                 TimeStampVaziosU2.Add(timestamp.TotalMilliseconds);
@@ -594,8 +596,6 @@ public class Logs : MonoBehaviour
     public void LogFileTellAStoryWriting()
     {
         // Adiciona o texto ao documento Log Tell A Story
-        // Time:User:Action:ObjUnity:NumSelectForSelection
-        //timestamp selecao cada user
         if (U1Action == "selected" && NumQuadsToSelect >= 0)
         {
             if(NumQuadsToSelect != 0)
@@ -615,9 +615,9 @@ public class Logs : MonoBehaviour
         {
             textStory.Add("At " + timestamp.TotalMilliseconds + " User1 tried to select " + LastCollidingTypeU1 + " and that is not possible.");
         }
-        if (U1TouchType == "double-tap" && LastCollidingTypeU1 == "square" || U1TouchType == "double-tap" && LastCollidingTypeU1 == null) // aka error do vazio
+        if (U1TouchType == "double-tap" && LastCollidingTypeU1 == "square" && U1Action == "vazio" || U1TouchType == "double-tap" && LastCollidingTypeU1 == "") // aka error do vazio
         {
-            textStory.Add("At " + timestamp.TotalMilliseconds + " User1 tried to select " + LastCollidingTypeU1 + ", but it's empty, so that is not possible.");
+            textStory.Add("At " + timestamp.TotalMilliseconds + " User1 tried to select " + U1Action + ", but it's empty, so that is not possible.");
         }
         if (U2Action == "selected" && NumCircsToSelect >= 0)
         {
@@ -638,9 +638,9 @@ public class Logs : MonoBehaviour
         {
             textStory.Add("At " + timestamp.TotalMilliseconds + " User2 tried to select " + LastCollidingTypeU2 + " and that is not possible.");
         }
-        if (U2TouchType == "double-tap" && LastCollidingTypeU2 == "circle" || U2TouchType == "double-tap" && LastCollidingTypeU2 == null) //aka error vazio
+        if (U2TouchType == "double-tap" && LastCollidingTypeU2 == "circle" && U2Action == "vazio" || U2TouchType == "double-tap" && LastCollidingTypeU2 == "") //aka error vazio
         {
-            textStory.Add("At " + timestamp.TotalMilliseconds + " User2 tried to select " + LastCollidingTypeU2 + ", but it's empty, so that is not possible.");
+            textStory.Add("At " + timestamp.TotalMilliseconds + " User2 tried to select " + U2Action + ", but it's empty, so that is not possible.");
         }
 
         if (NumQuadsToSelect == 0 && NumCircsToSelect == 0) //squares_inc == sqTotal && circles_inc == ccTotal)
