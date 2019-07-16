@@ -1,0 +1,9 @@
+%Config File created in 2019-06-14 02:59:40
+udp.listenport=9001
+udp.broadcastport=9005
+udp.sensor.listener=5007
+udp.sendinterval=50
+tracker.mergedistance=0
+tracker.confidencethreshold=10
+kinect.DESKTOP-PPJILDO=DESKTOP-PPJILDO;-0.3339168;1.514424;1.720632;-0.04105049;-0.9635898;0.1272414;-0.2315583
+kinect.ZENNIE=ZENNIE;1.11946;1.335306;1.909114;0.04658953;-0.9368189;0.05912235;0.3416203
