@@ -106,7 +106,7 @@ public class Logs : MonoBehaviour
 
     public void Start()
     {
-
+        
     }
 
     public void Update()
@@ -167,7 +167,6 @@ public class Logs : MonoBehaviour
                 "God Key: " +
                 "Space Key: " +
                 "H Key: ");
-
         }
         
         if (tarefaOn == 1)
@@ -248,18 +247,20 @@ public class Logs : MonoBehaviour
         U2LH = User1LeftHandPos.transform.position;
         User1hasTouch = false;
         User2hasTouch = false;
-        HandCubeU1.x = -1000;
-        HandCubeU1.y = -1000;
-        HandCubeU1.z = -1000;
-        HandCubeU2.x = -1000;
-        HandCubeU2.y = -1000;
-        HandCubeU2.z = -1000;
         //incSQ = NQuadToSelect.GetComponent<ColliderObj>().squares_inc;
         //incCC = NCircToSelect.GetComponent<ColliderObj>().circles_inc;
         incSQ = 0;
         incCC = 0;
         NumQuadsToSelect = NQuadToSelect.GetComponent<ColliderObj>().squares_findTotal;
         NumCircsToSelect = NCircToSelect.GetComponent<ColliderObj>().circles_findTotal;
+        HandCubeU1.x = -1000000;
+        HandCubeU1.y = -1000000;
+        HandCubeU1.z = -1000000;
+        HandCubeU2.x = -1000000;
+        HandCubeU2.y = -1000000;
+        HandCubeU2.z = -1000000;
+        HandCube1Pos.transform.localPosition = HandCubeU1;
+        HandCube2Pos.transform.localPosition = HandCubeU2;
         U1LastColliding = null;
         U2LastColliding = null;
         LastLastColliding1 = null;

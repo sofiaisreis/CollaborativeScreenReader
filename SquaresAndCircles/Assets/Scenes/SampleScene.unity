@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.43667555, g: 0.48427123, b: 0.5645229, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -180,6 +180,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462790539842953431, guid: b576413ea9e9c85408a01b42ff4a57e5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462790539842953431, guid: b576413ea9e9c85408a01b42ff4a57e5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 1760540636150990704, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}
@@ -3482,7 +3492,7 @@ PrefabInstance:
     - target: {fileID: 3462790539842953431, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.463
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3462790539842953431, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}
@@ -3493,6 +3503,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462790539842953431, guid: b576413ea9e9c85408a01b42ff4a57e5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 3462790539842953431, guid: b576413ea9e9c85408a01b42ff4a57e5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 1760540636150990704, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}
@@ -3705,6 +3725,9 @@ MonoBehaviour:
   quadrados: []
   circulos: []
   triangulos: []
+  squaresOnBoard: 0
+  circlesOnBoard: 0
+  trianglesOnBoard: 0
   code: 0
   AllPositionsTabuleiro: []
   AglomeradoDeVectosrs3Pos: []
