@@ -1,0 +1,5 @@
+Feedback is PUBLIC!
+Board WITHOUT TRIANGLES
+At 6481.3611 User1 selected square and there is still 4 squares to select.
+At 11066.4645 User1 selected square and there is still 3 squares to select.
+At 15442.3298 task was stopped

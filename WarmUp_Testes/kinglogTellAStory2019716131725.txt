@@ -1,0 +1,9 @@
+Feedback is TASK DEPENDENT!
+Board WITHOUT TRIANGLES
+At 5188.0192 User1 selected square and there is still 4 squares to select.
+At 7596.4822 User1 tried to select square, but it's empty, so that is not possible.
+At 9736.7082 User1 tried to select square, but it's empty, so that is not possible.
+At 14935.7808 User1 selected square and there is still 3 squares to select.
+At 17619.7809 User1 tried to select square, but it's empty, so that is not possible.
+At 23775.2714 User1 tried to select circle and that is not possible.
+At 27920.2284 task was stopped
