@@ -22,15 +22,19 @@ public class Tabuleiros : MonoBehaviour
     public GameObject triangle3;
     public GameObject triangle4;
     public GameObject triangle5;
+    public bool YouShouldRefactor;
 
     public Vector3 quadrado1, quadrado2, quadrado3, quadrado4, quadrado5;
     public Vector3 circulo1, circulo2, circulo3, circulo4, circulo5;
     public Vector3 triangulo1, triangulo2, triangulo3, triangulo4, triangulo5;
 
     public Vector3[] quadrados, circulos, triangulos;
-    public int squaresOnBoard = 0;
-    public int circlesOnBoard = 0;
-    public int trianglesOnBoard = 0;
+    public int squaresOnBoardLeft = 0;
+    public int squaresOnBoardRight = 0;
+    public int circlesOnBoardLeft = 0;
+    public int circlesOnBoardRight = 0;
+    public int trianglesOnBoardLeft = 0;
+    public int trianglesOnBoardRight = 0;
 
     public float[,] array2D;
     public int code = 0;
@@ -71,15 +75,15 @@ public class Tabuleiros : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.T))
         {
             code = 1;
+            YouShouldRefactor = false;
             ChangeTabuleiro();
-            HeuristicThreeSem();
         }
 
         if (Input.GetKeyDown(KeyCode.Y))
         {
             code = 2;
+            YouShouldRefactor = false;
             ChangeTabuleiroDistratores();
-            HeuristicThreeCom();
         }
     }
 
@@ -232,6 +236,7 @@ public class Tabuleiros : MonoBehaviour
          * Há sempre 1 quadrado, 1 círculo e, no caso dos distratores*/
         HeuristicOne();
         HeuristicTwoSemDistratores();
+        HeuristicThreeSem();
 
         //Quadrados
         square1.transform.localPosition = quadrados[0];
@@ -268,6 +273,7 @@ public class Tabuleiros : MonoBehaviour
         triangle3.SetActive(true);
         triangle4.SetActive(true);
         triangle5.SetActive(true);
+
     }
 
     public void ChangeTabuleiroDistratores()
@@ -276,6 +282,7 @@ public class Tabuleiros : MonoBehaviour
         * Há sempre 1 quadrado, 1 círculo e, no caso dos distratores, 1 triângulo por linha */
         HeuristicOne();
         HeuristicTwoDistratores();
+        HeuristicThreeCom();
 
         ///Quadrados
         square1.transform.localPosition = quadrados[0];
@@ -316,73 +323,98 @@ public class Tabuleiros : MonoBehaviour
 
     private void HeuristicThreeSem()
     {
-        //TO DO, VER ARRAY
-        // so quero ver ate metade. 
-        for (int colunas = 0; colunas < 5; colunas++)
+    /* Se Levar muito tempo: colocar <= a 0 e nos modulos abaixo colocar > 2*/
+        for (int numObj = 0; numObj < 5; numObj++)
         {
-            for (int numObj = 0; numObj < 5; numObj++)
+            if ((quadrados[numObj].x >= -(float)1800 / 1000) && (quadrados[numObj].x < (float)0 / 1000))
             {
-                if (quadrados[numObj].x == array2D[numObj, colunas])
-                {
-                    squaresOnBoard++;
-                }
-                if(circulos[numObj].x == array2D[numObj, colunas])
-                {
-                    circlesOnBoard++;
-                }
+                squaresOnBoardLeft++;
+            }
+            if ((quadrados[numObj].x > (float)0 / 1000) && (quadrados[numObj].x <= (float)1800 / 1000))
+            {
+                squaresOnBoardRight++;
+            }
+            if ((circulos[numObj].x >= -(float)1800 / 1000) && (circulos[numObj].x < (float)0 / 1000))
+            {
+                circlesOnBoardLeft++;
+            }
+            if ((circulos[numObj].x > (float)0 / 1000) && (circulos[numObj].x <= (float)1800 / 1000))
+            {
+                circlesOnBoardRight++;
             }
         }
-        print("Squares: " + squaresOnBoard + " and Circles: " + circlesOnBoard);
+
+        //print("Squares Left: " + squaresOnBoardLeft + " Squares Right: " + squaresOnBoardRight + " , Circles Left: " + circlesOnBoardLeft + " , Circles Right: " + circlesOnBoardRight);
 
         // Se no lado esquerdo do tabuleiro houver menos que 2 objetos de cada e mais que 4: refaz
-        if (squaresOnBoard < 2 || squaresOnBoard > 4 || circlesOnBoard < 2 || circlesOnBoard > 4)
+
+        if (Math.Abs(squaresOnBoardLeft - squaresOnBoardRight) >= 2 || Math.Abs(circlesOnBoardLeft - circlesOnBoardRight) >= 2)
         {
-            ChangeTabuleiro();
-            print("Fiz refactor");
-            squaresOnBoard = 0;
-            circlesOnBoard = 0;
+            //print("Board Accepted!");
+            YouShouldRefactor = true;
         }
         else
         {
-            print("Board Accepted!");
+            YouShouldRefactor = false;
         }
+
+        squaresOnBoardLeft = 0;
+        squaresOnBoardRight = 0;
+        circlesOnBoardLeft = 0;
+        circlesOnBoardRight = 0;
     }
 
-    private void HeuristicThreeCom()
+   private void HeuristicThreeCom()
     {
-        // so quero ver ate metade. 
-        for (int colunas = 0; colunas < 5; colunas++)
+        /* Se Levar muito tempo: colocar <= a 0 e nos modulos abaixo colocar > 2*/
+        for (int numObj = 0; numObj < 5; numObj++)
         {
-            for (int numObj = 0; numObj < 5; numObj++)
+            if ((quadrados[numObj].x >= -(float)1800 / 1000) && (quadrados[numObj].x < (float)0 / 1000))
             {
-                if (quadrados[numObj].x == array2D[numObj, colunas])
-                {
-                    squaresOnBoard++;
-                }
-                if (circulos[numObj].x == array2D[numObj, colunas])
-                {
-                    circlesOnBoard++;
-                }
-                if(triangulos[numObj].x == array2D[numObj, colunas])
-                {
-                    trianglesOnBoard++;
-                }
+                squaresOnBoardLeft++;
+            }
+            if ((quadrados[numObj].x > (float)0 / 1000) && (quadrados[numObj].x <= (float)1800 / 1000))
+            {
+                squaresOnBoardRight++;
+            }
+            if ((circulos[numObj].x >= -(float)1800 / 1000) && (circulos[numObj].x < (float)0 / 1000))
+            {
+                circlesOnBoardLeft++;
+            }
+            if ((circulos[numObj].x > (float)0 / 1000) && (circulos[numObj].x <= (float)1800 / 1000))
+            {
+                circlesOnBoardRight++;
+            }
+            if ((triangulos[numObj].x >= -(float)1800 / 1000) && (triangulos[numObj].x < (float)0 / 1000))
+            {
+                trianglesOnBoardLeft++;
+            }
+            if ((triangulos[numObj].x > (float)0 / 1000) && (triangulos[numObj].x <= (float)1800 / 1000))
+            {
+                trianglesOnBoardRight++;
             }
         }
 
+        //print("Squares Left: " + squaresOnBoardLeft + " Squares Right: " + squaresOnBoardRight + " , Circles Left: " + circlesOnBoardLeft + " , Circles Right: " + circlesOnBoardRight);
+
         // Se no lado esquerdo do tabuleiro houver menos que 2 objetos de cada e mais que 4: refaz
-        if (squaresOnBoard < 2 || squaresOnBoard > 4 || circlesOnBoard < 2 || circlesOnBoard > 4 || trianglesOnBoard < 2 || trianglesOnBoard > 4)
+
+        if (Math.Abs(squaresOnBoardLeft - squaresOnBoardRight) >= 2 || Math.Abs(circlesOnBoardLeft - circlesOnBoardRight) >= 2 || Math.Abs(trianglesOnBoardLeft - trianglesOnBoardRight) >= 2)
         {
-            ChangeTabuleiroDistratores();
-            print("Fiz refactor");
-            squaresOnBoard = 0;
-            circlesOnBoard = 0;
-            trianglesOnBoard = 0;
+           //print("Board Accepted!");
+            YouShouldRefactor = true;
         }
         else
         {
-            print("Board Accepted!");
+            YouShouldRefactor = false;
         }
+
+        squaresOnBoardLeft = 0;
+        squaresOnBoardRight = 0;
+        circlesOnBoardLeft = 0;
+        circlesOnBoardRight = 0;
+        trianglesOnBoardLeft = 0;
+        trianglesOnBoardRight = 0;
     }
 
     void OnGUI()
@@ -394,6 +426,14 @@ public class Tabuleiros : MonoBehaviour
         else if (code == 2)
         {
             GUI.Label(new Rect(10, 90, 300, 35), "Tabuleiro COM distratores");
+        }
+        if (YouShouldRefactor)
+        {
+            GUI.Label(new Rect(600, 10, 300, 35), "Faz Refactor!");
+        }
+        if (!YouShouldRefactor)
+        {
+            GUI.Label(new Rect(600, 10, 300, 35), "Tabuleiro Bom!");
         }
     }
 }
