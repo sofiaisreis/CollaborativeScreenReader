@@ -18,6 +18,8 @@ public class NewTouch : MonoBehaviour
     public bool isRep = false;
     public bool isH = false;
 
+    bool handsTooClose = false;
+
     void Start()
     {
         lastReprocess = DateTime.Now;
@@ -78,71 +80,88 @@ public class NewTouch : MonoBehaviour
             }
 
             // and now for something new: vamos tentar corrigir associacoes de toques que estao longe
-            foreach(Touch t in Input.touches)
+
+            Vector3 user1RightHPos = User1.handRight.transform.position;
+            Vector3 user1LeftHPos = User1.handLeft.transform.position;
+            Vector3 user2RightHPos = User2.handRight.transform.position;
+            Vector3 user2LeftHPos = User2.handLeft.transform.position;
+
+            float distUserHands = Mathf.Min(
+                Vector3.Distance(user1RightHPos, user2RightHPos),
+                Vector3.Distance(user1RightHPos, user2LeftHPos),
+                Vector3.Distance(user1LeftHPos, user2RightHPos),
+                Vector3.Distance(user1LeftHPos, user2LeftHPos)
+                );
+
+            if(distUserHands > distanceThreshold)
             {
-                // descobrir qual o user com a mao mais proxima
+                handsTooClose = false;
 
-                Vector3 user1RightHPos = User1.handRight.transform.position;
-                Vector3 user1LeftHPos = User1.handLeft.transform.position;
-                Vector3 user2RightHPos = User2.handRight.transform.position;
-                Vector3 user2LeftHPos = User2.handLeft.transform.position;
-
-                Vector3 touchPos = MyTouch.GetTouchWorldPosition(t);
-
-                // distancias User 1
-                float dUser1 = Mathf.Min(Vector3.Distance(user1RightHPos, touchPos), Vector3.Distance(user1LeftHPos, touchPos));
-
-                // distancias User 2
-                float dUser2 = Mathf.Min(Vector3.Distance(user2RightHPos, touchPos), Vector3.Distance(user2LeftHPos, touchPos));
-
-                // toques dos users
-                MyTouch touchUser1 = User1.handRight.userTouch.touch;
-                MyTouch touchUser2 = User2.handRight.userTouch.touch;
-
-                if (dUser1 < dUser2)
+                foreach (Touch t in Input.touches)
                 {
-                    if (dUser1 < distanceThreshold)
-                    {
-                        if (touchUser1 == null)
-                        {
-                            ReprocessTouches();
-                            break;
-                        }
-                        else
-                        {
-                            Vector3 currentTouchPos = touchUser1.transform.position;
-                            float currentDUser = Mathf.Min(Vector3.Distance(user1RightHPos, currentTouchPos), Vector3.Distance(user1LeftHPos, currentTouchPos));
+                    // descobrir qual o user com a mao mais proxima
 
-                            if(currentDUser > distanceThreshold)
+                    Vector3 touchPos = MyTouch.GetTouchWorldPosition(t);
+
+                    // distancias User 1
+                    float dUser1 = Mathf.Min(Vector3.Distance(user1RightHPos, touchPos), Vector3.Distance(user1LeftHPos, touchPos));
+
+                    // distancias User 2
+                    float dUser2 = Mathf.Min(Vector3.Distance(user2RightHPos, touchPos), Vector3.Distance(user2LeftHPos, touchPos));
+
+                    // toques dos users
+                    MyTouch touchUser1 = User1.handRight.userTouch.touch;
+                    MyTouch touchUser2 = User2.handRight.userTouch.touch;
+
+                    if (dUser1 < dUser2)
+                    {
+                        if (dUser1 < distanceThreshold)
+                        {
+                            if (touchUser1 == null)
                             {
                                 ReprocessTouches();
                                 break;
                             }
+                            else
+                            {
+                                Vector3 currentTouchPos = touchUser1.transform.position;
+                                float currentDUser = Mathf.Min(Vector3.Distance(user1RightHPos, currentTouchPos), Vector3.Distance(user1LeftHPos, currentTouchPos));
+
+                                if (currentDUser > distanceThreshold)
+                                {
+                                    ReprocessTouches();
+                                    break;
+                                }
+                            }
                         }
                     }
-                }
-                else if (dUser2 < dUser1)
-                {
-                    if (dUser2 < distanceThreshold)
+                    else if (dUser2 < dUser1)
                     {
-                        if (touchUser2 == null)
+                        if (dUser2 < distanceThreshold)
                         {
-                            ReprocessTouches();
-                            break;
-                        }
-                        else
-                        {
-                            Vector3 currentTouchPos = touchUser2.transform.position;
-                            float currentDUser = Mathf.Min(Vector3.Distance(user2RightHPos, currentTouchPos), Vector3.Distance(user2LeftHPos, currentTouchPos));
-
-                            if (currentDUser > distanceThreshold)
+                            if (touchUser2 == null)
                             {
                                 ReprocessTouches();
                                 break;
                             }
+                            else
+                            {
+                                Vector3 currentTouchPos = touchUser2.transform.position;
+                                float currentDUser = Mathf.Min(Vector3.Distance(user2RightHPos, currentTouchPos), Vector3.Distance(user2LeftHPos, currentTouchPos));
+
+                                if (currentDUser > distanceThreshold)
+                                {
+                                    ReprocessTouches();
+                                    break;
+                                }
+                            }
                         }
                     }
                 }
+            }
+            else
+            {
+                handsTooClose = true;
             }
         }
     }
@@ -267,6 +286,11 @@ public class NewTouch : MonoBehaviour
         foreach (Touch t in Input.touches)
         {
             GUI.Label(new Rect(t.position.x, Screen.height - t.position.y, 100, 100), "" + t.fingerId);
+        }
+
+        if(handsTooClose)
+        {
+            GUI.Box(new Rect(0, 0, Screen.width, Screen.height), "");
         }
     }
 }

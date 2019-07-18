@@ -16,6 +16,10 @@ public class UserTouch : MonoBehaviour
     public UserHand hand;
     //public UserHand uHand2;
 
+    private bool goAway = false;
+    private DateTime goAwayTime;
+    private Vector3 goAwayPos;
+
     void Start()
     {
         
@@ -31,6 +35,20 @@ public class UserTouch : MonoBehaviour
             {
                 SingleTap(lastTapPosition);
                 possibleDoubleTap = false;
+            }
+        }
+
+        if(goAway)
+        {
+            if(goAwayPos != transform.position)
+            {
+                goAway = false;
+            }
+            else if((DateTime.Now - goAwayTime).TotalMilliseconds > 100)
+            {
+                goAway = false;
+                GetComponent<ColliderObj>().ignoreNextExit = true;
+                transform.position = new Vector3(-1000, -1000, -1000);
             }
         }
     }
@@ -118,6 +136,10 @@ public class UserTouch : MonoBehaviour
         transform.position = position;
         //print("TAP");
         typeOfTouch = "tap";
+
+        goAway = true;
+        goAwayTime = DateTime.Now;
+        goAwayPos = position;
     }
 
     public void BeginDrag(Vector3 position)
@@ -132,6 +154,9 @@ public class UserTouch : MonoBehaviour
     {
         GetComponent<ColliderObj>().isBeingDragged = false;
         typeOfTouch = null;
+
+        GetComponent<ColliderObj>().ignoreNextExit = true;
+        transform.position = new Vector3(-1000, -1000, -1000);
     }
 }
 

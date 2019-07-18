@@ -13,6 +13,7 @@ public class ColliderObj : MonoBehaviour
 
     public bool isBeingDragged = false;
     public bool errorTap = false;
+    public bool ignoreNextExit = false;
     public GameObject collidingObject = null;
     public AudioRequest audioRequest;
     public Logs loggs;
@@ -194,7 +195,15 @@ public class ColliderObj : MonoBehaviour
         int idUser = GetComponent<UserTouch>().hand.theUser.userID;
 
         var objTag = collisionInfo.gameObject.tag;
-        audioRequest.StopRemoteAudio(idUser);
+
+        if (!ignoreNextExit)
+        {
+            audioRequest.StopRemoteAudio(idUser);
+        }
+        else
+        {
+            ignoreNextExit = false;
+        }
 
         if (isBeingDragged) {
             //audioRequest.PlayRemoteAudio(idUser, 8, 5, transform.position);
