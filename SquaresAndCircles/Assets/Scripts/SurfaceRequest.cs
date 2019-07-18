@@ -44,13 +44,13 @@ public class SurfaceRectangle
 
     public SurfaceRectangle(string value)
     {
-        string[] values = value.Split(MessageSeparators.L0)[1].Split(MessageSeparators.L1);
+        string[] values = value.Split(MessageSeparators.L0)[1].Split(MessageSeparators.L2);
         string name = values[0];
 
         _bl = CommonUtils.networkStringToVector3(values[1], MessageSeparators.L3);
         _br = CommonUtils.networkStringToVector3(values[2], MessageSeparators.L3);
         _tl = CommonUtils.networkStringToVector3(values[3], MessageSeparators.L3);
-        _tr = CommonUtils.networkStringToVector3(values[4], MessageSeparators.L3);
+        _tr = CommonUtils.networkStringToVector3(values[4].Split('#')[0], MessageSeparators.L3);
         Debug.Log(ToString());
     }
 
@@ -64,6 +64,7 @@ public class SurfaceMessage
 {
     public static string createRequestMessage(int port)
     {
+        //Debug.Log("SurfaceMessage" + MessageSeparators.L0 + IPManager.GetLocalIPAddress() + MessageSeparators.L1 + port);
         return "SurfaceMessage" + MessageSeparators.L0 + IPManager.GetLocalIPAddress() + MessageSeparators.L1 + port;
     }
 

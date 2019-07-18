@@ -1,7 +1,0 @@
-Feedback is PUBLIC!
-Board WITHOUT TRIANGLES
-At 5856.7965 User1 tried to select vazio, but it's empty, so that is not possible.
-At 8845.8707 User1 tried to select vazio, but it's empty, so that is not possible.
-At 15549.8965 User1 selected square and there is still 4 squares to select.
-At 18223.6461 User1 tried to select vazio, but it's empty, so that is not possible.
-At 20550.4086 task was stopped

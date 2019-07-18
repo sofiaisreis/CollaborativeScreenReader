@@ -1,0 +1,7 @@
+Feedback is TASK DEPENDENT!
+Board WITHOUT TRIANGLES
+At 10334.5738 User2 selected circle and there is still 4 circles to select.
+At 12727.5966 User2 tried to select vazio, but it's empty, so that is not possible.
+At 14826.5434 User2 tried to select vazio, but it's empty, so that is not possible.
+At 31841.9749 User2 tried to select square and that is not possible.
+At 37991.1152 task was stopped

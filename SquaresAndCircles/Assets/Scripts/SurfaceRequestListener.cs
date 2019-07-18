@@ -37,11 +37,15 @@ public class SurfaceRequestListener : MonoBehaviour
         Byte[] receiveBytes = _udpClient_LocalSurface.EndReceive(ar, ref _anyIP_LocalSurface);
         string result = System.Text.Encoding.UTF8.GetString(receiveBytes);
 
+        print("message received: " + result);
+
         if (SurfaceMessage.isMessage(result))
         {
+            print("is surface");
+
             _surface = new SurfaceRectangle(result);
 
-            Debug.Log(_surface.ToString());
+            Debug.Log("surface: " + _surface.ToString());
 
             _udpClient_LocalSurface.Close();
         }
