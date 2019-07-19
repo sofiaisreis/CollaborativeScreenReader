@@ -1,0 +1,9 @@
+%Config File created in 2019-07-18 16:28:22
+udp.listenport=9001
+udp.broadcastport=9005
+udp.sensor.listener=5007
+udp.sendinterval=50
+tracker.mergedistance=0.3
+tracker.confidencethreshold=0
+kinect.DESKTOP-HTGRV8G=DESKTOP-HTGRV8G;-0.7998046;1.518448;2.390651;-0.08998475;-0.8997149;0.130739;-0.4065994
+kinect.ZENNIE=ZENNIE;0.7614495;1.469486;2.432356;0.05055335;-0.9332592;0.1291038;0.3313666

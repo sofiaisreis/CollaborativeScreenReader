@@ -1,0 +1,7 @@
+% 2019/07/18 16:59:16
+surface.name=Unknown Surface
+surface.kinect=DESKTOP-HTGRV8G
+surface.bottom.left=-0.6889068:-0.01956498:2.213
+surface.bottom.right=0.2189106:-0.2217646:1.484
+surface.top.left=-1.114212:-0.1774018:1.727149
+surface.top.right=-0.2063949:-0.3796015:0.9981493

@@ -1,0 +1,9 @@
+%Config File created in 2019-06-21 17:28:36
+udp.listenport=5101
+udp.broadcastport=5102
+udp.sensor.listener=5107
+udp.sendinterval=50
+tracker.mergedistance=0.3
+tracker.confidencethreshold=10
+kinect.FRANK-SALES=FRANK-SALES;0.7529947;1.261766;2.489205;-0.01712481;-0.9694964;-0.01752971;0.2438773
+kinect.VANESSA=VANESSA;-0.6031075;1.561859;2.567083;-0.02408201;-0.973964;0.1552223;-0.163463
