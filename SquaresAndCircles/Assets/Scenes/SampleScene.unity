@@ -266,6 +266,11 @@ PrefabInstance:
       propertyPath: loggs
       value: 
       objectReference: {fileID: 633784402}
+    - target: {fileID: 3462790539842953432, guid: b576413ea9e9c85408a01b42ff4a57e5,
+        type: 3}
+      propertyPath: theTouch
+      value: 
+      objectReference: {fileID: 756066668}
     - target: {fileID: 4279992100563308375, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}
       propertyPath: touch
@@ -1695,6 +1700,7 @@ MonoBehaviour:
   "ag\xE1s": 0
   isRep: 0
   isH: 0
+  newFeedback: 0
 --- !u!4 &756066670
 Transform:
   m_ObjectHideFlags: 0
@@ -3603,6 +3609,16 @@ PrefabInstance:
       propertyPath: loggs
       value: 
       objectReference: {fileID: 633784402}
+    - target: {fileID: 3462790539842953432, guid: b576413ea9e9c85408a01b42ff4a57e5,
+        type: 3}
+      propertyPath: theTouch
+      value: 
+      objectReference: {fileID: 756066668}
+    - target: {fileID: 3462790539842953432, guid: b576413ea9e9c85408a01b42ff4a57e5,
+        type: 3}
+      propertyPath: isG
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4279992100563308375, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}
       propertyPath: touch

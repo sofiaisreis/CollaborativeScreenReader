@@ -120,39 +120,6 @@ public class Select : MonoBehaviour
                     }
                 }
                 break;
-            //Acontece em GOD MODE
-            /*case 2: //circulo
-                print("God indeed");
-                if (selecao <= totais)
-                {
-                    if (selecm == 1)
-                    {
-                        myAudioSource.PlayOneShot(f1cM);
-                    }
-                    else if (selecm == 2)
-                    {
-                        myAudioSource.PlayOneShot(f2cM);
-                    }
-                    else if (selecm == 3)
-                    {
-                        myAudioSource.PlayOneShot(f3cM);
-                    }
-                    else if (selecm == 4)
-                    {
-                        myAudioSource.PlayOneShot(f4cM);
-                    }
-                    else if (selecm == 5)
-                    {
-                        myAudioSource.PlayOneShot(f5cM);
-                    }
-                    else if (selecm == 0)
-                    {
-                        myAudioSource.PlayOneShot(todosCirculosM);
-                        TarefaCirculosMale = true;
-
-                    }
-                }
-                break;*/
         }
         // feedback ao outro
         if (TarefaQuadradosFemale)
@@ -194,53 +161,6 @@ public class Select : MonoBehaviour
                 myAudioSource.PlayOneShot(aoSeuParceiroF);
             }
         }
-        /*// finaliza em God Mode
-        //feedback ao outro
-        if (TarefaCirculosMale)
-        {
-            FaltamXQuadrados = ofSound.faltamXQuad;
-            if (FaltamXQuadrados == 0)
-            {
-                System.Threading.Thread.Sleep((int)todosQuadradosF.length + 2000);
-                myAudioSource.PlayOneShot(tarefaterminadaAmobs);
-            }
-            else if (FaltamXQuadrados == 1)
-            {
-                System.Threading.Thread.Sleep((int)todosQuadradosF.length + 2000);
-                myAudioSource.PlayOneShot(f1qM);
-                System.Threading.Thread.Sleep((int)f1qM.length + 1500);
-                myAudioSource.PlayOneShot(aoSeuParceiroM);
-            }
-            else if (FaltamXQuadrados == 2)
-            {
-                System.Threading.Thread.Sleep((int)todosQuadradosF.length + 2000);
-                myAudioSource.PlayOneShot(f2qM);
-                System.Threading.Thread.Sleep((int)f2qM.length + 1500);
-                myAudioSource.PlayOneShot(aoSeuParceiroM);
-            }
-            else if (FaltamXQuadrados == 3)
-            {
-                System.Threading.Thread.Sleep((int)todosQuadradosF.length + 2000);
-                myAudioSource.PlayOneShot(f3qM);
-                System.Threading.Thread.Sleep((int)f3qM.length + 1500);
-                myAudioSource.PlayOneShot(aoSeuParceiroM);
-            }
-            else if (FaltamXQuadrados == 4)
-            {
-                System.Threading.Thread.Sleep((int)todosQuadradosF.length + 2000);
-                myAudioSource.PlayOneShot(f4qM);
-                System.Threading.Thread.Sleep((int)f4qM.length + 1500);
-                myAudioSource.PlayOneShot(aoSeuParceiroM);
-            }
-            else if (FaltamXQuadrados == 5)
-            {
-                System.Threading.Thread.Sleep((int)todosQuadradosF.length + 2000);
-                myAudioSource.PlayOneShot(f5qM);
-                System.Threading.Thread.Sleep((int)f5qM.length + 1500);
-                myAudioSource.PlayOneShot(aoSeuParceiroM);
-            }
-        }*/
-
     }
 
     public void SelectionM(int lastObj, int selecao, int totais)
@@ -251,44 +171,6 @@ public class Select : MonoBehaviour
 
         switch (lastObj)
         {
-            /*//Acontece em God Mode
-            case 1: //quadrado
-                print("God indeed");
-                if (selecao <= totais)
-                {
-                    if (selecf == 1)
-                    {
-                        myAudioSource.PlayOneShot(f1qF);
-                    }
-                    else if (selecf == 2)
-                    {
-                        myAudioSource.PlayOneShot(f2qF);
-                    }
-                    else if (selecf == 3)
-                    {
-                        myAudioSource.PlayOneShot(f3qF);
-                    }
-                    else if (selecf == 4)
-                    {
-                        myAudioSource.PlayOneShot(f4qF);
-                    }
-                    else if (selecf == 5)
-                    {
-                        myAudioSource.PlayOneShot(f5qF);
-                    }
-                    else if (selecf == 0)
-                    {
-                        myAudioSource.PlayOneShot(todosQuadradosF);
-                        TarefaQuadradosFemale = true;
-                        if (TarefaCirculosMale)
-                        {
-                            System.Threading.Thread.Sleep(2000);
-                            myAudioSource.PlayOneShot(tarefaterminadaAmobs);
-                        }
-                    }
-                }
-                break;*/
-
             case 2: //circulo
                 if (selecao <= totais)
                 {
@@ -361,45 +243,5 @@ public class Select : MonoBehaviour
                 myAudioSource.PlayOneShot(aoSeuParceiroM);
             }
         }
-        /*
-        if (TarefaQuadradosFemale)
-        {
-            FaltamXCirculos = ofSound.faltamXCirc;
-            if (FaltamXCirculos == 1)
-            {
-                System.Threading.Thread.Sleep((int)todosQuadradosF.length + 2000);
-                myAudioSource.PlayOneShot(f1cF);
-                System.Threading.Thread.Sleep((int)todosQuadradosF.length + 1500);
-                myAudioSource.PlayOneShot(aoSeuParceiroF);
-            }
-            else if (FaltamXCirculos == 2)
-            {
-                System.Threading.Thread.Sleep((int)todosQuadradosF.length + 2000);
-                myAudioSource.PlayOneShot(f2cF);
-                System.Threading.Thread.Sleep((int)f2cF.length + 1500);
-                myAudioSource.PlayOneShot(aoSeuParceiroF);
-            }
-            else if (FaltamXCirculos == 3)
-            {
-                System.Threading.Thread.Sleep((int)todosQuadradosF.length + 2000);
-                myAudioSource.PlayOneShot(f3cF);
-                System.Threading.Thread.Sleep((int)f3cF.length + 1500);
-                myAudioSource.PlayOneShot(aoSeuParceiroF);
-            }
-            else if (FaltamXCirculos == 4)
-            {
-                System.Threading.Thread.Sleep((int)todosQuadradosF.length + 2000);
-                myAudioSource.PlayOneShot(f4cF);
-                System.Threading.Thread.Sleep((int)f4cF.length + 1500);
-                myAudioSource.PlayOneShot(aoSeuParceiroF);
-            }
-            else if (FaltamXCirculos == 5)
-            {
-                System.Threading.Thread.Sleep((int)todosQuadradosF.length + 2000);
-                myAudioSource.PlayOneShot(f5cF);
-                System.Threading.Thread.Sleep((int)todosQuadradosF.length + 1500);
-                myAudioSource.PlayOneShot(aoSeuParceiroF);
-            }
-        }*/
     }
 }

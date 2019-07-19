@@ -17,8 +17,10 @@ public class NewTouch : MonoBehaviour
     public int agás = 0;
     public bool isRep = false;
     public bool isH = false;
+    public int newFeedback;
 
     bool handsTooClose = false;
+    public bool handsTooCloseLuci = false;
 
     void Start()
     {
@@ -96,6 +98,7 @@ public class NewTouch : MonoBehaviour
             if(distUserHands > distanceThreshold)
             {
                 handsTooClose = false;
+                handsTooCloseLuci = false;
 
                 foreach (Touch t in Input.touches)
                 {
@@ -162,6 +165,12 @@ public class NewTouch : MonoBehaviour
             else
             {
                 handsTooClose = true;
+                // Se estiverem ainda mais perto: Luci mode
+                if (distUserHands < (distanceThreshold / 2))
+                {
+                    handsTooCloseLuci = true;
+                }
+
             }
         }
     }
@@ -288,9 +297,9 @@ public class NewTouch : MonoBehaviour
             GUI.Label(new Rect(t.position.x, Screen.height - t.position.y, 100, 100), "" + t.fingerId);
         }
 
-        if(handsTooClose)
+        if(handsTooCloseLuci)
         {
-            GUI.Box(new Rect(0, 0, Screen.width, Screen.height), "");
+            GUI.Box(new Rect(0, 0, Screen.width, Screen.height), "Luci");
         }
     }
 }

@@ -178,6 +178,7 @@ public class Logs : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S))
         {
             carregouNoS();
+            ResetObjects();
         }
     }
 
@@ -228,6 +229,18 @@ public class Logs : MonoBehaviour
         }
     }
 
+    private void ResetObjects()
+    {
+        HandCubeU1.x = -1000000;
+        HandCubeU1.y = -1000000;
+        HandCubeU1.z = -1000000;
+        HandCubeU2.x = -1000000;
+        HandCubeU2.y = -1000000;
+        HandCubeU2.z = -1000000;
+        HandCube1Pos.transform.localPosition = HandCubeU1;
+        HandCube2Pos.transform.localPosition = HandCubeU2;
+    }
+
     private void ResetAll()
     {
         taskStart = DateTime.Now;
@@ -253,14 +266,6 @@ public class Logs : MonoBehaviour
         incCC = 0;
         NumQuadsToSelect = NQuadToSelect.GetComponent<ColliderObj>().squares_findTotal;
         NumCircsToSelect = NCircToSelect.GetComponent<ColliderObj>().circles_findTotal;
-        HandCubeU1.x = -1000000;
-        HandCubeU1.y = -1000000;
-        HandCubeU1.z = -1000000;
-        HandCubeU2.x = -1000000;
-        HandCubeU2.y = -1000000;
-        HandCubeU2.z = -1000000;
-        HandCube1Pos.transform.localPosition = HandCubeU1;
-        HandCube2Pos.transform.localPosition = HandCubeU2;
         U1LastColliding = null;
         U2LastColliding = null;
         LastLastColliding1 = null;
@@ -651,6 +656,7 @@ public class Logs : MonoBehaviour
             finalizou = DateTime.Now;
             TempoTotalTarefa = (finalizou-taskStart).TotalMilliseconds;
             carregouNoS();
+            ResetObjects();
         }
 
         if(!HoverU1.GetComponent<ColliderObj>().godUp) textStory.Add("At " + timestamp.TotalMilliseconds + " GOD just occurred!");

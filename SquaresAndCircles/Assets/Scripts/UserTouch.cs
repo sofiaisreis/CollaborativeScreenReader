@@ -73,7 +73,9 @@ public class UserTouch : MonoBehaviour
         if (collider.GodOn)
         {
             collider.isG = true;
-            collider.GodSelects();
+            collider.SelectObject();
+            //TO DO verificar linha de cima
+            print("User Touch reconheceu o GOD com feedback: " + collider.feedbackType);
         }
         else
         {
