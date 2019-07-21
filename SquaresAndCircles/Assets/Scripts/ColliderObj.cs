@@ -124,6 +124,7 @@ public class ColliderObj : MonoBehaviour
         if (theTouch.GetComponent<NewTouch>().handsTooCloseLuci) {
             //LuciMode
             feedbackType = 6;
+            audioRequest.PlayRemoteAudio(-1, -1, -1, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
         }
     }
 
@@ -144,7 +145,7 @@ public class ColliderObj : MonoBehaviour
                 {
                     //userIDstring = u.GetComponent<User>().humanID;
                     lastObjectType = 1;
-                    audioRequest.PlayRemoteAudio(1, 1, 1, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
+                    audioRequest.PlayRemoteAudio(1, 1, 1, transform.position, -1, -1, feedbackType, 1, lastFeedbackPress);
                     //print("ID OF USER: " + u.humanID);
                     objectLastCollidingName = "square";
                     objectHoverName = "square";
@@ -152,7 +153,7 @@ public class ColliderObj : MonoBehaviour
                 else if (objTag == "circle")
                 {
                     lastObjectType = 2;
-                    audioRequest.PlayRemoteAudio(2, 2, 2, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
+                    audioRequest.PlayRemoteAudio(2, 2, 2, transform.position, -1, -1, feedbackType, 2, lastFeedbackPress);
                     objectLastCollidingName = "circle";
                     objectHoverName = "circle";
                 }
@@ -169,20 +170,20 @@ public class ColliderObj : MonoBehaviour
                 if (objTag == "square")
                 {
                     //userIDstring = u.GetComponent<User>().humanID;
-                    audioRequest.PlayRemoteAudio(idUser, 1, 1, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
+                    audioRequest.PlayRemoteAudio(idUser, 1, 1, transform.position, -1, -1, feedbackType, 1, lastFeedbackPress);
                     //print("ID OF USER: " + u.humanID);
                     objectLastCollidingName = "square";
                     objectHoverName = "square";
                 }
                 else if (objTag == "circle")
                 {
-                    audioRequest.PlayRemoteAudio(idUser, 2, 2, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
+                    audioRequest.PlayRemoteAudio(idUser, 2, 2, transform.position, -1, -1, feedbackType, 2, lastFeedbackPress);
                     objectLastCollidingName = "circle";
                     objectHoverName = "circle";
                 }
                 else if (objTag == "triangle")
                 {
-                    audioRequest.PlayRemoteAudio(idUser, 3, 3, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
+                    audioRequest.PlayRemoteAudio(idUser, 3, 3, transform.position, -1, -1, feedbackType, 3, lastFeedbackPress);
                     objectLastCollidingName = "triangle";
                     objectHoverName = "triangle";
                 }
@@ -206,15 +207,17 @@ public class ColliderObj : MonoBehaviour
             {
                 if (objTag == "square")
                 {
+                    lastObjectType = 1;
                     //userIDstring = u.GetComponent<User>().humanID;
-                    audioRequest.PlayRemoteAudio(1, 1, 1, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
+                    audioRequest.PlayRemoteAudio(1, 1, 1, transform.position, -1, -1, feedbackType, 1, lastFeedbackPress);
                     //print("ID OF USER: " + u.humanID);
                     objectLastCollidingName = "square";
                     objectHoverName = "square";
                 }
                 else if (objTag == "circle")
                 {
-                    audioRequest.PlayRemoteAudio(2, 2, 2, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
+                    lastObjectType = 2;
+                    audioRequest.PlayRemoteAudio(2, 2, 2, transform.position, -1, -1, feedbackType, 2, lastFeedbackPress);
                     objectLastCollidingName = "circle";
                     objectHoverName = "circle";
                 }
@@ -229,19 +232,19 @@ public class ColliderObj : MonoBehaviour
             {
                 if (objTag == "square")
                 {
-                    audioRequest.PlayRemoteAudio(idUser, 1, 1, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
+                    audioRequest.PlayRemoteAudio(idUser, 1, 1, transform.position, -1, -1, feedbackType, 1, lastFeedbackPress);
                     objectLastCollidingName = "square";
                     objectHoverName = "square";
                 }
                 else if (objTag == "circle")
                 {
-                    audioRequest.PlayRemoteAudio(idUser, 2, 2, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
+                    audioRequest.PlayRemoteAudio(idUser, 2, 2, transform.position, -1, -1, feedbackType, 2, lastFeedbackPress);
                     objectLastCollidingName = "circle";
                     objectHoverName = "circle";
                 }
                 else if (objTag == "triangle")
                 {
-                    audioRequest.PlayRemoteAudio(idUser, 3, 3, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
+                    audioRequest.PlayRemoteAudio(idUser, 3, 3, transform.position, -1, -1, feedbackType, 3, lastFeedbackPress);
                     objectLastCollidingName = "triangle";
                     objectHoverName = "triangle";
                 }
@@ -288,11 +291,11 @@ public class ColliderObj : MonoBehaviour
 
             if (lastCollidingObjectGlobal != null)
             {
-                if (lastObjectType == 1)
+                if (lastCollidingObjectGlobal.tag == "square")
                 {
                     actionIsNow = "selected";
                     squares_inc++;
-                    audioRequest.PlayRemoteAudio(idUser, 1, 4, transform.position, squares_inc, squares_findTotal, feedbackType, lastObjectType, lastFeedbackPress);
+                    audioRequest.PlayRemoteAudio(idUser, 1, 4, transform.position, squares_inc, squares_findTotal, feedbackType, 1, lastFeedbackPress);
                     print("Selecionou " + squares_inc + " de " + squares_findTotal + " quadrados.");
 
                     //Destroy(lastCollidingObject);
@@ -306,7 +309,7 @@ public class ColliderObj : MonoBehaviour
                 {
                     actionIsNow = "selected";
                     circles_inc++;
-                    audioRequest.PlayRemoteAudio(idUser, 2, 4, transform.position, circles_inc, circles_findTotal, feedbackType, lastObjectType, lastFeedbackPress);
+                    audioRequest.PlayRemoteAudio(idUser, 2, 4, transform.position, circles_inc, circles_findTotal, feedbackType, 2, lastFeedbackPress);
                     print("Selecionou " + circles_inc + " de " + circles_findTotal + " circulos.");
 
                     //Destroy(lastCollidingObject);
@@ -322,7 +325,7 @@ public class ColliderObj : MonoBehaviour
                     numErros++;
                     objectHoverName = "";
                     objectLastCollidingName = "triangle";
-                    audioRequest.PlayRemoteAudio(idUser, 3, 6, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
+                    audioRequest.PlayRemoteAudio(idUser, 3, 6, transform.position, -1, -1, feedbackType, 3, lastFeedbackPress);
                 }
                 //Destroy(lastCollidingObject);
                 lastCollidingObject.SetActive(false);
@@ -330,7 +333,7 @@ public class ColliderObj : MonoBehaviour
             }
             else
             {
-                audioRequest.PlayRemoteAudio(idUser, -1, 6, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
+                audioRequest.PlayRemoteAudio(idUser, -1, 6, transform.position, -1, -1, feedbackType, -1, lastFeedbackPress);
                 actionIsNow = "error";
             }
         }
@@ -343,7 +346,7 @@ public class ColliderObj : MonoBehaviour
                 {
                     actionIsNow = "selected";
                     squares_inc++;
-                    audioRequest.PlayRemoteAudio(1, 1, 4, transform.position, squares_inc, squares_findTotal, feedbackType, lastObjectType, lastFeedbackPress);
+                    audioRequest.PlayRemoteAudio(1, 1, 4, transform.position, squares_inc, squares_findTotal, feedbackType, 1, lastFeedbackPress);
                     print("Selecionou " + squares_inc + " de " + squares_findTotal + " quadrados.");
 
                     //Destroy(lastCollidingObject);
@@ -357,7 +360,7 @@ public class ColliderObj : MonoBehaviour
                 {
                     actionIsNow = "selected";
                     circles_inc++;
-                    audioRequest.PlayRemoteAudio(2, 2, 4, transform.position, circles_inc, circles_findTotal, feedbackType, lastObjectType, lastFeedbackPress);
+                    audioRequest.PlayRemoteAudio(2, 2, 4, transform.position, circles_inc, circles_findTotal, feedbackType, 2, lastFeedbackPress);
                     print("Selecionou " + circles_inc + " de " + circles_findTotal + " circulos.");
 
                     //Destroy(lastCollidingObject);
@@ -367,17 +370,6 @@ public class ColliderObj : MonoBehaviour
                     lastCollidingObject = collidingObject = lastCollidingObjectGlobal = null;
                     lastObjectType = -1;
                 }
-                /*else if (lastCollidingObjectGlobal.tag == "triangle")
-                {
-                    actionIsNow = "error";
-                    numErros++;
-                    objectHoverName = "";
-                    objectLastCollidingName = "triangle";
-                    audioRequest.PlayRemoteAudio(-1, 3, 6, transform.position, -1, -1, feedbackType, lastObjectType);
-                }*/
-                //Destroy(lastCollidingObject);
-                //lastCollidingObject.SetActive(false);
-                //lastCollidingObject = collidingObject = lastCollidingObjectGlobal = null;
             }
         }
         else
@@ -389,12 +381,12 @@ public class ColliderObj : MonoBehaviour
                 //vazio
                 if (lastCollidingObject == null)
                 {
-                    audioRequest.PlayRemoteAudio(idUser, -1, 7, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
+                    audioRequest.PlayRemoteAudio(idUser, -1, 7, transform.position, -1, -1, feedbackType, -1, lastFeedbackPress);
                     actionIsNow = "vazio";
                 }
                 else
                 {
-                    audioRequest.PlayRemoteAudio(idUser, -1, 6, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
+                    audioRequest.PlayRemoteAudio(idUser, -1, 6, transform.position, -1, -1, feedbackType, -1, lastFeedbackPress);
                     actionIsNow = "error";
                 }
                 numErros++;
@@ -405,7 +397,7 @@ public class ColliderObj : MonoBehaviour
                 {
                     actionIsNow = "selected";
                     squares_inc++;
-                    audioRequest.PlayRemoteAudio(idUser, 1, 4, transform.position, squares_inc, squares_findTotal, feedbackType, lastObjectType, lastFeedbackPress);
+                    audioRequest.PlayRemoteAudio(idUser, 1, 4, transform.position, squares_inc, squares_findTotal, feedbackType, 1, lastFeedbackPress);
                     print("Selecionou " + squares_inc + " de " + squares_findTotal + " quadrados.");
                     objectLastCollidingName = "square";
                     objectHoverName = "";
@@ -415,7 +407,7 @@ public class ColliderObj : MonoBehaviour
                 {
                     actionIsNow = "selected";
                     circles_inc++;
-                    audioRequest.PlayRemoteAudio(idUser, 2, 4, transform.position, circles_inc, circles_findTotal, feedbackType, lastObjectType, lastFeedbackPress);
+                    audioRequest.PlayRemoteAudio(idUser, 2, 4, transform.position, circles_inc, circles_findTotal, feedbackType, 2, lastFeedbackPress);
                     print("Selecionou " + circles_inc + " de " + circles_findTotal + "circulos.");
                     objectLastCollidingName = "circle";
                     objectHoverName = "";
@@ -426,7 +418,7 @@ public class ColliderObj : MonoBehaviour
                     numErros++;
                     objectLastCollidingName = "triangle";
                     objectHoverName = "triangle";
-                    audioRequest.PlayRemoteAudio(idUser, 3, 6, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
+                    audioRequest.PlayRemoteAudio(idUser, 3, 6, transform.position, -1, -1, feedbackType, 3, lastFeedbackPress);
                 }
 
                 //Destroy(lastCollidingObject);
