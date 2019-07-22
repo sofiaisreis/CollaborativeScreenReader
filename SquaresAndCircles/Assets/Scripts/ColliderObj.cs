@@ -449,7 +449,7 @@ public class ColliderObj : MonoBehaviour
         }
         if (feedbackType == 6)
         {
-            GUI.Label(new Rect(10, 30, 200, 35), "Feedback Type: Luci Mode ; Last Object Type: " + lastObjectType + "Last Feedback Pressed: " + lastFeedbackPress);
+            GUI.Label(new Rect(200, 30, 200, 35), "Feedback Type: Luci Mode ; Last Object Type: " + lastObjectType + "Last Feedback Pressed: " + lastFeedbackPress);
         }
 
         if (GodOn) GUI.Label(new Rect(10, 130, 200, 35), "God ON!");
