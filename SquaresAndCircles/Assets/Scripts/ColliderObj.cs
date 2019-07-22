@@ -34,6 +34,7 @@ public class ColliderObj : MonoBehaviour
     public bool isG = false;
     public bool PressingG = false;
     public bool godUp = true;
+    public bool LuciUp = true;
     public bool LuciOn = false;
     public DateTime haveTime;
     public TimeSpan startG;
@@ -130,41 +131,45 @@ public class ColliderObj : MonoBehaviour
             endG = DateTime.Now - haveTime;
         }
         // Emergency and for Testing Luci Mode
-        if (Input.GetKeyDown(KeyCode.L) && LuciSwitch == false)
+        if (Input.GetKeyDown(KeyCode.L))
         {
+            print("Luci On");
             feedbackTypeLast = feedbackType;
             feedbackType = 6;
-            startLuci = DateTime.Now - haveTimeLuci;
+            audioRequest.PlayRemoteAudio(-1, -1, -1, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
             LuciOn = true;
-            audioRequest.PlayRemoteAudio(-1, -1, -1, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
-            LuciSwitch = true;
+            startLuci = DateTime.Now - haveTimeLuci;
+            LuciUp = true;
         }
-        else if (Input.GetKeyDown(KeyCode.L) && LuciSwitch == true)
+        else if (Input.GetKeyUp(KeyCode.L))
         {
+            print("Luci Off");
             feedbackType = feedbackTypeLast;
-            endLuci = DateTime.Now - haveTimeLuci;
-            LuciOn = false;
-            LuciTempo += (endLuci - startLuci).TotalMilliseconds;
             audioRequest.PlayRemoteAudio(-1, -1, -1, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
+            LuciOn = false;
+            endLuci = DateTime.Now - haveTimeLuci;
+            LuciTempo += (endLuci - startLuci).TotalMilliseconds;
+            LuciUp = false;
         }
+       /* TO DO DESCOMENTAR 
         if (theTouch.GetComponent<NewTouch>().handsTooCloseLuci && feedbackType != 6) {
             //LuciMode
             feedbackTypeLast = feedbackType;
             feedbackType = 6;
+            audioRequest.PlayRemoteAudio(-1, -1, -1, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
             startLuci = DateTime.Now - haveTimeLuci;
             LuciOn = true;
-            audioRequest.PlayRemoteAudio(-1, -1, -1, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
         }
         if (!theTouch.GetComponent<NewTouch>().handsTooCloseLuci && feedbackType == 6) {
             //LuciModeEnds
             print("Saiu do Luci");
             feedbackType = feedbackTypeLast;
+            audioRequest.PlayRemoteAudio(-1, -1, -1, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
             endLuci = DateTime.Now - haveTimeLuci;
             LuciOn = false;
             LuciTempo += (endLuci - startLuci).TotalMilliseconds;
-            audioRequest.PlayRemoteAudio(-1, -1, -1, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
         }
-        print("Feedback: " + feedbackType);
+        */
     }
 
     void OnCollisionEnter(Collision collisionInfo)
@@ -410,6 +415,9 @@ public class ColliderObj : MonoBehaviour
                     lastObjectType = -1;
                 }
             }
+            objectLastCollidingName = "";
+            objectHoverName = "";
+            lastCollidingObject = collidingObject = lastCollidingObjectGlobal = null;
         }
         else
         {
@@ -465,6 +473,8 @@ public class ColliderObj : MonoBehaviour
                 lastCollidingObject = collidingObject = lastCollidingObjectGlobal = null;
             }
             errorTap = false;
+            objectLastCollidingName = "";
+            objectHoverName = "";
         }
     }
 
@@ -488,9 +498,12 @@ public class ColliderObj : MonoBehaviour
         }
         if (feedbackType == 6)
         {
-            GUI.Label(new Rect(260, 30, 400, 35), "Feedback Type: Luci Mode ; Last Object Type: " + lastObjectType + "Last Feedback Pressed: " + lastFeedbackPress);
+            GUI.Label(new Rect(260, 30, 700, 35), "Feedback Type: Luci Mode ; Last Object Type: " + lastObjectType + "Last Feedback Pressed: " + lastFeedbackPress);
         }
-
+        if (LuciOn)
+        {
+            GUI.Label(new Rect(260, 30, 700, 35), "Feedback Type: Luci Mode ; Last Object Type: " + lastObjectType + "Last Feedback Pressed: " + lastFeedbackPress);
+        }
         if (GodOn) GUI.Label(new Rect(10, 130, 200, 35), "God ON!");
     }
 }
