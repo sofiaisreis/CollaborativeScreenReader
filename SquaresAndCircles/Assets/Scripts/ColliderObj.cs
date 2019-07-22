@@ -44,7 +44,7 @@ public class ColliderObj : MonoBehaviour
     public TimeSpan endLuci;
     public GameObject theTouch;
     public bool TooCloseGoesLuci;
-    public int lastObjectType = -1;
+    public int lastObjectType = -2;
     public bool LuciSwitch = false;
 
     public double LuciTempo;
@@ -84,6 +84,7 @@ public class ColliderObj : MonoBehaviour
             haveTime = DateTime.Now;
             haveTimeLuci = DateTime.Now;
             audioRequest.PlayRemoteAudio(-1, -2, -1, transform.position, -1, -1, feedbackType, -2, lastFeedbackPress);
+            LuciTempo = 0;
         }
         //Reiniciar valores de incrementos no som:  passar -2 no lastObj
 
@@ -243,6 +244,7 @@ public class ColliderObj : MonoBehaviour
         //print("Feedback on collider: " + feedbackType);
         int idUser = GetComponent<UserTouch>().hand.theUser.userID;
         var objTag = collisionInfo.gameObject.tag;
+        actionIsNow = "in_objeto";
 
         //Luci Mode
         if (feedbackType == 6)
@@ -327,6 +329,9 @@ public class ColliderObj : MonoBehaviour
     {
         int idUser;
 
+        //para Modo Normal
+        idUser = GetComponent<UserTouch>().hand.theUser.userID;
+
         // God Mode
         if (feedbackType == 4)
         {
@@ -398,7 +403,11 @@ public class ColliderObj : MonoBehaviour
                     objectHoverName = "";
                     objectLastCollidingName = "square";
                     lastCollidingObject = collidingObject = lastCollidingObjectGlobal = null;
-                    lastObjectType = -1;
+                    lastObjectType = 1;
+                    if(idUser == 2)
+                    {
+                        objectLastCollidingName = "";
+                    }
                 }
                 else if (lastCollidingObjectGlobal.tag == "circle")
                 {
@@ -412,17 +421,16 @@ public class ColliderObj : MonoBehaviour
                     objectHoverName = "";
                     objectLastCollidingName = "circle";
                     lastCollidingObject = collidingObject = lastCollidingObjectGlobal = null;
-                    lastObjectType = -1;
+                    lastObjectType = 2;
+                    if (idUser == 1)
+                    {
+                        objectLastCollidingName = "";
+                    }
                 }
             }
-            objectLastCollidingName = "";
-            objectHoverName = "";
-            lastCollidingObject = collidingObject = lastCollidingObjectGlobal = null;
         }
         else
         {
-            // Modo Normal
-            idUser = GetComponent<UserTouch>().hand.theUser.userID;
             if (errorTap)
             {
                 //vazio
@@ -473,8 +481,6 @@ public class ColliderObj : MonoBehaviour
                 lastCollidingObject = collidingObject = lastCollidingObjectGlobal = null;
             }
             errorTap = false;
-            objectLastCollidingName = "";
-            objectHoverName = "";
         }
     }
 
@@ -498,7 +504,7 @@ public class ColliderObj : MonoBehaviour
         }
         if (feedbackType == 6)
         {
-            GUI.Label(new Rect(260, 30, 700, 35), "Feedback Type: Luci Mode ; Last Object Type: " + lastObjectType + "Last Feedback Pressed: " + lastFeedbackPress);
+            GUI.Label(new Rect(260, 30, 700, 35), "Feedback Type: Luci Mode ; " + "Last Feedback Pressed: " + lastFeedbackPress);
         }
         if (LuciOn)
         {
