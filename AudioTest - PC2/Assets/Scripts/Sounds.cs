@@ -34,18 +34,15 @@ public class Sounds : MonoBehaviour
             user = 2;
         if (quadSelecionadosAteAgora == 5 && circSelecionadosAteAgora == 5) estaoTodosSelecionados = true;
 
-        if (select.GetComponent<Select>().TarefaQuadradosFemale && select.GetComponent<Select>().TarefaCirculosMale)
-        {
-            estaoTodosSelecionados = true;
-        }
+        
         if (estaoTodosSelecionados)
         {
             System.Threading.Thread.Sleep(2000);
             select.GetComponent<Select>().TarefaTerminada();
-            estaoTodosSelecionados = false;
             quadSelecionadosAteAgora = 0;
             circSelecionadosAteAgora = 0;
         }
+        estaoTodosSelecionados = false;
     }
 
     public void ParseAndPlay(string stringToParse)

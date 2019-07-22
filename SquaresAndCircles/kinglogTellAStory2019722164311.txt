@@ -1,0 +1,26 @@
+Feedback is PUBLIC!
+Board WITHOUT TRIANGLES
+At 3619.6764 User1 tried to select error, but it's empty, so that is not possible.
+At 6012.4153 User1 selected  and there is still 4 squares to select.
+At 6012.4153 User1 tried to select selected, but it's empty, so that is not possible.
+At 8172.9393 User1 selected  and there is still 3 squares to select.
+At 8172.9393 User1 tried to select selected, but it's empty, so that is not possible.
+At 10233.3133 User1 selected  and there is still 2 squares to select.
+At 10233.3133 User1 tried to select selected, but it's empty, so that is not possible.
+At 12792.2445 User1 selected  and there is still 1 squares to select.
+At 12792.2445 User1 tried to select selected, but it's empty, so that is not possible.
+At 15784.1395 User 1 selected all the squares.
+At 15784.1395 User1 tried to select selected, but it's empty, so that is not possible.
+At 22264.1931 User 1 selected all the squares.
+At 22264.1931 User1 tried to select selected, but it's empty, so that is not possible.
+At 24490.3645 User 1 selected all the squares.
+At 24490.3645 User1 tried to select selected, but it's empty, so that is not possible.
+At 26817.929 User2 selected  and there is still 4 circles to select.
+At 26817.929 User2 tried to select selected, but it's empty, so that is not possible.
+At 29510.2591 User 1 selected all the squares.
+At 29510.2591 User1 tried to select selected, but it's empty, so that is not possible.
+At 32470.2504 User 1 selected all the squares.
+At 32470.2504 User1 tried to select selected, but it's empty, so that is not possible.
+At 35394.7505 User 1 selected all the squares.
+At 35394.7505 User1 tried to select selected, but it's empty, so that is not possible.
+At 41675.6571 task was stopped
