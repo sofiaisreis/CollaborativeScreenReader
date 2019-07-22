@@ -1,0 +1,24 @@
+Feedback is TASK DEPENDENT!
+Board WITHOUT TRIANGLES
+At 2490.3244 User2 selected  and there is still 4 circles to select.
+At 2490.3244 User2 tried to select selected, but it's empty, so that is not possible.
+At 4517.3643 User2 selected  and there is still 3 circles to select.
+At 4517.3643 User2 tried to select selected, but it's empty, so that is not possible.
+At 6777.2542 User2 selected  and there is still 2 circles to select.
+At 6777.2542 User2 tried to select selected, but it's empty, so that is not possible.
+At 9901.505 User2 selected  and there is still 1 circles to select.
+At 9901.505 User2 tried to select selected, but it's empty, so that is not possible.
+At 14986.1216 User2 selected  and there is still 1 circles to select.
+At 14986.1216 User2 tried to select selected, but it's empty, so that is not possible.
+At 20336.7695 User2 selected  and there is still 1 circles to select.
+At 20336.7695 User2 tried to select selected, but it's empty, so that is not possible.
+At 25288.3727 User 2 selected all the circles.
+At 25288.3727 User2 tried to select selected, but it's empty, so that is not possible.
+At 32832.911 User2 tried to select error, but it's empty, so that is not possible.
+At 35757.2099 User 2 selected all the circles.
+At 35757.2099 User2 tried to select selected, but it's empty, so that is not possible.
+At 38914.1314 User 2 selected all the circles.
+At 38914.1314 User2 tried to select selected, but it's empty, so that is not possible.
+At 41008.0599 User 2 selected all the circles.
+At 41008.0599 User2 tried to select selected, but it's empty, so that is not possible.
+At 46425.2878 task was stopped

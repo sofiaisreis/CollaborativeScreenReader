@@ -130,7 +130,7 @@ public class ColliderObj : MonoBehaviour
             godUp = false;
             endG = DateTime.Now - haveTime;
         }
-        // Emergency and for Testing Luci Mode
+        /*// Emergency and for Testing Luci Mode
         if (Input.GetKeyDown(KeyCode.L))
         {
             print("Luci On");
@@ -151,7 +151,7 @@ public class ColliderObj : MonoBehaviour
             LuciTempo += (endLuci - startLuci).TotalMilliseconds;
             LuciUp = false;
         }
-       /* TO DO DESCOMENTAR 
+      */ ///* 
         if (theTouch.GetComponent<NewTouch>().handsTooCloseLuci && feedbackType != 6) {
             //LuciMode
             feedbackTypeLast = feedbackType;
@@ -169,7 +169,7 @@ public class ColliderObj : MonoBehaviour
             LuciOn = false;
             LuciTempo += (endLuci - startLuci).TotalMilliseconds;
         }
-        */
+    //    */
     }
 
     void OnCollisionEnter(Collision collisionInfo)

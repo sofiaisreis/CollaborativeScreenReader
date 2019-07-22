@@ -1,0 +1,23 @@
+Feedback is PRIVATE!
+Board WITHOUT TRIANGLES
+At 5580.0267 User2 selected  and there is still 4 circles to select.
+At 5580.0267 User2 tried to select selected, but it's empty, so that is not possible.
+At 9070.5187 User2 selected  and there is still 3 circles to select.
+At 9070.5187 User2 tried to select selected, but it's empty, so that is not possible.
+At 12426.7505 User2 selected  and there is still 2 circles to select.
+At 12426.7505 User2 tried to select selected, but it's empty, so that is not possible.
+At 25355.5939 User2 selected  and there is still 1 circles to select.
+At 25355.5939 User2 tried to select selected, but it's empty, so that is not possible.
+At 28478.7072 User 2 selected all the circles.
+At 28478.7072 User2 tried to select selected, but it's empty, so that is not possible.
+At 35291.6439 User 2 selected all the circles.
+At 35291.6439 User2 tried to select selected, but it's empty, so that is not possible.
+At 37783.9689 User 2 selected all the circles.
+At 37783.9689 User2 tried to select selected, but it's empty, so that is not possible.
+At 40542.9339 User 2 selected all the circles.
+At 40542.9339 User2 tried to select selected, but it's empty, so that is not possible.
+At 43300.6266 User 2 selected all the circles.
+At 43300.6266 User2 tried to select selected, but it's empty, so that is not possible.
+At 46027.0214 User 2 selected all the circles.
+At 46027.0214 User2 tried to select selected, but it's empty, so that is not possible.
+At 58321.4076 task was stopped

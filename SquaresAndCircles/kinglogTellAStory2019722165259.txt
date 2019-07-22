@@ -1,0 +1,26 @@
+Feedback is PUBLIC!
+Board WITH TRIANGLES
+At 3486.8768 User2 tried to select error, but it's empty, so that is not possible.
+At 6676.8693 User2 selected  and there is still 5 circles to select.
+At 6676.8693 User2 tried to select selected, but it's empty, so that is not possible.
+At 9967.038 User2 selected  and there is still 5 circles to select.
+At 9967.038 User2 tried to select selected, but it's empty, so that is not possible.
+At 10997.8248 REPROCESS was Pressed!
+At 13988.1658 User2 selected  and there is still 5 circles to select.
+At 13988.1658 User2 tried to select selected, but it's empty, so that is not possible.
+At 16447.2127 User2 selected  and there is still 5 circles to select.
+At 16447.2127 User2 tried to select selected, but it's empty, so that is not possible.
+At 20767.6118 User2 selected  and there is still 5 circles to select.
+At 20767.6118 User2 tried to select selected, but it's empty, so that is not possible.
+At 29341.845 User2 tried to select error, but it's empty, so that is not possible.
+At 32033.8313 User2 selected  and there is still 4 circles to select.
+At 32033.8313 User2 tried to select selected, but it's empty, so that is not possible.
+At 34293.9262 User2 selected  and there is still 3 circles to select.
+At 34293.9262 User2 tried to select selected, but it's empty, so that is not possible.
+At 36687.111 User2 selected  and there is still 2 circles to select.
+At 36687.111 User2 tried to select selected, but it's empty, so that is not possible.
+At 39412.1642 User2 selected  and there is still 1 circles to select.
+At 39412.1642 User2 tried to select selected, but it's empty, so that is not possible.
+At 42236.9786 User 2 selected all the circles.
+At 42236.9786 User2 tried to select selected, but it's empty, so that is not possible.
+At 48484.4091 task was stopped
