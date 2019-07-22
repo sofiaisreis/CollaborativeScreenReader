@@ -1,0 +1,7 @@
+Feedback is TASK DEPENDENT!
+Board WITHOUT TRIANGLES
+At 4155.5836 REPROCESS was Pressed!
+At 17273.0937 User2 selected circle and there is still 4 circles to select.
+At 26412.7428 User2 selected square and there is still 4 circles to select.
+At 26412.7428 User2 tried to select square and that is not possible.
+At 58914.294 task was stopped

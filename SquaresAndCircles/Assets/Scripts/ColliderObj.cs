@@ -121,11 +121,20 @@ public class ColliderObj : MonoBehaviour
             godUp = false;
             endG = DateTime.Now - haveTime;
         }
-        if (theTouch.GetComponent<NewTouch>().handsTooCloseLuci) {
+        if (theTouch.GetComponent<NewTouch>().handsTooCloseLuci && feedbackType != 6) {
             //LuciMode
+            feedbackTypeLast = feedbackType;
             feedbackType = 6;
+            
             audioRequest.PlayRemoteAudio(-1, -1, -1, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
         }
+        if (!theTouch.GetComponent<NewTouch>().handsTooCloseLuci && feedbackType == 6) {
+            //LuciModeEnds
+            print("Saiu do Luci");
+            feedbackType = feedbackTypeLast;
+            audioRequest.PlayRemoteAudio(-1, -1, -1, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
+        }
+        print("Feedback: " + feedbackType);
     }
 
     void OnCollisionEnter(Collision collisionInfo)
@@ -449,7 +458,7 @@ public class ColliderObj : MonoBehaviour
         }
         if (feedbackType == 6)
         {
-            GUI.Label(new Rect(200, 30, 200, 35), "Feedback Type: Luci Mode ; Last Object Type: " + lastObjectType + "Last Feedback Pressed: " + lastFeedbackPress);
+            GUI.Label(new Rect(260, 30, 400, 35), "Feedback Type: Luci Mode ; Last Object Type: " + lastObjectType + "Last Feedback Pressed: " + lastFeedbackPress);
         }
 
         if (GodOn) GUI.Label(new Rect(10, 130, 200, 35), "God ON!");

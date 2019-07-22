@@ -47,6 +47,23 @@ public class NewTouch : MonoBehaviour
             isH = false;
         }
 
+        Vector3 user1RightHPos = User1.handRight.transform.position;
+        Vector3 user1LeftHPos = User1.handLeft.transform.position;
+        Vector3 user2RightHPos = User2.handRight.transform.position;
+        Vector3 user2LeftHPos = User2.handLeft.transform.position;
+
+        float distUserHands = Mathf.Min(
+            Vector3.Distance(user1RightHPos, user2RightHPos),
+            Vector3.Distance(user1RightHPos, user2LeftHPos),
+            Vector3.Distance(user1LeftHPos, user2RightHPos),
+            Vector3.Distance(user1LeftHPos, user2LeftHPos)
+            );
+
+        if (!(distUserHands < (distanceThreshold)))
+        {
+            handsTooCloseLuci = false;
+        }
+
         if (Input.touchCount > 0)
         {
             //  print("Touch!");
@@ -55,6 +72,17 @@ public class NewTouch : MonoBehaviour
             {
                 if (touch.phase == TouchPhase.Began)
                 {
+                    MyTouch touchUser1 = User1.handRight.userTouch.touch;
+                    MyTouch touchUser2 = User2.handRight.userTouch.touch;
+
+                    if (touchUser1 == null || touchUser2 == null)
+                    {
+                        if (distUserHands < (distanceThreshold))
+                        {
+                            handsTooCloseLuci = true;
+                        }
+                    }
+
                     ProcessNewTouch(touch);
                 }
             }
@@ -81,24 +109,9 @@ public class NewTouch : MonoBehaviour
                 }
             }
 
-            // and now for something new: vamos tentar corrigir associacoes de toques que estao longe
-
-            Vector3 user1RightHPos = User1.handRight.transform.position;
-            Vector3 user1LeftHPos = User1.handLeft.transform.position;
-            Vector3 user2RightHPos = User2.handRight.transform.position;
-            Vector3 user2LeftHPos = User2.handLeft.transform.position;
-
-            float distUserHands = Mathf.Min(
-                Vector3.Distance(user1RightHPos, user2RightHPos),
-                Vector3.Distance(user1RightHPos, user2LeftHPos),
-                Vector3.Distance(user1LeftHPos, user2RightHPos),
-                Vector3.Distance(user1LeftHPos, user2LeftHPos)
-                );
-
             if(distUserHands > distanceThreshold)
             {
                 handsTooClose = false;
-                handsTooCloseLuci = false;
 
                 foreach (Touch t in Input.touches)
                 {
@@ -166,11 +179,30 @@ public class NewTouch : MonoBehaviour
             {
                 handsTooClose = true;
                 // Se estiverem ainda mais perto: Luci mode
-                if (distUserHands < (distanceThreshold / 2))
-                {
-                    handsTooCloseLuci = true;
-                }
+                
 
+            }
+        }
+
+        if (reprocessInterval >= 0)
+        {
+            if ((DateTime.Now - lastReprocess).TotalMilliseconds > reprocessInterval)
+            {
+                if (
+                    ((User1.handRight.userTouch.touch == null && !User1.handRight.userTouch.possibleDoubleTap) || (User1.handRight.userTouch.touch != null && User1.handRight.userTouch.touch.isDrag)) &&
+                    ((User2.handRight.userTouch.touch == null && !User2.handRight.userTouch.possibleDoubleTap) || (User2.handRight.userTouch.touch != null && User2.handRight.userTouch.touch.isDrag))
+                    )
+                {
+                    if (Vector3.Distance(User1.handRight.transform.position, User2.handRight.transform.position) > distanceThreshold &&
+                        Vector3.Distance(User1.handLeft.transform.position, User2.handRight.transform.position) > distanceThreshold &&
+                        Vector3.Distance(User1.handRight.transform.position, User2.handLeft.transform.position) > distanceThreshold &&
+                        Vector3.Distance(User1.handLeft.transform.position, User2.handLeft.transform.position) > distanceThreshold
+                        )
+                    {
+                        lastReprocess = DateTime.Now;
+                        ReprocessTouches();
+                    }
+                }
             }
         }
     }

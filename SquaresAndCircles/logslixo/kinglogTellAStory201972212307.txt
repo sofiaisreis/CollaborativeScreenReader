@@ -1,0 +1,5 @@
+Feedback is PUBLIC!
+Board WITHOUT TRIANGLES
+At 2.9938 User1 tried to select circle and that is not possible.
+At 2.9938 User2 selected circle and there is still 3 circles to select.
+At 763.9823 task was stopped
