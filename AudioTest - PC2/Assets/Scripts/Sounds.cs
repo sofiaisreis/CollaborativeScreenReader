@@ -547,11 +547,11 @@ public class Sounds : MonoBehaviour
                                 female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                 female.GetComponent<Female>().PlaySquare();
                             }
-                            else if (objTypeSound == 2)
+                           /* else if (objTypeSound == 2)
                             {
                                 male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                 male.GetComponent<Female>().PlayCircle();
-                            }
+                            }*/
                             else if (objTypeSound == 4)
                             {
                                 switch (prevFeedback)
@@ -563,11 +563,11 @@ public class Sounds : MonoBehaviour
                                             female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                             female.GetComponent<Female>().PlaySelected(lastObjectGlobal, selecionados, totais);
                                         }
-                                        else if (lastObjectGlobal == 2)
+                                       /* else if (lastObjectGlobal == 2)
                                         {
                                             male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                             male.GetComponent<Male>().PlaySelected(lastObjectGlobal, selecionados, totais);
-                                        }
+                                        }*/
                                         break;
                                     // TD
                                     case 2:
@@ -576,11 +576,11 @@ public class Sounds : MonoBehaviour
                                             female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                             female.GetComponent<Female>().PlaySelected(lastObjectGlobal, selecionados, totais);
                                         }
-                                        else if (lastObjectGlobal == 2)
+                                        /*else if (lastObjectGlobal == 2)
                                         {
                                             male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                             male.GetComponent<Male>().PlaySelected(lastObjectGlobal, selecionados, totais);
-                                        }
+                                        }*/
                                         break;
                                     // Public
                                     case 3:
@@ -590,14 +590,14 @@ public class Sounds : MonoBehaviour
                                             male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
 
                                             female.GetComponent<Female>().PlaySelected(lastObjectGlobal, selecionados, totais);
-                                            male.GetComponent<Male>().PlaySelectedPublic(lastObjectGlobal, selecionados, totais);
+                                           // male.GetComponent<Male>().PlaySelectedPublic(lastObjectGlobal, selecionados, totais);
                                         }
                                         else if (lastObjectGlobal == 2)
                                         {
                                             male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                             female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
 
-                                            male.GetComponent<Male>().PlaySelected(lastObjectGlobal, selecionados, totais);
+                                            //male.GetComponent<Male>().PlaySelected(lastObjectGlobal, selecionados, totais);
                                             female.GetComponent<Female>().PlaySelectedPublic(lastObjectGlobal, selecionados, totais);
                                         }
                                         break;
@@ -610,13 +610,13 @@ public class Sounds : MonoBehaviour
                         else if (user == 2)
                         {
                             // ELE OUVE OS CIRCULOS EM QUE ELA TOCA E SELECTED
-                            if (objTypeSound == 1)
+                            /*if (objTypeSound == 1)
                             {
                                 female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                 female.GetComponent<Female>().PlaySquare();
 
-                            }
-                            else if (objTypeSound == 2)
+                            }*/
+                            if (objTypeSound == 2)
                             {
                                 male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                 male.GetComponent<Female>().PlayCircle();
@@ -627,12 +627,12 @@ public class Sounds : MonoBehaviour
                                 {
                                     //private
                                     case 1:
-                                        if (lastObjectGlobal == 1)
+                                        /*if (lastObjectGlobal == 1)
                                         {
                                             female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                             female.GetComponent<Female>().PlaySelected(lastObjectGlobal, selecionados, totais);
-                                        }
-                                        else if (lastObjectGlobal == 2)
+                                        }*/
+                                        if (lastObjectGlobal == 2)
                                         {
                                             male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                             male.GetComponent<Male>().PlaySelected(lastObjectGlobal, selecionados, totais);
@@ -640,12 +640,12 @@ public class Sounds : MonoBehaviour
                                         break;
                                     // TD
                                     case 2:
-                                        if (lastObjectGlobal == 1)
+                                        /*if (lastObjectGlobal == 1)
                                         {
                                             female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                             female.GetComponent<Female>().PlaySelected(lastObjectGlobal, selecionados, totais);
-                                        }
-                                        else if (lastObjectGlobal == 2)
+                                        }*/
+                                        if (lastObjectGlobal == 2)
                                         {
                                             male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                             male.GetComponent<Male>().PlaySelected(lastObjectGlobal, selecionados, totais);
@@ -653,7 +653,7 @@ public class Sounds : MonoBehaviour
                                         break;
                                     // Public
                                     case 3:
-                                        if (lastObjectGlobal == 1)
+                                        /*if (lastObjectGlobal == 1)
                                         {
                                             female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                             male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
@@ -661,7 +661,7 @@ public class Sounds : MonoBehaviour
                                             female.GetComponent<Female>().PlaySelected(lastObjectGlobal, selecionados, totais);
                                             male.GetComponent<Male>().PlaySelectedPublic(lastObjectGlobal, selecionados, totais);
                                         }
-                                        else if (lastObjectGlobal == 2)
+                                        else */if (lastObjectGlobal == 2)
                                         {
                                             male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                             female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
@@ -687,11 +687,11 @@ public class Sounds : MonoBehaviour
                                 female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                 female.GetComponent<Female>().PlaySquare();
                             }
-                            else if (objTypeSound == 2)
+                            /*else if (objTypeSound == 2)
                             {
                                 male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                 male.GetComponent<Male>().PlayCircle();
-                            }
+                            }*/
                             else if (objTypeSound == 4)
                             {
                                 switch (prevFeedback)
@@ -703,24 +703,24 @@ public class Sounds : MonoBehaviour
                                             female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                             female.GetComponent<Female>().PlaySelected(lastObjectGlobal, selecionados, totais);
                                         }
-                                        else if (lastObjectGlobal == 2)
+                                        /*else if (lastObjectGlobal == 2)
                                         {
                                             male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                             male.GetComponent<Male>().PlaySelected(lastObjectGlobal, selecionados, totais);
-                                        }
+                                        }*/
                                         break;
                                     // TD
                                     case 2:
-                                        if (lastObjectGlobal == 1)
+                                       if (lastObjectGlobal == 1)
                                         {
                                             female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                             female.GetComponent<Female>().PlaySelected(lastObjectGlobal, selecionados, totais);
                                         }
-                                        else if (lastObjectGlobal == 2)
+                                        /*else if (lastObjectGlobal == 2)
                                         {
                                             male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                             male.GetComponent<Male>().PlaySelected(lastObjectGlobal, selecionados, totais);
-                                        }
+                                        }*/
                                         break;
                                     // Public
                                     case 3:
@@ -730,14 +730,14 @@ public class Sounds : MonoBehaviour
                                             male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
 
                                             female.GetComponent<Female>().PlaySelected(lastObjectGlobal, selecionados, totais);
-                                            male.GetComponent<Male>().PlaySelectedPublic(lastObjectGlobal, selecionados, totais);
+                                        //    male.GetComponent<Male>().PlaySelectedPublic(lastObjectGlobal, selecionados, totais);
                                         }
                                         else if (lastObjectGlobal == 2)
                                         {
                                             male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                             female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
 
-                                            male.GetComponent<Male>().PlaySelected(lastObjectGlobal, selecionados, totais);
+                                            //male.GetComponent<Male>().PlaySelected(lastObjectGlobal, selecionados, totais);
                                             female.GetComponent<Female>().PlaySelectedPublic(lastObjectGlobal, selecionados, totais);
                                         }
                                         break;
@@ -748,13 +748,13 @@ public class Sounds : MonoBehaviour
                         // APLICACAO PARTE DELE
                         else if (user == 2)
                         {
-                            if (objTypeSound == 1)
+                           /* if (objTypeSound == 1)
                             {
                                 female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                 female.GetComponent<Female>().PlaySquare();
 
                             }
-                            else if (objTypeSound == 2)
+                            else */if (objTypeSound == 2)
                             {
                                 male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                 male.GetComponent<Male>().PlayCircle();
@@ -765,12 +765,12 @@ public class Sounds : MonoBehaviour
                                 {
                                     //private
                                     case 1:
-                                        if (lastObjectGlobal == 1)
+                                       /* if (lastObjectGlobal == 1)
                                         {
                                             female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                             female.GetComponent<Female>().PlaySelected(lastObjectGlobal, selecionados, totais);
                                         }
-                                        else if (lastObjectGlobal == 2)
+                                        else */if (lastObjectGlobal == 2)
                                         {
                                             male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                             male.GetComponent<Male>().PlaySelected(lastObjectGlobal, selecionados, totais);
@@ -778,12 +778,12 @@ public class Sounds : MonoBehaviour
                                         break;
                                     // TD
                                     case 2:
-                                        if (lastObjectGlobal == 1)
+                                       /* if (lastObjectGlobal == 1)
                                         {
                                             female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                             female.GetComponent<Female>().PlaySelected(lastObjectGlobal, selecionados, totais);
                                         }
-                                        else if (lastObjectGlobal == 2)
+                                        else */if (lastObjectGlobal == 2)
                                         {
                                             male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                             male.GetComponent<Male>().PlaySelected(lastObjectGlobal, selecionados, totais);
@@ -796,13 +796,13 @@ public class Sounds : MonoBehaviour
                                             female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
                                             male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
 
-                                            female.GetComponent<Female>().PlaySelected(lastObjectGlobal, selecionados, totais);
+                                           // female.GetComponent<Female>().PlaySelected(lastObjectGlobal, selecionados, totais);
                                             male.GetComponent<Male>().PlaySelectedPublic(lastObjectGlobal, selecionados, totais);
                                         }
                                         else if (lastObjectGlobal == 2)
                                         {
                                             male.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
-                                            female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
+                                           // female.transform.position = user == 1 ? relativePos1 : user == 2 ? relativePos2 : Vector3.zero;
 
                                             male.GetComponent<Male>().PlaySelected(lastObjectGlobal, selecionados, totais);
                                             female.GetComponent<Female>().PlaySelectedPublic(lastObjectGlobal, selecionados, totais);
