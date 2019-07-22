@@ -34,12 +34,19 @@ public class ColliderObj : MonoBehaviour
     public bool isG = false;
     public bool PressingG = false;
     public bool godUp = true;
+    public bool LuciOn = false;
     public DateTime haveTime;
     public TimeSpan startG;
     public TimeSpan endG;
+    public DateTime haveTimeLuci;
+    public TimeSpan startLuci;
+    public TimeSpan endLuci;
     public GameObject theTouch;
     public bool TooCloseGoesLuci;
     public int lastObjectType = -1;
+    public bool LuciSwitch = false;
+
+    public double LuciTempo;
 
     public static GameObject lastCollidingObjectGlobal = null;
 
@@ -74,6 +81,7 @@ public class ColliderObj : MonoBehaviour
             circles_inc = 0;
             squares_inc = 0;
             haveTime = DateTime.Now;
+            haveTimeLuci = DateTime.Now;
             audioRequest.PlayRemoteAudio(-1, -2, -1, transform.position, -1, -1, feedbackType, -2, lastFeedbackPress);
         }
         //Reiniciar valores de incrementos no som:  passar -2 no lastObj
@@ -121,17 +129,39 @@ public class ColliderObj : MonoBehaviour
             godUp = false;
             endG = DateTime.Now - haveTime;
         }
+        // Emergency and for Testing Luci Mode
+        if (Input.GetKeyDown(KeyCode.L) && LuciSwitch == false)
+        {
+            feedbackTypeLast = feedbackType;
+            feedbackType = 6;
+            startLuci = DateTime.Now - haveTimeLuci;
+            LuciOn = true;
+            audioRequest.PlayRemoteAudio(-1, -1, -1, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
+            LuciSwitch = true;
+        }
+        else if (Input.GetKeyDown(KeyCode.L) && LuciSwitch == true)
+        {
+            feedbackType = feedbackTypeLast;
+            endLuci = DateTime.Now - haveTimeLuci;
+            LuciOn = false;
+            LuciTempo += (endLuci - startLuci).TotalMilliseconds;
+            audioRequest.PlayRemoteAudio(-1, -1, -1, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
+        }
         if (theTouch.GetComponent<NewTouch>().handsTooCloseLuci && feedbackType != 6) {
             //LuciMode
             feedbackTypeLast = feedbackType;
             feedbackType = 6;
-            
+            startLuci = DateTime.Now - haveTimeLuci;
+            LuciOn = true;
             audioRequest.PlayRemoteAudio(-1, -1, -1, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
         }
         if (!theTouch.GetComponent<NewTouch>().handsTooCloseLuci && feedbackType == 6) {
             //LuciModeEnds
             print("Saiu do Luci");
             feedbackType = feedbackTypeLast;
+            endLuci = DateTime.Now - haveTimeLuci;
+            LuciOn = false;
+            LuciTempo += (endLuci - startLuci).TotalMilliseconds;
             audioRequest.PlayRemoteAudio(-1, -1, -1, transform.position, -1, -1, feedbackType, lastObjectType, lastFeedbackPress);
         }
         print("Feedback: " + feedbackType);

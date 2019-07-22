@@ -17,8 +17,11 @@ public class Logs : MonoBehaviour
     public Timer Timer1;
     public int tarefaOn = -1;
     DateTime taskStart;
+    DateTime LuciStart;
     DateTime comecou;
+    DateTime comecouLuci;
     DateTime finalizou;
+    DateTime finalizouLuci;
     
     public GameObject User1Pos, User2Pos;
     public GameObject User1LeftHandPos, User2LeftHandPos;
@@ -64,6 +67,7 @@ public class Logs : MonoBehaviour
     public int TargetReentersU1 = 0;
     public int TargetReentersU2 = 0;
     public string GodIs = "";
+    public string LuciIs = "";
     public string SpaceIs = "";
     public string HIs = "";
 
@@ -93,6 +97,7 @@ public class Logs : MonoBehaviour
     public double TempoSelecaoQuadrados;
     public double TempoSelecaoCirculos;
     public double TempoTotalTarefa;
+    public double TempoDoLucifer;
 
     public int GodTimes = 0;
     public int SpaceTimes = 0;
@@ -305,6 +310,7 @@ public class Logs : MonoBehaviour
         GodTimes = 0;
         SpaceTimes = 0;
         HTimes = 0;
+        TempoDoLucifer = 0;
         User1TouchTime = 0;
         User2TouchTime = 0;
 
@@ -417,6 +423,7 @@ public class Logs : MonoBehaviour
         HTimes = repocess.GetComponent<NewTouch>().agás;
 
         if (HoverU1.GetComponent<ColliderObj>().PressingG) GodIs = "GOD ON"; else GodIs = "-";
+        if (HoverU1.GetComponent<ColliderObj>().LuciOn) LuciIs = "LUCI ON"; else LuciIs = "-";
         if (repocess.GetComponent<NewTouch>().isRep) SpaceIs = "SPACE ON"; else SpaceIs = "-";
         if (repocess.GetComponent<NewTouch>().isH) HIs = "Trocou toque com tecla"; else HIs = "-";
 
@@ -511,6 +518,7 @@ public class Logs : MonoBehaviour
             LastCollidingTypeU1 + ":" +  
             HandCubeU1.x + ":" + HandCubeU1.y + ":" + HandCubeU1.z + ":" +
             GodIs + ":" +
+            LuciIs + ":" +
             SpaceIs + ":" +
             HIs);
 
@@ -530,6 +538,7 @@ public class Logs : MonoBehaviour
             LastCollidingTypeU2 + ":" +
             HandCubeU2.x + ":" + HandCubeU2.y + ":" + HandCubeU2.z + ":" + 
             GodIs + ":" +
+            LuciIs + ":" +
             SpaceIs + ":" + 
             HIs);
 
@@ -554,6 +563,9 @@ public class Logs : MonoBehaviour
 
         //Numero de erros no total
         int NumErrosAmbosTOTAL = NumSelecoesVaziasAmbos + NumSelecoesErradasTAmbos + NumErradasOAmbos;
+
+        //LUCI TIME UP
+        double tempoDoLucifer = HoverU1.GetComponent<ColliderObj>().LuciTempo;
 
         textAglomerate.Add("Tarefa Completada" + ":" + CompletedTask);
         textAglomerate.Add("Numero de Quadrados Selecionados" + ":" + incSQ);
