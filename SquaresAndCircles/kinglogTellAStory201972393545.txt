@@ -1,0 +1,33 @@
+Feedback is PRIVATE!
+Board WITHOUT TRIANGLES
+At 9803.7554 User1 tried to select circle and that is not possible.
+At 14056.609 User2 selected circle and there is still 4 circles to select.
+At 18676.0982 User2 selected circle and there is still 3 circles to select.
+At 19141.7865 User1 tried to select circle and that is not possible.
+At 27981.6105 User1 selected square and there is still 4 squares to select.
+At 36057.7622 User1 selected square and there is still 3 squares to select.
+At 37884.8961 REPROCESS was Pressed!
+At 39315.6768 REPROCESS was Pressed!
+At 47623.7675 REPROCESS was Pressed!
+At 48453.5477 REPROCESS was Pressed!
+At 49816.1597 User2 selected  and there is still 3 circles to select.
+At 53472.5812 User1 selected square and there is still 2 squares to select.
+At 57359.518 REPROCESS was Pressed!
+At 57426.3452 REPROCESS was Pressed!
+At 62610.7162 User2 tried to select square and that is not possible.
+At 68459.6612 User1 selected square and there is still 1 squares to select.
+At 71750.3665 REPROCESS was Pressed!
+At 71915.9231 REPROCESS was Pressed!
+At 73012.772 REPROCESS was Pressed!
+At 73545.5364 REPROCESS was Pressed!
+At 73810.8275 REPROCESS was Pressed!
+At 74541.0276 User2 selected  and there is still 3 circles to select.
+At 74873.9243 REPROCESS was Pressed!
+At 78928.8473 User2 selected circle and there is still 2 circles to select.
+At 85541.4169 REPROCESS was Pressed!
+At 87535.6326 REPROCESS was Pressed!
+At 90261.1685 REPROCESS was Pressed!
+At 128678.8769 REPROCESS was Pressed!
+At 130241.2351 User2 selected circle and there is still 1 circles to select.
+At 140974.2534 task was stopped
+At 140974.2534 task was stopped

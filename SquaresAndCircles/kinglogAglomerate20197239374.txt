@@ -1,0 +1,50 @@
+Feedback is TASK DEPENDENT!
+Board WITH TRIANGLES
+Tarefa Completada:True
+Numero de Quadrados Selecionados:5
+Numero de Circulos Selecionados:5
+Numero de Selecoes Vazias:0
+Numero de Selecoes Triangulos:0
+Numero de Selecoes de Objetos indevidos:2
+Numero de Erros no Total:2
+Selecoes Quadrados:19109.0095:24991.6629:29976.5989:44033.92:58357.1359:
+Selecoes Circulos:27550.5783:35526.006:45729.0973:55965.4875:67663.2377:
+Erros Vazios User 1:
+Erros Vazios User 2:
+Erros Triangulo ou Circulo User 1:2692.5453:11465.7189:
+Erros Triangulo ou Quadrado User 2:
+Tempo Total de Selecao de Quadrados:58357.1359
+Tempo Total de Selecao de Circulos:67663.2377
+Tempo total da tarefa:67663.2377
+Tempo Total de Toque do User 1:40047.8266
+Tempo Total de Toque do User 2:50978.4033
+Tempo Total de Toque em simultâneo:33699.1869
+Target Re-enters User 1:5
+Target Re-enters User 2:3
+SPACE times:20
+H times:0
+Luci Time:0
+Tarefa Completada:True
+Numero de Quadrados Selecionados:5
+Numero de Circulos Selecionados:5
+Numero de Selecoes Vazias:0
+Numero de Selecoes Triangulos:0
+Numero de Selecoes de Objetos indevidos:2
+Numero de Erros no Total:2
+Selecoes Quadrados:19109.0095:24991.6629:29976.5989:44033.92:58357.1359:19109.0095:24991.6629:29976.5989:44033.92:58357.1359:
+Selecoes Circulos:27550.5783:35526.006:45729.0973:55965.4875:67663.2377:27550.5783:35526.006:45729.0973:55965.4875:67663.2377:
+Erros Vazios User 1:
+Erros Vazios User 2:
+Erros Triangulo ou Circulo User 1:2692.5453:11465.7189:2692.5453:11465.7189:
+Erros Triangulo ou Quadrado User 2:
+Tempo Total de Selecao de Quadrados:58357.1359
+Tempo Total de Selecao de Circulos:67663.2377
+Tempo total da tarefa:67663.2377
+Tempo Total de Toque do User 1:40047.8266
+Tempo Total de Toque do User 2:50978.4033
+Tempo Total de Toque em simultâneo:33699.1869
+Target Re-enters User 1:5
+Target Re-enters User 2:3
+SPACE times:20
+H times:0
+Luci Time:0

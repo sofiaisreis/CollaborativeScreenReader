@@ -1,0 +1,6 @@
+Feedback is PUBLIC!
+Board WITHOUT TRIANGLES
+At 4585.3825 User2 tried to select square and that is not possible.
+At 8738.7159 User2 selected circle and there is still 4 circles to select.
+At 11065.0964 User2 tried to select vazio, but it's empty, so that is not possible.
+At 20137.9861 task was stopped
