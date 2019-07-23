@@ -151,7 +151,6 @@ public class ColliderObj : MonoBehaviour
             feedbackTypeLast = feedbackType;
             feedbackType = 6;
             //audioRequest.PlayRemoteAudio(-1, -1, -1, transform.position, cubinhosCounterMaster.GetSquaresInc(), squares_findTotal, cubinhosCounterMaster.GetCirclesInc(), circles_findTotal, feedbackType, lastObjectType, lastFeedbackPress);
-            startLuci = DateTime.Now - haveTimeLuci;
             LuciOn = true;
         }
         if (!theTouch.GetComponent<NewTouch>().handsTooCloseLuci && feedbackType == 6) {
@@ -159,9 +158,7 @@ public class ColliderObj : MonoBehaviour
             print("Saiu do Luci");
             feedbackType = feedbackTypeLast;
             //audioRequest.PlayRemoteAudio(-1, -1, -1, transform.position, cubinhosCounterMaster.GetSquaresInc(), squares_findTotal, cubinhosCounterMaster.GetCirclesInc(), circles_findTotal, feedbackType, -1, lastFeedbackPress);
-            endLuci = DateTime.Now - haveTimeLuci;
             LuciOn = false;
-            LuciTempo += (endLuci - startLuci).TotalMilliseconds;
         }
     //    */
     }
@@ -324,63 +321,7 @@ public class ColliderObj : MonoBehaviour
 
         //para Modo Normal
         idUser = GetComponent<UserTouch>().hand.theUser.userID;
-
-        // God Mode
-        /*if (feedbackType == 4)
-        {
-            idUser = -1;
-            isG = true;
-
-            if (lastCollidingObjectGlobal != null)
-            {
-                if (lastCollidingObjectGlobal.tag == "square")
-                {
-                    actionIsNow = "selected";
-                    cubinhosCounterMaster.GetSquaresInc()++;
-                    audioRequest.PlayRemoteAudio(idUser, 1, 4, transform.position, cubinhosCounterMaster.GetSquaresInc(), squares_findTotal, cubinhosCounterMaster.GetCirclesInc(), circles_findTotal, feedbackType, 1, lastFeedbackPress);
-                    print("Selecionou " + cubinhosCounterMaster.GetSquaresInc() + " de " + squares_findTotal + " quadrados.");
-
-                    //Destroy(lastCollidingObject);
-                    lastCollidingObject.SetActive(false);
-                    objectHoverName = "";
-                    objectLastCollidingName = "square";
-                    lastObjectType = -1;
-                    lastCollidingObject = collidingObject = lastCollidingObjectGlobal = null;
-                }
-                else if (lastCollidingObjectGlobal.tag == "circle")
-                {
-                    actionIsNow = "selected";
-                    cubinhosCounterMaster.GetCirclesInc()++;
-                   // counterMASTEster.circlesIncAdd()
-                    //audioRequest.PlayRemoteAudio(idUser, 2, 4, transform.position, cubinhosCounterMaster.GetSquaresInc(), squares_findTotal, cubinhosCounterMaster.GetCirclesInc(), circles_findTotal, feedbackType, 2, lastFeedbackPress);
-                    print("Selecionou " + cubinhosCounterMaster.GetCirclesInc() + " de " + circles_findTotal + " circulos.");
-                    //counterMASTEster.getCirclesInc()
-
-                    //Destroy(lastCollidingObject);
-                   // lastCollidingObject.SetActive(false);
-                    objectHoverName = "";
-                    objectLastCollidingName = "circle";
-                    lastObjectType = -1;
-                    lastCollidingObject = collidingObject = lastCollidingObjectGlobal = null;
-                }
-                else if (lastCollidingObjectGlobal.tag == "triangle")
-                {
-                    actionIsNow = "error";
-                    numErros++;
-                    objectHoverName = "";
-                    objectLastCollidingName = "triangle";
-                    audioRequest.PlayRemoteAudio(idUser, 3, 6, transform.position, cubinhosCounterMaster.GetSquaresInc(), squares_findTotal, cubinhosCounterMaster.GetCirclesInc(), circles_findTotal, feedbackType, 3, lastFeedbackPress);
-                }
-                //Destroy(lastCollidingObject);
-                lastCollidingObject.SetActive(false);
-                lastCollidingObject = collidingObject = lastCollidingObjectGlobal = null;
-            }
-            else
-            {
-                audioRequest.PlayRemoteAudio(idUser, -1, 6, transform.position, cubinhosCounterMaster.GetSquaresInc(), squares_findTotal, cubinhosCounterMaster.GetCirclesInc(), circles_findTotal, feedbackType, -1, lastFeedbackPress);
-                actionIsNow = "error";
-            }
-        }*/
+        
         // Luci Mode
         if (feedbackType == 6)
         {
