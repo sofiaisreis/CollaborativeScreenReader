@@ -17,7 +17,7 @@ public class Logs : MonoBehaviour
     public Timer Timer1;
     public int tarefaOn = -1;
     DateTime taskStart;
-    DateTime LuciStart;
+    double LuciTime;
     DateTime comecou;
     DateTime comecouLuci;
     DateTime finalizou;
@@ -70,6 +70,8 @@ public class Logs : MonoBehaviour
     public string LuciIs = "";
     public string SpaceIs = "";
     public string HIs = "";
+    public int LastTypeNumber1;
+    public int LastTypeNumber2;
 
     public bool CompletedTask = false;
     public int NumSelecoesVaziasU1 = 0;
@@ -169,7 +171,7 @@ public class Logs : MonoBehaviour
                 "HandCubePosX:" +
                 "HandCubePosY:" +
                 "HandCubePosZ:" +
-                "God Key: " +
+                "LuciMode: " +
                 "Space Key: " +
                 "H Key: ");
         }
@@ -310,10 +312,11 @@ public class Logs : MonoBehaviour
         GodTimes = 0;
         SpaceTimes = 0;
         HTimes = 0;
-        TempoDoLucifer = 0;
+        LuciTime = 0;
         User1TouchTime = 0;
         User2TouchTime = 0;
-
+        LastTypeNumber1 = -2;
+        LastTypeNumber2 = -2;
     }
 
     public void LogFileFrameWriting()
@@ -412,17 +415,17 @@ public class Logs : MonoBehaviour
         U2LastColliding = LastCollidingObj2.GetComponent<ColliderObj>().lastCollidingObject;
         LastCollidingTypeU1 = HoverU1.GetComponent<ColliderObj>().objectLastCollidingName;
         LastCollidingTypeU2 = HoverU2.GetComponent<ColliderObj>().objectLastCollidingName;
+        LastTypeNumber1 = LastCollidingObj1.GetComponent<ColliderObj>().lastObjectType;
+        LastTypeNumber2 = LastCollidingObj2.GetComponent<ColliderObj>().lastObjectType;
 
         //POSICAO DO CUBINHO
         HandCubeU1 = HandCube1Pos.transform.position;
         HandCubeU2 = HandCube2Pos.transform.position;
 
         //Keys
-        GodTimes = HoverU1.GetComponent<ColliderObj>().pressGod;
         SpaceTimes = repocess.GetComponent<NewTouch>().repro;
         HTimes = repocess.GetComponent<NewTouch>().agás;
-
-        if (HoverU1.GetComponent<ColliderObj>().PressingG) GodIs = "GOD ON"; else GodIs = "-";
+        
         if (HoverU1.GetComponent<ColliderObj>().LuciOn) LuciIs = "LUCI ON"; else LuciIs = "-";
         if (repocess.GetComponent<NewTouch>().isRep) SpaceIs = "SPACE ON"; else SpaceIs = "-";
         if (repocess.GetComponent<NewTouch>().isH) HIs = "Trocou toque com tecla"; else HIs = "-";
@@ -446,7 +449,7 @@ public class Logs : MonoBehaviour
                 NumSelecoesErradasOU1++;
                 TimeStampSelecoesErradasU1.Add(timestamp.TotalMilliseconds);
             }
-            if (LastCollidingTypeU1 == "square" && U1Action == "vazio" || LastCollidingTypeU1 == "")
+            if (LastCollidingTypeU1 == "square" && U1Action == "vazio" || LastTypeNumber1 == -2)
             {
                 NumSelecoesVaziasU1++;
                 TimeStampVaziosU1.Add(timestamp.TotalMilliseconds);
@@ -464,7 +467,7 @@ public class Logs : MonoBehaviour
                 NumSelecoesErradasOU2++;
                 TimeStampSelecoesErradasU2.Add(timestamp.TotalMilliseconds);
             }
-            if (LastCollidingTypeU2 == "circle" && U2Action == "vazio" || LastCollidingTypeU2 == "")
+            if (LastCollidingTypeU2 == "circle" && U2Action == "vazio" || LastTypeNumber2 == -2)
             {
                 NumSelecoesVaziasU2++;
                 TimeStampVaziosU2.Add(timestamp.TotalMilliseconds);
@@ -517,7 +520,6 @@ public class Logs : MonoBehaviour
             U1LastColliding + ":" +  
             LastCollidingTypeU1 + ":" +  
             HandCubeU1.x + ":" + HandCubeU1.y + ":" + HandCubeU1.z + ":" +
-            GodIs + ":" +
             LuciIs + ":" +
             SpaceIs + ":" +
             HIs);
@@ -537,7 +539,6 @@ public class Logs : MonoBehaviour
             U2LastColliding + ":" +
             LastCollidingTypeU2 + ":" +
             HandCubeU2.x + ":" + HandCubeU2.y + ":" + HandCubeU2.z + ":" + 
-            GodIs + ":" +
             LuciIs + ":" +
             SpaceIs + ":" + 
             HIs);
@@ -593,9 +594,9 @@ public class Logs : MonoBehaviour
         textAglomerate.Add("Tempo Total de Toque em simultâneo" + ":" + UserSimultaneousTouchTime);
         textAglomerate.Add("Target Re-enters User 1" + ":" + TargetReentersU1);
         textAglomerate.Add("Target Re-enters User 2" + ":" + TargetReentersU2);
-        textAglomerate.Add("GOD times" + ":" + GodTimes);
         textAglomerate.Add("SPACE times" + ":" + SpaceTimes);
         textAglomerate.Add("H times" + ":" + HTimes);
+        textAglomerate.Add("Luci Time" + ":" + LuciTime);
 
 
         DateTime now = DateTime.Now;
@@ -633,7 +634,7 @@ public class Logs : MonoBehaviour
         {
             textStory.Add("At " + timestamp.TotalMilliseconds + " User1 tried to select " + LastCollidingTypeU1 + " and that is not possible.");
         }
-        if (U1TouchType == "double-tap" && LastCollidingTypeU1 == "square" && U1Action == "vazio" || U1TouchType == "double-tap" && LastCollidingTypeU1 == "") // aka error do vazio
+        if (U1TouchType == "double-tap" && LastCollidingTypeU1 == "square" && U1Action == "vazio" || U1TouchType == "double-tap" && LastTypeNumber1 == -2) // aka error do vazio
         {
             textStory.Add("At " + timestamp.TotalMilliseconds + " User1 tried to select " + U1Action + ", but it's empty, so that is not possible.");
         }
@@ -656,7 +657,7 @@ public class Logs : MonoBehaviour
         {
             textStory.Add("At " + timestamp.TotalMilliseconds + " User2 tried to select " + LastCollidingTypeU2 + " and that is not possible.");
         }
-        if (U2TouchType == "double-tap" && LastCollidingTypeU2 == "circle" && U2Action == "vazio" || U2TouchType == "double-tap" && LastCollidingTypeU2 == "") //aka error vazio
+        if (U2TouchType == "double-tap" && LastCollidingTypeU2 == "circle" && U2Action == "vazio" || U2TouchType == "double-tap" && LastTypeNumber2 == -2) //aka error vazio
         {
             textStory.Add("At " + timestamp.TotalMilliseconds + " User2 tried to select " + U2Action + ", but it's empty, so that is not possible.");
         }
@@ -670,9 +671,7 @@ public class Logs : MonoBehaviour
             carregouNoS();
             ResetObjects();
         }
-
-        if(!HoverU1.GetComponent<ColliderObj>().godUp) textStory.Add("At " + timestamp.TotalMilliseconds + " GOD just occurred!");
-        HoverU1.GetComponent<ColliderObj>().godUp = true;
+        
         if (repocess.GetComponent<NewTouch>().isRep) textStory.Add("At " + timestamp.TotalMilliseconds + " REPROCESS was Pressed!");
         repocess.GetComponent<NewTouch>().isRep = false;
         if (repocess.GetComponent<NewTouch>().isH) textStory.Add("At " + timestamp.TotalMilliseconds + " Troca Toques Occurred!");
