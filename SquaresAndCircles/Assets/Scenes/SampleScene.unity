@@ -235,7 +235,7 @@ PrefabInstance:
         type: 3}
       propertyPath: u
       value: 
-      objectReference: {fileID: 662442363}
+      objectReference: {fileID: 522154814}
     - target: {fileID: 3462790539842953432, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}
       propertyPath: isBeingDragged
@@ -271,6 +271,11 @@ PrefabInstance:
       propertyPath: theTouch
       value: 
       objectReference: {fileID: 756066668}
+    - target: {fileID: 3462790539842953432, guid: b576413ea9e9c85408a01b42ff4a57e5,
+        type: 3}
+      propertyPath: cubinhosCounterMaster
+      value: 
+      objectReference: {fileID: 1282254578}
     - target: {fileID: 4279992100563308375, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}
       propertyPath: touch
@@ -1184,6 +1189,7 @@ MonoBehaviour:
   tabuleirino: {fileID: 1895074540}
   LastLastColliding1: {fileID: 9567905}
   LastLastColliding2: {fileID: 1881834339}
+  counting: {fileID: 1282254578}
   User1Posicao: {x: 0, y: 0, z: 0}
   User2Posicao: {x: 0, y: 0, z: 0}
   U1RH: {x: 0, y: 0, z: 0}
@@ -1222,8 +1228,11 @@ MonoBehaviour:
   TargetReentersU1: 0
   TargetReentersU2: 0
   GodIs: 
+  LuciIs: 
   SpaceIs: 
   HIs: 
+  LastTypeNumber1: 0
+  LastTypeNumber2: 0
   CompletedTask: 0
   NumSelecoesVaziasU1: 0
   NumSelecoesVaziasU2: 0
@@ -1240,6 +1249,7 @@ MonoBehaviour:
   TempoSelecaoQuadrados: 0
   TempoSelecaoCirculos: 0
   TempoTotalTarefa: 0
+  TempoDoLucifer: 0
   GodTimes: 0
   SpaceTimes: 0
   HTimes: 0
@@ -1701,6 +1711,7 @@ MonoBehaviour:
   isRep: 0
   isH: 0
   newFeedback: 0
+  handsTooCloseLuci: 0
 --- !u!4 &756066670
 Transform:
   m_ObjectHideFlags: 0
@@ -2245,6 +2256,57 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1282254577
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1282254579}
+  - component: {fileID: 1282254578}
+  m_Layer: 0
+  m_Name: CounterMaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1282254578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282254577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6999397f49ddc7141a5bb27d0dd1f49c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cubinhoHand1: {fileID: 9567905}
+  cubinhoHand2: {fileID: 1881834339}
+  counterSquares: 0
+  counterCircles: 0
+  squares_findTotal: 0
+  circles_findTotal: 0
+  squares_inc: 0
+  circles_inc: 0
+--- !u!4 &1282254579
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1282254577}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.047, y: 0, z: -1.184}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1295183538
 GameObject:
@@ -3588,7 +3650,7 @@ PrefabInstance:
         type: 3}
       propertyPath: u
       value: 
-      objectReference: {fileID: 522154814}
+      objectReference: {fileID: 662442363}
     - target: {fileID: 3462790539842953432, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}
       propertyPath: idUser
@@ -3619,6 +3681,11 @@ PrefabInstance:
       propertyPath: isG
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3462790539842953432, guid: b576413ea9e9c85408a01b42ff4a57e5,
+        type: 3}
+      propertyPath: cubinhosCounterMaster
+      value: 
+      objectReference: {fileID: 1282254578}
     - target: {fileID: 4279992100563308375, guid: b576413ea9e9c85408a01b42ff4a57e5,
         type: 3}
       propertyPath: touch

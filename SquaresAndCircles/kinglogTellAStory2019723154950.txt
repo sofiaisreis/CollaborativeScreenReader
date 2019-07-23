@@ -1,0 +1,21 @@
+Feedback is PUBLIC!
+Board WITH TRIANGLES
+At 1.9943 User2 tried to select square and that is not possible.
+At 9636.7204 User2 tried to select square and that is not possible.
+At 16184.2515 User1 selected square and there is still 4 squares to select.
+At 19239.9672 User2 selected circle and there is still 4 circles to select.
+At 30639.6092 User2 selected  and there is still 4 circles to select.
+At 44962.792 User1 selected  and there is still 3 squares to select.
+At 54934.1813 User2 selected circle and there is still 2 circles to select.
+At 55896.368 User1 tried to select triangle and that is not possible.
+At 63474.2475 User1 selected square and there is still 2 squares to select.
+At 96507.8858 User1 selected  and there is still 2 squares to select.
+At 108506.1249 User2 tried to select vazio, but it's empty, so that is not possible.
+At 109270.7338 User1 tried to select circle and that is not possible.
+At 115185.6048 User 2 selected all the circles.
+At 147055.8987 User2 tried to select square and that is not possible.
+At 154765.4157 User 2 selected all the circles.
+At 162676.3351 User 2 selected all the circles.
+At 162676.3351 All squares and circles were selected. Task completed!
+At 162676.3351 task was stopped
+At 162676.3351 task was stopped

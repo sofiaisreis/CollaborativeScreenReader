@@ -60,6 +60,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CounterMaster.cs" />
     <Compile Include="Assets\Scripts\AudioRequest.cs" />
     <Compile Include="Assets\Scripts\ColliderObj.cs" />
     <Compile Include="Assets\Scripts\FPSLimiter.cs" />

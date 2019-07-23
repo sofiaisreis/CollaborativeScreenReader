@@ -1,0 +1,26 @@
+Feedback is PRIVATE!
+Board WITHOUT TRIANGLES
+Tarefa Completada:False
+Numero de Quadrados Selecionados:4
+Numero de Circulos Selecionados:4
+Numero de Selecoes Vazias:0
+Numero de Selecoes Triangulos:0
+Numero de Selecoes de Objetos indevidos:3
+Numero de Erros no Total:3
+Selecoes Quadrados:94245.3523:127676.1328:141102.4007:212686.9249:273735.4801:
+Selecoes Circulos:4480.1136:70447.5351:85901.0692:108466.8478:199725.7824:253862.09:
+Erros Vazios User 1:
+Erros Vazios User 2:
+Erros Triangulo ou Circulo User 1:58783.5906:
+Erros Triangulo ou Quadrado User 2:61208.9427:95208.6395:
+Tempo Total de Selecao de Quadrados:273735.4801
+Tempo Total de Selecao de Circulos:253862.09
+Tempo total da tarefa:325947.7486
+Tempo Total de Toque do User 1:96376.6455
+Tempo Total de Toque do User 2:62662.3129
+Tempo Total de Toque em simultâneo:33686.1166
+Target Re-enters User 1:29
+Target Re-enters User 2:40
+SPACE times:2
+H times:0
+Luci Time:0

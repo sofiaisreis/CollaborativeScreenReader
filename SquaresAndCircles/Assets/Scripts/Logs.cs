@@ -39,6 +39,7 @@ public class Logs : MonoBehaviour
     public GameObject tabuleirino;
     public GameObject LastLastColliding1;
     public GameObject LastLastColliding2;
+    public CounterMaster counting;
 
     public TimeSpan timestamp;
     public Vector3 User1Posicao, User2Posicao;
@@ -267,12 +268,12 @@ public class Logs : MonoBehaviour
         U2LH = User1LeftHandPos.transform.position;
         User1hasTouch = false;
         User2hasTouch = false;
-        //incSQ = NQuadToSelect.GetComponent<ColliderObj>().squares_inc;
-        //incCC = NCircToSelect.GetComponent<ColliderObj>().circles_inc;
+        //incSQ = NQuadToSelect.GetComponent<ColliderObj>().cubinhosCounterMaster.GetSquaresInc();
+        //incCC = NCircToSelect.GetComponent<ColliderObj>().cubinhosCounterMaster.GetCirclesInc();
         incSQ = 0;
         incCC = 0;
-        NumQuadsToSelect = NQuadToSelect.GetComponent<ColliderObj>().squares_findTotal;
-        NumCircsToSelect = NCircToSelect.GetComponent<ColliderObj>().circles_findTotal;
+        NumQuadsToSelect = counting.GetSquaresTotal();
+        NumCircsToSelect = counting.GetCirclesTotal();
         U1LastColliding = null;
         U2LastColliding = null;
         LastLastColliding1 = null;
@@ -403,12 +404,10 @@ public class Logs : MonoBehaviour
         HoverOTU2 = HoverU2.GetComponent<ColliderObj>().objectHoverName;
 
         //CONTAGEM DE SELECOES E TOTAIS
-        sqTotal = NQuadToSelect.GetComponent<ColliderObj>().squares_findTotal;
-        ccTotal = NCircToSelect.GetComponent<ColliderObj>().circles_findTotal;
-        incSQ = NQuadToSelect.GetComponent<ColliderObj>().squares_inc;
-        incCC = NCircToSelect.GetComponent<ColliderObj>().circles_inc;
-        NumQuadsToSelect = sqTotal - incSQ; //pelo User1
-        NumCircsToSelect = ccTotal - incCC; //pelo User2
+        sqTotal = counting.squares_findTotal;
+        ccTotal = counting.circles_findTotal;
+        NumQuadsToSelect = sqTotal - counting.GetSquaresInc(); //pelo User1
+        NumCircsToSelect = ccTotal - counting.GetCirclesInc(); //pelo User2
 
         //LAST COLLIDING OBJECT
         U1LastColliding = LastCollidingObj1.GetComponent<ColliderObj>().lastCollidingObject;
@@ -569,8 +568,8 @@ public class Logs : MonoBehaviour
         double tempoDoLucifer = HoverU1.GetComponent<ColliderObj>().LuciTempo;
 
         textAglomerate.Add("Tarefa Completada" + ":" + CompletedTask);
-        textAglomerate.Add("Numero de Quadrados Selecionados" + ":" + incSQ);
-        textAglomerate.Add("Numero de Circulos Selecionados" + ":" + incCC);
+        textAglomerate.Add("Numero de Quadrados Selecionados" + ":" + counting.GetSquaresInc());
+        textAglomerate.Add("Numero de Circulos Selecionados" + ":" + counting.GetCirclesInc());
         textAglomerate.Add("Numero de Selecoes Vazias" + ":" + NumSelecoesVaziasAmbos);
         textAglomerate.Add("Numero de Selecoes Triangulos" + ":" + NumSelecoesErradasTAmbos);
         textAglomerate.Add("Numero de Selecoes de Objetos indevidos" + ":" + NumErradasOAmbos);
@@ -638,6 +637,9 @@ public class Logs : MonoBehaviour
         {
             textStory.Add("At " + timestamp.TotalMilliseconds + " User1 tried to select " + U1Action + ", but it's empty, so that is not possible.");
         }
+
+
+
         if (U2Action == "selected" && NumCircsToSelect >= 0)
         {
             if(NumCircsToSelect != 0)
@@ -662,7 +664,9 @@ public class Logs : MonoBehaviour
             textStory.Add("At " + timestamp.TotalMilliseconds + " User2 tried to select " + U2Action + ", but it's empty, so that is not possible.");
         }
 
-        if (NumQuadsToSelect == 0 && NumCircsToSelect == 0) //squares_inc == sqTotal && circles_inc == ccTotal)
+
+
+        if (NumQuadsToSelect == 0 && NumCircsToSelect == 0) //cubinhosCounterMaster.GetSquaresInc() == sqTotal && cubinhosCounterMaster.GetCirclesInc() == ccTotal)
         {
             textStory.Add("At " + timestamp.TotalMilliseconds + " All squares and circles were selected. Task completed!");
             CompletedTask = true;
