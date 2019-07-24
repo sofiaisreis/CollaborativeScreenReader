@@ -1,0 +1,3 @@
+Time:User:UserPosX:UserPosY:UserPosZ:UserRHPosX:UserRHPosY:UserRHPosZ:UserLHPosX:UserLHPosY:UserLHPosZ:UserHasTouch:UserPosToqueX:UserPosToqueY:UserPosToqueZ:UserTouchType:UserAction:HoverUnityName:HoverObjectType:NQuadToSelect:NCircToSelect:LastCollidingObj:LastCollidingObjectType:HandCubePosX:HandCubePosY:HandCubePosZ:LuciMode: Space Key: H Key: 
+1.9914:User 1:0.6283383:0.832648:1.207529:0.218:0.905:1.397:0.253:1.181:1.097:True:0.1888761:0.8476628:1.352198:drag:in_objeto:Cylinder2 (UnityEngine.GameObject):circle:0:0:Cylinder2 (UnityEngine.GameObject):circle:0.1888761:0.8476628:1.352198:-:-:-
+1.9914:User 2:-0.6380529:0.8754416:1.310352:-0.211:0.838:1.273:0.253:1.181:1.097:True:-0.2235421:0.8627433:1.302429:drag::::0:0:::-0.2235421:0.8627433:1.302429:-:-:-

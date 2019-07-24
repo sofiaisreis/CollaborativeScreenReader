@@ -1,0 +1,50 @@
+Feedback is TASK DEPENDENT!
+Board WITH TRIANGLES
+Tarefa Completada:True
+Numero de Quadrados Selecionados:5
+Numero de Circulos Selecionados:5
+Numero de Selecoes Vazias:1
+Numero de Selecoes Triangulos:7
+Numero de Selecoes de Objetos indevidos:0
+Numero de Erros no Total:8
+Selecoes Quadrados:12794.5928:34396.3541:141009.0757:
+Selecoes Circulos:20106.9248:38318.6106:212227.8078:
+Erros Vazios User 1:45663.1229:
+Erros Vazios User 2:
+Erros Triangulo ou Circulo User 1:26420.2392:60816.5213:65402.8359:74708.6738:129909.6773:154800.6393:171251.7451:
+Erros Triangulo ou Quadrado User 2:
+Tempo Total de Selecao de Quadrados:141009.0757
+Tempo Total de Selecao de Circulos:212227.8078
+Tempo total da tarefa:212227.8078
+Tempo Total de Toque do User 1:87105.6286
+Tempo Total de Toque do User 2:167998.9599
+Tempo Total de Toque em simultâneo:74643.2371
+Target Re-enters User 1:146
+Target Re-enters User 2:48
+SPACE times:53
+H times:0
+Luci Time:-134911678.185
+Tarefa Completada:True
+Numero de Quadrados Selecionados:5
+Numero de Circulos Selecionados:5
+Numero de Selecoes Vazias:1
+Numero de Selecoes Triangulos:7
+Numero de Selecoes de Objetos indevidos:0
+Numero de Erros no Total:8
+Selecoes Quadrados:12794.5928:34396.3541:141009.0757:12794.5928:34396.3541:141009.0757:
+Selecoes Circulos:20106.9248:38318.6106:212227.8078:20106.9248:38318.6106:212227.8078:
+Erros Vazios User 1:45663.1229:45663.1229:
+Erros Vazios User 2:
+Erros Triangulo ou Circulo User 1:26420.2392:60816.5213:65402.8359:74708.6738:129909.6773:154800.6393:171251.7451:26420.2392:60816.5213:65402.8359:74708.6738:129909.6773:154800.6393:171251.7451:
+Erros Triangulo ou Quadrado User 2:
+Tempo Total de Selecao de Quadrados:141009.0757
+Tempo Total de Selecao de Circulos:212227.8078
+Tempo total da tarefa:212227.8078
+Tempo Total de Toque do User 1:87105.6286
+Tempo Total de Toque do User 2:167998.9599
+Tempo Total de Toque em simultâneo:74643.2371
+Target Re-enters User 1:146
+Target Re-enters User 2:48
+SPACE times:53
+H times:0
+Luci Time:-134911678.185

@@ -1,0 +1,17 @@
+Feedback is TASK DEPENDENT!
+Board WITHOUT TRIANGLES
+At 8043.241 User1 selected square and there is still 4 squares to select.
+At 11465.4243 User1 selected square and there is still 3 squares to select.
+At 16916.4426 REPROCESS was Pressed!
+At 17282.1403 REPROCESS was Pressed!
+At 17747.5263 REPROCESS was Pressed!
+At 19807.7326 User2 selected circle and there is still 4 circles to select.
+At 23563.5903 REPROCESS was Pressed!
+At 24559.9563 User2 selected circle and there is still 3 circles to select.
+At 25257.4136 REPROCESS was Pressed!
+At 28148.8412 REPROCESS was Pressed!
+At 35161.4452 User2 tried to select vazio, but it's empty, so that is not possible.
+At 50448.7628 User 2 selected all the circles.
+At 50448.7628 All squares and circles were selected. Task completed!
+At 50448.7628 task was stopped
+At 50448.7628 task was stopped

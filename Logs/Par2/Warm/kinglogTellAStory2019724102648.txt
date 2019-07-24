@@ -1,0 +1,44 @@
+Feedback is PUBLIC!
+Board WITHOUT TRIANGLES
+At 7710.2884 User2 selected circle and there is still 4 circles to select.
+At 15520.8413 User1 selected square and there is still 4 squares to select.
+At 20205.7276 User2 selected circle and there is still 3 circles to select.
+At 24592.7506 User1 tried to select circle and that is not possible.
+At 25489.7197 User2 tried to select vazio, but it's empty, so that is not possible.
+At 37853.2598 REPROCESS was Pressed!
+At 41874.7693 User1 tried to select circle and that is not possible.
+At 46759.4501 User2 selected circle and there is still 2 circles to select.
+At 55732.7387 User1 selected square and there is still 3 squares to select.
+At 58790.4437 User2 tried to select square and that is not possible.
+At 62146.4849 User1 tried to select vazio, but it's empty, so that is not possible.
+At 67597.1683 REPROCESS was Pressed!
+At 70487.8995 User2 tried to select square and that is not possible.
+At 77334.1209 REPROCESS was Pressed!
+At 77467.7632 REPROCESS was Pressed!
+At 77500.6759 REPROCESS was Pressed!
+At 80658.3162 REPROCESS was Pressed!
+At 83150.3807 REPROCESS was Pressed!
+At 94183.6792 REPROCESS was Pressed!
+At 94250.4986 REPROCESS was Pressed!
+At 94283.4109 REPROCESS was Pressed!
+At 94317.321 REPROCESS was Pressed!
+At 95014.4565 REPROCESS was Pressed!
+At 98371.8341 REPROCESS was Pressed!
+At 105550.0101 REPROCESS was Pressed!
+At 109770.1951 User1 selected square and there is still 2 squares to select.
+At 114156.8486 User1 selected square and there is still 1 squares to select.
+At 119042.7031 REPROCESS was Pressed!
+At 120238.8434 REPROCESS was Pressed!
+At 120969.9082 REPROCESS was Pressed!
+At 127483.7826 REPROCESS was Pressed!
+At 127516.8881 REPROCESS was Pressed!
+At 127549.7992 REPROCESS was Pressed!
+At 127583.7077 REPROCESS was Pressed!
+At 127616.2088 REPROCESS was Pressed!
+At 129909.6761 User1 tried to select vazio, but it's empty, so that is not possible.
+At 129942.5824 REPROCESS was Pressed!
+At 130143.0289 REPROCESS was Pressed!
+At 135159.9548 REPROCESS was Pressed!
+At 141242.4583 All squares and circles were selected. Task completed!
+At 141242.4583 task was stopped
+At 141242.4583 task was stopped
