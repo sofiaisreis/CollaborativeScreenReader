@@ -1,0 +1,4 @@
+Feedback is PUBLIC!
+Board WITH TRIANGLES
+At 0 All squares and circles were selected. Task completed!
+At 0 task was stopped

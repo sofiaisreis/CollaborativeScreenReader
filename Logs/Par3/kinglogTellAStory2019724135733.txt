@@ -1,0 +1,39 @@
+Feedback is PRIVATE!
+Board WITHOUT TRIANGLES
+At 3090.8297 User1 selected square and there is still 4 squares to select.
+At 14223.6665 User1 selected square and there is still 3 squares to select.
+At 16350.4724 User2 selected circle and there is still 4 circles to select.
+At 22232.9655 REPROCESS was Pressed!
+At 27418.0661 REPROCESS was Pressed!
+At 36357.2509 REPROCESS was Pressed!
+At 36524.4551 REPROCESS was Pressed!
+At 36557.3353 REPROCESS was Pressed!
+At 36590.254 REPROCESS was Pressed!
+At 36623.1682 REPROCESS was Pressed!
+At 36657.0754 REPROCESS was Pressed!
+At 36689.3107 REPROCESS was Pressed!
+At 36723.2198 REPROCESS was Pressed!
+At 36756.1327 REPROCESS was Pressed!
+At 36789.5745 REPROCESS was Pressed!
+At 36822.4863 REPROCESS was Pressed!
+At 39182.8357 REPROCESS was Pressed!
+At 39682.0312 REPROCESS was Pressed!
+At 39713.9429 REPROCESS was Pressed!
+At 39747.855 REPROCESS was Pressed!
+At 39780.7918 REPROCESS was Pressed!
+At 39813.7022 REPROCESS was Pressed!
+At 39847.5956 REPROCESS was Pressed!
+At 39913.4107 REPROCESS was Pressed!
+At 40445.0148 REPROCESS was Pressed!
+At 44399.5895 User1 selected square and there is still 1 squares to select.
+At 46659.4051 User2 selected circle and there is still 2 circles to select.
+At 55035.5269 REPROCESS was Pressed!
+At 56529.6198 REPROCESS was Pressed!
+At 57560.5828 User 1 selected all the squares.
+At 58357.9223 User2 selected circle and there is still 1 circles to select.
+At 72116.924 All squares and circles were selected. Task completed!
+At 72116.924 task was stopped
+At 72116.924 task was stopped
+At 72116.924 task was stopped
+At 72116.924 task was stopped
+At 72116.924 task was stopped

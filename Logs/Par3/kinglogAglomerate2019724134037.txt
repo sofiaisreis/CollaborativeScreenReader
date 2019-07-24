@@ -1,0 +1,74 @@
+Feedback is PUBLIC!
+Board WITH TRIANGLES
+Tarefa Completada:True
+Numero de Quadrados Selecionados:5
+Numero de Circulos Selecionados:5
+Numero de Selecoes Vazias:1
+Numero de Selecoes Triangulos:1
+Numero de Selecoes de Objetos indevidos:0
+Numero de Erros no Total:2
+Selecoes Quadrados:57659.5436:88599.4133:244297.886:
+Selecoes Circulos:86405.9499:131337.7999:156894.0839:165335.2249:
+Erros Vazios User 1:
+Erros Vazios User 2:88865.7391:
+Erros Triangulo ou Circulo User 1:
+Erros Triangulo ou Quadrado User 2:97507.5629:
+Tempo Total de Selecao de Quadrados:244297.886
+Tempo Total de Selecao de Circulos:165335.2249
+Tempo total da tarefa:244297.886
+Tempo Total de Toque do User 1:171419.2973
+Tempo Total de Toque do User 2:94590.5402
+Tempo Total de Toque em simultâneo:88043.7742
+Target Re-enters User 1:0
+Target Re-enters User 2:58
+SPACE times:36
+H times:0
+Luci Time:-888284642.958403
+Tarefa Completada:True
+Numero de Quadrados Selecionados:5
+Numero de Circulos Selecionados:5
+Numero de Selecoes Vazias:1
+Numero de Selecoes Triangulos:1
+Numero de Selecoes de Objetos indevidos:0
+Numero de Erros no Total:2
+Selecoes Quadrados:57659.5436:88599.4133:244297.886:57659.5436:88599.4133:244297.886:
+Selecoes Circulos:86405.9499:131337.7999:156894.0839:165335.2249:86405.9499:131337.7999:156894.0839:165335.2249:
+Erros Vazios User 1:
+Erros Vazios User 2:88865.7391:88865.7391:
+Erros Triangulo ou Circulo User 1:
+Erros Triangulo ou Quadrado User 2:97507.5629:97507.5629:
+Tempo Total de Selecao de Quadrados:244297.886
+Tempo Total de Selecao de Circulos:165335.2249
+Tempo total da tarefa:244297.886
+Tempo Total de Toque do User 1:171419.2973
+Tempo Total de Toque do User 2:94590.5402
+Tempo Total de Toque em simultâneo:88043.7742
+Target Re-enters User 1:0
+Target Re-enters User 2:58
+SPACE times:36
+H times:0
+Luci Time:-888284642.958403
+Tarefa Completada:True
+Numero de Quadrados Selecionados:5
+Numero de Circulos Selecionados:5
+Numero de Selecoes Vazias:1
+Numero de Selecoes Triangulos:1
+Numero de Selecoes de Objetos indevidos:0
+Numero de Erros no Total:2
+Selecoes Quadrados:57659.5436:88599.4133:244297.886:57659.5436:88599.4133:244297.886:57659.5436:88599.4133:244297.886:
+Selecoes Circulos:86405.9499:131337.7999:156894.0839:165335.2249:86405.9499:131337.7999:156894.0839:165335.2249:86405.9499:131337.7999:156894.0839:165335.2249:
+Erros Vazios User 1:
+Erros Vazios User 2:88865.7391:88865.7391:88865.7391:
+Erros Triangulo ou Circulo User 1:
+Erros Triangulo ou Quadrado User 2:97507.5629:97507.5629:97507.5629:
+Tempo Total de Selecao de Quadrados:244297.886
+Tempo Total de Selecao de Circulos:165335.2249
+Tempo total da tarefa:244297.886
+Tempo Total de Toque do User 1:171419.2973
+Tempo Total de Toque do User 2:94590.5402
+Tempo Total de Toque em simultâneo:88043.7742
+Target Re-enters User 1:0
+Target Re-enters User 2:58
+SPACE times:36
+H times:0
+Luci Time:-888284642.958403
