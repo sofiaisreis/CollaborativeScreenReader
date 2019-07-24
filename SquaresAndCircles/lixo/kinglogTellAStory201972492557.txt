@@ -1,0 +1,4 @@
+Feedback is TASK DEPENDENT!
+Board WITHOUT TRIANGLES
+At 146392.6352 User2 selected circle and there is still 4 circles to select.
+At 157690.1703 task was stopped

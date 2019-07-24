@@ -1,0 +1,4 @@
+Feedback is TASK DEPENDENT!
+Board WITHOUT TRIANGLES
+At 1.9937 All squares and circles were selected. Task completed!
+At 1.9937 task was stopped

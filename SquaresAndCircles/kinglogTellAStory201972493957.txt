@@ -1,0 +1,6 @@
+Feedback is PUBLIC!
+Board WITHOUT TRIANGLES
+At 13757.8282 User2 selected circle and there is still 4 circles to select.
+At 15917.0839 REPROCESS was Pressed!
+At 15950.0002 REPROCESS was Pressed!
+At 22862.686 task was stopped

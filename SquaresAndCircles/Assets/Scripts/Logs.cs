@@ -657,22 +657,26 @@ public class Logs : MonoBehaviour
             }
         }
         //Seleciona em Luci
-        if (U2Action == "selected" && colliderino.GetComponent<ColliderObj>().lastCollidingObjectGlobal.tag == "square" && colliderino.GetComponent<ColliderObj>().feedbackType == 6)
+        if(colliderino.GetComponent<ColliderObj>().feedbackType == 6)
         {
-            if (NumQuadsToSelect != 0)
-            {
-                TimeStampQuadrados.Add(timestamp.TotalMilliseconds);
-                TempoSelecaoQuadrados = timestamp.TotalMilliseconds;
-                textStory.Add("At " + timestamp.TotalMilliseconds + " User2 selected on LuciMode" + LastCollidingTypeU1 + " and there is still " + NumQuadsToSelect + " squares to select.");
-            }
-            else
-            {
-                TempoSelecaoQuadrados = timestamp.TotalMilliseconds;
-                TimeStampQuadrados.Add(timestamp.TotalMilliseconds);
-                textStory.Add("At " + timestamp.TotalMilliseconds + " User 2, on Luci Mode, finished selected all the squares.");
-            }
-        }
 
+            if (U2Action == "selected" && LastCollidingTypeU2 == "square")
+            {
+                if (NumQuadsToSelect != 0)
+                {
+                    TimeStampQuadrados.Add(timestamp.TotalMilliseconds);
+                    TempoSelecaoQuadrados = timestamp.TotalMilliseconds;
+                    textStory.Add("At " + timestamp.TotalMilliseconds + " User2 selected on LuciMode" + LastCollidingTypeU1 + " and there is still " + NumQuadsToSelect + " squares to select.");
+                }
+                else
+                {
+                    TempoSelecaoQuadrados = timestamp.TotalMilliseconds;
+                    TimeStampQuadrados.Add(timestamp.TotalMilliseconds);
+                    textStory.Add("At " + timestamp.TotalMilliseconds + " User 2, on Luci Mode, finished selected all the squares.");
+                }
+            }
+
+        }
         if (U1TouchType == "double-tap" && LastCollidingTypeU1 == "circle" || U1TouchType == "double-tap" && LastCollidingTypeU1 == "triangle") // aka error
         {
             textStory.Add("At " + timestamp.TotalMilliseconds + " User1 tried to select " + LastCollidingTypeU1 + " and that is not possible.");
@@ -700,21 +704,25 @@ public class Logs : MonoBehaviour
             }
         }
         //Seleciona em Luci
-        if (U1Action == "selected" && colliderino.GetComponent<ColliderObj>().lastCollidingObjectGlobal.tag == "circle" && colliderino.GetComponent<ColliderObj>().feedbackType == 6)
+        if(colliderino.GetComponent<ColliderObj>().feedbackType == 6)
         {
-            if (NumQuadsToSelect != 0)
+            if (U1Action == "selected" && LastCollidingTypeU1 == "circle")
             {
-                TimeStampQuadrados.Add(timestamp.TotalMilliseconds);
-                TempoSelecaoQuadrados = timestamp.TotalMilliseconds;
-                textStory.Add("At " + timestamp.TotalMilliseconds + " User1 selected on LuciMode" + LastCollidingTypeU2 + " and there is still " + NumQuadsToSelect + " circles to select.");
-            }
-            else
-            {
-                TempoSelecaoQuadrados = timestamp.TotalMilliseconds;
-                TimeStampQuadrados.Add(timestamp.TotalMilliseconds);
-                textStory.Add("At " + timestamp.TotalMilliseconds + " User 1, on Luci Mode, finished selected all the circles.");
+                if (NumCircsToSelect != 0)
+                {
+                    TimeStampCirculos.Add(timestamp.TotalMilliseconds);
+                    TempoSelecaoCirculos = timestamp.TotalMilliseconds;
+                    textStory.Add("At " + timestamp.TotalMilliseconds + " User1 selected on LuciMode" + LastCollidingTypeU2 + " and there is still " + NumQuadsToSelect + " circles to select.");
+                }
+                else
+                {
+                    TempoSelecaoCirculos = timestamp.TotalMilliseconds;
+                    TimeStampCirculos.Add(timestamp.TotalMilliseconds);
+                    textStory.Add("At " + timestamp.TotalMilliseconds + " User 1, on Luci Mode, finished selected all the circles.");
+                }
             }
         }
+
         if (U2TouchType == "double-tap" && LastCollidingTypeU2 == "square" || U2TouchType == "double-tap" && LastCollidingTypeU2 == "triangle") //aka error
         {
             textStory.Add("At " + timestamp.TotalMilliseconds + " User2 tried to select " + LastCollidingTypeU2 + " and that is not possible.");
