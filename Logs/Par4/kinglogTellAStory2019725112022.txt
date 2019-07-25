@@ -1,0 +1,19 @@
+Feedback is PUBLIC!
+Board WITHOUT TRIANGLES
+At 2428.6477 REPROCESS was Pressed!
+At 5284.0603 User1 selected square and there is still 4 squares to select.
+At 5550.3454 REPROCESS was Pressed!
+At 6447.4755 REPROCESS was Pressed!
+At 24294.0762 User1 selected square and there is still 3 squares to select.
+At 28149.0263 User2 selected circle and there is still 3 circles to select.
+At 31605.3167 User1 selected square and there is still 2 squares to select.
+At 37787.7232 REPROCESS was Pressed!
+At 51014.0297 User2 selected circle and there is still 2 circles to select.
+At 57460.5245 User 1 selected all the squares.
+At 60817.1225 User2 selected circle and there is still 1 circles to select.
+At 64971.1034 REPROCESS was Pressed!
+At 66167.8656 User 2 selected all the circles.
+At 66167.8656 All squares and circles were selected. Task completed!
+At 66167.8656 task was stopped
+At 66167.8656 task was stopped
+At 66167.8656 task was stopped

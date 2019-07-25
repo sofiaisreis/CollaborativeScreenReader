@@ -1,0 +1,13 @@
+Feedback is TASK DEPENDENT!
+Board WITH TRIANGLES
+At 8873.0207 User1 selected square and there is still 4 squares to select.
+At 9770.7402 User2 tried to select square and that is not possible.
+At 19773.8001 REPROCESS was Pressed!
+At 52275.3541 REPROCESS was Pressed!
+At 52342.1748 REPROCESS was Pressed!
+At 71417.5573 User2 selected circle and there is still 2 circles to select.
+At 72515.1535 User 1 selected all the squares.
+At 80523.701 User2 selected circle and there is still 1 circles to select.
+At 109935.2848 User 2 selected all the circles.
+At 109935.2848 All squares and circles were selected. Task completed!
+At 109935.2848 task was stopped

@@ -1,0 +1,17 @@
+Feedback is PRIVATE!
+Board WITH TRIANGLES
+At 9904.204 User1 selected square and there is still 3 squares to select.
+At 18876.5014 User1 selected square and there is still 2 squares to select.
+At 19208.7366 User2 selected circle and there is still 3 circles to select.
+At 23894.8728 User2 selected circle and there is still 2 circles to select.
+At 36723.2533 User1 tried to select triangle and that is not possible.
+At 37055.3643 User1 tried to select triangle and that is not possible.
+At 37287.7412 User1 tried to select triangle and that is not possible.
+At 47024.8285 User1 selected square and there is still 1 squares to select.
+At 62112.8856 User1 tried to select circle and that is not possible.
+At 63541.9634 User1 tried to select circle and that is not possible.
+At 93518.6536 REPROCESS was Pressed!
+At 95579.5984 User1 tried to select triangle and that is not possible.
+At 103355.7677 User 1 selected all the squares.
+At 103355.7677 All squares and circles were selected. Task completed!
+At 103355.7677 task was stopped

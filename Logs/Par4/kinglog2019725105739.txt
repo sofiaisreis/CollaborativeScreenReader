@@ -1,0 +1,3 @@
+Time:User:UserPosX:UserPosY:UserPosZ:UserRHPosX:UserRHPosY:UserRHPosZ:UserLHPosX:UserLHPosY:UserLHPosZ:UserHasTouch:UserPosToqueX:UserPosToqueY:UserPosToqueZ:UserTouchType:UserAction:HoverUnityName:HoverObjectType:NQuadToSelect:NCircToSelect:LastCollidingObj:LastCollidingObjectType:HandCubePosX:HandCubePosY:HandCubePosZ:LuciMode: Space Key: H Key: 
+0:User 1:0.6300838:0.8313298:1.299011:0.415:0.689:1.508:0.314:0.684:1.264:False::::::::0:0::square:337252.9:325316.7:-334103.3:-:-:-
+0:User 2:-0.6394252:0.876478:1.238428:-0.379:1.213:1.4:0.314:0.684:1.264:False::::::::0:0::circle:337252.9:325316.7:-334103.3:-:-:-
