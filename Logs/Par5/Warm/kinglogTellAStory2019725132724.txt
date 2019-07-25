@@ -1,0 +1,73 @@
+Feedback is TASK DEPENDENT!
+Board WITH TRIANGLES
+At 1828.7893 REPROCESS was Pressed!
+At 4253.6323 User1 selected square and there is still 4 squares to select.
+At 4286.5436 REPROCESS was Pressed!
+At 8175.0486 REPROCESS was Pressed!
+At 39015.8721 User2 tried to select square and that is not possible.
+At 41607.8662 REPROCESS was Pressed!
+At 46592.8255 User1 selected square and there is still 3 squares to select.
+At 51477.9493 User2 selected circle and there is still 4 circles to select.
+At 66100.8512 User2 selected circle and there is still 3 circles to select.
+At 67862.3774 REPROCESS was Pressed!
+At 68693.1219 REPROCESS was Pressed!
+At 68727.0293 REPROCESS was Pressed!
+At 68759.9474 REPROCESS was Pressed!
+At 70288.3411 REPROCESS was Pressed!
+At 70321.2494 REPROCESS was Pressed!
+At 70355.164 REPROCESS was Pressed!
+At 70388.0904 REPROCESS was Pressed!
+At 70420.9896 REPROCESS was Pressed!
+At 70454.9 REPROCESS was Pressed!
+At 70487.81 REPROCESS was Pressed!
+At 70520.7246 REPROCESS was Pressed!
+At 70553.634 REPROCESS was Pressed!
+At 70587.544 REPROCESS was Pressed!
+At 70620.4587 REPROCESS was Pressed!
+At 70654.3649 REPROCESS was Pressed!
+At 70687.2766 REPROCESS was Pressed!
+At 70720.1888 REPROCESS was Pressed!
+At 70754.0977 REPROCESS was Pressed!
+At 70787.0093 REPROCESS was Pressed!
+At 70819.9217 REPROCESS was Pressed!
+At 70852.8343 REPROCESS was Pressed!
+At 70886.743 REPROCESS was Pressed!
+At 70919.6578 REPROCESS was Pressed!
+At 70952.5711 REPROCESS was Pressed!
+At 70986.4765 REPROCESS was Pressed!
+At 71019.3887 REPROCESS was Pressed!
+At 71052.3007 REPROCESS was Pressed!
+At 71086.2104 REPROCESS was Pressed!
+At 71119.1216 REPROCESS was Pressed!
+At 71152.033 REPROCESS was Pressed!
+At 71185.9423 REPROCESS was Pressed!
+At 71218.8539 REPROCESS was Pressed!
+At 71251.7653 REPROCESS was Pressed!
+At 71318.5888 REPROCESS was Pressed!
+At 74012.8615 REPROCESS was Pressed!
+At 78962.2759 REPROCESS was Pressed!
+At 79826.4884 REPROCESS was Pressed!
+At 80126.6834 REPROCESS was Pressed!
+At 81221.7558 REPROCESS was Pressed!
+At 81986.694 REPROCESS was Pressed!
+At 83116.6708 REPROCESS was Pressed!
+At 86904.9279 User1 tried to select triangle and that is not possible.
+At 98038.6685 REPROCESS was Pressed!
+At 98174.305 REPROCESS was Pressed!
+At 99267.312 User2 selected circle and there is still 2 circles to select.
+At 113259.3202 REPROCESS was Pressed!
+At 116516.3285 REPROCESS was Pressed!
+At 117514.7128 REPROCESS was Pressed!
+At 117579.5381 REPROCESS was Pressed!
+At 118941.7549 User2 tried to select triangle and that is not possible.
+At 119708.7133 REPROCESS was Pressed!
+At 138848.4838 User1 selected square and there is still 1 squares to select.
+At 138881.3954 REPROCESS was Pressed!
+At 168194.6914 REPROCESS was Pressed!
+At 169954.9595 User 2 selected all the circles.
+At 179627.4505 REPROCESS was Pressed!
+At 181786.1054 REPROCESS was Pressed!
+At 197837.4641 All squares and circles were selected. Task completed!
+At 197837.4641 task was stopped
+At 197837.4641 task was stopped
+At 197837.4641 task was stopped
