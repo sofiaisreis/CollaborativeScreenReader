@@ -1,0 +1,27 @@
+Feedback is PUBLIC!
+Board WITH TRIANGLES
+At 10401.6636 User1 tried to select triangle and that is not possible.
+At 17947.0645 REPROCESS was Pressed!
+At 28780.3942 User2 selected circle and there is still 4 circles to select.
+At 38085.8951 REPROCESS was Pressed!
+At 38118.8257 REPROCESS was Pressed!
+At 38151.7434 REPROCESS was Pressed!
+At 39481.6956 REPROCESS was Pressed!
+At 40977.6932 REPROCESS was Pressed!
+At 45862.2054 User1 selected square and there is still 2 squares to select.
+At 47091.5642 User2 selected circle and there is still 2 circles to select.
+At 73213.2243 REPROCESS was Pressed!
+At 88035.3614 REPROCESS was Pressed!
+At 90427.9546 REPROCESS was Pressed!
+At 111631.4293 REPROCESS was Pressed!
+At 114954.169 User 2 selected all the circles.
+At 116516.0404 User1 tried to select triangle and that is not possible.
+At 129909.6448 User1 tried to select triangle and that is not possible.
+At 132934.257 REPROCESS was Pressed!
+At 133165.6666 REPROCESS was Pressed!
+At 133498.7681 REPROCESS was Pressed!
+At 139513.5994 User 1 selected all the squares.
+At 139513.5994 All squares and circles were selected. Task completed!
+At 139513.5994 task was stopped
+At 139513.5994 task was stopped
+At 139513.5994 task was stopped

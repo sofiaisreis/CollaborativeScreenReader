@@ -1,0 +1,16 @@
+Feedback is PRIVATE!
+Board WITHOUT TRIANGLES
+At 15520.3705 User1 selected square and there is still 4 squares to select.
+At 19574.3625 User2 selected circle and there is still 2 circles to select.
+At 23728.9313 REPROCESS was Pressed!
+At 28016.2228 REPROCESS was Pressed!
+At 33533.0272 REPROCESS was Pressed!
+At 46959.9303 REPROCESS was Pressed!
+At 47624.1499 REPROCESS was Pressed!
+At 48753.8853 User 2 selected all the circles.
+At 49185.7302 User1 selected square and there is still 2 squares to select.
+At 52376.3987 REPROCESS was Pressed!
+At 63010.7668 User1 tried to select vazio, but it's empty, so that is not possible.
+At 67230.8757 User 1 selected all the squares.
+At 67230.8757 All squares and circles were selected. Task completed!
+At 67230.8757 task was stopped

@@ -1,0 +1,40 @@
+Feedback is TASK DEPENDENT!
+Board WITH TRIANGLES
+At 2160.8537 REPROCESS was Pressed!
+At 3822.1734 User2 selected circle and there is still 4 circles to select.
+At 24260.3872 User2 tried to select square and that is not possible.
+At 32735.1501 REPROCESS was Pressed!
+At 43901.9283 User2 selected circle and there is still 2 circles to select.
+At 44931.5597 User1 selected square and there is still 4 squares to select.
+At 45796.2274 User2 tried to select vazio, but it's empty, so that is not possible.
+At 45829.1701 REPROCESS was Pressed!
+At 52741.2564 User2 tried to select square and that is not possible.
+At 53938.03 REPROCESS was Pressed!
+At 55167.9921 User1 tried to select vazio, but it's empty, so that is not possible.
+At 55566.4797 User1 tried to select vazio, but it's empty, so that is not possible.
+At 58360.2698 REPROCESS was Pressed!
+At 60551.3969 User1 selected square and there is still 3 squares to select.
+At 64207.087 User1 tried to select vazio, but it's empty, so that is not possible.
+At 67696.8921 REPROCESS was Pressed!
+At 73512.1103 User1 tried to select triangle and that is not possible.
+At 73978.1061 User1 tried to select triangle and that is not possible.
+At 74044.0253 REPROCESS was Pressed!
+At 74277.4303 REPROCESS was Pressed!
+At 86772.3346 User2 tried to select square and that is not possible.
+At 88667.2667 User2 tried to select square and that is not possible.
+At 91359.2552 User2 tried to select square and that is not possible.
+At 101827.2034 REPROCESS was Pressed!
+At 101893.7989 REPROCESS was Pressed!
+At 107177.7946 User1 tried to select triangle and that is not possible.
+At 107576.7275 User1 tried to select triangle and that is not possible.
+At 108042.5507 REPROCESS was Pressed!
+At 111598.2982 User2 selected circle and there is still 1 circles to select.
+At 121168.7893 User1 tried to select circle and that is not possible.
+At 138949.0689 REPROCESS was Pressed!
+At 150946.402 REPROCESS was Pressed!
+At 152175.8376 REPROCESS was Pressed!
+At 160684.1763 User1 tried to select triangle and that is not possible.
+At 162810.9638 User1 tried to select triangle and that is not possible.
+At 167696.0261 User 1 selected all the squares.
+At 167696.0261 All squares and circles were selected. Task completed!
+At 167696.0261 task was stopped

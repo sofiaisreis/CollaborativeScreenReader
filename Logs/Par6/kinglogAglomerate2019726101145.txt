@@ -1,0 +1,26 @@
+Feedback is TASK DEPENDENT!
+Board WITHOUT TRIANGLES
+Tarefa Completada:True
+Numero de Quadrados Selecionados:5
+Numero de Circulos Selecionados:5
+Numero de Selecoes Vazias:0
+Numero de Selecoes Triangulos:0
+Numero de Selecoes de Objetos indevidos:2
+Numero de Erros no Total:2
+Selecoes Quadrados:5184.4298:82651.5611:97240.5419:
+Selecoes Circulos:21003.1257:24758.7662:
+Erros Vazios User 1:
+Erros Vazios User 2:
+Erros Triangulo ou Circulo User 1:
+Erros Triangulo ou Quadrado User 2:4186.9247:11000.3254:
+Tempo Total de Selecao de Quadrados:97240.5419
+Tempo Total de Selecao de Circulos:24758.7662
+Tempo total da tarefa:97240.5419
+Tempo Total de Toque do User 1:70295.4361
+Tempo Total de Toque do User 2:59887.485
+Tempo Total de Toque em simultâneo:46101.6022
+Target Re-enters User 1:0
+Target Re-enters User 2:5
+SPACE times:229
+H times:0
+Luci Time:-6724122.43659996

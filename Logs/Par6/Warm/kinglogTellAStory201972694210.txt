@@ -1,0 +1,113 @@
+Feedback is PRIVATE!
+Board WITHOUT TRIANGLES
+At 5982.0927 User1 selected square and there is still 4 squares to select.
+At 8739.9887 REPROCESS was Pressed!
+At 9204.7761 User2 selected circle and there is still 4 circles to select.
+At 15353.1507 User2 selected circle and there is still 3 circles to select.
+At 16682.5699 REPROCESS was Pressed!
+At 20173.7756 REPROCESS was Pressed!
+At 34661.7001 User1 tried to select circle and that is not possible.
+At 55299.5829 User1 selected square and there is still 3 squares to select.
+At 63109.4642 User1 selected square and there is still 2 squares to select.
+At 70288.3038 User1 tried to select vazio, but it's empty, so that is not possible.
+At 81620.7954 REPROCESS was Pressed!
+At 81653.7099 REPROCESS was Pressed!
+At 81986.3859 REPROCESS was Pressed!
+At 82019.3039 REPROCESS was Pressed!
+At 83781.5147 REPROCESS was Pressed!
+At 84180.2568 REPROCESS was Pressed!
+At 84412.6113 REPROCESS was Pressed!
+At 87635.213 User2 selected circle and there is still 1 circles to select.
+At 88301.4 REPROCESS was Pressed!
+At 98636.1396 REPROCESS was Pressed!
+At 100364.086 REPROCESS was Pressed!
+At 100396.9748 REPROCESS was Pressed!
+At 100430.8845 REPROCESS was Pressed!
+At 100463.8163 REPROCESS was Pressed!
+At 100496.7083 REPROCESS was Pressed!
+At 100530.6234 REPROCESS was Pressed!
+At 100563.5491 REPROCESS was Pressed!
+At 100596.4608 REPROCESS was Pressed!
+At 100630.3506 REPROCESS was Pressed!
+At 100663.2685 REPROCESS was Pressed!
+At 100696.1757 REPROCESS was Pressed!
+At 100730.0834 REPROCESS was Pressed!
+At 100762.9965 REPROCESS was Pressed!
+At 100795.9264 REPROCESS was Pressed!
+At 100829.8193 REPROCESS was Pressed!
+At 100862.7299 REPROCESS was Pressed!
+At 100895.6416 REPROCESS was Pressed!
+At 100929.5818 REPROCESS was Pressed!
+At 100962.4904 REPROCESS was Pressed!
+At 100995.3758 REPROCESS was Pressed!
+At 101029.2845 REPROCESS was Pressed!
+At 101062.1979 REPROCESS was Pressed!
+At 101095.1125 REPROCESS was Pressed!
+At 101129.0164 REPROCESS was Pressed!
+At 101162.9262 REPROCESS was Pressed!
+At 101194.8406 REPROCESS was Pressed!
+At 101228.7506 REPROCESS was Pressed!
+At 101261.6629 REPROCESS was Pressed!
+At 101294.5876 REPROCESS was Pressed!
+At 101327.4865 REPROCESS was Pressed!
+At 101593.7751 REPROCESS was Pressed!
+At 101626.6899 REPROCESS was Pressed!
+At 101660.6246 REPROCESS was Pressed!
+At 101693.5264 REPROCESS was Pressed!
+At 101726.42 REPROCESS was Pressed!
+At 101759.3325 REPROCESS was Pressed!
+At 101793.2395 REPROCESS was Pressed!
+At 101826.1533 REPROCESS was Pressed!
+At 101860.0699 REPROCESS was Pressed!
+At 101892.5374 REPROCESS was Pressed!
+At 101926.4437 REPROCESS was Pressed!
+At 102457.7025 REPROCESS was Pressed!
+At 102491.6098 REPROCESS was Pressed!
+At 102524.5225 REPROCESS was Pressed!
+At 102557.4351 REPROCESS was Pressed!
+At 102591.3414 REPROCESS was Pressed!
+At 102624.255 REPROCESS was Pressed!
+At 102657.1669 REPROCESS was Pressed!
+At 102691.0792 REPROCESS was Pressed!
+At 102723.99 REPROCESS was Pressed!
+At 102756.8983 REPROCESS was Pressed!
+At 102790.8088 REPROCESS was Pressed!
+At 102823.7234 REPROCESS was Pressed!
+At 102856.6326 REPROCESS was Pressed!
+At 102890.5435 REPROCESS was Pressed!
+At 102923.4561 REPROCESS was Pressed!
+At 102956.3879 REPROCESS was Pressed!
+At 102989.2902 REPROCESS was Pressed!
+At 103023.2043 REPROCESS was Pressed!
+At 109503.2839 REPROCESS was Pressed!
+At 110035.4405 REPROCESS was Pressed!
+At 111465.5566 REPROCESS was Pressed!
+At 113624.7815 REPROCESS was Pressed!
+At 113824.2945 REPROCESS was Pressed!
+At 127016.9988 REPROCESS was Pressed!
+At 127050.9152 REPROCESS was Pressed!
+At 127083.811 REPROCESS was Pressed!
+At 127117.7452 REPROCESS was Pressed!
+At 127150.6603 REPROCESS was Pressed!
+At 127183.5715 REPROCESS was Pressed!
+At 128679.5273 REPROCESS was Pressed!
+At 129842.2615 REPROCESS was Pressed!
+At 130872.5058 REPROCESS was Pressed!
+At 140111.4804 REPROCESS was Pressed!
+At 142570.7965 REPROCESS was Pressed!
+At 147522.1901 REPROCESS was Pressed!
+At 154268.5752 REPROCESS was Pressed!
+At 156661.7857 REPROCESS was Pressed!
+At 156861.2525 REPROCESS was Pressed!
+At 157592.3844 REPROCESS was Pressed!
+At 170986.1523 REPROCESS was Pressed!
+At 172880.0184 User2 tried to select square and that is not possible.
+At 173809.8916 REPROCESS was Pressed!
+At 173976.4519 REPROCESS was Pressed!
+At 174408.2909 REPROCESS was Pressed!
+At 174574.8569 REPROCESS was Pressed!
+At 174707.4897 REPROCESS was Pressed!
+At 176734.5457 REPROCESS was Pressed!
+At 191590.375 User 1 selected all the squares.
+At 191590.375 All squares and circles were selected. Task completed!
+At 191590.375 task was stopped

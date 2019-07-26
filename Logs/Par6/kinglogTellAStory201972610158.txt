@@ -1,0 +1,5 @@
+Feedback is PRIVATE!
+Board WITHOUT TRIANGLES
+At 0 User2 tried to select square and that is not possible.
+At 0 All squares and circles were selected. Task completed!
+At 0 task was stopped
