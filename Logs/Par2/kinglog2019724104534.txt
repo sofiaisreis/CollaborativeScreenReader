@@ -1,3 +1,0 @@
-Time:User:UserPosX:UserPosY:UserPosZ:UserRHPosX:UserRHPosY:UserRHPosZ:UserLHPosX:UserLHPosY:UserLHPosZ:UserHasTouch:UserPosToqueX:UserPosToqueY:UserPosToqueZ:UserTouchType:UserAction:HoverUnityName:HoverObjectType:NQuadToSelect:NCircToSelect:LastCollidingObj:LastCollidingObjectType:HandCubePosX:HandCubePosY:HandCubePosZ:LuciMode: Space Key: H Key: 
-0:User 1:0.6256894:0.8346487:1.068693:0.455:0.693:1.47:0.552:0.743:0.654:False::::::::0:0:::-1000:-999.9999:-999.9999:-:-:-
-0:User 2:-0.6441911:0.8834854:0.9826022:-0.225:0.93:0.93:0.552:0.743:0.654:False::::::::0:0:Cube5 (UnityEngine.GameObject):square:337252.9:325316.7:-334103.3:-:-:-
